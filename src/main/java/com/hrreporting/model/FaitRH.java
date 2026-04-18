@@ -27,13 +27,14 @@ public class FaitRH {
     private final double coutFormation;      // -1 si pas de formation
     private final int    nbFormations;       // -1 si inconnu
     private final int    dureeAvantDepart;   // jours, -1 si encore actif
+    private final int promotionRecommandee; // 0 = Non, 1 = Oui, -1 = inconnu
 
     // ── Constructeur complet ──────────────────────────────────────────
     public FaitRH(String employeId, int deptId, int tempsId, int posteId, int formationId,
                   double salaireMensuel, int attrition, int scorePerformance,
                   int satisfactionEmploye, int nbAbsences, int heuresSup,
                   int scoreEvaluation, int objectifsAtteintsP,
-                  double coutFormation, int nbFormations, int dureeAvantDepart) {
+                  double coutFormation, int nbFormations, int dureeAvantDepart, int promotionRecommandee) {
         this.employeId          = employeId;
         this.deptId             = deptId;
         this.tempsId            = tempsId;
@@ -50,6 +51,7 @@ public class FaitRH {
         this.coutFormation      = coutFormation;
         this.nbFormations       = nbFormations;
         this.dureeAvantDepart   = dureeAvantDepart;
+        this.promotionRecommandee = promotionRecommandee;
     }
 
     // ── Builder statique pour construction progressive ────────────────
@@ -72,6 +74,7 @@ public class FaitRH {
         private double coutFormation      = -1;
         private int    nbFormations       = -1;
         private int    dureeAvantDepart   = -1;
+        private int    promotionRecommandee = -1;
 
         public Builder employeId(String v)           { this.employeId = v; return this; }
         public Builder deptId(int v)                 { this.deptId = v; return this; }
@@ -89,12 +92,13 @@ public class FaitRH {
         public Builder coutFormation(double v)       { this.coutFormation = v; return this; }
         public Builder nbFormations(int v)           { this.nbFormations = v; return this; }
         public Builder dureeAvantDepart(int v)       { this.dureeAvantDepart = v; return this; }
+        public Builder promotionRecommandee(int v) { this.promotionRecommandee = v; return this; }
 
         public FaitRH build() {
             return new FaitRH(employeId, deptId, tempsId, posteId, formationId,
                     salaireMensuel, attrition, scorePerformance, satisfactionEmploye,
                     nbAbsences, heuresSup, scoreEvaluation, objectifsAtteintsP,
-                    coutFormation, nbFormations, dureeAvantDepart);
+                    coutFormation, nbFormations, dureeAvantDepart, promotionRecommandee);
         }
     }
 
@@ -115,6 +119,7 @@ public class FaitRH {
     public double getCoutFormation()       { return coutFormation; }
     public int    getNbFormations()        { return nbFormations; }
     public int    getDureeAvantDepart()    { return dureeAvantDepart; }
+    public int getPromotionRecommandee() { return promotionRecommandee; }
 
     @Override
     public String toString() {

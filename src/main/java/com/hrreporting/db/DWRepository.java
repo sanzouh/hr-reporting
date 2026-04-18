@@ -173,8 +173,8 @@ public class DWRepository {
                 employe_id, dept_id, temps_id, poste_id, formation_id,
                 salaire_mensuel, attrition, score_performance, satisfaction_employe,
                 nb_absences, heures_sup, score_evaluation, objectifs_atteints_pct,
-                cout_formation, nb_formations, duree_avant_depart
-            ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+                cout_formation, nb_formations, duree_avant_depart, promotion_recommandee
+            ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
         """);
 
         ps.setString(1, fait.getEmployeId());
@@ -193,6 +193,7 @@ public class DWRepository {
         setNullableDouble(ps, 14, fait.getCoutFormation());
         setNullableInt(ps, 15, fait.getNbFormations());
         setNullableInt(ps, 16, fait.getDureeAvantDepart());
+        setNullableInt(ps, 17, fait.getPromotionRecommandee());
 
         ps.executeUpdate();
     }
@@ -209,8 +210,8 @@ public class DWRepository {
                 employe_id, dept_id, temps_id, poste_id, formation_id,
                 salaire_mensuel, attrition, score_performance, satisfaction_employe,
                 nb_absences, heures_sup, score_evaluation, objectifs_atteints_pct,
-                cout_formation, nb_formations, duree_avant_depart
-            ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+                cout_formation, nb_formations, duree_avant_depart, promotion_recommandee
+            ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
         """);
 
         for (FaitRH fait : faits) {
@@ -230,6 +231,7 @@ public class DWRepository {
             setNullableDouble(ps, 14, fait.getCoutFormation());
             setNullableInt(ps, 15, fait.getNbFormations());
             setNullableInt(ps, 16, fait.getDureeAvantDepart());
+            setNullableInt(ps, 17, fait.getPromotionRecommandee());
             ps.addBatch();
         }
 
@@ -374,6 +376,22 @@ public class DWRepository {
             GROUP BY e.motif_depart
             ORDER BY nb DESC
         """;
+        return queryStringInt(sql);
+    }
+
+    /** KPI Avancement : employés candidats à la promotion */
+    public static Map<String, Integer> getCandidatsPromotion() throws SQLException {
+        String sql = """
+        SELECT d.nom_dept, COUNT(*) AS nb
+        FROM fait_rh f
+        JOIN dim_departement d ON f.dept_id = d.dept_id
+        WHERE f.promotion_recommandee = 1
+          AND f.score_performance >= 3
+          AND f.score_evaluation >= 4
+          AND f.objectifs_atteints_pct >= 80
+        GROUP BY d.nom_dept
+        ORDER BY nb DESC
+    """;
         return queryStringInt(sql);
     }
 
