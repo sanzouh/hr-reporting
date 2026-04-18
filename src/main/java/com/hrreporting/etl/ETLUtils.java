@@ -178,7 +178,7 @@ public class ETLUtils {
         if (raw == null || raw.isBlank()) return "N/A";
         return switch (raw.trim().toLowerCase()) {
             case "research & development",
-                 "r&d", "r and d", "rand d"        -> "R&D";
+                 "r&d", "r and d", "rand d", "randd"-> "R&D";
             case "sales"                            -> "Sales";
             case "human resources", "hr"            -> "HR";
             case "it/is", "it", "software engineering" -> "IT";
