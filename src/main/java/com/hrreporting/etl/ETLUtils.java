@@ -6,6 +6,7 @@ import java.time.format.DateTimeParseException;
 import java.time.temporal.ChronoUnit;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Locale;
 import java.util.Map;
 
 /**
@@ -28,7 +29,11 @@ public class ETLUtils {
             DateTimeFormatter.ofPattern("dd-MM-yyyy"),
             DateTimeFormatter.ofPattern("yyyy/MM/dd"),
             DateTimeFormatter.ofPattern("dd MMM yyyy"),
-            DateTimeFormatter.ofPattern("MM/dd/yy")
+            DateTimeFormatter.ofPattern("MM/dd/yy"),
+            DateTimeFormatter.ofPattern("M/d/yyyy"),   // couvre 7/5/2011, 1/7/2008
+            //DateTimeFormatter.ofPattern("dd MMM yyyy") // couvre 26 Sep 2021 — attention : nécessite Locale.ENGLISH
+            DateTimeFormatter.ofPattern("dd MMM yyyy", Locale.ENGLISH),
+            DateTimeFormatter.ofPattern("d MMM yyyy",  Locale.ENGLISH)
     );
 
     // ═══════════════════════════════════════════════════════════════════
