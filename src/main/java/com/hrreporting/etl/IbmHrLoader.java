@@ -27,13 +27,6 @@ public class IbmHrLoader {
 
     private static final String FILE_PATH = "src/main/resources/data/WA_Fn-UseC_-HR-Employee-Attrition.csv";
 
-    // Mapping normalisation département IBM → nom unifié
-    private static final Map<String, String> DEPT_MAP = Map.of(
-            "Research & Development", "R&D",
-            "Sales",                  "Sales",
-            "Human Resources",        "HR"
-    );
-
     /**
      * Point d'entrée principal du loader.
      * Lit le CSV, nettoie, insère les dimensions et retourne les FaitRH.
@@ -57,23 +50,24 @@ public class IbmHrLoader {
 
                 try {
                     // ── EXTRACTION ────────────────────────────────────
-                    String employeId      = "EMP-" + get(row, idx, "EmployeeNumber").trim().replace("\uFEFF", "");
+                    String employeId      = "EMP-" + ETLUtils.clean(get(row, idx, "EmployeeNumber"));
                     String deptRaw        = get(row, idx, "Department");
                     String jobRole        = get(row, idx, "JobRole");
-                    String genre          = normaliserGenre(get(row, idx, "Gender"));
+                    String genre          = ETLUtils.normaliserGenre(get(row, idx, "Gender"));
                     String attritionRaw   = get(row, idx, "Attrition");
                     String overtimeRaw    = get(row, idx, "OverTime");
 
                     // ── TRANSFORMATION ────────────────────────────────
-                    String dept           = DEPT_MAP.getOrDefault(deptRaw.trim(), deptRaw.trim());
-                    int    age            = parseIntSafe(get(row, idx, "Age"));
-                    int    anciennete     = parseIntSafe(get(row, idx, "YearsAtCompany"));
-                    double salaire        = parseDoubleSafe(get(row, idx, "MonthlyIncome"));
+                    String dept           = ETLUtils.normaliserDepartement(deptRaw);
+                    int    age            = ETLUtils.parseInt(get(row, idx, "Age"));
+                    int    anciennete     = ETLUtils.parseInt(get(row, idx, "YearsAtCompany"));
+                    double salaire        = ETLUtils.parseMontant(get(row, idx, "MonthlyIncome"));
                     int    attrition      = "Yes".equalsIgnoreCase(attritionRaw.trim()) ? 1 : 0;
-                    int    satisfaction   = parseIntSafe(get(row, idx, "JobSatisfaction"));
-                    int    performance    = parseIntSafe(get(row, idx, "PerformanceRating"));
+                    int    satisfaction   = ETLUtils.parseInt(get(row, idx, "JobSatisfaction"));
+                    int    performance    =  ETLUtils.parseInt(get(row, idx, "PerformanceRating"));
                     int    heuresSup      = "Yes".equalsIgnoreCase(overtimeRaw.trim()) ? 1 : 0;
                     String statut         = attrition == 1 ? "Parti" : "Actif";
+                    String niveau    = ETLUtils.inferNiveau(jobRole);
 
                     // Durée avant départ : YearsAtCompany si parti, sinon -1
                     int dureeAvantDepart  = attrition == 1 ? anciennete * 365 : -1;
@@ -89,7 +83,7 @@ public class IbmHrLoader {
 
                     int deptId    = DWRepository.upsertDepartement(dept, "N/A", "N/A");
                     int tempsId   = DWRepository.upsertTemps(2023, 1, 1, 1); // année de référence IBM
-                    int posteId   = DWRepository.upsertPoste(jobRole, inferNiveau(jobRole), "N/A");
+                    int posteId   = DWRepository.upsertPoste(jobRole, niveau, "N/A");
 
                     // ── CONSTRUCTION DU FAIT ──────────────────────────
                     FaitRH fait = FaitRH.builder()
@@ -137,35 +131,5 @@ public class IbmHrLoader {
         Integer i = idx.get(col);
         if (i == null || i >= row.length) return "";
         return row[i] == null ? "" : row[i].trim();
-    }
-
-    /** Normalise le genre vers M/F */
-    private static String normaliserGenre(String raw) {
-        if (raw == null) return "N/A";
-        return switch (raw.trim().toLowerCase()) {
-            case "male", "m"   -> "M";
-            case "female", "f" -> "F";
-            default            -> "N/A";
-        };
-    }
-
-    /** Infère un niveau de poste à partir du titre */
-    private static String inferNiveau(String jobRole) {
-        if (jobRole == null) return "N/A";
-        String r = jobRole.toLowerCase();
-        if (r.contains("manager") || r.contains("director") || r.contains("executive")) return "Senior";
-        if (r.contains("senior"))  return "Senior";
-        if (r.contains("junior"))  return "Junior";
-        return "Mid";
-    }
-
-    private static int parseIntSafe(String val) {
-        try { return Integer.parseInt(val.trim()); }
-        catch (Exception e) { return -1; }
-    }
-
-    private static double parseDoubleSafe(String val) {
-        try { return Double.parseDouble(val.trim().replace(",", ".")); }
-        catch (Exception e) { return -1; }
     }
 }
