@@ -107,6 +107,8 @@ public class FormationsLoader {
         // ── CONSTRUCTION DES FAITS ────────────────────────────────────
         for (FormationAgregee agg : agregations.values()) {
             try {
+                // Insérer l'employé s'il n'existe pas (données minimales)
+                DWRepository.upsertEmploye(agg.employeId, "", -1, "N/A", -1, "N/A", "N/A");
                 int deptId  = DWRepository.upsertDepartement(agg.dept, "N/A", "N/A");
                 int tempsId = DWRepository.upsertTemps(agg.annee, agg.semestre, agg.trimestre, agg.mois);
                 int posteId = DWRepository.upsertPoste("N/A", "N/A", "N/A");

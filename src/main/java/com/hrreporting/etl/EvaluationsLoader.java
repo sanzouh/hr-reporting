@@ -76,6 +76,7 @@ public class EvaluationsLoader {
                     int mois      = dateEval != null ? ETLUtils.mois(dateEval)      : (semestre == 1 ? 3 : 9);
 
                     // ── CHARGEMENT DIMENSIONS ─────────────────────────
+                    DWRepository.upsertEmploye(employeId, "", -1, "N/A", -1, "N/A", "N/A");
                     int deptId  = DWRepository.upsertDepartement(dept, "N/A", "N/A");
                     int tempsId = DWRepository.upsertTemps(annee, semestre, trimestre, mois);
                     int posteId = DWRepository.upsertPoste("N/A", "N/A", "N/A");
