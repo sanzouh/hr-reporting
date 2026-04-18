@@ -47,7 +47,7 @@ public class FormationsLoader {
                         new FileInputStream(FILE_PATH), StandardCharsets.UTF_8))) {
 
             String[] headers = reader.readNext();
-            Map<String, Integer> idx = buildIndex(headers);
+            Map<String, Integer> idx = ETLUtils.buildIndex(headers);
 
             String[] row;
             while ((row = reader.readNext()) != null) {
@@ -55,12 +55,12 @@ public class FormationsLoader {
 
                 try {
                     // ── EXTRACTION ────────────────────────────────────
-                    String employeId   = ETLUtils.clean(get(row, idx, "EmployeeID"));
-                    String deptRaw     = get(row, idx, "Department");
-                    String formation   = ETLUtils.clean(get(row, idx, "Formation"));
-                    String dureeRaw    = get(row, idx, "Duree_jours");
-                    String dateRaw     = get(row, idx, "Date");
-                    String coutRaw     = get(row, idx, "Cout_USD");
+                    String employeId   = ETLUtils.clean(ETLUtils.get(row, idx, "EmployeeID"));
+                    String deptRaw     = ETLUtils.get(row, idx, "Department");
+                    String formation   = ETLUtils.clean(ETLUtils.get(row, idx, "Formation"));
+                    String dureeRaw    = ETLUtils.get(row, idx, "Duree_jours");
+                    String dateRaw     = ETLUtils.get(row, idx, "Date");
+                    String coutRaw     = ETLUtils.get(row, idx, "Cout_USD");
 
                     // ── VALIDATION ────────────────────────────────────
                     if (employeId.isBlank() || formation.isBlank()) {
@@ -161,23 +161,5 @@ public class FormationsLoader {
             this.trimestre   = trimestre;
             this.mois        = mois;
         }
-    }
-
-    // ═══════════════════════════════════════════════════════════════════
-    // UTILITAIRES PRIVÉS
-    // ═══════════════════════════════════════════════════════════════════
-
-    private static Map<String, Integer> buildIndex(String[] headers) {
-        Map<String, Integer> idx = new HashMap<>();
-        for (int i = 0; i < headers.length; i++) {
-            idx.put(ETLUtils.clean(headers[i]), i);
-        }
-        return idx;
-    }
-
-    private static String get(String[] row, Map<String, Integer> idx, String col) {
-        Integer i = idx.get(col);
-        if (i == null || i >= row.length) return "";
-        return row[i] == null ? "" : row[i].trim();
     }
 }

@@ -38,7 +38,7 @@ public class RshuebnerLoader {
                         new FileInputStream(FILE_PATH), StandardCharsets.UTF_8))) {
 
             String[] headers = reader.readNext();
-            Map<String, Integer> idx = buildIndex(headers);
+            Map<String, Integer> idx = ETLUtils.buildIndex(headers);
 
             String[] row;
             while ((row = reader.readNext()) != null) {
@@ -46,20 +46,20 @@ public class RshuebnerLoader {
 
                 try {
                     // ── EXTRACTION ────────────────────────────────────
-                    String employeId        = "RSH-" + ETLUtils.clean(get(row, idx, "EmpID"));
-                    String deptRaw          = get(row, idx, "Department");
-                    String position         = get(row, idx, "Position");
-                    String sexRaw           = get(row, idx, "Sex");
-                    String salaryRaw        = get(row, idx, "Salary");
-                    String hireRaw          = get(row, idx, "DateofHire");
-                    String termRaw          = get(row, idx, "DateofTermination");
-                    String termReason       = get(row, idx, "TermReason");
-                    String empStatus        = get(row, idx, "EmploymentStatus");
-                    String recSource        = get(row, idx, "RecruitmentSource");
-                    String perfRaw          = get(row, idx, "PerformanceScore");
-                    String satisfRaw        = get(row, idx, "EmpSatisfaction");
-                    String absencesRaw      = get(row, idx, "Absences");
-                    String dobRaw           = get(row, idx, "DOB");
+                    String employeId        = "RSH-" + ETLUtils.clean(ETLUtils.get(row, idx, "EmpID"));
+                    String deptRaw          = ETLUtils.get(row, idx, "Department");
+                    String position         = ETLUtils.get(row, idx, "Position");
+                    String sexRaw           = ETLUtils.get(row, idx, "Sex");
+                    String salaryRaw        = ETLUtils.get(row, idx, "Salary");
+                    String hireRaw          = ETLUtils.get(row, idx, "DateofHire");
+                    String termRaw          = ETLUtils.get(row, idx, "DateofTermination");
+                    String termReason       = ETLUtils.get(row, idx, "TermReason");
+                    String empStatus        = ETLUtils.get(row, idx, "EmploymentStatus");
+                    String recSource        = ETLUtils.get(row, idx, "RecruitmentSource");
+                    String perfRaw          = ETLUtils.get(row, idx, "PerformanceScore");
+                    String satisfRaw        = ETLUtils.get(row, idx, "EmpSatisfaction");
+                    String absencesRaw      = ETLUtils.get(row, idx, "Absences");
+                    String dobRaw           = ETLUtils.get(row, idx, "DOB");
 
                     // ── TRANSFORMATION ────────────────────────────────
                     String dept             = ETLUtils.normaliserDepartement(deptRaw);
@@ -85,7 +85,7 @@ public class RshuebnerLoader {
                             : -1;
 
                     // Attrition : Termd = 1 si parti
-                    int attrition = ETLUtils.parseInt(get(row, idx, "Termd"));
+                    int attrition = ETLUtils.parseInt(ETLUtils.get(row, idx, "Termd"));
 
                     // Durée avant départ en jours
                     int dureeAvantDepart = (attrition == 1)
@@ -177,19 +177,5 @@ public class RshuebnerLoader {
             case "pip"                            -> 1;
             default                               -> -1;
         };
-    }
-
-    private static Map<String, Integer> buildIndex(String[] headers) {
-        Map<String, Integer> idx = new HashMap<>();
-        for (int i = 0; i < headers.length; i++) {
-            idx.put(ETLUtils.clean(headers[i]), i);
-        }
-        return idx;
-    }
-
-    private static String get(String[] row, Map<String, Integer> idx, String col) {
-        Integer i = idx.get(col);
-        if (i == null || i >= row.length) return "";
-        return row[i] == null ? "" : row[i].trim();
     }
 }

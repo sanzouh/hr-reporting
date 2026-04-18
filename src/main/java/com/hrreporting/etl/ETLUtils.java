@@ -4,7 +4,9 @@ import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeParseException;
 import java.time.temporal.ChronoUnit;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * ETLUtils — Utilitaires partagés par tous les loaders ETL.
@@ -208,5 +210,25 @@ public class ETLUtils {
     public static String capitaliser(String s) {
         if (s == null || s.isBlank()) return s;
         return Character.toUpperCase(s.charAt(0)) + s.substring(1).toLowerCase();
+    }
+
+    // ═══════════════════════════════════════════════════════════════════
+    // AUTRES
+    // ═══════════════════════════════════════════════════════════════════
+
+    /** Construit un index nom_colonne → position depuis un tableau de headers CSV */
+    public static Map<String, Integer> buildIndex(String[] headers) {
+        Map<String, Integer> idx = new HashMap<>();
+        for (int i = 0; i < headers.length; i++) {
+            idx.put(ETLUtils.clean(headers[i]), i);
+        }
+        return idx;
+    }
+
+    /** Accès sécurisé à une cellule CSV par nom de colonne */
+    public static String get(String[] row, Map<String, Integer> idx, String col) {
+        Integer i = idx.get(col);
+        if (i == null || i >= row.length) return "";
+        return row[i] == null ? "" : row[i].trim();
     }
 }

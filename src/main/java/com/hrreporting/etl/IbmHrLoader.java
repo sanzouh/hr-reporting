@@ -42,7 +42,7 @@ public class IbmHrLoader {
                         new FileInputStream(FILE_PATH), StandardCharsets.UTF_8))) {
 
             String[] headers = reader.readNext(); // ligne d'en-tête
-            Map<String, Integer> idx = buildIndex(headers);
+            Map<String, Integer> idx = ETLUtils.buildIndex(headers);
 
             String[] row;
             while ((row = reader.readNext()) != null) {
@@ -50,21 +50,21 @@ public class IbmHrLoader {
 
                 try {
                     // ── EXTRACTION ────────────────────────────────────
-                    String employeId      = "EMP-" + ETLUtils.clean(get(row, idx, "EmployeeNumber"));
-                    String deptRaw        = get(row, idx, "Department");
-                    String jobRole        = get(row, idx, "JobRole");
-                    String genre          = ETLUtils.normaliserGenre(get(row, idx, "Gender"));
-                    String attritionRaw   = get(row, idx, "Attrition");
-                    String overtimeRaw    = get(row, idx, "OverTime");
+                    String employeId      = "EMP-" + ETLUtils.clean(ETLUtils.get(row, idx, "EmployeeNumber"));
+                    String deptRaw        = ETLUtils.get(row, idx, "Department");
+                    String jobRole        = ETLUtils.get(row, idx, "JobRole");
+                    String genre          = ETLUtils.normaliserGenre(ETLUtils.get(row, idx, "Gender"));
+                    String attritionRaw   = ETLUtils.get(row, idx, "Attrition");
+                    String overtimeRaw    = ETLUtils.get(row, idx, "OverTime");
 
                     // ── TRANSFORMATION ────────────────────────────────
                     String dept           = ETLUtils.normaliserDepartement(deptRaw);
-                    int    age            = ETLUtils.parseInt(get(row, idx, "Age"));
-                    int    anciennete     = ETLUtils.parseInt(get(row, idx, "YearsAtCompany"));
-                    double salaire        = ETLUtils.parseMontant(get(row, idx, "MonthlyIncome"));
+                    int    age            = ETLUtils.parseInt(ETLUtils.get(row, idx, "Age"));
+                    int    anciennete     = ETLUtils.parseInt(ETLUtils.get(row, idx, "YearsAtCompany"));
+                    double salaire        = ETLUtils.parseMontant(ETLUtils.get(row, idx, "MonthlyIncome"));
                     int    attrition      = "Yes".equalsIgnoreCase(attritionRaw.trim()) ? 1 : 0;
-                    int    satisfaction   = ETLUtils.parseInt(get(row, idx, "JobSatisfaction"));
-                    int    performance    =  ETLUtils.parseInt(get(row, idx, "PerformanceRating"));
+                    int    satisfaction   = ETLUtils.parseInt(ETLUtils.get(row, idx, "JobSatisfaction"));
+                    int    performance    =  ETLUtils.parseInt(ETLUtils.get(row, idx, "PerformanceRating"));
                     int    heuresSup      = "Yes".equalsIgnoreCase(overtimeRaw.trim()) ? 1 : 0;
                     String statut         = attrition == 1 ? "Parti" : "Actif";
                     String niveau    = ETLUtils.inferNiveau(jobRole);
@@ -111,25 +111,5 @@ public class IbmHrLoader {
         System.out.println("[IBM] Chargement terminé — " + faits.size() +
                 " faits construits, " + lignesIgnorees + " lignes ignorées.");
         return faits;
-    }
-
-    // ═══════════════════════════════════════════════════════════════════
-    // UTILITAIRES PRIVÉS
-    // ═══════════════════════════════════════════════════════════════════
-
-    /** Construit un index nom_colonne → position pour accès par nom */
-    private static Map<String, Integer> buildIndex(String[] headers) {
-        Map<String, Integer> idx = new HashMap<>();
-        for (int i = 0; i < headers.length; i++) {
-            idx.put(headers[i].trim().replace("\uFEFF", ""), i);
-        }
-        return idx;
-    }
-
-    /** Accès sécurisé à une cellule par nom de colonne */
-    private static String get(String[] row, Map<String, Integer> idx, String col) {
-        Integer i = idx.get(col);
-        if (i == null || i >= row.length) return "";
-        return row[i] == null ? "" : row[i].trim();
     }
 }
