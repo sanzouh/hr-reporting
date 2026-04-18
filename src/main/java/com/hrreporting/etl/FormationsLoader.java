@@ -109,7 +109,9 @@ public class FormationsLoader {
             try {
                 // Insérer l'employé s'il n'existe pas (données minimales)
                 DWRepository.upsertEmploye(agg.employeId, "", -1, "N/A", -1, "N/A", "N/A");
-                int deptId  = DWRepository.upsertDepartement(agg.dept, "N/A", "N/A");
+
+                String deptFinal = agg.dept.isBlank() || agg.dept.equals("N/A") ? "Non défini" : agg.dept;
+                int deptId = DWRepository.upsertDepartement(deptFinal, "N/A", "N/A");
                 int tempsId = DWRepository.upsertTemps(agg.annee, agg.semestre, agg.trimestre, agg.mois);
                 int posteId = DWRepository.upsertPoste("N/A", "N/A", "N/A");
 

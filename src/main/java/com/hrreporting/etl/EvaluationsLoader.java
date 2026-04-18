@@ -77,7 +77,9 @@ public class EvaluationsLoader {
 
                     // ── CHARGEMENT DIMENSIONS ─────────────────────────
                     DWRepository.upsertEmploye(employeId, "", -1, "N/A", -1, "N/A", "N/A");
-                    int deptId  = DWRepository.upsertDepartement(dept, "N/A", "N/A");
+
+                    String deptFinal = dept.isBlank() || dept.equals("N/A") ? "Non défini" : dept;
+                    int deptId = DWRepository.upsertDepartement(deptFinal, "N/A", "N/A");
                     int tempsId = DWRepository.upsertTemps(annee, semestre, trimestre, mois);
                     int posteId = DWRepository.upsertPoste("N/A", "N/A", "N/A");
 

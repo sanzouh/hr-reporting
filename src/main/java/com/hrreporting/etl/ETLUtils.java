@@ -185,7 +185,7 @@ public class ETLUtils {
             case "admin offices", "admin"           -> "Admin";
             case "production", "operations"         -> "Operations";
             case "executive office", "management"   -> "Management";
-            default                                 -> capitaliser(raw.trim());
+            default                                 -> raw.trim().isBlank() ? "Non défini" : capitaliser(raw.trim());
         };
     }
 
