@@ -67,13 +67,13 @@ public class PromotionsPanel extends JPanel implements MainDashboard.Refreshable
             Map<String, Integer> candidats = DWRepository.getCandidatsPromotion();
             int totalCandidats = candidats.values().stream().mapToInt(Integer::intValue).sum();
             row.add(MainDashboard.buildKpiCard("Candidats promotion",
-                    String.format("%,d", totalCandidats), "● Éligibles", MainDashboard.C_PRIMARY));
+                    String.format("%,d", totalCandidats), "Éligibles", MainDashboard.C_PRIMARY));
 
             // % de l'effectif total recommandé à la promotion
             ResultSet rsTotal = query("SELECT COUNT(DISTINCT employe_id) FROM fait_rh");
             int totalEffectif = rsTotal.next() ? rsTotal.getInt(1) : 1;
             double pctPromo = totalEffectif > 0 ? totalCandidats * 100.0 / totalEffectif : 0;
-            String badgePromo = pctPromo >= 10 ? "✓ Actif" : pctPromo >= 5 ? "~ Modéré" : "▼ Faible";
+            String badgePromo = pctPromo >= 10 ? "Actif" : pctPromo >= 5 ? "Modéré" : "Faible";
             Color  colorPromo = pctPromo >= 10 ? MainDashboard.C_SUCCESS
                     : pctPromo >= 5  ? MainDashboard.C_WARNING
                       : MainDashboard.C_DANGER;
@@ -99,7 +99,7 @@ public class PromotionsPanel extends JPanel implements MainDashboard.Refreshable
                   AND f.objectifs_atteints_pct IS NOT NULL AND f.objectifs_atteints_pct >= 0
             """);
             double objMoyen = rsObj.next() ? rsObj.getDouble(1) : 0;
-            String badgeObj = objMoyen >= 80 ? "✓ Excellent" : objMoyen >= 60 ? "~ Correct" : "▼ Insuffisant";
+            String badgeObj = objMoyen >= 80 ? "Excellent" : objMoyen >= 60 ? "Correct" : "Insuffisant";
             Color  colorObj  = objMoyen >= 80 ? MainDashboard.C_SUCCESS
                     : objMoyen >= 60 ? MainDashboard.C_WARNING
                       : MainDashboard.C_DANGER;

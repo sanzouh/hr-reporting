@@ -66,7 +66,7 @@ public class PerformancePanel extends JPanel implements MainDashboard.Refreshabl
             Color cPerf = perf >= 3.5 ? MainDashboard.C_SUCCESS : perf >= 2.5 ? MainDashboard.C_WARNING : MainDashboard.C_DANGER;
             row.add(MainDashboard.buildKpiCard("Score performance moy.",
                     String.format("%.2f / 4", perf),
-                    perf >= 3.5 ? "✓ Excellent" : perf >= 2.5 ? "~ Correct" : "▼ Faible", cPerf));
+                    perf >= 3.5 ? "Excellent" : perf >= 2.5 ? "Correct" : "Faible", cPerf));
 
             // Satisfaction moyenne (1-4)
             ResultSet rs2 = query("SELECT ROUND(AVG(satisfaction_employe), 2) FROM fait_rh WHERE satisfaction_employe > 0");
@@ -74,14 +74,14 @@ public class PerformancePanel extends JPanel implements MainDashboard.Refreshabl
             Color cSatisf = satisf >= 3 ? MainDashboard.C_SUCCESS : satisf >= 2 ? MainDashboard.C_WARNING : MainDashboard.C_DANGER;
             row.add(MainDashboard.buildKpiCard("Satisfaction moyenne",
                     String.format("%.2f / 4", satisf),
-                    satisf >= 3 ? "✓ Bon" : satisf >= 2 ? "~ Moyen" : "▼ Faible", cSatisf));
+                    satisf >= 3 ? "Bon" : satisf >= 2 ? "Moyen" : "Faible", cSatisf));
 
             // % employés avec heures sup
             ResultSet rs3 = query("SELECT ROUND(SUM(heures_sup) * 100.0 / COUNT(*), 1) FROM fait_rh");
             double pctHs = rs3.next() ? rs3.getDouble(1) : 0;
             row.add(MainDashboard.buildKpiCard("Heures supplémentaires",
                     String.format("%.1f%%", pctHs),
-                    pctHs > 30 ? "▲ Élevé" : "✓ Normal",
+                    pctHs > 30 ? "Élevé" : "Normal",
                     pctHs > 30 ? MainDashboard.C_DANGER : MainDashboard.C_SUCCESS));
 
             // Score évaluation moyen (1-5)

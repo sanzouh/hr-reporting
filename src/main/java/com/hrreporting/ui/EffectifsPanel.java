@@ -79,7 +79,7 @@ public class EffectifsPanel extends JPanel implements MainDashboard.Refreshable 
             double pctActifs = rs2.next() ? rs2.getDouble(1) : 0;
             row.add(MainDashboard.buildKpiCard("Employés actifs",
                     String.format("%.1f%%", pctActifs),
-                    pctActifs > 85 ? "✓ Stable" : "▼ Attention",
+                    pctActifs > 85 ? "Stable" : "Attention",
                     pctActifs > 85 ? MainDashboard.C_SUCCESS : MainDashboard.C_WARNING));
 
             // Âge moyen

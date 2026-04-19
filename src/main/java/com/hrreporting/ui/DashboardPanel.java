@@ -63,7 +63,7 @@ public class DashboardPanel extends JPanel implements MainDashboard.Refreshable 
             Map<String, Double> attrition = DWRepository.getTauxAttritionParDept();
             double tauxMoyen = attrition.values().stream()
                     .mapToDouble(Double::doubleValue).average().orElse(0);
-            String badgeAttrition = tauxMoyen > 15 ? "▲ Risque élevé" : tauxMoyen > 8 ? "~ Modéré" : "✓ Stable";
+            String badgeAttrition = tauxMoyen > 15 ? "Risque élevé" : tauxMoyen > 8 ? "Modéré" : "Stable";
             Color  colorAttrition = tauxMoyen > 15 ? MainDashboard.C_DANGER
                     : tauxMoyen > 8  ? MainDashboard.C_WARNING
                       : MainDashboard.C_SUCCESS;
@@ -74,7 +74,7 @@ public class DashboardPanel extends JPanel implements MainDashboard.Refreshable 
             Map<String, Integer> effectifs = DWRepository.getEffectifParDept();
             int totalEffectif = effectifs.values().stream().mapToInt(Integer::intValue).sum();
             row.add(MainDashboard.buildKpiCard("Effectif total",
-                    String.format("%,d", totalEffectif) + " emp.", "● Actifs", MainDashboard.C_PRIMARY));
+                    String.format("%,d", totalEffectif) + " emp.", "Actifs", MainDashboard.C_PRIMARY));
 
             // Salaire moyen
             Map<String, Double> salaires = DWRepository.getSalaireMoyenParDept();
@@ -87,7 +87,7 @@ public class DashboardPanel extends JPanel implements MainDashboard.Refreshable 
             Map<String, Double> satisfaction = DWRepository.getSatisfactionParDept();
             double satisfMoyenne = satisfaction.values().stream()
                     .mapToDouble(Double::doubleValue).average().orElse(0);
-            String badgeSatisf = satisfMoyenne >= 3.5 ? "✓ Bon" : satisfMoyenne >= 2.5 ? "~ Moyen" : "▼ Faible";
+            String badgeSatisf = satisfMoyenne >= 3.5 ? "Bon" : satisfMoyenne >= 2.5 ? "Moyen" : "Faible";
             Color  colorSatisf = satisfMoyenne >= 3.5 ? MainDashboard.C_SUCCESS
                     : satisfMoyenne >= 2.5 ? MainDashboard.C_WARNING
                       : MainDashboard.C_DANGER;

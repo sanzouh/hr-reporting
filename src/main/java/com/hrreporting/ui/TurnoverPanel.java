@@ -67,7 +67,7 @@ public class TurnoverPanel extends JPanel implements MainDashboard.Refreshable {
             Color cTaux = taux > 15 ? MainDashboard.C_DANGER : taux > 8 ? MainDashboard.C_WARNING : MainDashboard.C_SUCCESS;
             row.add(MainDashboard.buildKpiCard("Taux d'attrition",
                     String.format("%.1f%%", taux),
-                    taux > 15 ? "▲ Critique" : taux > 8 ? "~ Modéré" : "✓ Stable", cTaux));
+                    taux > 15 ? "Critique" : taux > 8 ? "Modéré" : "Stable", cTaux));
 
             // Nombre total de départs
             ResultSet rs2 = query("SELECT SUM(attrition) FROM fait_rh");
@@ -85,7 +85,7 @@ public class TurnoverPanel extends JPanel implements MainDashboard.Refreshable {
             double retention = 100.0 - taux;
             row.add(MainDashboard.buildKpiCard("Taux de rétention",
                     String.format("%.1f%%", retention),
-                    retention >= 90 ? "✓ Excellent" : retention >= 80 ? "~ Correct" : "▼ À améliorer",
+                    retention >= 90 ? "Excellent" : retention >= 80 ? "Correct" : "À améliorer",
                     retention >= 90 ? MainDashboard.C_SUCCESS : retention >= 80 ? MainDashboard.C_WARNING : MainDashboard.C_DANGER));
 
         } catch (Exception e) {

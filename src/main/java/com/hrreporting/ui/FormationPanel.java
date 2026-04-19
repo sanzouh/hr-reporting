@@ -99,7 +99,7 @@ public class FormationPanel extends JPanel implements MainDashboard.Refreshable 
                 FROM fait_rh f
             """);
             double pctFormes = rs4.next() ? rs4.getDouble(1) : 0;
-            String badge = pctFormes >= 70 ? "✓ Bon" : pctFormes >= 40 ? "~ Moyen" : "▼ Faible";
+            String badge = pctFormes >= 70 ? "Bon" : pctFormes >= 40 ? "Moyen" : "Faible";
             Color color  = pctFormes >= 70 ? MainDashboard.C_SUCCESS
                     : pctFormes >= 40 ? MainDashboard.C_WARNING
                       : MainDashboard.C_DANGER;
