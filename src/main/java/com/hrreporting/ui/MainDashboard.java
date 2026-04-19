@@ -142,9 +142,9 @@ public class MainDashboard extends JFrame {
     private JButton buildNavButton(String label, FlatSVGIcon icon, String section) {
         JButton btn = new JButton(label, icon);
         btn.setMaximumSize(new Dimension(Integer.MAX_VALUE, 52));
-        btn.setHorizontalAlignment(SwingConstants.CENTER);
+        btn.setHorizontalAlignment(SwingConstants.LEFT);
         btn.setAlignmentX(Component.CENTER_ALIGNMENT);
-        btn.setBorder(new EmptyBorder(22, 20, 22, 20));
+        btn.setBorder(new EmptyBorder(22, 40, 22, 20));
         btn.setForeground(new Color(0xB5D4F4));
         btn.setBackground(C_PRIMARY);
         btn.setFont(new Font("Segoe UI", Font.PLAIN, 15));
