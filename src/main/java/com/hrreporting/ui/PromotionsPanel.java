@@ -1,0 +1,309 @@
+package com.hrreporting.ui;
+
+import com.hrreporting.db.DatabaseManager;
+import com.hrreporting.db.DWRepository;
+import org.jfree.chart.*;
+import org.jfree.chart.plot.*;
+import org.jfree.chart.renderer.category.BarRenderer;
+import org.jfree.chart.renderer.category.LineAndShapeRenderer;
+import org.jfree.data.category.DefaultCategoryDataset;
+import org.jfree.data.general.DefaultPieDataset;
+
+import javax.swing.*;
+import javax.swing.border.EmptyBorder;
+import java.awt.*;
+import java.sql.*;
+import java.util.*;
+
+/**
+ * PromotionsPanel — Section Promotions du dashboard RH.
+ * Contenu :
+ * – KPI cards : Nb candidats promus, % promotion, Score perf moyen, % objectifs atteints
+ * – Graphique 1 : Candidats à la promotion par département (barres verticales)
+ * – Graphique 2 : Score performance des promouvables vs reste (barres groupées)
+ * – Graphique 3 : % objectifs atteints par département (ligne)
+ * – Graphique 4 : Répartition promouvables par genre (camembert)
+ */
+public class PromotionsPanel extends JPanel implements MainDashboard.Refreshable {
+
+    private final MainDashboard dashboard;
+
+    public PromotionsPanel(MainDashboard dashboard) {
+        this.dashboard = dashboard;
+        setBackground(MainDashboard.C_BG);
+        setLayout(new BorderLayout());
+        build("Toutes", "Tous");
+    }
+
+    private void build(String annee, String departement) {
+        JPanel content = new JPanel();
+        content.setLayout(new BoxLayout(content, BoxLayout.Y_AXIS));
+        content.setBackground(MainDashboard.C_BG);
+        content.setBorder(new EmptyBorder(20, 20, 20, 20));
+
+        content.add(buildKpiRow(departement));
+        content.add(Box.createVerticalStrut(16));
+        content.add(buildChartsRow1(departement));
+        content.add(Box.createVerticalStrut(16));
+        content.add(buildChartsRow2(departement));
+
+        JScrollPane scroll = new JScrollPane(content);
+        scroll.setBorder(null);
+        scroll.getVerticalScrollBar().setUnitIncrement(16);
+        add(scroll, BorderLayout.CENTER);
+    }
+
+    // ═══════════════════════════════════════════════════════════════════
+    // KPI CARDS
+    // ═══════════════════════════════════════════════════════════════════
+
+    private JPanel buildKpiRow(String departement) {
+        JPanel row = new JPanel(new GridLayout(1, 4, 12, 0));
+        row.setBackground(MainDashboard.C_BG);
+        row.setMaximumSize(new Dimension(Integer.MAX_VALUE, 130));
+
+        try {
+            // Total candidats à la promotion
+            Map<String, Integer> candidats = DWRepository.getCandidatsPromotion();
+            int totalCandidats = candidats.values().stream().mapToInt(Integer::intValue).sum();
+            row.add(MainDashboard.buildKpiCard("Candidats promotion",
+                    String.format("%,d", totalCandidats), "● Éligibles", MainDashboard.C_PRIMARY));
+
+            // % de l'effectif total recommandé à la promotion
+            ResultSet rsTotal = query("SELECT COUNT(DISTINCT employe_id) FROM fait_rh");
+            int totalEffectif = rsTotal.next() ? rsTotal.getInt(1) : 1;
+            double pctPromo = totalEffectif > 0 ? totalCandidats * 100.0 / totalEffectif : 0;
+            String badgePromo = pctPromo >= 10 ? "✓ Actif" : pctPromo >= 5 ? "~ Modéré" : "▼ Faible";
+            Color  colorPromo = pctPromo >= 10 ? MainDashboard.C_SUCCESS
+                    : pctPromo >= 5  ? MainDashboard.C_WARNING
+                      : MainDashboard.C_DANGER;
+            row.add(MainDashboard.buildKpiCard("% promouvables",
+                    String.format("%.1f%%", pctPromo), badgePromo, colorPromo));
+
+            // Score performance moyen des candidats
+            ResultSet rsPerf = query("""
+                SELECT ROUND(AVG(f.score_performance), 2)
+                FROM fait_rh f
+                WHERE f.promotion_recommandee = 1
+                  AND f.score_performance IS NOT NULL AND f.score_performance > 0
+            """);
+            double scoreMoyen = rsPerf.next() ? rsPerf.getDouble(1) : 0;
+            row.add(MainDashboard.buildKpiCard("Score perf. moyen",
+                    String.format("%.2f / 5", scoreMoyen), null, null));
+
+            // % objectifs atteints moyen des candidats
+            ResultSet rsObj = query("""
+                SELECT ROUND(AVG(f.objectifs_atteints_pct), 1)
+                FROM fait_rh f
+                WHERE f.promotion_recommandee = 1
+                  AND f.objectifs_atteints_pct IS NOT NULL AND f.objectifs_atteints_pct >= 0
+            """);
+            double objMoyen = rsObj.next() ? rsObj.getDouble(1) : 0;
+            String badgeObj = objMoyen >= 80 ? "✓ Excellent" : objMoyen >= 60 ? "~ Correct" : "▼ Insuffisant";
+            Color  colorObj  = objMoyen >= 80 ? MainDashboard.C_SUCCESS
+                    : objMoyen >= 60 ? MainDashboard.C_WARNING
+                      : MainDashboard.C_DANGER;
+            row.add(MainDashboard.buildKpiCard("Objectifs atteints moy.",
+                    String.format("%.1f%%", objMoyen), badgeObj, colorObj));
+
+        } catch (Exception e) {
+            System.err.println("[Promotions] Erreur KPI : " + e.getMessage());
+        }
+
+        return row;
+    }
+
+    // ═══════════════════════════════════════════════════════════════════
+    // GRAPHIQUES LIGNE 1 : Candidats/dept + Perf promouvables vs autres
+    // ═══════════════════════════════════════════════════════════════════
+
+    private JPanel buildChartsRow1(String departement) {
+        JPanel row = new JPanel(new GridLayout(1, 2, 12, 0));
+        row.setBackground(MainDashboard.C_BG);
+        row.setMaximumSize(new Dimension(Integer.MAX_VALUE, 280));
+
+        try {
+            // Candidats à la promotion par département
+            Map<String, Integer> candidats = DWRepository.getCandidatsPromotion();
+            DefaultCategoryDataset dsCand = new DefaultCategoryDataset();
+            candidats.forEach((dept, nb) -> dsCand.addValue(nb, "Candidats", dept));
+            JFreeChart chartCand = ChartFactory.createBarChart(
+                    null, "Département", "Candidats", dsCand,
+                    PlotOrientation.VERTICAL, false, true, false);
+            styleBar(chartCand, MainDashboard.C_PRIMARY);
+            row.add(MainDashboard.buildCard("Candidats à la promotion / département",
+                    new ChartPanel(chartCand)));
+
+            // Score perf moyen : promouvables vs non-promouvables, par département
+            DefaultCategoryDataset dsPerf = new DefaultCategoryDataset();
+            ResultSet rsPerf = query("""
+                SELECT d.nom_dept,
+                       ROUND(AVG(CASE WHEN f.promotion_recommandee = 1 THEN f.score_performance END), 2) AS score_promo,
+                       ROUND(AVG(CASE WHEN f.promotion_recommandee = 0 THEN f.score_performance END), 2) AS score_autres
+                FROM fait_rh f
+                JOIN dim_departement d ON f.dept_id = d.dept_id
+                WHERE f.score_performance IS NOT NULL AND f.score_performance > 0
+                GROUP BY d.nom_dept
+                ORDER BY d.nom_dept
+            """);
+            while (rsPerf.next()) {
+                String dept = rsPerf.getString("nom_dept");
+                dsPerf.addValue(rsPerf.getDouble("score_promo"),  "Promouvables", dept);
+                dsPerf.addValue(rsPerf.getDouble("score_autres"), "Autres",       dept);
+            }
+            JFreeChart chartPerf = ChartFactory.createBarChart(
+                    null, "Département", "Score", dsPerf,
+                    PlotOrientation.VERTICAL, true, true, false);
+            stylePerfGrouped(chartPerf);
+            row.add(MainDashboard.buildCard("Score performance : promouvables vs autres",
+                    new ChartPanel(chartPerf)));
+
+        } catch (Exception e) {
+            System.err.println("[Promotions] Erreur graphiques ligne 1 : " + e.getMessage());
+        }
+
+        return row;
+    }
+
+    // ═══════════════════════════════════════════════════════════════════
+    // GRAPHIQUES LIGNE 2 : % objectifs/dept (ligne) + Genre promouvables (pie)
+    // ═══════════════════════════════════════════════════════════════════
+
+    private JPanel buildChartsRow2(String departement) {
+        JPanel row = new JPanel(new GridLayout(1, 2, 12, 0));
+        row.setBackground(MainDashboard.C_BG);
+        row.setMaximumSize(new Dimension(Integer.MAX_VALUE, 280));
+
+        try {
+            // % objectifs atteints par département (tous employés)
+            DefaultCategoryDataset dsObj = new DefaultCategoryDataset();
+            ResultSet rsObj = query("""
+                SELECT d.nom_dept, ROUND(AVG(f.objectifs_atteints_pct), 1) AS moy_obj
+                FROM fait_rh f
+                JOIN dim_departement d ON f.dept_id = d.dept_id
+                WHERE f.objectifs_atteints_pct IS NOT NULL AND f.objectifs_atteints_pct >= 0
+                GROUP BY d.nom_dept
+                ORDER BY moy_obj DESC
+            """);
+            while (rsObj.next())
+                dsObj.addValue(rsObj.getDouble("moy_obj"), "% objectifs", rsObj.getString("nom_dept"));
+
+            JFreeChart chartObj = ChartFactory.createLineChart(
+                    null, "Département", "% objectifs atteints", dsObj,
+                    PlotOrientation.VERTICAL, false, true, false);
+            styleLine(chartObj, MainDashboard.C_SUCCESS);
+            row.add(MainDashboard.buildCard("% objectifs atteints / département",
+                    new ChartPanel(chartObj)));
+
+            // Répartition genre des candidats à la promotion
+            DefaultPieDataset<String> dsGenre = new DefaultPieDataset<>();
+            ResultSet rsGenre = query("""
+                SELECT e.genre, COUNT(*) AS nb
+                FROM fait_rh f
+                JOIN dim_employe e ON f.employe_id = e.employe_id
+                WHERE f.promotion_recommandee = 1
+                  AND e.genre IS NOT NULL
+                GROUP BY e.genre
+            """);
+            while (rsGenre.next())
+                dsGenre.setValue(rsGenre.getString("genre"), rsGenre.getInt("nb"));
+
+            JFreeChart chartGenre = ChartFactory.createPieChart(
+                    null, dsGenre, true, true, false);
+            stylePie(chartGenre);
+            row.add(MainDashboard.buildCard("Genre des candidats à la promotion",
+                    new ChartPanel(chartGenre)));
+
+        } catch (Exception e) {
+            System.err.println("[Promotions] Erreur graphiques ligne 2 : " + e.getMessage());
+        }
+
+        return row;
+    }
+
+    // ═══════════════════════════════════════════════════════════════════
+    // UTILITAIRES
+    // ═══════════════════════════════════════════════════════════════════
+
+    private ResultSet query(String sql) throws SQLException {
+        return DatabaseManager.getConnection().createStatement().executeQuery(sql);
+    }
+
+    private void styleBar(JFreeChart chart, Color color) {
+        chart.setBackgroundPaint(MainDashboard.C_CARD);
+        chart.setBorderVisible(false);
+        CategoryPlot plot = chart.getCategoryPlot();
+        plot.setBackgroundPaint(MainDashboard.C_CARD);
+        plot.setOutlineVisible(false);
+        plot.setRangeGridlinePaint(MainDashboard.C_BORDER);
+        plot.setDomainGridlinesVisible(false);
+        BarRenderer r = (BarRenderer) plot.getRenderer();
+        r.setSeriesPaint(0, color);
+        r.setDrawBarOutline(false);
+        r.setShadowVisible(false);
+        r.setMaximumBarWidth(0.5);
+        plot.getDomainAxis().setTickLabelFont(new Font("Segoe UI", Font.PLAIN, 11));
+        plot.getRangeAxis().setTickLabelFont(new Font("Segoe UI", Font.PLAIN, 11));
+        plot.getDomainAxis().setAxisLineVisible(false);
+        plot.getRangeAxis().setAxisLineVisible(false);
+    }
+
+    private void stylePerfGrouped(JFreeChart chart) {
+        chart.setBackgroundPaint(MainDashboard.C_CARD);
+        chart.setBorderVisible(false);
+        CategoryPlot plot = chart.getCategoryPlot();
+        plot.setBackgroundPaint(MainDashboard.C_CARD);
+        plot.setOutlineVisible(false);
+        plot.setRangeGridlinePaint(MainDashboard.C_BORDER);
+        plot.setDomainGridlinesVisible(false);
+        BarRenderer r = (BarRenderer) plot.getRenderer();
+        r.setSeriesPaint(0, MainDashboard.C_SUCCESS);
+        r.setSeriesPaint(1, MainDashboard.C_BORDER);
+        r.setDrawBarOutline(false);
+        r.setShadowVisible(false);
+        plot.getDomainAxis().setTickLabelFont(new Font("Segoe UI", Font.PLAIN, 11));
+        plot.getRangeAxis().setTickLabelFont(new Font("Segoe UI", Font.PLAIN, 11));
+        plot.getDomainAxis().setAxisLineVisible(false);
+        plot.getRangeAxis().setAxisLineVisible(false);
+        if (chart.getLegend() != null)
+            chart.getLegend().setBackgroundPaint(MainDashboard.C_CARD);
+    }
+
+    private void styleLine(JFreeChart chart, Color color) {
+        chart.setBackgroundPaint(MainDashboard.C_CARD);
+        chart.setBorderVisible(false);
+        CategoryPlot plot = chart.getCategoryPlot();
+        plot.setBackgroundPaint(MainDashboard.C_CARD);
+        plot.setOutlineVisible(false);
+        plot.setRangeGridlinePaint(MainDashboard.C_BORDER);
+        LineAndShapeRenderer r = (LineAndShapeRenderer) plot.getRenderer();
+        r.setSeriesPaint(0, color);
+        r.setSeriesStroke(0, new BasicStroke(2.5f));
+        r.setDefaultShapesVisible(true);
+        plot.getDomainAxis().setTickLabelFont(new Font("Segoe UI", Font.PLAIN, 11));
+        plot.getRangeAxis().setTickLabelFont(new Font("Segoe UI", Font.PLAIN, 11));
+        plot.getDomainAxis().setAxisLineVisible(false);
+        plot.getRangeAxis().setAxisLineVisible(false);
+    }
+
+    private void stylePie(JFreeChart chart) {
+        chart.setBackgroundPaint(MainDashboard.C_CARD);
+        chart.setBorderVisible(false);
+        PiePlot<?> plot = (PiePlot<?>) chart.getPlot();
+        plot.setBackgroundPaint(MainDashboard.C_CARD);
+        plot.setOutlineVisible(false);
+        plot.setShadowPaint(null);
+        plot.setLabelFont(new Font("Segoe UI", Font.PLAIN, 11));
+        plot.setSectionPaint("M", MainDashboard.C_PRIMARY);
+        plot.setSectionPaint("F", MainDashboard.C_DANGER);
+        plot.setSectionPaint("N/A", MainDashboard.C_BORDER);
+    }
+
+    @Override
+    public void refresh(String annee, String departement) {
+        removeAll();
+        build(annee, departement);
+        revalidate();
+        repaint();
+    }
+}

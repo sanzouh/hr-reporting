@@ -178,17 +178,7 @@ public class MainDashboard extends JFrame {
         ));
 
         // Titre
-        JPanel titlePanel = new JPanel();
-        titlePanel.setBackground(C_CARD);
-        titlePanel.setLayout(new BoxLayout(titlePanel, BoxLayout.Y_AXIS));
-        JLabel title = new JLabel("HR Analytics Dashboard");
-        title.setFont(new Font("Segoe UI", Font.BOLD, 22));
-        title.setForeground(C_TEXT);
-        JLabel subtitle = new JLabel("Vue globale des ressources humaines");
-        subtitle.setFont(new Font("Segoe UI", Font.PLAIN, 13));
-        subtitle.setForeground(C_TEXT_SEC);
-        titlePanel.add(title);
-        titlePanel.add(subtitle);
+        JPanel titlePanel = getJPanel();
 
         // Filtres + Refresh
         JPanel filterPanel = new JPanel(new FlowLayout(FlowLayout.RIGHT, 10, 0));
@@ -228,6 +218,21 @@ public class MainDashboard extends JFrame {
         header.add(titlePanel, BorderLayout.WEST);
         header.add(filterPanel, BorderLayout.EAST);
         return header;
+    }
+
+    private static JPanel getJPanel() {
+        JPanel titlePanel = new JPanel();
+        titlePanel.setBackground(C_CARD);
+        titlePanel.setLayout(new BoxLayout(titlePanel, BoxLayout.Y_AXIS));
+        JLabel title = new JLabel("HR Analytics Dashboard");
+        title.setFont(new Font("Segoe UI", Font.BOLD, 22));
+        title.setForeground(C_TEXT);
+        JLabel subtitle = new JLabel("Vue globale des ressources humaines");
+        subtitle.setFont(new Font("Segoe UI", Font.PLAIN, 13));
+        subtitle.setForeground(C_TEXT_SEC);
+        titlePanel.add(title);
+        titlePanel.add(subtitle);
+        return titlePanel;
     }
 
     // ── Zone de contenu avec CardLayout ──────────────────────────────
