@@ -7,12 +7,25 @@ import com.hrreporting.etl.ETLPipeline;
 import com.hrreporting.ui.MainDashboard;
 
 import javax.swing.*;
+import java.awt.*;
+import java.util.Objects;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
         try {
+            // Chargement des fonts inter regular et bold
+            Font interRegular = Font.createFont(Font.TRUETYPE_FONT,
+                    Objects.requireNonNull(Main.class.getResourceAsStream("/fonts/Inter-Regular.ttf")));
+            Font interBold = Font.createFont(Font.TRUETYPE_FONT,
+                    Objects.requireNonNull(Main.class.getResourceAsStream("/fonts/Inter-Bold.ttf")));
+            GraphicsEnvironment ge = GraphicsEnvironment.getLocalGraphicsEnvironment();
+            ge.registerFont(interRegular);
+            ge.registerFont(interBold);
+            UIManager.put("defaultFont", interRegular.deriveFont(13f));
+
+            FlatLightLaf.setup();
             FlatLightLaf.setup(); // ou  FlatDarkLaf
             DatabaseManager.initialize();
             ETLPipeline.run();
