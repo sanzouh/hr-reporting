@@ -410,15 +410,14 @@ public class MainDashboard extends JFrame {
         card.setLayout(new BoxLayout(card, BoxLayout.Y_AXIS));
         card.setBorder(BorderFactory.createCompoundBorder(
                 BorderFactory.createLineBorder(C_BORDER, 1, true),
-                new EmptyBorder(20, 20, 20, 20)
+                new EmptyBorder(10, 16, 10, 16)
         ));
-
         JLabel lblLabel = new JLabel(label);
         lblLabel.setFont(new Font("Segoe UI", Font.PLAIN, 13));
         lblLabel.setForeground(C_TEXT_SEC);
 
         JLabel lblValue = new JLabel(value);
-        lblValue.setFont(new Font("Segoe UI", Font.BOLD, 32));
+        lblValue.setFont(new Font("Segoe UI", Font.BOLD, 24));
         lblValue.setForeground(C_TEXT);
 
         card.add(lblLabel);

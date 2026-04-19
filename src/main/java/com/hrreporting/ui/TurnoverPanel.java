@@ -35,21 +35,21 @@ public class TurnoverPanel extends JPanel implements MainDashboard.Refreshable {
     }
 
     private void build(String annee, String departement) {
-        JPanel content = new JPanel();
-        content.setLayout(new BoxLayout(content, BoxLayout.Y_AXIS));
-        content.setBackground(MainDashboard.C_BG);
-        content.setBorder(new EmptyBorder(20, 20, 20, 20));
+        setLayout(new GridBagLayout());
+        GridBagConstraints gbc = new GridBagConstraints();
+        gbc.fill = GridBagConstraints.BOTH;
+        gbc.insets = new Insets(8, 10, 8, 10);
+        gbc.weightx = 1.0;
+        gbc.gridx = 0;
 
-        content.add(buildKpiRow());
-        content.add(Box.createVerticalStrut(16));
-        content.add(buildChartsRow1());
-        content.add(Box.createVerticalStrut(16));
-        content.add(buildChartsRow2());
+        gbc.gridy = 0; gbc.weighty = 0.08;
+        add(buildKpiRow(), gbc);
 
-        JScrollPane scroll = new JScrollPane(content);
-        scroll.setBorder(null);
-        scroll.getVerticalScrollBar().setUnitIncrement(16);
-        add(scroll, BorderLayout.CENTER);
+        gbc.gridy = 1; gbc.weighty = 0.38;
+        add(buildChartsRow1(), gbc);
+
+        gbc.gridy = 2; gbc.weighty = 0.24;
+        add(buildChartsRow2(), gbc);
     }
 
     // ═══════════════════════════════════════════════════════════════════
@@ -59,7 +59,6 @@ public class TurnoverPanel extends JPanel implements MainDashboard.Refreshable {
     private JPanel buildKpiRow() {
         JPanel row = new JPanel(new GridLayout(1, 4, 12, 0));
         row.setBackground(MainDashboard.C_BG);
-        row.setMaximumSize(new Dimension(Integer.MAX_VALUE, 130));
 
         try {
             // Taux attrition global
@@ -101,12 +100,13 @@ public class TurnoverPanel extends JPanel implements MainDashboard.Refreshable {
     // ═══════════════════════════════════════════════════════════════════
 
     private JPanel buildChartsRow1() {
-        JPanel row = new JPanel(new GridLayout(1, 2, 12, 0));
+        JPanel row = new JPanel(new GridBagLayout());
         row.setBackground(MainDashboard.C_BG);
-        row.setMaximumSize(new Dimension(Integer.MAX_VALUE, 280));
+        GridBagConstraints gbc = new GridBagConstraints();
+        gbc.fill = GridBagConstraints.BOTH;
+        gbc.weighty = 1.0;
 
         try {
-            // Attrition par département
             Map<String, Double> attrition = DWRepository.getTauxAttritionParDept();
             DefaultCategoryDataset ds = new DefaultCategoryDataset();
             attrition.forEach((dept, taux) -> ds.addValue(taux, "Attrition (%)", dept));
@@ -114,9 +114,11 @@ public class TurnoverPanel extends JPanel implements MainDashboard.Refreshable {
                     null, "Département", "Taux (%)", ds,
                     PlotOrientation.VERTICAL, false, true, false);
             styleAttritionChart(chart);
-            row.add(MainDashboard.buildCard("Taux d'attrition par département", new ChartPanel(chart)));
 
-            // Motifs de départ
+            gbc.gridx = 0; gbc.weightx = 0.60; gbc.insets = new Insets(0, 0, 0, 6);
+            row.add(MainDashboard.buildCard("Taux d'attrition par département",
+                    new ChartPanel(chart)), gbc);
+
             Map<String, Integer> motifs = DWRepository.getMotifsDepart();
             DefaultPieDataset<String> dsPie = new DefaultPieDataset<>();
             motifs.entrySet().stream()
@@ -125,12 +127,14 @@ public class TurnoverPanel extends JPanel implements MainDashboard.Refreshable {
                     .forEach(e -> dsPie.setValue(e.getKey(), e.getValue()));
             JFreeChart chartPie = ChartFactory.createPieChart(null, dsPie, true, true, false);
             stylePie(chartPie);
-            row.add(MainDashboard.buildCard("Motifs de départ", new ChartPanel(chartPie)));
+
+            gbc.gridx = 1; gbc.weightx = 0.40; gbc.insets = new Insets(0, 6, 0, 0);
+            row.add(MainDashboard.buildCard("Motifs de départ",
+                    new ChartPanel(chartPie)), gbc);
 
         } catch (Exception e) {
             System.err.println("[Turnover] Erreur graphiques ligne 1 : " + e.getMessage());
         }
-
         return row;
     }
 
@@ -139,55 +143,57 @@ public class TurnoverPanel extends JPanel implements MainDashboard.Refreshable {
     // ═══════════════════════════════════════════════════════════════════
 
     private JPanel buildChartsRow2() {
-        JPanel row = new JPanel(new GridLayout(1, 2, 12, 0));
+        JPanel row = new JPanel(new GridBagLayout());
         row.setBackground(MainDashboard.C_BG);
-        row.setMaximumSize(new Dimension(Integer.MAX_VALUE, 280));
+        GridBagConstraints gbc = new GridBagConstraints();
+        gbc.fill = GridBagConstraints.BOTH;
+        gbc.weighty = 1.0;
 
         try {
-            // Durée moyenne avant départ par département
+            // Durée avant départ
             DefaultCategoryDataset dsDepart = new DefaultCategoryDataset();
             ResultSet rs = query("""
-                SELECT d.nom_dept, ROUND(AVG(f.duree_avant_depart) / 365.0, 1)
-                FROM fait_rh f
-                JOIN dim_departement d ON f.dept_id = d.dept_id
-                WHERE f.duree_avant_depart > 0
-                GROUP BY d.nom_dept ORDER BY AVG(f.duree_avant_depart) ASC
-            """);
-            while (rs.next()) dsDepart.addValue(rs.getDouble(2), "Années", rs.getString(1));
-
+            SELECT d.nom_dept, ROUND(AVG(f.duree_avant_depart) / 365.0, 1)
+            FROM fait_rh f JOIN dim_departement d ON f.dept_id = d.dept_id
+            WHERE f.duree_avant_depart > 0
+            GROUP BY d.nom_dept ORDER BY AVG(f.duree_avant_depart) ASC
+        """);
+            while (rs.next())
+                dsDepart.addValue(rs.getDouble(2), "Années", rs.getString(1));
             JFreeChart chartDepart = ChartFactory.createBarChart(
                     null, "Département", "Années", dsDepart,
                     PlotOrientation.HORIZONTAL, false, true, false);
             styleBar(chartDepart, MainDashboard.C_WARNING);
-            row.add(MainDashboard.buildCard("Durée moyenne avant départ", new ChartPanel(chartDepart)));
+            gbc.gridx = 0; gbc.weightx = 0.50; gbc.insets = new Insets(0, 0, 0, 6);
+            row.add(MainDashboard.buildCard("Durée moyenne avant départ",
+                    new ChartPanel(chartDepart)), gbc);
 
-            // Heures sup vs Attrition (barres groupées)
+            // Heures sup vs attrition
             DefaultCategoryDataset dsHs = new DefaultCategoryDataset();
             ResultSet rsHs = query("""
-                SELECT d.nom_dept,
-                       ROUND(SUM(CASE WHEN f.heures_sup = 1 AND f.attrition = 1 THEN 1 ELSE 0 END) * 100.0
-                             / NULLIF(SUM(CASE WHEN f.heures_sup = 1 THEN 1 ELSE 0 END), 0), 1) AS attr_hs,
-                       ROUND(SUM(CASE WHEN f.heures_sup = 0 AND f.attrition = 1 THEN 1 ELSE 0 END) * 100.0
-                             / NULLIF(SUM(CASE WHEN f.heures_sup = 0 THEN 1 ELSE 0 END), 0), 1) AS attr_no_hs
-                FROM fait_rh f
-                JOIN dim_departement d ON f.dept_id = d.dept_id
-                GROUP BY d.nom_dept
-            """);
+            SELECT d.nom_dept,
+                   ROUND(SUM(CASE WHEN f.heures_sup = 1 AND f.attrition = 1 THEN 1 ELSE 0 END) * 100.0
+                         / NULLIF(SUM(CASE WHEN f.heures_sup = 1 THEN 1 ELSE 0 END), 0), 1) AS attr_hs,
+                   ROUND(SUM(CASE WHEN f.heures_sup = 0 AND f.attrition = 1 THEN 1 ELSE 0 END) * 100.0
+                         / NULLIF(SUM(CASE WHEN f.heures_sup = 0 THEN 1 ELSE 0 END), 0), 1) AS attr_no_hs
+            FROM fait_rh f JOIN dim_departement d ON f.dept_id = d.dept_id
+            GROUP BY d.nom_dept
+        """);
             while (rsHs.next()) {
-                dsHs.addValue(rsHs.getDouble("attr_hs"),    "Avec heures sup",  rsHs.getString(1));
-                dsHs.addValue(rsHs.getDouble("attr_no_hs"), "Sans heures sup",  rsHs.getString(1));
+                dsHs.addValue(rsHs.getDouble("attr_hs"),    "Avec heures sup", rsHs.getString(1));
+                dsHs.addValue(rsHs.getDouble("attr_no_hs"), "Sans heures sup", rsHs.getString(1));
             }
-
             JFreeChart chartHs = ChartFactory.createBarChart(
                     null, "Département", "Attrition (%)", dsHs,
                     PlotOrientation.VERTICAL, true, true, false);
             styleGroupedBar(chartHs);
-            row.add(MainDashboard.buildCard("Heures supplémentaires vs attrition", new ChartPanel(chartHs)));
+            gbc.gridx = 1; gbc.weightx = 0.50; gbc.insets = new Insets(0, 6, 0, 0);
+            row.add(MainDashboard.buildCard("Heures supplémentaires vs attrition",
+                    new ChartPanel(chartHs)), gbc);
 
         } catch (Exception e) {
             System.err.println("[Turnover] Erreur graphiques ligne 2 : " + e.getMessage());
         }
-
         return row;
     }
 
