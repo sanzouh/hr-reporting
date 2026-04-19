@@ -78,7 +78,7 @@ public class MainDashboard extends JFrame {
     private JPanel buildSidebar() {
         JPanel sidebar = new JPanel();
         sidebar.setBackground(C_PRIMARY);
-        sidebar.setPreferredSize(new Dimension(200, 0));
+        sidebar.setPreferredSize(new Dimension(220, 0));
         sidebar.setLayout(new BoxLayout(sidebar, BoxLayout.Y_AXIS));
         sidebar.setBorder(new EmptyBorder(0, 0, 0, 0));
 
@@ -102,6 +102,8 @@ public class MainDashboard extends JFrame {
         logoText.add(logoLabel);
         logoText.add(subLabel);
         logoPanel.add(logoText, BorderLayout.CENTER);
+        logoText.setAlignmentX(Component.LEFT_ALIGNMENT);
+        logoPanel.setAlignmentX(Component.LEFT_ALIGNMENT);
 
         sidebar.add(logoPanel);
         sidebar.add(Box.createVerticalStrut(16));
@@ -130,9 +132,9 @@ public class MainDashboard extends JFrame {
 
     private JButton buildNavButton(String label, String section) {
         JButton btn = new JButton(label);
-        btn.setMaximumSize(new Dimension(200, 44));
-        btn.setPreferredSize(new Dimension(200, 44));
+        btn.setMaximumSize(new Dimension(Integer.MAX_VALUE, 44));
         btn.setHorizontalAlignment(SwingConstants.LEFT);
+        btn.setAlignmentX(Component.LEFT_ALIGNMENT);
         btn.setBorder(new EmptyBorder(10, 20, 10, 10));
         btn.setForeground(new Color(0xB5D4F4));
         btn.setBackground(C_PRIMARY);
