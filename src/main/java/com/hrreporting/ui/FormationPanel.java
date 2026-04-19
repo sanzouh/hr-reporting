@@ -36,21 +36,21 @@ public class FormationPanel extends JPanel implements MainDashboard.Refreshable 
     }
 
     private void build(String annee, String departement) {
-        JPanel content = new JPanel();
-        content.setLayout(new BoxLayout(content, BoxLayout.Y_AXIS));
-        content.setBackground(MainDashboard.C_BG);
-        content.setBorder(new EmptyBorder(20, 20, 20, 20));
+        setLayout(new GridBagLayout());
+        GridBagConstraints gbc = new GridBagConstraints();
+        gbc.fill = GridBagConstraints.BOTH;
+        gbc.insets = new Insets(8, 10, 8, 10);
+        gbc.weightx = 1.0;
+        gbc.gridx = 0;
 
-        content.add(buildKpiRow(departement));
-        content.add(Box.createVerticalStrut(16));
-        content.add(buildChartsRow1(departement));
-        content.add(Box.createVerticalStrut(16));
-        content.add(buildChartsRow2(departement));
+        gbc.gridy = 0; gbc.weighty = 0.08;
+        add(buildKpiRow(departement), gbc);
 
-        JScrollPane scroll = new JScrollPane(content);
-        scroll.setBorder(null);
-        scroll.getVerticalScrollBar().setUnitIncrement(16);
-        add(scroll, BorderLayout.CENTER);
+        gbc.gridy = 1; gbc.weighty = 0.46;
+        add(buildChartsRow1(departement), gbc);
+
+        gbc.gridy = 2; gbc.weighty = 0.46;
+        add(buildChartsRow2(departement), gbc);
     }
 
     // ═══════════════════════════════════════════════════════════════════
@@ -60,7 +60,6 @@ public class FormationPanel extends JPanel implements MainDashboard.Refreshable 
     private JPanel buildKpiRow(String departement) {
         JPanel row = new JPanel(new GridLayout(1, 4, 12, 0));
         row.setBackground(MainDashboard.C_BG);
-        row.setMaximumSize(new Dimension(Integer.MAX_VALUE, 130));
 
         try {
             String joinDept = departement.equals("Tous") ? "" :
@@ -119,12 +118,13 @@ public class FormationPanel extends JPanel implements MainDashboard.Refreshable 
     // ═══════════════════════════════════════════════════════════════════
 
     private JPanel buildChartsRow1(String departement) {
-        JPanel row = new JPanel(new GridLayout(1, 2, 12, 0));
+        JPanel row = new JPanel(new GridBagLayout());
         row.setBackground(MainDashboard.C_BG);
-        row.setMaximumSize(new Dimension(Integer.MAX_VALUE, 280));
+        GridBagConstraints gbc = new GridBagConstraints();
+        gbc.fill = GridBagConstraints.BOTH;
+        gbc.weighty = 1.0;
 
         try {
-            // Coût total par département
             Map<String, Double> couts = DWRepository.getCoutFormationParDept();
             DefaultCategoryDataset dsCout = new DefaultCategoryDataset();
             couts.forEach((dept, c) -> dsCout.addValue(c, "Coût ($)", dept));
@@ -132,33 +132,33 @@ public class FormationPanel extends JPanel implements MainDashboard.Refreshable 
                     null, "Département", "Coût ($)", dsCout,
                     PlotOrientation.VERTICAL, false, true, false);
             styleBar(chartCout, MainDashboard.C_WARNING);
-            row.add(MainDashboard.buildCard("Coût total formation / département",
-                    new ChartPanel(chartCout)));
 
-            // Top 8 formations par fréquence
+            gbc.gridx = 0; gbc.weightx = 0.55; gbc.insets = new Insets(0, 0, 0, 6);
+            row.add(MainDashboard.buildCard("Coût total formation / département",
+                    new ChartPanel(chartCout)), gbc);
+
             DefaultCategoryDataset dsTop = new DefaultCategoryDataset();
             ResultSet rsTop = query("""
-                SELECT df.intitule, COUNT(*) AS nb
-                FROM fait_rh f
-                JOIN dim_formation df ON f.formation_id = df.formation_id
-                WHERE f.formation_id IS NOT NULL
-                GROUP BY df.intitule
-                ORDER BY nb DESC
-                LIMIT 8
-            """);
+            SELECT df.intitule, COUNT(*) AS nb
+            FROM fait_rh f
+            JOIN dim_formation df ON f.formation_id = df.formation_id
+            WHERE f.formation_id IS NOT NULL
+            GROUP BY df.intitule ORDER BY nb DESC LIMIT 8
+        """);
             while (rsTop.next())
                 dsTop.addValue(rsTop.getInt("nb"), "Nb employés", rsTop.getString("intitule"));
-
             JFreeChart chartTop = ChartFactory.createBarChart(
                     null, null, "Employés", dsTop,
                     PlotOrientation.HORIZONTAL, false, true, false);
             styleBar(chartTop, MainDashboard.C_PRIMARY);
-            row.add(MainDashboard.buildCard("Top formations (fréquence)", new ChartPanel(chartTop)));
+
+            gbc.gridx = 1; gbc.weightx = 0.45; gbc.insets = new Insets(0, 6, 0, 0);
+            row.add(MainDashboard.buildCard("Top formations (fréquence)",
+                    new ChartPanel(chartTop)), gbc);
 
         } catch (Exception e) {
             System.err.println("[Formation] Erreur graphiques ligne 1 : " + e.getMessage());
         }
-
         return row;
     }
 
@@ -167,34 +167,34 @@ public class FormationPanel extends JPanel implements MainDashboard.Refreshable 
     // ═══════════════════════════════════════════════════════════════════
 
     private JPanel buildChartsRow2(String departement) {
-        JPanel row = new JPanel(new GridLayout(1, 2, 12, 0));
+        JPanel row = new JPanel(new GridBagLayout());
         row.setBackground(MainDashboard.C_BG);
-        row.setMaximumSize(new Dimension(Integer.MAX_VALUE, 280));
+        GridBagConstraints gbc = new GridBagConstraints();
+        gbc.fill = GridBagConstraints.BOTH;
+        gbc.weighty = 1.0;
 
         try {
-            // Nb moyen de formations par employé, par département
             DefaultCategoryDataset dsNb = new DefaultCategoryDataset();
             ResultSet rsNb = query("""
-                SELECT d.nom_dept, ROUND(AVG(f.nb_formations), 2) AS moy
-                FROM fait_rh f
-                JOIN dim_departement d ON f.dept_id = d.dept_id
-                WHERE f.nb_formations IS NOT NULL AND f.nb_formations >= 0
-                GROUP BY d.nom_dept
-                ORDER BY moy DESC
-            """);
+            SELECT d.nom_dept, ROUND(AVG(f.nb_formations), 2) AS moy
+            FROM fait_rh f
+            JOIN dim_departement d ON f.dept_id = d.dept_id
+            WHERE f.nb_formations IS NOT NULL AND f.nb_formations >= 0
+            GROUP BY d.nom_dept ORDER BY moy DESC
+        """);
             while (rsNb.next())
                 dsNb.addValue(rsNb.getDouble("moy"), "Formations/employé", rsNb.getString("nom_dept"));
-
             JFreeChart chartNb = ChartFactory.createLineChart(
                     null, "Département", "Moy. formations", dsNb,
                     PlotOrientation.VERTICAL, false, true, false);
             styleLine(chartNb, MainDashboard.C_SUCCESS);
-            row.add(MainDashboard.buildCard("Nb moyen formations / département",
-                    new ChartPanel(chartNb)));
 
-            // Répartition par durée (tranches de jours)
+            gbc.gridx = 0; gbc.weightx = 0.55; gbc.insets = new Insets(0, 0, 0, 6);
+            row.add(MainDashboard.buildCard("Nb moyen formations / département",
+                    new ChartPanel(chartNb)), gbc);
+
             DefaultPieDataset<String> dsDuree = new DefaultPieDataset<>();
-            String[] labels    = {"1 jour", "2-3 jours", "4-5 jours", "6+ jours"};
+            String[] labels     = {"1 jour", "2-3 jours", "4-5 jours", "6+ jours"};
             String[] conditions = {
                     "df.duree_jours = 1",
                     "df.duree_jours BETWEEN 2 AND 3",
@@ -202,10 +202,8 @@ public class FormationPanel extends JPanel implements MainDashboard.Refreshable 
                     "df.duree_jours >= 6"
             };
             Color[] pieColors = {
-                    MainDashboard.C_PRIMARY,
-                    MainDashboard.C_SUCCESS,
-                    MainDashboard.C_WARNING,
-                    MainDashboard.C_DANGER
+                    MainDashboard.C_PRIMARY, MainDashboard.C_SUCCESS,
+                    MainDashboard.C_WARNING, MainDashboard.C_DANGER
             };
             for (int i = 0; i < labels.length; i++) {
                 ResultSet rsD = query(
@@ -217,13 +215,14 @@ public class FormationPanel extends JPanel implements MainDashboard.Refreshable 
             JFreeChart chartDuree = ChartFactory.createPieChart(
                     null, dsDuree, true, true, false);
             stylePie(chartDuree, labels, pieColors);
+
+            gbc.gridx = 1; gbc.weightx = 0.45; gbc.insets = new Insets(0, 6, 0, 0);
             row.add(MainDashboard.buildCard("Répartition par durée de formation",
-                    new ChartPanel(chartDuree)));
+                    new ChartPanel(chartDuree)), gbc);
 
         } catch (Exception e) {
             System.err.println("[Formation] Erreur graphiques ligne 2 : " + e.getMessage());
         }
-
         return row;
     }
 
