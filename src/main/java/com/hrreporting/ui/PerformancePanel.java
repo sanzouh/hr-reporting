@@ -34,21 +34,21 @@ public class PerformancePanel extends JPanel implements MainDashboard.Refreshabl
     }
 
     private void build(String annee, String departement) {
-        JPanel content = new JPanel();
-        content.setLayout(new BoxLayout(content, BoxLayout.Y_AXIS));
-        content.setBackground(MainDashboard.C_BG);
-        content.setBorder(new EmptyBorder(20, 20, 20, 20));
+        setLayout(new GridBagLayout());
+        GridBagConstraints gbc = new GridBagConstraints();
+        gbc.fill = GridBagConstraints.BOTH;
+        gbc.insets = new Insets(8, 10, 8, 10);
+        gbc.weightx = 1.0;
+        gbc.gridx = 0;
 
-        content.add(buildKpiRow());
-        content.add(Box.createVerticalStrut(16));
-        content.add(buildChartsRow1());
-        content.add(Box.createVerticalStrut(16));
-        content.add(buildChartsRow2(annee));
+        gbc.gridy = 0; gbc.weighty = 0.08;
+        add(buildKpiRow(), gbc);
 
-        JScrollPane scroll = new JScrollPane(content);
-        scroll.setBorder(null);
-        scroll.getVerticalScrollBar().setUnitIncrement(16);
-        add(scroll, BorderLayout.CENTER);
+        gbc.gridy = 1; gbc.weighty = 0.46;
+        add(buildChartsRow1(), gbc);
+
+        gbc.gridy = 2; gbc.weighty = 0.46;
+        add(buildChartsRow2(annee), gbc);
     }
 
     // ═══════════════════════════════════════════════════════════════════
@@ -58,7 +58,6 @@ public class PerformancePanel extends JPanel implements MainDashboard.Refreshabl
     private JPanel buildKpiRow() {
         JPanel row = new JPanel(new GridLayout(1, 4, 12, 0));
         row.setBackground(MainDashboard.C_BG);
-        row.setMaximumSize(new Dimension(Integer.MAX_VALUE, 130));
 
         try {
             // Score performance moyen (1-4)
@@ -103,12 +102,13 @@ public class PerformancePanel extends JPanel implements MainDashboard.Refreshabl
     // ═══════════════════════════════════════════════════════════════════
 
     private JPanel buildChartsRow1() {
-        JPanel row = new JPanel(new GridLayout(1, 2, 12, 0));
+        JPanel row = new JPanel(new GridBagLayout());
         row.setBackground(MainDashboard.C_BG);
-        row.setMaximumSize(new Dimension(Integer.MAX_VALUE, 280));
+        GridBagConstraints gbc = new GridBagConstraints();
+        gbc.fill = GridBagConstraints.BOTH;
+        gbc.weighty = 1.0;
 
         try {
-            // Score performance par département
             Map<String, Double> perf = DWRepository.getScorePerfMoyenParDept();
             DefaultCategoryDataset dsPerf = new DefaultCategoryDataset();
             perf.forEach((dept, score) -> dsPerf.addValue(score, "Score", dept));
@@ -116,10 +116,11 @@ public class PerformancePanel extends JPanel implements MainDashboard.Refreshabl
                     null, "Département", "Score (1-4)", dsPerf,
                     PlotOrientation.VERTICAL, false, true, false);
             styleBar(chartPerf, MainDashboard.C_PRIMARY);
-            row.add(MainDashboard.buildCard("Score performance moyen / département",
-                    new ChartPanel(chartPerf)));
 
-            // Satisfaction par département (courbe)
+            gbc.gridx = 0; gbc.weightx = 0.60; gbc.insets = new Insets(0, 0, 0, 6);
+            row.add(MainDashboard.buildCard("Score performance moyen / département",
+                    new ChartPanel(chartPerf)), gbc);
+
             Map<String, Double> satisf = DWRepository.getSatisfactionParDept();
             DefaultCategoryDataset dsSatisf = new DefaultCategoryDataset();
             satisf.forEach((dept, s) -> dsSatisf.addValue(s, "Satisfaction", dept));
@@ -127,13 +128,14 @@ public class PerformancePanel extends JPanel implements MainDashboard.Refreshabl
                     null, "Département", "Score (1-4)", dsSatisf,
                     PlotOrientation.VERTICAL, false, true, false);
             styleLine(chartSatisf);
+
+            gbc.gridx = 1; gbc.weightx = 0.40; gbc.insets = new Insets(0, 6, 0, 0);
             row.add(MainDashboard.buildCard("Satisfaction employés / département",
-                    new ChartPanel(chartSatisf)));
+                    new ChartPanel(chartSatisf)), gbc);
 
         } catch (Exception e) {
             System.err.println("[Performance] Erreur graphiques ligne 1 : " + e.getMessage());
         }
-
         return row;
     }
 
@@ -142,22 +144,23 @@ public class PerformancePanel extends JPanel implements MainDashboard.Refreshabl
     // ═══════════════════════════════════════════════════════════════════
 
     private JPanel buildChartsRow2(String annee) {
-        JPanel row = new JPanel(new GridLayout(1, 2, 12, 0));
+        JPanel row = new JPanel(new GridBagLayout());
         row.setBackground(MainDashboard.C_BG);
-        row.setMaximumSize(new Dimension(Integer.MAX_VALUE, 280));
+        GridBagConstraints gbc = new GridBagConstraints();
+        gbc.fill = GridBagConstraints.BOTH;
+        gbc.weighty = 1.0;
 
         try {
-            // Corrélation satisfaction ↔ turnover
             DefaultCategoryDataset dsCorrel = new DefaultCategoryDataset();
             ResultSet rs = query("""
-                SELECT d.nom_dept,
-                       ROUND(AVG(f.satisfaction_employe), 2) AS satisf,
-                       ROUND(SUM(f.attrition) * 100.0 / COUNT(*), 1) AS taux_attr
-                FROM fait_rh f
-                JOIN dim_departement d ON f.dept_id = d.dept_id
-                WHERE f.satisfaction_employe > 0
-                GROUP BY d.nom_dept
-            """);
+            SELECT d.nom_dept,
+                   ROUND(AVG(f.satisfaction_employe), 2) AS satisf,
+                   ROUND(SUM(f.attrition) * 100.0 / COUNT(*), 1) AS taux_attr
+            FROM fait_rh f
+            JOIN dim_departement d ON f.dept_id = d.dept_id
+            WHERE f.satisfaction_employe > 0
+            GROUP BY d.nom_dept
+        """);
             while (rs.next()) {
                 dsCorrel.addValue(rs.getDouble("satisf"),    "Satisfaction (1-4)", rs.getString(1));
                 dsCorrel.addValue(rs.getDouble("taux_attr"), "Attrition (%)",      rs.getString(1));
@@ -166,35 +169,38 @@ public class PerformancePanel extends JPanel implements MainDashboard.Refreshabl
                     null, "Département", "Valeur", dsCorrel,
                     PlotOrientation.VERTICAL, true, true, false);
             styleGroupedBar(chartCorrel);
-            row.add(MainDashboard.buildCard("Corrélation satisfaction ↔ turnover",
-                    new ChartPanel(chartCorrel)));
 
-            // Score évaluation par semestre
+            gbc.gridx = 0; gbc.weightx = 0.50; gbc.insets = new Insets(0, 0, 0, 6);
+            row.add(MainDashboard.buildCard("Corrélation satisfaction ↔ turnover",
+                    new ChartPanel(chartCorrel)), gbc);
+
             DefaultCategoryDataset dsEval = new DefaultCategoryDataset();
             String anneeFilter = annee.equals("Toutes") ? "" : " AND t.annee = " + annee;
             ResultSet rsEval = query("""
-                SELECT t.annee || '-S' || t.semestre AS periode,
-                       ROUND(AVG(f.score_evaluation), 2)
-                FROM fait_rh f
-                JOIN dim_temps t ON f.temps_id = t.temps_id
-                WHERE f.score_evaluation > 0
-            """ + anneeFilter + """
-                GROUP BY t.annee, t.semestre
-                ORDER BY t.annee, t.semestre
-            """);
-            while (rsEval.next()) dsEval.addValue(rsEval.getDouble(2), "Score éval.", rsEval.getString(1));
+            SELECT t.annee || '-S' || t.semestre AS periode,
+                   ROUND(AVG(f.score_evaluation), 2)
+            FROM fait_rh f
+            JOIN dim_temps t ON f.temps_id = t.temps_id
+            WHERE f.score_evaluation > 0
+        """ + anneeFilter + """
+            GROUP BY t.annee, t.semestre
+            ORDER BY t.annee, t.semestre
+        """);
+            while (rsEval.next())
+                dsEval.addValue(rsEval.getDouble(2), "Score éval.", rsEval.getString(1));
 
             JFreeChart chartEval = ChartFactory.createLineChart(
                     null, "Période", "Score (1-5)", dsEval,
                     PlotOrientation.VERTICAL, false, true, false);
             styleLine(chartEval);
+
+            gbc.gridx = 1; gbc.weightx = 0.50; gbc.insets = new Insets(0, 6, 0, 0);
             row.add(MainDashboard.buildCard("Évolution score évaluation semestrielle",
-                    new ChartPanel(chartEval)));
+                    new ChartPanel(chartEval)), gbc);
 
         } catch (Exception e) {
             System.err.println("[Performance] Erreur graphiques ligne 2 : " + e.getMessage());
         }
-
         return row;
     }
 
