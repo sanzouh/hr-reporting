@@ -36,21 +36,21 @@ public class PromotionsPanel extends JPanel implements MainDashboard.Refreshable
     }
 
     private void build(String annee, String departement) {
-        JPanel content = new JPanel();
-        content.setLayout(new BoxLayout(content, BoxLayout.Y_AXIS));
-        content.setBackground(MainDashboard.C_BG);
-        content.setBorder(new EmptyBorder(20, 20, 20, 20));
+        setLayout(new GridBagLayout());
+        GridBagConstraints gbc = new GridBagConstraints();
+        gbc.fill = GridBagConstraints.BOTH;
+        gbc.insets = new Insets(8, 10, 8, 10);
+        gbc.weightx = 1.0;
+        gbc.gridx = 0;
 
-        content.add(buildKpiRow(departement));
-        content.add(Box.createVerticalStrut(16));
-        content.add(buildChartsRow1(departement));
-        content.add(Box.createVerticalStrut(16));
-        content.add(buildChartsRow2(departement));
+        gbc.gridy = 0; gbc.weighty = 0.08;
+        add(buildKpiRow(departement), gbc);
 
-        JScrollPane scroll = new JScrollPane(content);
-        scroll.setBorder(null);
-        scroll.getVerticalScrollBar().setUnitIncrement(16);
-        add(scroll, BorderLayout.CENTER);
+        gbc.gridy = 1; gbc.weighty = 0.46;
+        add(buildChartsRow1(departement), gbc);
+
+        gbc.gridy = 2; gbc.weighty = 0.46;
+        add(buildChartsRow2(departement), gbc);
     }
 
     // ═══════════════════════════════════════════════════════════════════
@@ -118,12 +118,13 @@ public class PromotionsPanel extends JPanel implements MainDashboard.Refreshable
     // ═══════════════════════════════════════════════════════════════════
 
     private JPanel buildChartsRow1(String departement) {
-        JPanel row = new JPanel(new GridLayout(1, 2, 12, 0));
+        JPanel row = new JPanel(new GridBagLayout());
         row.setBackground(MainDashboard.C_BG);
-        row.setMaximumSize(new Dimension(Integer.MAX_VALUE, 280));
+        GridBagConstraints gbc = new GridBagConstraints();
+        gbc.fill = GridBagConstraints.BOTH;
+        gbc.weighty = 1.0;
 
         try {
-            // Candidats à la promotion par département
             Map<String, Integer> candidats = DWRepository.getCandidatsPromotion();
             DefaultCategoryDataset dsCand = new DefaultCategoryDataset();
             candidats.forEach((dept, nb) -> dsCand.addValue(nb, "Candidats", dept));
@@ -131,21 +132,21 @@ public class PromotionsPanel extends JPanel implements MainDashboard.Refreshable
                     null, "Département", "Candidats", dsCand,
                     PlotOrientation.VERTICAL, false, true, false);
             styleBar(chartCand, MainDashboard.C_PRIMARY);
-            row.add(MainDashboard.buildCard("Candidats à la promotion / département",
-                    new ChartPanel(chartCand)));
 
-            // Score perf moyen : promouvables vs non-promouvables, par département
+            gbc.gridx = 0; gbc.weightx = 0.55; gbc.insets = new Insets(0, 0, 0, 6);
+            row.add(MainDashboard.buildCard("Candidats à la promotion / département",
+                    new ChartPanel(chartCand)), gbc);
+
             DefaultCategoryDataset dsPerf = new DefaultCategoryDataset();
             ResultSet rsPerf = query("""
-                SELECT d.nom_dept,
-                       ROUND(AVG(CASE WHEN f.promotion_recommandee = 1 THEN f.score_performance END), 2) AS score_promo,
-                       ROUND(AVG(CASE WHEN f.promotion_recommandee = 0 THEN f.score_performance END), 2) AS score_autres
-                FROM fait_rh f
-                JOIN dim_departement d ON f.dept_id = d.dept_id
-                WHERE f.score_performance IS NOT NULL AND f.score_performance > 0
-                GROUP BY d.nom_dept
-                ORDER BY d.nom_dept
-            """);
+            SELECT d.nom_dept,
+                   ROUND(AVG(CASE WHEN f.promotion_recommandee = 1 THEN f.score_performance END), 2) AS score_promo,
+                   ROUND(AVG(CASE WHEN f.promotion_recommandee = 0 THEN f.score_performance END), 2) AS score_autres
+            FROM fait_rh f
+            JOIN dim_departement d ON f.dept_id = d.dept_id
+            WHERE f.score_performance IS NOT NULL AND f.score_performance > 0
+            GROUP BY d.nom_dept ORDER BY d.nom_dept
+        """);
             while (rsPerf.next()) {
                 String dept = rsPerf.getString("nom_dept");
                 dsPerf.addValue(rsPerf.getDouble("score_promo"),  "Promouvables", dept);
@@ -155,13 +156,14 @@ public class PromotionsPanel extends JPanel implements MainDashboard.Refreshable
                     null, "Département", "Score", dsPerf,
                     PlotOrientation.VERTICAL, true, true, false);
             stylePerfGrouped(chartPerf);
+
+            gbc.gridx = 1; gbc.weightx = 0.45; gbc.insets = new Insets(0, 6, 0, 0);
             row.add(MainDashboard.buildCard("Score performance : promouvables vs autres",
-                    new ChartPanel(chartPerf)));
+                    new ChartPanel(chartPerf)), gbc);
 
         } catch (Exception e) {
             System.err.println("[Promotions] Erreur graphiques ligne 1 : " + e.getMessage());
         }
-
         return row;
     }
 
@@ -170,54 +172,53 @@ public class PromotionsPanel extends JPanel implements MainDashboard.Refreshable
     // ═══════════════════════════════════════════════════════════════════
 
     private JPanel buildChartsRow2(String departement) {
-        JPanel row = new JPanel(new GridLayout(1, 2, 12, 0));
+        JPanel row = new JPanel(new GridBagLayout());
         row.setBackground(MainDashboard.C_BG);
-        row.setMaximumSize(new Dimension(Integer.MAX_VALUE, 280));
+        GridBagConstraints gbc = new GridBagConstraints();
+        gbc.fill = GridBagConstraints.BOTH;
+        gbc.weighty = 1.0;
 
         try {
-            // % objectifs atteints par département (tous employés)
             DefaultCategoryDataset dsObj = new DefaultCategoryDataset();
             ResultSet rsObj = query("""
-                SELECT d.nom_dept, ROUND(AVG(f.objectifs_atteints_pct), 1) AS moy_obj
-                FROM fait_rh f
-                JOIN dim_departement d ON f.dept_id = d.dept_id
-                WHERE f.objectifs_atteints_pct IS NOT NULL AND f.objectifs_atteints_pct >= 0
-                GROUP BY d.nom_dept
-                ORDER BY moy_obj DESC
-            """);
+            SELECT d.nom_dept, ROUND(AVG(f.objectifs_atteints_pct), 1) AS moy_obj
+            FROM fait_rh f
+            JOIN dim_departement d ON f.dept_id = d.dept_id
+            WHERE f.objectifs_atteints_pct IS NOT NULL AND f.objectifs_atteints_pct >= 0
+            GROUP BY d.nom_dept ORDER BY moy_obj DESC
+        """);
             while (rsObj.next())
                 dsObj.addValue(rsObj.getDouble("moy_obj"), "% objectifs", rsObj.getString("nom_dept"));
-
             JFreeChart chartObj = ChartFactory.createLineChart(
                     null, "Département", "% objectifs atteints", dsObj,
                     PlotOrientation.VERTICAL, false, true, false);
             styleLine(chartObj, MainDashboard.C_SUCCESS);
-            row.add(MainDashboard.buildCard("% objectifs atteints / département",
-                    new ChartPanel(chartObj)));
 
-            // Répartition genre des candidats à la promotion
+            gbc.gridx = 0; gbc.weightx = 0.60; gbc.insets = new Insets(0, 0, 0, 6);
+            row.add(MainDashboard.buildCard("% objectifs atteints / département",
+                    new ChartPanel(chartObj)), gbc);
+
             DefaultPieDataset<String> dsGenre = new DefaultPieDataset<>();
             ResultSet rsGenre = query("""
-                SELECT e.genre, COUNT(*) AS nb
-                FROM fait_rh f
-                JOIN dim_employe e ON f.employe_id = e.employe_id
-                WHERE f.promotion_recommandee = 1
-                  AND e.genre IS NOT NULL
-                GROUP BY e.genre
-            """);
+            SELECT e.genre, COUNT(*) AS nb
+            FROM fait_rh f
+            JOIN dim_employe e ON f.employe_id = e.employe_id
+            WHERE f.promotion_recommandee = 1 AND e.genre IS NOT NULL
+            GROUP BY e.genre
+        """);
             while (rsGenre.next())
                 dsGenre.setValue(rsGenre.getString("genre"), rsGenre.getInt("nb"));
-
             JFreeChart chartGenre = ChartFactory.createPieChart(
                     null, dsGenre, true, true, false);
             stylePie(chartGenre);
+
+            gbc.gridx = 1; gbc.weightx = 0.40; gbc.insets = new Insets(0, 6, 0, 0);
             row.add(MainDashboard.buildCard("Genre des candidats à la promotion",
-                    new ChartPanel(chartGenre)));
+                    new ChartPanel(chartGenre)), gbc);
 
         } catch (Exception e) {
             System.err.println("[Promotions] Erreur graphiques ligne 2 : " + e.getMessage());
         }
-
         return row;
     }
 

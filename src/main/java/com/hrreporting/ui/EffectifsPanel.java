@@ -59,7 +59,6 @@ public class EffectifsPanel extends JPanel implements MainDashboard.Refreshable 
     private JPanel buildKpiRow(String departement) {
         JPanel row = new JPanel(new GridLayout(1, 4, 12, 0));
         row.setBackground(MainDashboard.C_BG);
-        row.setMaximumSize(new Dimension(Integer.MAX_VALUE, 130));
 
         try {
             String deptFilter = buildDeptFilter(departement);
