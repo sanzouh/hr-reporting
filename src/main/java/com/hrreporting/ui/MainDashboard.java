@@ -50,8 +50,8 @@ public class MainDashboard extends JFrame {
             "Dashboard", "Effectifs", "Turnover", "Performance", "Formation", "Promotions"
     };
     private static final String[] ICON_PATHS = {
-            "/icons/home-circle.svg", "/icons/account-group.svg", "/icons/account-arrow-left.svg",
-            "/icons/chart-line.svg", "/icons/school.svg", "/icons/trophy.svg"
+            "icons/home-circle.svg", "icons/account-group.svg", "icons/account-arrow-left.svg",
+            "icons/chart-line.svg", "icons/school.svg", "icons/trophy.svg"
     };
 
     // Panneaux de contenu par section
@@ -114,13 +114,17 @@ public class MainDashboard extends JFrame {
 
         // Boutons de navigation
         for (int i = 0; i < SECTIONS.length; i++) {
-            FlatSVGIcon icon = new FlatSVGIcon(ICON_PATHS[i], 18, 18);
-            icon.setColorFilter(new FlatSVGIcon.ColorFilter(c -> new Color(0xB5D4F4)));
+            FlatSVGIcon icon = null;
+            try {
+                icon = new FlatSVGIcon(ICON_PATHS[i], 18, 18);
+                icon.setColorFilter(new FlatSVGIcon.ColorFilter(c -> new Color(0xB5D4F4)));
+            } catch (Exception e) {
+                System.err.println("Erreur chargement icône " + ICON_PATHS[i] + ": " + e.getMessage());
+            }
             JButton btn = buildNavButton(SECTIONS[i], icon, SECTIONS[i]);
             sidebar.add(btn);
             sidebar.add(Box.createVerticalStrut(4));
             if (i == 0) activeButton = btn; // Dashboard actif par défaut
-            System.out.println(getClass().getResource(ICON_PATHS[i]));
         }
 
         sidebar.add(Box.createVerticalGlue());
@@ -210,8 +214,13 @@ public class MainDashboard extends JFrame {
         filterPanel.add(cbDepartement);
 
         // Bouton Refresh
-        FlatSVGIcon refreshIcon = new FlatSVGIcon("/icons/refresh.svg", 16, 16);
-        refreshIcon.setColorFilter(new FlatSVGIcon.ColorFilter(c -> Color.WHITE));
+        FlatSVGIcon refreshIcon = null;
+        try {
+            refreshIcon = new FlatSVGIcon("icons/refresh.svg", 16, 16);
+            refreshIcon.setColorFilter(new FlatSVGIcon.ColorFilter(c -> Color.WHITE));
+        } catch (Exception e) {
+            System.err.println("Erreur chargement icône refresh: " + e.getMessage());
+        }
         JButton btnRefresh = new JButton("Actualiser", refreshIcon);
         btnRefresh.setBackground(C_PRIMARY);
         btnRefresh.setForeground(Color.WHITE);
