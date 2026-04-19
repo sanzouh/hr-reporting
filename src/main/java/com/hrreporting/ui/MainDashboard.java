@@ -114,14 +114,13 @@ public class MainDashboard extends JFrame {
         for (int i = 0; i < SECTIONS.length; i++) {
             FlatSVGIcon icon = null;
             try {
-                icon = new FlatSVGIcon(ICON_PATHS[i], 20, 20);
+                icon = new FlatSVGIcon(ICON_PATHS[i], 24, 24);
                 icon.setColorFilter(new FlatSVGIcon.ColorFilter(c -> new Color(0xB5D4F4)));
             } catch (Exception e) {
                 System.err.println("Erreur chargement icône " + ICON_PATHS[i] + ": " + e.getMessage());
             }
             JButton btn = buildNavButton(SECTIONS[i], icon, SECTIONS[i]);
             sidebar.add(btn);
-            sidebar.add(Box.createVerticalStrut(6));
             if (i == 0) activeButton = btn; // Dashboard actif par défaut
         }
 
@@ -143,7 +142,7 @@ public class MainDashboard extends JFrame {
         btn.setMaximumSize(new Dimension(Integer.MAX_VALUE, 52));
         btn.setHorizontalAlignment(SwingConstants.CENTER);
         btn.setAlignmentX(Component.CENTER_ALIGNMENT);
-        btn.setBorder(new EmptyBorder(14, 20, 14, 20));
+        btn.setBorder(new EmptyBorder(22, 20, 22, 20));
         btn.setForeground(new Color(0xB5D4F4));
         btn.setBackground(C_PRIMARY);
         btn.setFont(new Font("Segoe UI", Font.PLAIN, 15));
@@ -310,7 +309,7 @@ public class MainDashboard extends JFrame {
                 boolean isActive = btn.getText().endsWith(section);
                 btn.setBackground(isActive ? C_PRIMARY_LT : C_PRIMARY);
                 btn.setForeground(isActive ? Color.WHITE : new Color(0xB5D4F4));
-                btn.setFont(new Font("Segoe UI", isActive ? Font.BOLD : Font.PLAIN, 13));
+                btn.setFont(new Font("Segoe UI", isActive ? Font.BOLD : Font.PLAIN, 16));
                 if (isActive) activeButton = btn;
             }
         }
