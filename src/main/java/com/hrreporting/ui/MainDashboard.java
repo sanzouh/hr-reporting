@@ -59,7 +59,7 @@ public class MainDashboard extends JFrame {
     private JButton activeButton = null;
 
     public MainDashboard() {
-        super("HR Reporting — Système d'Information Décisionnel");
+            super("Système d'Information Décisionnel - Reporting");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setSize(1280, 800);
         setMinimumSize(new Dimension(1100, 700));
@@ -94,12 +94,14 @@ public class MainDashboard extends JFrame {
         logoPanel.setBorder(new EmptyBorder(16, 16, 16, 16));
         logoPanel.setAlignmentX(Component.CENTER_ALIGNMENT);
 
-        JLabel logoLabel = new JLabel("HR Reporting");
+        ImageIcon logoIcon = new ImageIcon(Objects.requireNonNull(getClass().getResource("/icons/hr-logo.png")));
+        Image scaled = logoIcon.getImage().getScaledInstance(188, 35, Image.SCALE_SMOOTH);
+        JLabel logoLabel = new JLabel(new ImageIcon(scaled), SwingConstants.CENTER);
         logoLabel.setForeground(Color.WHITE);
         logoLabel.setFont(new Font("Segoe UI", Font.BOLD, 16));
         logoLabel.setAlignmentX(Component.CENTER_ALIGNMENT);
 
-        JLabel subLabel = new JLabel("SID — Ressources Humaines");
+        JLabel subLabel = new JLabel("Analytics & Reporting");
         subLabel.setForeground(new Color(0xB5D4F4));
         subLabel.setFont(new Font("Segoe UI", Font.PLAIN, 10));
         subLabel.setAlignmentX(Component.CENTER_ALIGNMENT);
@@ -240,7 +242,7 @@ public class MainDashboard extends JFrame {
         JPanel titlePanel = new JPanel();
         titlePanel.setBackground(C_CARD);
         titlePanel.setLayout(new BoxLayout(titlePanel, BoxLayout.Y_AXIS));
-        JLabel title = new JLabel("HR Analytics Dashboard");
+        JLabel title = new JLabel("Dashboard d'Analyse RH");
         title.setFont(new Font("Segoe UI", Font.BOLD, 22));
         title.setForeground(C_TEXT);
         JLabel subtitle = new JLabel("Vue globale des ressources humaines");
