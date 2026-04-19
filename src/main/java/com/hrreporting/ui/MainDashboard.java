@@ -87,27 +87,25 @@ public class MainDashboard extends JFrame {
         sidebar.setBorder(new EmptyBorder(0, 0, 0, 0));
 
         // Logo / titre
-        JPanel logoPanel = new JPanel(new BorderLayout());
+        JPanel logoPanel = new JPanel();
+        logoPanel.setLayout(new BoxLayout(logoPanel, BoxLayout.Y_AXIS));
         logoPanel.setBackground(new Color(0x163960));
         logoPanel.setMaximumSize(new Dimension(Integer.MAX_VALUE, 70));
-        logoPanel.setPreferredSize(new Dimension(200, 70));
         logoPanel.setBorder(new EmptyBorder(16, 16, 16, 16));
+        logoPanel.setAlignmentX(Component.CENTER_ALIGNMENT);
 
         JLabel logoLabel = new JLabel("HR Reporting");
         logoLabel.setForeground(Color.WHITE);
         logoLabel.setFont(new Font("Segoe UI", Font.BOLD, 16));
+        logoLabel.setAlignmentX(Component.CENTER_ALIGNMENT);
+
         JLabel subLabel = new JLabel("SID — Ressources Humaines");
         subLabel.setForeground(new Color(0xB5D4F4));
         subLabel.setFont(new Font("Segoe UI", Font.PLAIN, 10));
+        subLabel.setAlignmentX(Component.CENTER_ALIGNMENT);
 
-        JPanel logoText = new JPanel();
-        logoText.setBackground(new Color(0x163960));
-        logoText.setLayout(new BoxLayout(logoText, BoxLayout.Y_AXIS));
-        logoText.add(logoLabel);
-        logoText.add(subLabel);
-        logoPanel.add(logoText, BorderLayout.CENTER);
-        logoText.setAlignmentX(Component.LEFT_ALIGNMENT);
-        logoPanel.setAlignmentX(Component.LEFT_ALIGNMENT);
+        logoPanel.add(logoLabel);
+        logoPanel.add(subLabel);
 
         sidebar.add(logoPanel);
         sidebar.add(Box.createVerticalStrut(16));
@@ -116,38 +114,39 @@ public class MainDashboard extends JFrame {
         for (int i = 0; i < SECTIONS.length; i++) {
             FlatSVGIcon icon = null;
             try {
-                icon = new FlatSVGIcon(ICON_PATHS[i], 18, 18);
+                icon = new FlatSVGIcon(ICON_PATHS[i], 20, 20);
                 icon.setColorFilter(new FlatSVGIcon.ColorFilter(c -> new Color(0xB5D4F4)));
             } catch (Exception e) {
                 System.err.println("Erreur chargement icône " + ICON_PATHS[i] + ": " + e.getMessage());
             }
             JButton btn = buildNavButton(SECTIONS[i], icon, SECTIONS[i]);
             sidebar.add(btn);
-            sidebar.add(Box.createVerticalStrut(4));
+            sidebar.add(Box.createVerticalStrut(6));
             if (i == 0) activeButton = btn; // Dashboard actif par défaut
         }
 
         sidebar.add(Box.createVerticalGlue());
 
         // Version en bas
-        JLabel versionLabel = new JLabel("  v1.0 — Java 21 + H2");
+        JLabel versionLabel = new JLabel("  v1.0 - Java 21 + H2");
         versionLabel.setForeground(new Color(0x7F9FBF));
         versionLabel.setFont(new Font("Segoe UI", Font.PLAIN, 10));
         versionLabel.setBorder(new EmptyBorder(12, 16, 16, 0));
         sidebar.add(versionLabel);
+        versionLabel.setAlignmentX(Component.CENTER_ALIGNMENT);
 
         return sidebar;
     }
 
     private JButton buildNavButton(String label, FlatSVGIcon icon, String section) {
         JButton btn = new JButton(label, icon);
-        btn.setMaximumSize(new Dimension(Integer.MAX_VALUE, 44));
-        btn.setHorizontalAlignment(SwingConstants.LEFT);
-        btn.setAlignmentX(Component.LEFT_ALIGNMENT);
-        btn.setBorder(new EmptyBorder(10, 20, 10, 10));
+        btn.setMaximumSize(new Dimension(Integer.MAX_VALUE, 52));
+        btn.setHorizontalAlignment(SwingConstants.CENTER);
+        btn.setAlignmentX(Component.CENTER_ALIGNMENT);
+        btn.setBorder(new EmptyBorder(14, 20, 14, 20));
         btn.setForeground(new Color(0xB5D4F4));
         btn.setBackground(C_PRIMARY);
-        btn.setFont(new Font("Segoe UI", Font.PLAIN, 13));
+        btn.setFont(new Font("Segoe UI", Font.PLAIN, 15));
         btn.setFocusPainted(false);
         btn.setBorderPainted(false);
         btn.setOpaque(true);
