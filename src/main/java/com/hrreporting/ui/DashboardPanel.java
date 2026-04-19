@@ -27,26 +27,27 @@ public class DashboardPanel extends JPanel implements MainDashboard.Refreshable 
     }
 
     private void build() {
-        JPanel content = new JPanel();
-        content.setLayout(new BoxLayout(content, BoxLayout.Y_AXIS));
-        content.setBackground(MainDashboard.C_BG);
-        content.setBorder(new EmptyBorder(20, 20, 20, 20));
+        setLayout(new GridBagLayout());
+        GridBagConstraints gbc = new GridBagConstraints();
+        gbc.fill = GridBagConstraints.BOTH;
+        gbc.insets = new Insets(8, 10, 8, 10);
+        gbc.weightx = 1.0;
+        gbc.gridx = 0;
 
-        JPanel kpiRow = buildKpiRow();
-        JPanel chartsRow = buildChartsRow();
-        JPanel insightsRow = buildInsightsRow();
+        // Ligne KPI — 10% de la hauteur
+        gbc.gridy = 0;
+        gbc.weighty = 0.10;
+        add(buildKpiRow(), gbc);
 
-        content.add(kpiRow);
-        content.add(Box.createVerticalStrut(16));
-        content.add(chartsRow);
-        content.add(Box.createVerticalStrut(16));
-        content.add(insightsRow);
+        // Ligne charts 1 - 70%
+        gbc.gridy = 1;
+        gbc.weighty = 0.70;
+        add(buildChartsRow(), gbc);
 
-        JScrollPane scroll = new JScrollPane(content);
-        scroll.setBorder(null);
-        scroll.getVerticalScrollBar().setUnitIncrement(16);
-        scroll.setBackground(MainDashboard.C_BG);
-        add(scroll, BorderLayout.CENTER);
+        // Ligne insights — 20%
+        gbc.gridy = 2;
+        gbc.weighty = 0.20;
+        add(buildInsightsRow(), gbc);
     }
 
     // ═══════════════════════════════════════════════════════════════════
@@ -56,7 +57,6 @@ public class DashboardPanel extends JPanel implements MainDashboard.Refreshable 
     private JPanel buildKpiRow() {
         JPanel row = new JPanel(new GridLayout(1, 4, 12, 0));
         row.setBackground(MainDashboard.C_BG);
-        row.setMaximumSize(new Dimension(Integer.MAX_VALUE, 130));
 
         try {
             // Attrition
@@ -108,7 +108,6 @@ public class DashboardPanel extends JPanel implements MainDashboard.Refreshable 
     private JPanel buildChartsRow() {
         JPanel row = new JPanel(new GridLayout(1, 3, 12, 0));
         row.setBackground(MainDashboard.C_BG);
-        row.setMaximumSize(new Dimension(Integer.MAX_VALUE, 280));
 
         try {
             // Graphique 1 : Effectif par département (barres horizontales)
