@@ -35,21 +35,21 @@ public class EffectifsPanel extends JPanel implements MainDashboard.Refreshable 
     }
 
     private void build(String annee, String departement) {
-        JPanel content = new JPanel();
-        content.setLayout(new BoxLayout(content, BoxLayout.Y_AXIS));
-        content.setBackground(MainDashboard.C_BG);
-        content.setBorder(new EmptyBorder(20, 20, 20, 20));
+        setLayout(new GridBagLayout());
+        GridBagConstraints gbc = new GridBagConstraints();
+        gbc.fill = GridBagConstraints.BOTH;
+        gbc.insets = new Insets(8, 10, 8, 10);
+        gbc.weightx = 1.0;
+        gbc.gridx = 0;
 
-        content.add(buildKpiRow(departement));
-        content.add(Box.createVerticalStrut(16));
-        content.add(buildChartsRow1(departement));
-        content.add(Box.createVerticalStrut(16));
-        content.add(buildChartsRow2(departement));
+        gbc.gridy = 0; gbc.weighty = 0.10;
+        add(buildKpiRow(departement), gbc);
 
-        JScrollPane scroll = new JScrollPane(content);
-        scroll.setBorder(null);
-        scroll.getVerticalScrollBar().setUnitIncrement(16);
-        add(scroll, BorderLayout.CENTER);
+        gbc.gridy = 1; gbc.weighty = 0.50;
+        add(buildChartsRow1(departement), gbc);
+
+        gbc.gridy = 2; gbc.weighty = 0.40;
+        add(buildChartsRow2(departement), gbc);
     }
 
     // ═══════════════════════════════════════════════════════════════════
@@ -113,12 +113,14 @@ public class EffectifsPanel extends JPanel implements MainDashboard.Refreshable 
     // ═══════════════════════════════════════════════════════════════════
 
     private JPanel buildChartsRow1(String departement) {
-        JPanel row = new JPanel(new GridLayout(1, 2, 12, 0));
+        JPanel row = new JPanel(new GridBagLayout());
         row.setBackground(MainDashboard.C_BG);
-        row.setMaximumSize(new Dimension(Integer.MAX_VALUE, 280));
+        GridBagConstraints gbc = new GridBagConstraints();
+        gbc.fill = GridBagConstraints.BOTH;
+        gbc.weighty = 1.0;
+        gbc.insets = new Insets(0, 0, 0, 6);
 
         try {
-            // Effectif par département
             Map<String, Integer> effectifs = DWRepository.getEffectifParDept();
             DefaultCategoryDataset ds = new DefaultCategoryDataset();
             effectifs.forEach((dept, nb) -> ds.addValue(nb, "Employés", dept));
@@ -126,20 +128,24 @@ public class EffectifsPanel extends JPanel implements MainDashboard.Refreshable 
                     null, "Département", "Nombre", ds,
                     PlotOrientation.VERTICAL, false, true, false);
             styleBar(chart, MainDashboard.C_PRIMARY);
-            row.add(MainDashboard.buildCard("Effectif par département", new ChartPanel(chart)));
 
-            // Répartition genre (camembert)
+            gbc.gridx = 0; gbc.weightx = 0.60;
+            row.add(MainDashboard.buildCard("Effectif par département",
+                    new ChartPanel(chart)), gbc);
+
             Map<String, Integer> genre = DWRepository.getRepartitionGenre();
             DefaultPieDataset<String> dsPie = new DefaultPieDataset<>();
             genre.forEach(dsPie::setValue);
             JFreeChart chartPie = ChartFactory.createPieChart(null, dsPie, true, true, false);
             stylePie(chartPie);
-            row.add(MainDashboard.buildCard("Répartition par genre", new ChartPanel(chartPie)));
+
+            gbc.gridx = 1; gbc.weightx = 0.40; gbc.insets = new Insets(0, 6, 0, 0);
+            row.add(MainDashboard.buildCard("Répartition par genre",
+                    new ChartPanel(chartPie)), gbc);
 
         } catch (Exception e) {
             System.err.println("[Effectifs] Erreur graphiques ligne 1 : " + e.getMessage());
         }
-
         return row;
     }
 
@@ -148,17 +154,18 @@ public class EffectifsPanel extends JPanel implements MainDashboard.Refreshable 
     // ═══════════════════════════════════════════════════════════════════
 
     private JPanel buildChartsRow2(String departement) {
-        JPanel row = new JPanel(new GridLayout(1, 2, 12, 0));
+        JPanel row = new JPanel(new GridBagLayout());
         row.setBackground(MainDashboard.C_BG);
-        row.setMaximumSize(new Dimension(Integer.MAX_VALUE, 280));
+        GridBagConstraints gbc = new GridBagConstraints();
+        gbc.fill = GridBagConstraints.BOTH;
+        gbc.weighty = 1.0;
+        gbc.insets = new Insets(0, 0, 0, 6);
 
         try {
-            // Pyramide des âges — tranches
             DefaultCategoryDataset dsPyramide = new DefaultCategoryDataset();
-            String[] tranches = {"< 25", "25-34", "35-44", "45-54", "55+"};
-            String[] conditions = {"e.age < 25", "e.age BETWEEN 25 AND 34",
+            String[] tranches    = {"< 25", "25-34", "35-44", "45-54", "55+"};
+            String[] conditions  = {"e.age < 25", "e.age BETWEEN 25 AND 34",
                     "e.age BETWEEN 35 AND 44", "e.age BETWEEN 45 AND 54", "e.age >= 55"};
-
             for (int i = 0; i < tranches.length; i++) {
                 ResultSet rsM = query("SELECT COUNT(*) FROM fait_rh f " +
                         "JOIN dim_employe e ON f.employe_id = e.employe_id " +
@@ -169,35 +176,39 @@ public class EffectifsPanel extends JPanel implements MainDashboard.Refreshable 
                 dsPyramide.addValue(rsM.next() ? rsM.getInt(1) : 0, "Hommes", tranches[i]);
                 dsPyramide.addValue(rsF.next() ? rsF.getInt(1) : 0, "Femmes", tranches[i]);
             }
-
             JFreeChart chartPyramide = ChartFactory.createBarChart(
                     null, "Tranche d'âge", "Nombre", dsPyramide,
                     PlotOrientation.HORIZONTAL, true, true, false);
             stylePyramide(chartPyramide);
-            row.add(MainDashboard.buildCard("Pyramide des âges", new ChartPanel(chartPyramide)));
 
-            // Ancienneté moyenne par département
+            gbc.gridx = 0; gbc.weightx = 0.65;
+            row.add(MainDashboard.buildCard("Pyramide des âges",
+                    new ChartPanel(chartPyramide)), gbc);
+
             DefaultCategoryDataset dsAnc = new DefaultCategoryDataset();
             ResultSet rsAnc = query("""
-                SELECT d.nom_dept, ROUND(AVG(e.anciennete_ans), 1)
-                FROM fait_rh f
-                JOIN dim_employe e ON f.employe_id = e.employe_id
-                JOIN dim_departement d ON f.dept_id = d.dept_id
-                WHERE e.anciennete_ans >= 0
-                GROUP BY d.nom_dept ORDER BY AVG(e.anciennete_ans) DESC
-            """);
-            while (rsAnc.next()) dsAnc.addValue(rsAnc.getDouble(2), "Ancienneté (ans)", rsAnc.getString(1));
+            SELECT d.nom_dept, ROUND(AVG(e.anciennete_ans), 1)
+            FROM fait_rh f
+            JOIN dim_employe e ON f.employe_id = e.employe_id
+            JOIN dim_departement d ON f.dept_id = d.dept_id
+            WHERE e.anciennete_ans >= 0
+            GROUP BY d.nom_dept ORDER BY AVG(e.anciennete_ans) DESC
+        """);
+            while (rsAnc.next())
+                dsAnc.addValue(rsAnc.getDouble(2), "Ancienneté (ans)", rsAnc.getString(1));
 
             JFreeChart chartAnc = ChartFactory.createBarChart(
                     null, "Département", "Années", dsAnc,
                     PlotOrientation.VERTICAL, false, true, false);
             styleBar(chartAnc, MainDashboard.C_SUCCESS);
-            row.add(MainDashboard.buildCard("Ancienneté moyenne / département", new ChartPanel(chartAnc)));
+
+            gbc.gridx = 1; gbc.weightx = 0.35; gbc.insets = new Insets(0, 6, 0, 0);
+            row.add(MainDashboard.buildCard("Ancienneté moyenne / département",
+                    new ChartPanel(chartAnc)), gbc);
 
         } catch (Exception e) {
             System.err.println("[Effectifs] Erreur graphiques ligne 2 : " + e.getMessage());
         }
-
         return row;
     }
 
