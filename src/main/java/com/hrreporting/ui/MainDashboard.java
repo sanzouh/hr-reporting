@@ -1,5 +1,6 @@
 package com.hrreporting.ui;
 
+import com.formdev.flatlaf.extras.FlatSVGIcon;
 import com.hrreporting.db.DWRepository;
 
 import javax.swing.*;
@@ -48,7 +49,10 @@ public class MainDashboard extends JFrame {
     private static final String[] SECTIONS = {
             "Dashboard", "Effectifs", "Turnover", "Performance", "Formation", "Promotions"
     };
-    private static final String[] ICONS = { "⌂", "👥", "↩", "★", "🎓", "▲" };
+    private static final String[] ICON_PATHS = {
+            "/icons/home-circle.svg", "/icons/account-group.svg", "/icons/account-arrow-left.svg",
+            "/icons/chart-line.svg", "/icons/school.svg", "/icons/trophy.svg"
+    };
 
     // Panneaux de contenu par section
     private final Map<String, JPanel> panels = new LinkedHashMap<>();
@@ -85,7 +89,7 @@ public class MainDashboard extends JFrame {
         // Logo / titre
         JPanel logoPanel = new JPanel(new BorderLayout());
         logoPanel.setBackground(new Color(0x163960));
-        logoPanel.setMaximumSize(new Dimension(200, 70));
+        logoPanel.setMaximumSize(new Dimension(Integer.MAX_VALUE, 70));
         logoPanel.setPreferredSize(new Dimension(200, 70));
         logoPanel.setBorder(new EmptyBorder(16, 16, 16, 16));
 
@@ -110,12 +114,13 @@ public class MainDashboard extends JFrame {
 
         // Boutons de navigation
         for (int i = 0; i < SECTIONS.length; i++) {
-            String section = SECTIONS[i];
-            String icon    = ICONS[i];
-            JButton btn    = buildNavButton(icon + "  " + section, section);
+            FlatSVGIcon icon = new FlatSVGIcon(ICON_PATHS[i], 18, 18);
+            icon.setColorFilter(new FlatSVGIcon.ColorFilter(c -> new Color(0xB5D4F4)));
+            JButton btn = buildNavButton(SECTIONS[i], icon, SECTIONS[i]);
             sidebar.add(btn);
             sidebar.add(Box.createVerticalStrut(4));
             if (i == 0) activeButton = btn; // Dashboard actif par défaut
+            System.out.println(getClass().getResource(ICON_PATHS[i]));
         }
 
         sidebar.add(Box.createVerticalGlue());
@@ -130,8 +135,8 @@ public class MainDashboard extends JFrame {
         return sidebar;
     }
 
-    private JButton buildNavButton(String label, String section) {
-        JButton btn = new JButton(label);
+    private JButton buildNavButton(String label, FlatSVGIcon icon, String section) {
+        JButton btn = new JButton(label, icon);
         btn.setMaximumSize(new Dimension(Integer.MAX_VALUE, 44));
         btn.setHorizontalAlignment(SwingConstants.LEFT);
         btn.setAlignmentX(Component.LEFT_ALIGNMENT);
@@ -205,7 +210,9 @@ public class MainDashboard extends JFrame {
         filterPanel.add(cbDepartement);
 
         // Bouton Refresh
-        JButton btnRefresh = new JButton("↺  Actualiser");
+        FlatSVGIcon refreshIcon = new FlatSVGIcon("/icons/refresh.svg", 16, 16);
+        refreshIcon.setColorFilter(new FlatSVGIcon.ColorFilter(c -> Color.WHITE));
+        JButton btnRefresh = new JButton("Actualiser", refreshIcon);
         btnRefresh.setBackground(C_PRIMARY);
         btnRefresh.setForeground(Color.WHITE);
         btnRefresh.setFont(new Font("Segoe UI", Font.BOLD, 13));

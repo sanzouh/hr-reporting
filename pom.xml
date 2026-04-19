@@ -50,9 +50,17 @@
             <version>2.23.1</version>
         </dependency>
 
+        <!-- Look moderne FlatLaf et une interface plus agréable -->
         <dependency>
             <groupId>com.formdev</groupId>
             <artifactId>flatlaf</artifactId>
+            <version>3.4</version>
+        </dependency>
+
+        <!-- with extras for better UI components (like file choosers, etc.) -->
+        <dependency>
+            <groupId>com.formdev</groupId>
+            <artifactId>flatlaf-extras</artifactId>
             <version>3.4</version>
         </dependency>
     </dependencies>
