@@ -43,10 +43,10 @@
             <version>5.3.0</version>
         </dependency>
 
-        <!-- Utilisé par POI pour afficher les logs -->
+        <!-- Bridge entre les 2 afficheurs de log log4j et slf4j pour éviter les conflicts -->
         <dependency>
             <groupId>org.apache.logging.log4j</groupId>
-            <artifactId>log4j-core</artifactId>
+            <artifactId>log4j-to-slf4j</artifactId>
             <version>2.23.1</version>
         </dependency>
 
@@ -69,6 +69,13 @@
             <groupId>org.xerial</groupId>
             <artifactId>sqlite-jdbc</artifactId>
             <version>3.45.3.0</version>
+        </dependency>
+
+        <!-- SLF4J simple pour les logs de base (utilisé par POI, OpenCSV et autres) -->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-simple</artifactId>
+            <version>2.0.11</version>
         </dependency>
     </dependencies>
 
