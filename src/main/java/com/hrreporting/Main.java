@@ -39,7 +39,7 @@ public class Main {
             }
 
             // Open the H2 database console. Access the console at http://localhost:8082 with JDBC URL: jdbc:h2:mem:hrdb, User Name: san, Password: (leave blank).
-//            org.h2.tools.Server.startWebServer(DatabaseManager.getConnection());
+            org.h2.tools.Server.startWebServer(DatabaseManager.getConnection());
 //            DatabaseManager.close();
 //            console H2 sans bloquer le thread UI
 //            org.h2.tools.Server.createWebServer("-web", "-webPort", "8082").start();

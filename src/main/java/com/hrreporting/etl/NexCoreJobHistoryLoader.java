@@ -13,23 +13,12 @@ import java.util.*;
 
 /**
  * NexCoreJobHistoryLoader — Loader ETL pour JobHistory.csv.
- *
- * Source     : JobHistory.csv (~2 000 lignes)
- * Colonnes   : EmployeeID, ChangeDate, FromJobTitle, ToJobTitle,
- *              SalaryBefore, SalaryAfter, ChangeType, DepartmentCode, Site
- *
- * Spécificités :
- *   - EmployeeID = matricule numérique pur
- *   - Dates en DD/MM/YYYY
- *   - SalaryBefore peut être vide (première embauche)
- *   - ChangeType : Promotion, Lateral_Move, Hire, Demotion
- *   - Promotion → promotion_recommandee = 1 dans le fait
- *   - Salaire = SalaryAfter × 12 → mensuel via ETLUtils
+ * Retourne une Map<employe_id, FaitRH.Builder> pour consolidation dans ETLPipeline.
+ * Conserve le salaire le plus récent et promotion = 1 si au moins une promotion.
  */
 public class NexCoreJobHistoryLoader {
 
-    private static final String FILE_PATH =
-            "src/main/resources/data/JobHistory.csv";
+    private static final String FILE_PATH = "src/main/resources/data/JobHistory.csv";
 
     private static final Map<String, String> DEPT_MAP = Map.of(
             "RD",    "R&D",
@@ -41,13 +30,15 @@ public class NexCoreJobHistoryLoader {
             "MGMT",  "Management"
     );
 
-    public static List<FaitRH> load() throws IOException, CsvValidationException, SQLException {
-        List<FaitRH> faits = new ArrayList<>();
+    public static Map<String, FaitRH.Builder> loadAsMap()
+            throws IOException, CsvValidationException, SQLException {
+
+        // Agrégation : salaire le plus récent + promotion si au moins une
+        Map<String, JobAgg> aggregations = new LinkedHashMap<>();
         int lignesLues = 0, lignesIgnorees = 0;
 
         try (CSVReader reader = new CSVReader(
-                new InputStreamReader(
-                        new FileInputStream(FILE_PATH), StandardCharsets.UTF_8))) {
+                new InputStreamReader(new FileInputStream(FILE_PATH), StandardCharsets.UTF_8))) {
 
             String[] headers = reader.readNext();
             Map<String, Integer> idx = ETLUtils.buildIndex(headers);
@@ -56,53 +47,34 @@ public class NexCoreJobHistoryLoader {
             while ((row = reader.readNext()) != null) {
                 lignesLues++;
                 try {
-                    String matricule    = ETLUtils.clean(ETLUtils.get(row, idx, "EmployeeID"));
-                    String changeDateRaw= ETLUtils.get(row, idx, "ChangeDate");
-                    String toTitle      = ETLUtils.get(row, idx, "ToJobTitle");
-                    String salAfterRaw  = ETLUtils.get(row, idx, "SalaryAfter");
-                    String changeType   = ETLUtils.get(row, idx, "ChangeType");
-                    String deptCode     = ETLUtils.get(row, idx, "DepartmentCode");
-                    String site         = ETLUtils.get(row, idx, "Site");
+                    String matricule     = ETLUtils.clean(ETLUtils.get(row, idx, "EmployeeID"));
+                    String changeDateRaw = ETLUtils.get(row, idx, "ChangeDate");
+                    String toTitle       = ETLUtils.get(row, idx, "ToJobTitle");
+                    String salAfterRaw   = ETLUtils.get(row, idx, "SalaryAfter");
+                    String changeType    = ETLUtils.get(row, idx, "ChangeType");
+                    String deptCode      = ETLUtils.get(row, idx, "DepartmentCode");
+                    String site          = ETLUtils.get(row, idx, "Site");
 
-                    if (matricule.isBlank() || toTitle.isBlank()) {
-                        lignesIgnorees++;
-                        continue;
-                    }
+                    if (matricule.isBlank() || toTitle.isBlank()) { lignesIgnorees++; continue; }
 
-                    String dept         = DEPT_MAP.getOrDefault(deptCode.trim().toUpperCase(), deptCode.trim());
-                    LocalDate changeDate= ETLUtils.parseDate(changeDateRaw);
-                    double salAnnuel    = ETLUtils.parseMontant(salAfterRaw);
-                    double salMensuel   = ETLUtils.annuelVersQuotidien(salAnnuel);
+                    String    dept       = DEPT_MAP.getOrDefault(deptCode.trim().toUpperCase(), deptCode.trim());
+                    LocalDate changeDate = ETLUtils.parseDate(changeDateRaw);
+                    double    salMensuel = ETLUtils.annuelVersQuotidien(ETLUtils.parseMontant(salAfterRaw));
+                    boolean   isPromo    = "Promotion".equalsIgnoreCase(changeType.trim());
 
-                    int annee     = changeDate != null ? ETLUtils.annee(changeDate)     : 2020;
-                    int semestre  = changeDate != null ? ETLUtils.semestre(changeDate)  : 1;
-                    int trimestre = changeDate != null ? ETLUtils.trimestre(changeDate) : 1;
-                    int mois      = changeDate != null ? ETLUtils.mois(changeDate)      : 1;
-
-                    // Promotion → promotion_recommandee = 1
-                    int promoted = "Promotion".equalsIgnoreCase(changeType.trim()) ? 1 : 0;
-
-                    // ── CHARGEMENT DIMENSIONS ─────────────────────────
-                    DWRepository.upsertEmploye(matricule, "", -1, "N/A", -1, "N/A", "N/A");
-
-                    int deptId  = DWRepository.upsertDepartement(dept, site, "N/A");
-                    int tempsId = DWRepository.upsertTemps(annee, semestre, trimestre, mois);
-                    int posteId = DWRepository.upsertPoste(
-                            toTitle,
-                            ETLUtils.inferNiveau(toTitle),
-                            "N/A"
-                    );
-
-                    FaitRH fait = FaitRH.builder()
-                            .employeId(matricule)
-                            .deptId(deptId)
-                            .tempsId(tempsId)
-                            .posteId(posteId)
-                            .salaireMensuel(salMensuel)
-                            .promotionRecommandee(promoted)
-                            .build();
-
-                    faits.add(fait);
+                    aggregations.merge(matricule,
+                            new JobAgg(matricule, dept, toTitle, salMensuel, isPromo, changeDate, site),
+                            (ex, nw) -> {
+                                // Garder le salaire le plus récent
+                                if (nw.changeDate != null && (ex.changeDate == null || nw.changeDate.isAfter(ex.changeDate))) {
+                                    ex.salMensuel  = nw.salMensuel;
+                                    ex.titre       = nw.titre;
+                                    ex.changeDate  = nw.changeDate;
+                                }
+                                // Promotion = 1 si au moins une promotion dans l'historique
+                                if (nw.promoted) ex.promoted = true;
+                                return ex;
+                            });
 
                 } catch (Exception e) {
                     lignesIgnorees++;
@@ -111,8 +83,51 @@ public class NexCoreJobHistoryLoader {
             }
         }
 
-        System.out.println("[JH] Chargement terminé — " + faits.size() +
-                " faits construits, " + lignesIgnorees + " ignorées.");
+        Map<String, FaitRH.Builder> result = new LinkedHashMap<>();
+        for (JobAgg agg : aggregations.values()) {
+            try {
+                int deptId  = DWRepository.upsertDepartement(agg.dept, agg.site, "N/A");
+                int annee   = agg.changeDate != null ? ETLUtils.annee(agg.changeDate)     : 2020;
+                int sem     = agg.changeDate != null ? ETLUtils.semestre(agg.changeDate)  : 1;
+                int trim    = agg.changeDate != null ? ETLUtils.trimestre(agg.changeDate) : 1;
+                int mois    = agg.changeDate != null ? ETLUtils.mois(agg.changeDate)      : 1;
+                int tempsId = DWRepository.upsertTemps(annee, sem, trim, mois);
+                int posteId = DWRepository.upsertPoste(agg.titre, ETLUtils.inferNiveau(agg.titre), "N/A");
+
+                FaitRH.Builder builder = FaitRH.builder()
+                        .employeId(agg.matricule)
+                        .deptId(deptId)
+                        .tempsId(tempsId)
+                        .posteId(posteId)
+                        .salaireMensuel(agg.salMensuel)
+                        .promotionRecommandee(agg.promoted ? 1 : 0);
+
+                result.put(agg.matricule, builder);
+            } catch (Exception e) {
+                System.err.println("[JH] Erreur fait " + agg.matricule + " : " + e.getMessage());
+            }
+        }
+
+        System.out.println("[JH] " + result.size() + " builders construits, " + lignesIgnorees + " ignorées.");
+        return result;
+    }
+
+    /** Compatibilité ascendante */
+    public static List<FaitRH> load() throws IOException, CsvValidationException, SQLException {
+        List<FaitRH> faits = new ArrayList<>();
+        loadAsMap().values().forEach(b -> faits.add(b.build()));
         return faits;
+    }
+
+    private static class JobAgg {
+        String    matricule, dept, titre, site;
+        double    salMensuel;
+        boolean   promoted;
+        LocalDate changeDate;
+
+        JobAgg(String m, String d, String t, double s, boolean p, LocalDate cd, String si) {
+            this.matricule = m; this.dept = d; this.titre = t;
+            this.salMensuel = s; this.promoted = p; this.changeDate = cd; this.site = si;
+        }
     }
 }

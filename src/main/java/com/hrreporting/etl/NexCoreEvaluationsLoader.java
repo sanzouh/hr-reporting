@@ -9,25 +9,12 @@ import java.util.*;
 
 /**
  * NexCoreEvaluationsLoader — Loader ETL pour Evaluations_Semestral.db (SQLite).
- *
- * Source     : Evaluations_Semestral.db (SQLite, ~8 000 lignes)
- * Table      : evaluations
- * Colonnes   : id, emp_id, Department, Semester, EvaluationScore,
- *              ObjectivesAchieved_Pct, PromotionRecommended, Site
- *
- * Spécificités :
- *   - emp_id = matricule numérique pur
- *   - Department = codes courts (RD, SALES, IT, OPS, HR, ADMIN, MGMT)
- *   - Semester = "S1-2022" / "S2-2023"
- *   - PromotionRecommended : Oui/Non/Yes/NO/oui/non → normaliserBoolean()
- *   - Nécessite le driver SQLite (org.xerial:sqlite-jdbc ou java.sql avec SQLite)
- *
- * Note : H2 est utilisé pour le DW, SQLite uniquement pour lire la source.
+ * Retourne une Map<employe_id, FaitRH.Builder> pour consolidation dans ETLPipeline.
+ * Agrégation : score_eval moyen, objectifs moyens, promotion = 1 si au moins une fois recommandé.
  */
 public class NexCoreEvaluationsLoader {
 
-    private static final String FILE_PATH =
-            "src/main/resources/data/Evaluations_Semestral.db";
+    private static final String FILE_PATH = "src/main/resources/data/Evaluations_Semestral.db";
 
     private static final Map<String, String> DEPT_MAP = Map.of(
             "RD",    "R&D",
@@ -39,17 +26,15 @@ public class NexCoreEvaluationsLoader {
             "MGMT",  "Management"
     );
 
-    public static List<FaitRH> load() throws SQLException {
-        List<FaitRH> faits = new ArrayList<>();
+    public static Map<String, FaitRH.Builder> loadAsMap() throws SQLException {
+        Map<String, EvalAgg> aggregations = new LinkedHashMap<>();
         int lignesLues = 0, lignesIgnorees = 0;
 
-        // Chargement du driver SQLite
         try {
             Class.forName("org.sqlite.JDBC");
         } catch (ClassNotFoundException e) {
             System.err.println("[EVAL] Driver SQLite non trouvé : " + e.getMessage());
-            System.err.println("[EVAL] Ajoutez org.xerial:sqlite-jdbc dans pom.xml");
-            return faits;
+            return new LinkedHashMap<>();
         }
 
         String dbUrl = "jdbc:sqlite:" + new File(FILE_PATH).getAbsolutePath();
@@ -69,56 +54,74 @@ public class NexCoreEvaluationsLoader {
                     String promoRaw   = rs.getString("PromotionRecommended");
                     String site       = rs.getString("Site");
 
-                    if (matricule.isBlank() || semester == null) {
-                        lignesIgnorees++;
-                        continue;
-                    }
+                    if (matricule.isBlank() || semester == null) { lignesIgnorees++; continue; }
 
-                    String dept     = DEPT_MAP.getOrDefault(deptCode.trim().toUpperCase(), deptCode.trim());
+                    String dept    = DEPT_MAP.getOrDefault(deptCode.trim().toUpperCase(), deptCode.trim());
                     int    promoted = ETLUtils.normaliserBoolean(promoRaw);
-                    int    annee    = parseSemestreAnnee(semester);
-                    int    semNum   = parseSemestreNum(semester);
-                    int    trimestre= semNum == 1 ? 1 : 3;
-                    int    mois     = semNum == 1 ? 3 : 9;
+                    int    annee   = parseSemestreAnnee(semester);
+                    int    semNum  = parseSemestreNum(semester);
 
-                    DWRepository.upsertEmploye(matricule, "", -1, "N/A", -1, "N/A", "N/A");
-
-                    String deptFinal = dept.isBlank() || dept.equals("N/A") ? "Non défini" : dept;
-                    int deptId  = DWRepository.upsertDepartement(deptFinal, site, "N/A");
-                    int tempsId = DWRepository.upsertTemps(annee, semNum, trimestre, mois);
-                    int posteId = DWRepository.upsertPoste("N/A", "N/A", "N/A");
-
-                    FaitRH fait = FaitRH.builder()
-                            .employeId(matricule)
-                            .deptId(deptId)
-                            .tempsId(tempsId)
-                            .posteId(posteId)
-                            .scoreEvaluation(score > 0 ? score : -1)
-                            .objectifsAtteintsP(objectives >= 0 ? objectives : -1)
-                            .promotionRecommandee(promoted)
-                            .build();
-
-                    faits.add(fait);
+                    aggregations.merge(matricule,
+                            new EvalAgg(matricule, dept, score, objectives, promoted, annee, semNum, site),
+                            (ex, nw) -> {
+                                ex.scoreTotal      += nw.scoreTotal;
+                                ex.objectifsTotal  += nw.objectifsTotal;
+                                ex.count           += 1;
+                                if (nw.promoted == 1) ex.promoted = 1; // 1 prend le dessus
+                                return ex;
+                            });
 
                 } catch (Exception e) {
                     lignesIgnorees++;
-                    System.err.println("[EVAL] Ligne " + lignesLues + " ignorée : " + e.getMessage());
                 }
             }
         }
 
-        System.out.println("[EVAL] Chargement terminé — " + faits.size() +
-                " faits construits, " + lignesIgnorees + " ignorées.");
+        Map<String, FaitRH.Builder> result = new LinkedHashMap<>();
+        for (EvalAgg agg : aggregations.values()) {
+            try {
+                String deptFinal = agg.dept.isBlank() || agg.dept.equals("N/A") ? "Non défini" : agg.dept;
+                int deptId  = DWRepository.upsertDepartement(deptFinal, agg.site, "N/A");
+                int trimestre = agg.semNum == 1 ? 1 : 3;
+                int mois      = agg.semNum == 1 ? 3 : 9;
+                int tempsId = DWRepository.upsertTemps(agg.annee, agg.semNum, trimestre, mois);
+                int posteId = DWRepository.upsertPoste("N/A", "N/A", "N/A");
+
+                // Moyennes sur toutes les évaluations de l'employé
+                int scoreEvalMoyen   = agg.count > 0 ? agg.scoreTotal / agg.count : -1;
+                int objectifsMoyen   = agg.count > 0 ? agg.objectifsTotal / agg.count : -1;
+
+                FaitRH.Builder builder = FaitRH.builder()
+                        .employeId(agg.matricule)
+                        .deptId(deptId)
+                        .tempsId(tempsId)
+                        .posteId(posteId)
+                        .scoreEvaluation(scoreEvalMoyen)
+                        .objectifsAtteintsP(objectifsMoyen)
+                        .promotionRecommandee(agg.promoted);
+
+                result.put(agg.matricule, builder);
+            } catch (Exception e) {
+                System.err.println("[EVAL] Erreur fait " + agg.matricule + " : " + e.getMessage());
+            }
+        }
+
+        System.out.println("[EVAL] " + result.size() + " builders construits, " + lignesIgnorees + " ignorées sur " + lignesLues + " lues.");
+        return result;
+    }
+
+    /** Compatibilité ascendante */
+    public static List<FaitRH> load() throws SQLException {
+        List<FaitRH> faits = new ArrayList<>();
+        loadAsMap().values().forEach(b -> faits.add(b.build()));
         return faits;
     }
 
     private static int parseSemestreAnnee(String raw) {
         if (raw == null) return 2022;
         for (String part : raw.split("[-]")) {
-            try {
-                int v = Integer.parseInt(part.trim());
-                if (v > 2000) return v;
-            } catch (NumberFormatException ignored) {}
+            try { int v = Integer.parseInt(part.trim()); if (v > 2000) return v; }
+            catch (NumberFormatException ignored) {}
         }
         return 2022;
     }
@@ -126,5 +129,19 @@ public class NexCoreEvaluationsLoader {
     private static int parseSemestreNum(String raw) {
         if (raw == null) return 1;
         return raw.toUpperCase().contains("S2") ? 2 : 1;
+    }
+
+    private static class EvalAgg {
+        String matricule, dept, site;
+        int    scoreTotal, objectifsTotal, count, promoted, annee, semNum;
+
+        EvalAgg(String m, String d, int s, int o, int p, int a, int sn, String si) {
+            this.matricule      = m; this.dept = d; this.site = si;
+            this.scoreTotal     = s > 0 ? s : 0;
+            this.objectifsTotal = o >= 0 ? o : 0;
+            this.count          = 1;
+            this.promoted       = p;
+            this.annee          = a; this.semNum = sn;
+        }
     }
 }
