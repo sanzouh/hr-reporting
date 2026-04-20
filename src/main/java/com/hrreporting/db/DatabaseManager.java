@@ -19,6 +19,12 @@ public class DatabaseManager {
         return connection;
     }
 
+    public static boolean isDatabasePopulated() throws SQLException {
+        ResultSet rs = getConnection().createStatement()
+            .executeQuery("SELECT COUNT(*) FROM fait_rh");
+        return rs.next() && rs.getInt(1) > 0;
+    }
+
     public static void initialize() throws SQLException {
         Connection conn = getConnection();
         Statement stmt  = conn.createStatement();
