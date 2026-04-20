@@ -25,15 +25,17 @@ import java.util.Map;
 public class PerformancePanel extends JPanel implements MainDashboard.Refreshable {
 
     private final MainDashboard dashboard;
+    private String annee       = "Toutes";
+    private String departement = "Tous";
 
     public PerformancePanel(MainDashboard dashboard) {
         this.dashboard = dashboard;
         setBackground(MainDashboard.C_BG);
         setLayout(new BorderLayout());
-        build("Toutes", "Tous");
+        build();
     }
 
-    private void build(String annee, String departement) {
+    private void build() {
         setLayout(new GridBagLayout());
         GridBagConstraints gbc = new GridBagConstraints();
         gbc.fill = GridBagConstraints.BOTH;
@@ -48,7 +50,7 @@ public class PerformancePanel extends JPanel implements MainDashboard.Refreshabl
         add(buildChartsRow1(), gbc);
 
         gbc.gridy = 2; gbc.weighty = 0.46;
-        add(buildChartsRow2(annee), gbc);
+        add(buildChartsRow2(), gbc);
     }
 
     // ═══════════════════════════════════════════════════════════════════
@@ -60,8 +62,14 @@ public class PerformancePanel extends JPanel implements MainDashboard.Refreshabl
         row.setBackground(MainDashboard.C_BG);
 
         try {
+            String af = buildAnneeFilter();
+            String df = buildDeptFilter();
+
             // Score performance moyen (1-4)
-            ResultSet rs1 = query("SELECT ROUND(AVG(score_performance), 2) FROM fait_rh WHERE score_performance > 0");
+            ResultSet rs1 = query("SELECT ROUND(AVG(score_performance), 2) FROM fait_rh f " +
+                    "JOIN dim_departement d ON f.dept_id = d.dept_id " +
+                    "JOIN dim_temps t ON f.temps_id = t.temps_id " +
+                    "WHERE score_performance > 0" + af + df);
             double perf = rs1.next() ? rs1.getDouble(1) : 0;
             Color cPerf = perf >= 3.5 ? MainDashboard.C_SUCCESS : perf >= 2.5 ? MainDashboard.C_WARNING : MainDashboard.C_DANGER;
             row.add(MainDashboard.buildKpiCard("Score performance moy.",
@@ -69,7 +77,10 @@ public class PerformancePanel extends JPanel implements MainDashboard.Refreshabl
                     perf >= 3.5 ? "Excellent" : perf >= 2.5 ? "Correct" : "Faible", cPerf));
 
             // Satisfaction moyenne (1-4)
-            ResultSet rs2 = query("SELECT ROUND(AVG(satisfaction_employe), 2) FROM fait_rh WHERE satisfaction_employe > 0");
+            ResultSet rs2 = query("SELECT ROUND(AVG(satisfaction_employe), 2) FROM fait_rh f " +
+                    "JOIN dim_departement d ON f.dept_id = d.dept_id " +
+                    "JOIN dim_temps t ON f.temps_id = t.temps_id " +
+                    "WHERE satisfaction_employe > 0" + af + df);
             double satisf = rs2.next() ? rs2.getDouble(1) : 0;
             Color cSatisf = satisf >= 3 ? MainDashboard.C_SUCCESS : satisf >= 2 ? MainDashboard.C_WARNING : MainDashboard.C_DANGER;
             row.add(MainDashboard.buildKpiCard("Satisfaction moyenne",
@@ -77,7 +88,9 @@ public class PerformancePanel extends JPanel implements MainDashboard.Refreshabl
                     satisf >= 3 ? "Bon" : satisf >= 2 ? "Moyen" : "Faible", cSatisf));
 
             // % employés avec heures sup
-            ResultSet rs3 = query("SELECT ROUND(SUM(heures_sup) * 100.0 / COUNT(*), 1) FROM fait_rh");
+            ResultSet rs3 = query("SELECT ROUND(SUM(heures_sup) * 100.0 / COUNT(*), 1) FROM fait_rh f " +
+                    "JOIN dim_departement d ON f.dept_id = d.dept_id " +
+                    "JOIN dim_temps t ON f.temps_id = t.temps_id WHERE 1=1" + af + df);
             double pctHs = rs3.next() ? rs3.getDouble(1) : 0;
             row.add(MainDashboard.buildKpiCard("Heures supplémentaires",
                     String.format("%.1f%%", pctHs),
@@ -85,7 +98,10 @@ public class PerformancePanel extends JPanel implements MainDashboard.Refreshabl
                     pctHs > 30 ? MainDashboard.C_DANGER : MainDashboard.C_SUCCESS));
 
             // Score évaluation moyen (1-5)
-            ResultSet rs4 = query("SELECT ROUND(AVG(score_evaluation), 2) FROM fait_rh WHERE score_evaluation > 0");
+            ResultSet rs4 = query("SELECT ROUND(AVG(score_evaluation), 2) FROM fait_rh f " +
+                    "JOIN dim_departement d ON f.dept_id = d.dept_id " +
+                    "JOIN dim_temps t ON f.temps_id = t.temps_id " +
+                    "WHERE score_evaluation > 0" + af + df);
             double eval = rs4.next() ? rs4.getDouble(1) : 0;
             row.add(MainDashboard.buildKpiCard("Score évaluation moy.",
                     String.format("%.2f / 5", eval), null, null));
@@ -109,7 +125,7 @@ public class PerformancePanel extends JPanel implements MainDashboard.Refreshabl
         gbc.weighty = 1.0;
 
         try {
-            Map<String, Double> perf = DWRepository.getScorePerfMoyenParDept();
+            Map<String, Double> perf = DWRepository.getScorePerfMoyenParDept(annee, departement);
             DefaultCategoryDataset dsPerf = new DefaultCategoryDataset();
             perf.forEach((dept, score) -> dsPerf.addValue(score, "Score", dept));
             JFreeChart chartPerf = ChartFactory.createBarChart(
@@ -121,7 +137,7 @@ public class PerformancePanel extends JPanel implements MainDashboard.Refreshabl
             row.add(MainDashboard.buildCard("Score performance moyen / département",
                     new ChartPanel(chartPerf)), gbc);
 
-            Map<String, Double> satisf = DWRepository.getSatisfactionParDept();
+            Map<String, Double> satisf = DWRepository.getSatisfactionParDept(annee, departement);
             DefaultCategoryDataset dsSatisf = new DefaultCategoryDataset();
             satisf.forEach((dept, s) -> dsSatisf.addValue(s, "Satisfaction", dept));
             JFreeChart chartSatisf = ChartFactory.createLineChart(
@@ -143,7 +159,7 @@ public class PerformancePanel extends JPanel implements MainDashboard.Refreshabl
     // GRAPHIQUES LIGNE 2 : Satisfaction↔Turnover + Évaluation semestrielle
     // ═══════════════════════════════════════════════════════════════════
 
-    private JPanel buildChartsRow2(String annee) {
+    private JPanel buildChartsRow2() {
         JPanel row = new JPanel(new GridBagLayout());
         row.setBackground(MainDashboard.C_BG);
         GridBagConstraints gbc = new GridBagConstraints();
@@ -151,16 +167,19 @@ public class PerformancePanel extends JPanel implements MainDashboard.Refreshabl
         gbc.weighty = 1.0;
 
         try {
+            String af = buildAnneeFilter();
+            String df = buildDeptFilter();
+
             DefaultCategoryDataset dsCorrel = new DefaultCategoryDataset();
             ResultSet rs = query("""
-            SELECT d.nom_dept,
-                   ROUND(AVG(f.satisfaction_employe), 2) AS satisf,
-                   ROUND(SUM(f.attrition) * 100.0 / COUNT(*), 1) AS taux_attr
-            FROM fait_rh f
-            JOIN dim_departement d ON f.dept_id = d.dept_id
-            WHERE f.satisfaction_employe > 0
-            GROUP BY d.nom_dept
-        """);
+                SELECT d.nom_dept,
+                       ROUND(AVG(f.satisfaction_employe), 2) AS satisf,
+                       ROUND(SUM(f.attrition) * 100.0 / COUNT(*), 1) AS taux_attr
+                FROM fait_rh f
+                JOIN dim_departement d ON f.dept_id = d.dept_id
+                JOIN dim_temps t ON f.temps_id = t.temps_id
+                WHERE f.satisfaction_employe > 0
+                """ + af + df + " GROUP BY d.nom_dept");
             while (rs.next()) {
                 dsCorrel.addValue(rs.getDouble("satisf"),    "Satisfaction (1-4)", rs.getString(1));
                 dsCorrel.addValue(rs.getDouble("taux_attr"), "Attrition (%)",      rs.getString(1));
@@ -175,17 +194,14 @@ public class PerformancePanel extends JPanel implements MainDashboard.Refreshabl
                     new ChartPanel(chartCorrel)), gbc);
 
             DefaultCategoryDataset dsEval = new DefaultCategoryDataset();
-            String anneeFilter = annee.equals("Toutes") ? "" : " AND t.annee = " + annee;
             ResultSet rsEval = query("""
-            SELECT t.annee || '-S' || t.semestre AS periode,
-                   ROUND(AVG(f.score_evaluation), 2)
-            FROM fait_rh f
-            JOIN dim_temps t ON f.temps_id = t.temps_id
-            WHERE f.score_evaluation > 0
-        """ + anneeFilter + """
-            GROUP BY t.annee, t.semestre
-            ORDER BY t.annee, t.semestre
-        """);
+                SELECT t.annee || '-S' || t.semestre AS periode,
+                       ROUND(AVG(f.score_evaluation), 2)
+                FROM fait_rh f
+                JOIN dim_departement d ON f.dept_id = d.dept_id
+                JOIN dim_temps t ON f.temps_id = t.temps_id
+                WHERE f.score_evaluation > 0
+                """ + af + df + " GROUP BY t.annee, t.semestre ORDER BY t.annee, t.semestre");
             while (rsEval.next())
                 dsEval.addValue(rsEval.getDouble(2), "Score éval.", rsEval.getString(1));
 
@@ -265,10 +281,26 @@ public class PerformancePanel extends JPanel implements MainDashboard.Refreshabl
         return DatabaseManager.getConnection().createStatement().executeQuery(sql);
     }
 
+    // ═══════════════════════════════════════════════════════════════════
+    // HELPERS FILTRES SQL
+    // ═══════════════════════════════════════════════════════════════════
+
+    private String buildAnneeFilter() {
+        return (annee == null || annee.equals("Toutes")) ? ""
+                : " AND t.annee = " + annee.replaceAll("[^0-9]", "");
+    }
+
+    private String buildDeptFilter() {
+        return (departement == null || departement.equals("Tous")) ? ""
+                : " AND d.nom_dept = '" + departement.replace("'", "''") + "'";
+    }
+
     @Override
     public void refresh(String annee, String departement) {
+        this.annee       = annee;
+        this.departement = departement;
         removeAll();
-        build(annee, departement);
+        build();
         revalidate();
         repaint();
     }

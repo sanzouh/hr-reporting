@@ -20,6 +20,9 @@ import java.util.Map;
  */
 public class DashboardPanel extends JPanel implements MainDashboard.Refreshable {
 
+    private String annee       = "Toutes";
+    private String departement = "Tous";
+
     public DashboardPanel(MainDashboard dashboard) {
         setBackground(MainDashboard.C_BG);
         setLayout(new BorderLayout());
@@ -60,37 +63,32 @@ public class DashboardPanel extends JPanel implements MainDashboard.Refreshable 
 
         try {
             // Attrition
-            Map<String, Double> attrition = DWRepository.getTauxAttritionParDept();
-            double tauxMoyen = attrition.values().stream()
-                    .mapToDouble(Double::doubleValue).average().orElse(0);
+            double tauxMoyen = DWRepository.getTauxAttritionGlobal(annee, departement);
             String badgeAttrition = tauxMoyen > 15 ? "Risque élevé" : tauxMoyen > 8 ? "Modéré" : "Stable";
             Color  colorAttrition = tauxMoyen > 15 ? MainDashboard.C_DANGER
-                    : tauxMoyen > 8  ? MainDashboard.C_WARNING
-                      : MainDashboard.C_SUCCESS;
+                    : tauxMoyen > 8 ? MainDashboard.C_WARNING : MainDashboard.C_SUCCESS;
             row.add(MainDashboard.buildKpiCard("Taux d'attrition",
                     String.format("%.1f%%", tauxMoyen), badgeAttrition, colorAttrition));
 
             // Effectif
-            Map<String, Integer> effectifs = DWRepository.getEffectifParDept();
-            int totalEffectif = effectifs.values().stream().mapToInt(Integer::intValue).sum();
+            int totalEffectif = DWRepository.getEffectifTotal(annee, departement);
             row.add(MainDashboard.buildKpiCard("Effectif total",
                     String.format("%,d", totalEffectif) + " emp.", "Actifs", MainDashboard.C_PRIMARY));
 
-            // Salaire moyen
-            Map<String, Double> salaires = DWRepository.getSalaireMoyenParDept();
-            double salaireMoyen = salaires.values().stream()
-                    .mapToDouble(Double::doubleValue).average().orElse(0);
+            // Salaire moyen + delta dynamique
+            double salaireMoyen = DWRepository.getSalaireMoyenGlobal(annee, departement);
+            double delta        = DWRepository.getDeltaSalaireAnnuel(annee);
+            String badgeSalaire = delta == 0 ? "vs N-1 : N/A"
+                    : String.format("%+.1f%% vs N-1", delta);
+            Color colorSalaire  = delta >= 0 ? MainDashboard.C_SUCCESS : MainDashboard.C_DANGER;
             row.add(MainDashboard.buildKpiCard("Salaire moyen",
-                    String.format("$%,.0f", salaireMoyen), "+1.2% vs N-1", MainDashboard.C_WARNING));
+                    String.format("$%,.0f", salaireMoyen), badgeSalaire, colorSalaire));
 
             // Satisfaction
-            Map<String, Double> satisfaction = DWRepository.getSatisfactionParDept();
-            double satisfMoyenne = satisfaction.values().stream()
-                    .mapToDouble(Double::doubleValue).average().orElse(0);
+            double satisfMoyenne = DWRepository.getSatisfactionMoyenneGlobale(annee, departement);
             String badgeSatisf = satisfMoyenne >= 3.5 ? "Bon" : satisfMoyenne >= 2.5 ? "Moyen" : "Faible";
             Color  colorSatisf = satisfMoyenne >= 3.5 ? MainDashboard.C_SUCCESS
-                    : satisfMoyenne >= 2.5 ? MainDashboard.C_WARNING
-                      : MainDashboard.C_DANGER;
+                    : satisfMoyenne >= 2.5 ? MainDashboard.C_WARNING : MainDashboard.C_DANGER;
             row.add(MainDashboard.buildKpiCard("Satisfaction moy.",
                     String.format("%.1f / 4", satisfMoyenne), badgeSatisf, colorSatisf));
 
@@ -111,7 +109,7 @@ public class DashboardPanel extends JPanel implements MainDashboard.Refreshable 
 
         try {
             // Graphique 1 : Effectif par département (barres horizontales)
-            Map<String, Integer> effectifs = DWRepository.getEffectifParDept();
+            Map<String, Integer> effectifs = DWRepository.getEffectifParDept(annee, departement);
             DefaultCategoryDataset dsEffectif = new DefaultCategoryDataset();
             effectifs.forEach((dept, nb) -> dsEffectif.addValue(nb, "Effectif", dept));
 
@@ -123,7 +121,7 @@ public class DashboardPanel extends JPanel implements MainDashboard.Refreshable 
                     new ChartPanel(chartEffectif)));
 
             // Graphique 2 : Salaire moyen par département (barres horizontales)
-            Map<String, Double> salaires = DWRepository.getSalaireMoyenParDept();
+            Map<String, Double> salaires = DWRepository.getSalaireMoyenParDept(annee, departement);
             DefaultCategoryDataset dsSalaire = new DefaultCategoryDataset();
             salaires.forEach((dept, sal) -> dsSalaire.addValue(sal, "Salaire", dept));
 
@@ -135,7 +133,7 @@ public class DashboardPanel extends JPanel implements MainDashboard.Refreshable 
                     new ChartPanel(chartSalaire)));
 
             // Graphique 3 : Satisfaction par département (courbe)
-            Map<String, Double> satisfaction = DWRepository.getSatisfactionParDept();
+            Map<String, Double> satisfaction = DWRepository.getSatisfactionParDept(annee, departement);
             DefaultCategoryDataset dsSatisf = new DefaultCategoryDataset();
             satisfaction.forEach((dept, s) -> dsSatisf.addValue(s, "Satisfaction", dept));
 
@@ -170,10 +168,10 @@ public class DashboardPanel extends JPanel implements MainDashboard.Refreshable 
         row.setBackground(MainDashboard.C_BG);
 
         try {
-            Map<String, Double> attrition   = DWRepository.getTauxAttritionParDept();
-            Map<String, Double> satisfaction = DWRepository.getSatisfactionParDept();
-            Map<String, Double> salaires     = DWRepository.getSalaireMoyenParDept();
-            Map<String, Integer> promotions  = DWRepository.getCandidatsPromotion();
+            Map<String, Double>  attrition   = DWRepository.getTauxAttritionParDept(annee, departement);
+            Map<String, Double>  satisfaction = DWRepository.getSatisfactionParDept(annee, departement);
+            Map<String, Double>  salaires     = DWRepository.getSalaireMoyenParDept(annee, departement);
+            Map<String, Integer> promotions   = DWRepository.getCandidatsPromotion(annee, departement);
 
             // Risques
             StringBuilder risques = new StringBuilder("<html><b style='color:#E24B4A'>Risques critiques</b><br><br>");
@@ -201,7 +199,7 @@ public class DashboardPanel extends JPanel implements MainDashboard.Refreshable 
                 if (taux > 15) reco.append("● Revoir conditions <b>").append(dept).append("</b><br>");
             });
             double salaireMoyen = salaires.values().stream().mapToDouble(Double::doubleValue).average().orElse(0);
-            Map<String, Double> salGenre = DWRepository.getSalaireMoyenParGenre();
+            Map<String, Double> salGenre = DWRepository.getSalaireMoyenParGenre(annee, departement);
             double salF = salGenre.getOrDefault("F", 0.0);
             double salM = salGenre.getOrDefault("M", 0.0);
             if (Math.abs(salF - salM) / salaireMoyen > 0.05)
@@ -283,6 +281,8 @@ public class DashboardPanel extends JPanel implements MainDashboard.Refreshable 
 
     @Override
     public void refresh(String annee, String departement) {
+        this.annee       = annee;
+        this.departement = departement;
         removeAll();
         build();
         revalidate();

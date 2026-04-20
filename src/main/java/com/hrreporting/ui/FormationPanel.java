@@ -27,15 +27,17 @@ import java.util.*;
 public class FormationPanel extends JPanel implements MainDashboard.Refreshable {
 
     private final MainDashboard dashboard;
+    private String annee       = "Toutes";
+    private String departement = "Tous";
 
     public FormationPanel(MainDashboard dashboard) {
         this.dashboard = dashboard;
         setBackground(MainDashboard.C_BG);
         setLayout(new BorderLayout());
-        build("Toutes", "Tous");
+        build();
     }
 
-    private void build(String annee, String departement) {
+    private void build() {
         setLayout(new GridBagLayout());
         GridBagConstraints gbc = new GridBagConstraints();
         gbc.fill = GridBagConstraints.BOTH;
@@ -44,60 +46,56 @@ public class FormationPanel extends JPanel implements MainDashboard.Refreshable 
         gbc.gridx = 0;
 
         gbc.gridy = 0; gbc.weighty = 0.08;
-        add(buildKpiRow(departement), gbc);
+        add(buildKpiRow(), gbc);
 
         gbc.gridy = 1; gbc.weighty = 0.46;
-        add(buildChartsRow1(departement), gbc);
+        add(buildChartsRow1(), gbc);
 
         gbc.gridy = 2; gbc.weighty = 0.46;
-        add(buildChartsRow2(departement), gbc);
+        add(buildChartsRow2(), gbc);
     }
 
     // ═══════════════════════════════════════════════════════════════════
     // KPI CARDS
     // ═══════════════════════════════════════════════════════════════════
 
-    private JPanel buildKpiRow(String departement) {
+    private JPanel buildKpiRow() {
         JPanel row = new JPanel(new GridLayout(1, 4, 12, 0));
         row.setBackground(MainDashboard.C_BG);
 
         try {
-            String joinDept = departement.equals("Tous") ? "" :
-                    " JOIN dim_departement d ON f.dept_id = d.dept_id WHERE d.nom_dept = '" + departement + "'";
-            String whereDept = departement.equals("Tous") ? " WHERE " : " AND ";
+            String af = buildAnneeFilter();
+            String df = buildDeptFilter();
 
             // Nb total de formations enregistrées
-            ResultSet rs1 = query("SELECT COALESCE(SUM(f.nb_formations), 0) FROM fait_rh f" + joinDept);
+            ResultSet rs1 = query("SELECT COALESCE(SUM(f.nb_formations), 0) FROM fait_rh f " +
+                    "JOIN dim_departement d ON f.dept_id = d.dept_id " +
+                    "JOIN dim_temps t ON f.temps_id = t.temps_id WHERE 1=1" + af + df);
             int nbFormations = rs1.next() ? rs1.getInt(1) : 0;
             row.add(MainDashboard.buildKpiCard("Formations réalisées",
                     String.format("%,d", nbFormations), null, null));
 
             // Coût total
-            Map<String, Double> couts = DWRepository.getCoutFormationParDept();
+            Map<String, Double> couts = DWRepository.getCoutFormationParDept(annee, departement);
             double coutTotal = couts.values().stream().mapToDouble(Double::doubleValue).sum();
             row.add(MainDashboard.buildKpiCard("Coût total formation",
                     String.format("$%,.0f", coutTotal), null, MainDashboard.C_WARNING));
 
             // Coût moyen par employé formé
-            ResultSet rs3 = query("""
-                SELECT ROUND(AVG(f.cout_formation), 0)
-                FROM fait_rh f
-                WHERE f.cout_formation IS NOT NULL AND f.cout_formation > 0
-                  AND f.nb_formations IS NOT NULL AND f.nb_formations > 0
-            """);
+            ResultSet rs3 = query("SELECT ROUND(AVG(f.cout_formation), 0) FROM fait_rh f " +
+                    "JOIN dim_departement d ON f.dept_id = d.dept_id " +
+                    "JOIN dim_temps t ON f.temps_id = t.temps_id " +
+                    "WHERE f.cout_formation IS NOT NULL AND f.cout_formation > 0 " +
+                    "AND f.nb_formations IS NOT NULL AND f.nb_formations > 0" + af + df);
             double coutMoyen = rs3.next() ? rs3.getDouble(1) : 0;
             row.add(MainDashboard.buildKpiCard("Coût moyen / employé",
                     String.format("$%,.0f", coutMoyen), null, null));
 
             // % employés ayant au moins une formation
-            ResultSet rs4 = query("""
-                SELECT
-                    ROUND(
-                        SUM(CASE WHEN f.nb_formations > 0 THEN 1 ELSE 0 END) * 100.0 / COUNT(*),
-                        1
-                    )
-                FROM fait_rh f
-            """);
+            ResultSet rs4 = query("SELECT ROUND(SUM(CASE WHEN f.nb_formations > 0 THEN 1 ELSE 0 END) * 100.0 / COUNT(*), 1) " +
+                    "FROM fait_rh f " +
+                    "JOIN dim_departement d ON f.dept_id = d.dept_id " +
+                    "JOIN dim_temps t ON f.temps_id = t.temps_id WHERE 1=1" + af + df);
             double pctFormes = rs4.next() ? rs4.getDouble(1) : 0;
             String badge = pctFormes >= 70 ? "Bon" : pctFormes >= 40 ? "Moyen" : "Faible";
             Color color  = pctFormes >= 70 ? MainDashboard.C_SUCCESS
@@ -117,7 +115,7 @@ public class FormationPanel extends JPanel implements MainDashboard.Refreshable 
     // GRAPHIQUES LIGNE 1 : Coût/dept + Top formations
     // ═══════════════════════════════════════════════════════════════════
 
-    private JPanel buildChartsRow1(String departement) {
+    private JPanel buildChartsRow1() {
         JPanel row = new JPanel(new GridBagLayout());
         row.setBackground(MainDashboard.C_BG);
         GridBagConstraints gbc = new GridBagConstraints();
@@ -125,7 +123,10 @@ public class FormationPanel extends JPanel implements MainDashboard.Refreshable 
         gbc.weighty = 1.0;
 
         try {
-            Map<String, Double> couts = DWRepository.getCoutFormationParDept();
+            String af = buildAnneeFilter();
+            String df = buildDeptFilter();
+
+            Map<String, Double> couts = DWRepository.getCoutFormationParDept(annee, departement);
             DefaultCategoryDataset dsCout = new DefaultCategoryDataset();
             couts.forEach((dept, c) -> dsCout.addValue(c, "Coût ($)", dept));
             JFreeChart chartCout = ChartFactory.createBarChart(
@@ -139,12 +140,13 @@ public class FormationPanel extends JPanel implements MainDashboard.Refreshable 
 
             DefaultCategoryDataset dsTop = new DefaultCategoryDataset();
             ResultSet rsTop = query("""
-            SELECT df.intitule, COUNT(*) AS nb
-            FROM fait_rh f
-            JOIN dim_formation df ON f.formation_id = df.formation_id
-            WHERE f.formation_id IS NOT NULL
-            GROUP BY df.intitule ORDER BY nb DESC LIMIT 8
-        """);
+                SELECT df.intitule, COUNT(*) AS nb
+                FROM fait_rh f
+                JOIN dim_formation df ON f.formation_id = df.formation_id
+                JOIN dim_departement d ON f.dept_id = d.dept_id
+                JOIN dim_temps t ON f.temps_id = t.temps_id
+                WHERE f.formation_id IS NOT NULL
+                """ + af + df + " GROUP BY df.intitule ORDER BY nb DESC LIMIT 8");
             while (rsTop.next())
                 dsTop.addValue(rsTop.getInt("nb"), "Nb employés", rsTop.getString("intitule"));
             JFreeChart chartTop = ChartFactory.createBarChart(
@@ -166,7 +168,7 @@ public class FormationPanel extends JPanel implements MainDashboard.Refreshable 
     // GRAPHIQUES LIGNE 2 : Nb formations/dept (ligne) + Durée (camembert)
     // ═══════════════════════════════════════════════════════════════════
 
-    private JPanel buildChartsRow2(String departement) {
+    private JPanel buildChartsRow2() {
         JPanel row = new JPanel(new GridBagLayout());
         row.setBackground(MainDashboard.C_BG);
         GridBagConstraints gbc = new GridBagConstraints();
@@ -174,14 +176,17 @@ public class FormationPanel extends JPanel implements MainDashboard.Refreshable 
         gbc.weighty = 1.0;
 
         try {
+            String af = buildAnneeFilter();
+            String df = buildDeptFilter();
+
             DefaultCategoryDataset dsNb = new DefaultCategoryDataset();
             ResultSet rsNb = query("""
-            SELECT d.nom_dept, ROUND(AVG(f.nb_formations), 2) AS moy
-            FROM fait_rh f
-            JOIN dim_departement d ON f.dept_id = d.dept_id
-            WHERE f.nb_formations IS NOT NULL AND f.nb_formations >= 0
-            GROUP BY d.nom_dept ORDER BY moy DESC
-        """);
+                SELECT d.nom_dept, ROUND(AVG(f.nb_formations), 2) AS moy
+                FROM fait_rh f
+                JOIN dim_departement d ON f.dept_id = d.dept_id
+                JOIN dim_temps t ON f.temps_id = t.temps_id
+                WHERE f.nb_formations IS NOT NULL AND f.nb_formations >= 0
+                """ + af + df + " GROUP BY d.nom_dept ORDER BY moy DESC");
             while (rsNb.next())
                 dsNb.addValue(rsNb.getDouble("moy"), "Formations/employé", rsNb.getString("nom_dept"));
             JFreeChart chartNb = ChartFactory.createLineChart(
@@ -209,7 +214,9 @@ public class FormationPanel extends JPanel implements MainDashboard.Refreshable 
                 ResultSet rsD = query(
                         "SELECT COUNT(*) FROM fait_rh f " +
                                 "JOIN dim_formation df ON f.formation_id = df.formation_id " +
-                                "WHERE " + conditions[i]);
+                                "JOIN dim_departement d ON f.dept_id = d.dept_id " +
+                                "JOIN dim_temps t ON f.temps_id = t.temps_id " +
+                                "WHERE " + conditions[i] + af + df);
                 dsDuree.setValue(labels[i], rsD.next() ? rsD.getInt(1) : 0);
             }
             JFreeChart chartDuree = ChartFactory.createPieChart(
@@ -233,6 +240,20 @@ public class FormationPanel extends JPanel implements MainDashboard.Refreshable 
     private ResultSet query(String sql) throws SQLException {
         return DatabaseManager.getConnection().createStatement().executeQuery(sql);
     }
+
+    private String buildAnneeFilter() {
+        return (annee == null || annee.equals("Toutes")) ? ""
+                : " AND t.annee = " + annee.replaceAll("[^0-9]", "");
+    }
+
+    private String buildDeptFilter() {
+        return (departement == null || departement.equals("Tous")) ? ""
+                : " AND d.nom_dept = '" + departement.replace("'", "''") + "'";
+    }
+
+    // ═══════════════════════════════════════════════════════════════════
+    // STYLE GRAPHIQUES
+    // ═══════════════════════════════════════════════════════════════════
 
     private void styleBar(JFreeChart chart, Color color) {
         chart.setBackgroundPaint(MainDashboard.C_CARD);
@@ -284,8 +305,10 @@ public class FormationPanel extends JPanel implements MainDashboard.Refreshable 
 
     @Override
     public void refresh(String annee, String departement) {
+        this.annee       = annee;
+        this.departement = departement;
         removeAll();
-        build(annee, departement);
+        build();
         revalidate();
         repaint();
     }

@@ -26,15 +26,17 @@ import java.util.Map;
 public class TurnoverPanel extends JPanel implements MainDashboard.Refreshable {
 
     private final MainDashboard dashboard;
+    private String annee       = "Toutes";
+    private String departement = "Tous";
 
     public TurnoverPanel(MainDashboard dashboard) {
         this.dashboard = dashboard;
         setBackground(MainDashboard.C_BG);
         setLayout(new BorderLayout());
-        build("Toutes", "Tous");
+        build();
     }
 
-    private void build(String annee, String departement) {
+    private void build() {
         setLayout(new GridBagLayout());
         GridBagConstraints gbc = new GridBagConstraints();
         gbc.fill = GridBagConstraints.BOTH;
@@ -61,27 +63,30 @@ public class TurnoverPanel extends JPanel implements MainDashboard.Refreshable {
         row.setBackground(MainDashboard.C_BG);
 
         try {
-            // Taux attrition global
-            ResultSet rs1 = query("SELECT ROUND(SUM(attrition) * 100.0 / COUNT(*), 1) FROM fait_rh");
-            double taux = rs1.next() ? rs1.getDouble(1) : 0;
+            String af = buildAnneeFilter();
+            String df = buildDeptFilter();
+
+            double taux = DWRepository.getTauxAttritionGlobal(annee, departement);
             Color cTaux = taux > 15 ? MainDashboard.C_DANGER : taux > 8 ? MainDashboard.C_WARNING : MainDashboard.C_SUCCESS;
             row.add(MainDashboard.buildKpiCard("Taux d'attrition",
                     String.format("%.1f%%", taux),
                     taux > 15 ? "Critique" : taux > 8 ? "Modéré" : "Stable", cTaux));
 
-            // Nombre total de départs
-            ResultSet rs2 = query("SELECT SUM(attrition) FROM fait_rh");
+            ResultSet rs2 = query("SELECT SUM(attrition) FROM fait_rh f " +
+                    "JOIN dim_departement d ON f.dept_id = d.dept_id " +
+                    "JOIN dim_temps t ON f.temps_id = t.temps_id WHERE 1=1" + af + df);
             int departs = rs2.next() ? rs2.getInt(1) : 0;
             row.add(MainDashboard.buildKpiCard("Départs totaux",
                     String.valueOf(departs), null, null));
 
-            // Durée moyenne avant départ (jours → années)
-            ResultSet rs3 = query("SELECT ROUND(AVG(duree_avant_depart) / 365.0, 1) FROM fait_rh WHERE duree_avant_depart > 0");
+            ResultSet rs3 = query("SELECT ROUND(AVG(duree_avant_depart) / 365.0, 1) FROM fait_rh f " +
+                    "JOIN dim_departement d ON f.dept_id = d.dept_id " +
+                    "JOIN dim_temps t ON f.temps_id = t.temps_id " +
+                    "WHERE f.duree_avant_depart > 0" + af + df);
             double duree = rs3.next() ? rs3.getDouble(1) : 0;
             row.add(MainDashboard.buildKpiCard("Durée moy. avant départ",
                     String.format("%.1f ans", duree), null, null));
 
-            // Taux de rétention
             double retention = 100.0 - taux;
             row.add(MainDashboard.buildKpiCard("Taux de rétention",
                     String.format("%.1f%%", retention),
@@ -107,7 +112,7 @@ public class TurnoverPanel extends JPanel implements MainDashboard.Refreshable {
         gbc.weighty = 1.0;
 
         try {
-            Map<String, Double> attrition = DWRepository.getTauxAttritionParDept();
+            Map<String, Double> attrition = DWRepository.getTauxAttritionParDept(annee, departement);
             DefaultCategoryDataset ds = new DefaultCategoryDataset();
             attrition.forEach((dept, taux) -> ds.addValue(taux, "Attrition (%)", dept));
             JFreeChart chart = ChartFactory.createBarChart(
@@ -119,7 +124,7 @@ public class TurnoverPanel extends JPanel implements MainDashboard.Refreshable {
             row.add(MainDashboard.buildCard("Taux d'attrition par département",
                     new ChartPanel(chart)), gbc);
 
-            Map<String, Integer> motifs = DWRepository.getMotifsDepart();
+            Map<String, Integer> motifs = DWRepository.getMotifsDepart(annee, departement);
             DefaultPieDataset<String> dsPie = new DefaultPieDataset<>();
             motifs.entrySet().stream()
                     .sorted(Map.Entry.<String, Integer>comparingByValue().reversed())
@@ -150,14 +155,16 @@ public class TurnoverPanel extends JPanel implements MainDashboard.Refreshable {
         gbc.weighty = 1.0;
 
         try {
-            // Durée avant départ
+            String af = buildAnneeFilter();
+            String df = buildDeptFilter();
+
             DefaultCategoryDataset dsDepart = new DefaultCategoryDataset();
             ResultSet rs = query("""
-            SELECT d.nom_dept, ROUND(AVG(f.duree_avant_depart) / 365.0, 1)
-            FROM fait_rh f JOIN dim_departement d ON f.dept_id = d.dept_id
-            WHERE f.duree_avant_depart > 0
-            GROUP BY d.nom_dept ORDER BY AVG(f.duree_avant_depart) ASC
-        """);
+                SELECT d.nom_dept, ROUND(AVG(f.duree_avant_depart) / 365.0, 1)
+                FROM fait_rh f JOIN dim_departement d ON f.dept_id = d.dept_id
+                JOIN dim_temps t ON f.temps_id = t.temps_id
+                WHERE f.duree_avant_depart > 0
+                """ + af + df + " GROUP BY d.nom_dept ORDER BY AVG(f.duree_avant_depart) ASC");
             while (rs.next())
                 dsDepart.addValue(rs.getDouble(2), "Années", rs.getString(1));
             JFreeChart chartDepart = ChartFactory.createBarChart(
@@ -168,17 +175,17 @@ public class TurnoverPanel extends JPanel implements MainDashboard.Refreshable {
             row.add(MainDashboard.buildCard("Durée moyenne avant départ",
                     new ChartPanel(chartDepart)), gbc);
 
-            // Heures sup vs attrition
             DefaultCategoryDataset dsHs = new DefaultCategoryDataset();
             ResultSet rsHs = query("""
-            SELECT d.nom_dept,
-                   ROUND(SUM(CASE WHEN f.heures_sup = 1 AND f.attrition = 1 THEN 1 ELSE 0 END) * 100.0
-                         / NULLIF(SUM(CASE WHEN f.heures_sup = 1 THEN 1 ELSE 0 END), 0), 1) AS attr_hs,
-                   ROUND(SUM(CASE WHEN f.heures_sup = 0 AND f.attrition = 1 THEN 1 ELSE 0 END) * 100.0
-                         / NULLIF(SUM(CASE WHEN f.heures_sup = 0 THEN 1 ELSE 0 END), 0), 1) AS attr_no_hs
-            FROM fait_rh f JOIN dim_departement d ON f.dept_id = d.dept_id
-            GROUP BY d.nom_dept
-        """);
+                SELECT d.nom_dept,
+                       ROUND(SUM(CASE WHEN f.heures_sup = 1 AND f.attrition = 1 THEN 1 ELSE 0 END) * 100.0
+                             / NULLIF(SUM(CASE WHEN f.heures_sup = 1 THEN 1 ELSE 0 END), 0), 1) AS attr_hs,
+                       ROUND(SUM(CASE WHEN f.heures_sup = 0 AND f.attrition = 1 THEN 1 ELSE 0 END) * 100.0
+                             / NULLIF(SUM(CASE WHEN f.heures_sup = 0 THEN 1 ELSE 0 END), 0), 1) AS attr_no_hs
+                FROM fait_rh f JOIN dim_departement d ON f.dept_id = d.dept_id
+                JOIN dim_temps t ON f.temps_id = t.temps_id
+                WHERE 1=1
+                """ + af + df + " GROUP BY d.nom_dept");
             while (rsHs.next()) {
                 dsHs.addValue(rsHs.getDouble("attr_hs"),    "Avec heures sup", rsHs.getString(1));
                 dsHs.addValue(rsHs.getDouble("attr_no_hs"), "Sans heures sup", rsHs.getString(1));
@@ -212,7 +219,6 @@ public class TurnoverPanel extends JPanel implements MainDashboard.Refreshable {
         r.setDrawBarOutline(false);
         r.setShadowVisible(false);
         r.setMaximumBarWidth(0.5);
-        // Colorer les barres selon le seuil
         for (int i = 0; i < chart.getCategoryPlot().getDataset().getColumnCount(); i++) {
             double val = chart.getCategoryPlot().getDataset().getValue(0, i).doubleValue();
             r.setSeriesPaint(0, val > 15 ? MainDashboard.C_DANGER :
@@ -274,10 +280,26 @@ public class TurnoverPanel extends JPanel implements MainDashboard.Refreshable {
         return DatabaseManager.getConnection().createStatement().executeQuery(sql);
     }
 
+    // ═══════════════════════════════════════════════════════════════════
+    // HELPERS FILTRES SQL
+    // ═══════════════════════════════════════════════════════════════════
+
+    private String buildAnneeFilter() {
+        return (annee == null || annee.equals("Toutes")) ? ""
+                : " AND t.annee = " + annee.replaceAll("[^0-9]", "");
+    }
+
+    private String buildDeptFilter() {
+        return (departement == null || departement.equals("Tous")) ? ""
+                : " AND d.nom_dept = '" + departement.replace("'", "''") + "'";
+    }
+
     @Override
     public void refresh(String annee, String departement) {
+        this.annee       = annee;
+        this.departement = departement;
         removeAll();
-        build(annee, departement);
+        build();
         revalidate();
         repaint();
     }

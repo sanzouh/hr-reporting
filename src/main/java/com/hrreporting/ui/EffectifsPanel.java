@@ -26,15 +26,17 @@ import java.util.*;
 public class EffectifsPanel extends JPanel implements MainDashboard.Refreshable {
 
     private final MainDashboard dashboard;
+    private String annee       = "Toutes";
+    private String departement = "Tous";
 
     public EffectifsPanel(MainDashboard dashboard) {
         this.dashboard = dashboard;
         setBackground(MainDashboard.C_BG);
         setLayout(new BorderLayout());
-        build("Toutes", "Tous");
+        build();
     }
 
-    private void build(String annee, String departement) {
+    private void build() {
         setLayout(new GridBagLayout());
         GridBagConstraints gbc = new GridBagConstraints();
         gbc.fill = GridBagConstraints.BOTH;
@@ -43,28 +45,32 @@ public class EffectifsPanel extends JPanel implements MainDashboard.Refreshable 
         gbc.gridx = 0;
 
         gbc.gridy = 0; gbc.weighty = 0.10;
-        add(buildKpiRow(departement), gbc);
+        add(buildKpiRow(), gbc);
 
         gbc.gridy = 1; gbc.weighty = 0.50;
-        add(buildChartsRow1(departement), gbc);
+        add(buildChartsRow1(), gbc);
 
         gbc.gridy = 2; gbc.weighty = 0.40;
-        add(buildChartsRow2(departement), gbc);
+        add(buildChartsRow2(), gbc);
     }
 
     // ═══════════════════════════════════════════════════════════════════
     // KPI CARDS
     // ═══════════════════════════════════════════════════════════════════
 
-    private JPanel buildKpiRow(String departement) {
+    private JPanel buildKpiRow() {
         JPanel row = new JPanel(new GridLayout(1, 4, 12, 0));
         row.setBackground(MainDashboard.C_BG);
 
         try {
-            String deptFilter = buildDeptFilter(departement);
+            String deptFilter  = buildDeptJoin();
+            String anneeFilter = buildAnneeFilter();
 
             // Total employés
-            ResultSet rs1 = query("SELECT COUNT(DISTINCT employe_id) FROM fait_rh" + deptFilter);
+            ResultSet rs1 = query("SELECT COUNT(DISTINCT f.employe_id) FROM fait_rh f" +
+                    " JOIN dim_departement d ON f.dept_id = d.dept_id" +
+                    " JOIN dim_temps t ON f.temps_id = t.temps_id" +
+                    " WHERE 1=1" + anneeFilter + deptFilter);
             int total = rs1.next() ? rs1.getInt(1) : 0;
             row.add(MainDashboard.buildKpiCard("Total employés",
                     String.format("%,d", total), null, null));
@@ -72,10 +78,12 @@ public class EffectifsPanel extends JPanel implements MainDashboard.Refreshable 
             // % actifs
             ResultSet rs2 = query("""
                 SELECT ROUND(SUM(CASE WHEN e.statut = 'Actif' THEN 1 ELSE 0 END) * 100.0 / COUNT(*), 1)
-                FROM fait_rh f JOIN dim_employe e ON f.employe_id = e.employe_id
-            """ + (departement.equals("Tous") ? "" : """
+                FROM fait_rh f
+                JOIN dim_employe e ON f.employe_id = e.employe_id
                 JOIN dim_departement d ON f.dept_id = d.dept_id
-                WHERE d.nom_dept = '""" + departement + "'"));
+                JOIN dim_temps t ON f.temps_id = t.temps_id
+                WHERE 1=1
+                """ + anneeFilter + deptFilter);
             double pctActifs = rs2.next() ? rs2.getDouble(1) : 0;
             row.add(MainDashboard.buildKpiCard("Employés actifs",
                     String.format("%.1f%%", pctActifs),
@@ -83,19 +91,27 @@ public class EffectifsPanel extends JPanel implements MainDashboard.Refreshable 
                     pctActifs > 85 ? MainDashboard.C_SUCCESS : MainDashboard.C_WARNING));
 
             // Âge moyen
-            ResultSet rs3 = query("SELECT ROUND(AVG(e.age), 1) FROM fait_rh f " +
-                    "JOIN dim_employe e ON f.employe_id = e.employe_id" +
-                    (departement.equals("Tous") ? "" :
-                            " JOIN dim_departement d ON f.dept_id = d.dept_id WHERE d.nom_dept = '" + departement + "'"));
+            ResultSet rs3 = query("""
+                SELECT ROUND(AVG(e.age), 1)
+                FROM fait_rh f
+                JOIN dim_employe e ON f.employe_id = e.employe_id
+                JOIN dim_departement d ON f.dept_id = d.dept_id
+                JOIN dim_temps t ON f.temps_id = t.temps_id
+                WHERE e.age > 0
+                """ + anneeFilter + deptFilter);
             double ageMoyen = rs3.next() ? rs3.getDouble(1) : 0;
             row.add(MainDashboard.buildKpiCard("Âge moyen",
                     String.format("%.0f ans", ageMoyen), null, null));
 
             // Ancienneté moyenne
-            ResultSet rs4 = query("SELECT ROUND(AVG(e.anciennete_ans), 1) FROM fait_rh f " +
-                    "JOIN dim_employe e ON f.employe_id = e.employe_id" +
-                    (departement.equals("Tous") ? "" :
-                            " JOIN dim_departement d ON f.dept_id = d.dept_id WHERE d.nom_dept = '" + departement + "'"));
+            ResultSet rs4 = query("""
+                SELECT ROUND(AVG(e.anciennete_ans), 1)
+                FROM fait_rh f
+                JOIN dim_employe e ON f.employe_id = e.employe_id
+                JOIN dim_departement d ON f.dept_id = d.dept_id
+                JOIN dim_temps t ON f.temps_id = t.temps_id
+                WHERE e.anciennete_ans >= 0
+                """ + anneeFilter + deptFilter);
             double ancMoyenne = rs4.next() ? rs4.getDouble(1) : 0;
             row.add(MainDashboard.buildKpiCard("Ancienneté moy.",
                     String.format("%.1f ans", ancMoyenne), null, null));
@@ -111,7 +127,7 @@ public class EffectifsPanel extends JPanel implements MainDashboard.Refreshable 
     // GRAPHIQUES LIGNE 1 : Effectif/dept + Genre
     // ═══════════════════════════════════════════════════════════════════
 
-    private JPanel buildChartsRow1(String departement) {
+    private JPanel buildChartsRow1() {
         JPanel row = new JPanel(new GridBagLayout());
         row.setBackground(MainDashboard.C_BG);
         GridBagConstraints gbc = new GridBagConstraints();
@@ -152,7 +168,7 @@ public class EffectifsPanel extends JPanel implements MainDashboard.Refreshable 
     // GRAPHIQUES LIGNE 2 : Pyramide des âges + Ancienneté
     // ═══════════════════════════════════════════════════════════════════
 
-    private JPanel buildChartsRow2(String departement) {
+    private JPanel buildChartsRow2() {
         JPanel row = new JPanel(new GridBagLayout());
         row.setBackground(MainDashboard.C_BG);
         GridBagConstraints gbc = new GridBagConstraints();
@@ -219,10 +235,19 @@ public class EffectifsPanel extends JPanel implements MainDashboard.Refreshable 
         return DatabaseManager.getConnection().createStatement().executeQuery(sql);
     }
 
-    private String buildDeptFilter(String departement) {
-        if (departement.equals("Tous")) return "";
-        return " JOIN dim_departement d ON f.dept_id = d.dept_id WHERE d.nom_dept = '" + departement + "'";
+    private String buildDeptJoin() {
+        if (departement == null || departement.equals("Tous")) return "";
+        return " AND d.nom_dept = '" + departement.replace("'", "''") + "'";
     }
+
+    private String buildAnneeFilter() {
+        if (annee == null || annee.equals("Toutes")) return "";
+        return " AND t.annee = " + annee.replaceAll("[^0-9]", "");
+    }
+
+    // ═══════════════════════════════════════════════════════════════════
+    // STYLE GRAPHIQUES
+    // ═══════════════════════════════════════════════════════════════════
 
     private void styleBar(JFreeChart chart, Color color) {
         chart.setBackgroundPaint(MainDashboard.C_CARD);
@@ -276,8 +301,10 @@ public class EffectifsPanel extends JPanel implements MainDashboard.Refreshable 
 
     @Override
     public void refresh(String annee, String departement) {
+        this.annee       = annee;
+        this.departement = departement;
         removeAll();
-        build(annee, departement);
+        build();
         revalidate();
         repaint();
     }
