@@ -1,6 +1,7 @@
-package com.hrreporting.etl;
+package com.hrreporting.old_loaders;
 
 import com.hrreporting.db.DWRepository;
+import com.hrreporting.etl.ETLUtils;
 import com.hrreporting.model.FaitRH;
 import com.opencsv.CSVReader;
 import com.opencsv.exceptions.CsvValidationException;
