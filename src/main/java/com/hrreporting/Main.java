@@ -25,6 +25,11 @@ public class Main {
             ge.registerFont(interBold);
             UIManager.put("defaultFont", interRegular.deriveFont(13f));
 
+            // Add rounded corners to buttons and text fields
+            UIManager.put("Button.arc", 16);
+            UIManager.put("Component.arc", 16);
+            UIManager.put("TextComponent.arc", 16);
+
             FlatLightLaf.setup();
             FlatLightLaf.setup(); // ou  FlatDarkLaf
             DatabaseManager.initialize();

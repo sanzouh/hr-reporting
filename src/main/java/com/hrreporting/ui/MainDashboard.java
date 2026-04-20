@@ -4,6 +4,7 @@ import com.formdev.flatlaf.extras.FlatSVGIcon;
 import com.hrreporting.db.DWRepository;
 
 import javax.swing.*;
+import javax.swing.border.Border;
 import javax.swing.border.EmptyBorder;
 import java.awt.*;
 import java.awt.event.*;
@@ -222,14 +223,14 @@ public class MainDashboard extends JFrame {
             System.err.println("Erreur chargement icône refresh: " + e.getMessage());
         }
         JButton btnRefresh = new JButton("Actualiser", refreshIcon);
+        btnRefresh.setFont(new Font("Segoe UI", Font.BOLD, 13));
+        btnRefresh.setFocusPainted(false);
+        btnRefresh.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+        btnRefresh.setPreferredSize(new Dimension(140, 36));
+        btnRefresh.putClientProperty("JButton.buttonType", "default");
+        btnRefresh.putClientProperty("Button.arc", 16);
         btnRefresh.setBackground(C_PRIMARY);
         btnRefresh.setForeground(Color.WHITE);
-        btnRefresh.setFont(new Font("Segoe UI", Font.BOLD, 13));
-        btnRefresh.setBorder(new EmptyBorder(8, 16, 8, 16));
-        btnRefresh.setFocusPainted(false);
-        btnRefresh.setBorderPainted(false);
-        btnRefresh.setOpaque(true);
-        btnRefresh.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
         btnRefresh.addActionListener(e -> refreshCurrentPanel());
         filterPanel.add(btnRefresh);
 
@@ -386,7 +387,7 @@ public class MainDashboard extends JFrame {
         JPanel card = new JPanel(new BorderLayout(0, 12));
         card.setBackground(C_CARD);
         card.setBorder(BorderFactory.createCompoundBorder(
-                BorderFactory.createLineBorder(C_BORDER, 1, true),
+                roundedBorder(C_BORDER),
                 new EmptyBorder(16, 16, 16, 16)
         ));
 
@@ -409,7 +410,7 @@ public class MainDashboard extends JFrame {
         card.setBackground(C_CARD);
         card.setLayout(new BoxLayout(card, BoxLayout.Y_AXIS));
         card.setBorder(BorderFactory.createCompoundBorder(
-                BorderFactory.createLineBorder(C_BORDER, 1, true),
+                roundedBorder(C_BORDER),
                 new EmptyBorder(10, 16, 10, 16)
         ));
         JLabel lblLabel = new JLabel(label);
@@ -443,5 +444,20 @@ public class MainDashboard extends JFrame {
      */
     public interface Refreshable {
         void refresh(String annee, String departement);
+    }
+
+    /* Crée des bordures personnalisées */
+    public static Border roundedBorder(Color color) {
+        return new Border() {
+            public void paintBorder(Component c, Graphics g, int x, int y, int w, int h) {
+                Graphics2D g2 = (Graphics2D) g.create();
+                g2.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
+                g2.setColor(color);
+                g2.drawRoundRect(x, y, w-1, h-1, 16, 16);
+                g2.dispose();
+            }
+            public Insets getBorderInsets(Component c) { return new Insets(1,1,1,1); }
+            public boolean isBorderOpaque() { return false; }
+        };
     }
 }

@@ -225,7 +225,7 @@ public class DashboardPanel extends JPanel implements MainDashboard.Refreshable 
         JPanel card = new JPanel(new BorderLayout());
         card.setBackground(bgColor);
         card.setBorder(BorderFactory.createCompoundBorder(
-                BorderFactory.createLineBorder(MainDashboard.C_BORDER, 1, true),
+                MainDashboard.roundedBorder(MainDashboard.C_BORDER),
                 new EmptyBorder(16, 16, 16, 16)
         ));
         JLabel lbl = new JLabel(html);
