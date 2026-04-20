@@ -1,0 +1,1001 @@
+﻿EmployeeID,FirstName,LastName,DateOfBirth,Gender,DepartmentCode,JobTitle,AnnualSalary,HireDate,TerminationDate,EmploymentStatus,TermReason,EmployeeSatisfaction,PerformanceRating,Site
+100001,Alexandre,Leroy,26/12/1980,M,RD,Software Engineer,81395,03/07/2017,,Active,,3,2,Paris
+100002,Julie,Blanc,02/01/1997,F,RD,Software Engineer,128878,19/04/2015,,LOA,,3,4,Paris
+100003,Xavier,Robert,06/04/1985,F,RD,Lead Engineer,82156,12/02/2018,,Active,,3,3,Paris
+100004,Antoine,Dubois,11/08/1990,M,RD,QA Engineer,142357,05/01/2021,,LOA,,3,4,Paris
+100005,Romain,Lambert,13/02/1973,M,RD,R&D Analyst,100512,07/07/2015,,Active,,4,3,Paris
+100006,Camille,Petit,08/12/1985,M,RD,R&D Analyst,92431,08/05/2017,,Active,,3,3,Paris
+100007,Antoine,Chevalier,08/11/1979,F,RD,Software Engineer,74207,05/09/2022,,Active,,4,3,Paris
+100008,Romain,Moreau,16/07/1979,F,RD,Data Scientist,104718,08/05/2022,,LOA,,2,4,Paris
+100009,Céline,Robert,05/03/1996,M,RD,Software Engineer,134686,24/06/2019,,Active,,2,2,Paris
+100010,Vincent,Garnier,11/07/2000,F,RD,Data Scientist,148104,26/09/2019,,LOA,,4,4,Paris
+100011,Valérie,Durand,31/07/2000,M,RD,DevOps Engineer,108469,08/01/2021,,Active,,3,3,Paris
+100012,Olivier,Garnier,09/10/1992,M,RD,QA Engineer,136540,11/03/2016,,Active,,3,3,Paris
+100013,Patricia,Blanc,10/01/1970,F,RD,Lead Engineer,117576,19/09/2021,,Active,,4,5,Paris
+100014,Sophie,Laurent,14/06/1995,F,RD,Data Scientist,86483,19/11/2015,22/09/2022,Terminated,Resignation,2,3,Paris
+100015,Antoine,Blanc,18/03/1997,F,RD,R&D Analyst,122296,30/09/2019,,Active,,4,4,Paris
+100016,Maxime,Durand,13/02/1981,M,RD,Software Engineer,98864,09/07/2017,13/02/2020,Terminated,Retirement,1,4,Paris
+100017,Nicolas,Dubois,27/10/1984,F,RD,Data Scientist,98080,18/10/2015,,Active,,3,4,Paris
+100018,Nathalie,Laurent,21/03/1991,M,RD,DevOps Engineer,116438,26/07/2019,,Active,,3,3,Paris
+100019,Valérie,Durand,20/09/1972,M,RD,R&D Analyst,95112,08/07/2019,,Active,,2,3,Paris
+100020,Antoine,Simon,16/03/1981,F,RD,QA Engineer,140855,05/11/2015,,Active,,4,5,Paris
+100021,Camille,Robert,14/10/1991,F,RD,Lead Engineer,91579,25/05/2020,,LOA,,3,5,Paris
+100022,Claire,Robert,06/12/1994,F,RD,DevOps Engineer,108890,04/06/2022,,Active,,3,2,Paris
+100023,Sophie,Moreau,25/07/1972,M,RD,Data Scientist,136562,25/07/2015,,Active,,2,3,Paris
+100024,Valérie,Laurent,11/02/1988,M,RD,DevOps Engineer,147924,06/05/2016,,Active,,1,2,Paris
+100025,Romain,Blanc,11/03/1984,M,RD,Lead Engineer,104814,04/12/2017,,Active,,3,4,Paris
+100026,François,Dupont,02/06/1970,F,RD,Lead Engineer,140468,21/02/2020,,Active,,3,3,Paris
+100027,Julie,Petit,14/10/1982,M,RD,Lead Engineer,139329,08/10/2016,,Active,,1,4,Paris
+100028,Thomas,Leroy,07/03/1975,M,RD,Senior Software Engineer,106930,14/03/2016,,Active,,3,4,Paris
+100029,Olivier,Thomas,07/04/1981,M,RD,Lead Engineer,70464,28/07/2015,17/05/2022,Terminated,Layoff,3,3,Paris
+100030,Céline,Simon,30/09/1994,F,RD,Senior Software Engineer,79862,30/11/2022,,Active,,4,4,Paris
+100031,Sophie,Petit,17/02/1996,M,RD,QA Engineer,110404,13/03/2021,,Active,,3,5,Paris
+100032,Isabelle,Lambert,05/08/2000,M,RD,Senior Software Engineer,123264,19/10/2017,,Active,,4,4,Paris
+100033,Camille,Robert,11/02/1971,F,RD,Software Engineer,102527,04/01/2017,,Active,,3,4,Paris
+100034,Sophie,Thomas,24/12/1979,F,RD,Senior Software Engineer,110001,28/03/2017,,LOA,,4,5,Paris
+100035,Valérie,Lambert,16/11/1987,M,RD,QA Engineer,116025,06/09/2018,,Active,,3,3,Paris
+100036,François,Bernard,05/03/1975,M,RD,QA Engineer,84208,05/12/2017,,Active,,3,3,Paris
+100037,Laurence,Blanc,10/03/1975,M,RD,QA Engineer,75817,27/04/2019,,Active,,4,1,Paris
+100038,Valérie,Lambert,04/05/1986,M,RD,Lead Engineer,111145,02/11/2019,20/01/2024,Terminated,Layoff,4,2,Paris
+100039,Claire,Robert,19/08/1984,M,RD,DevOps Engineer,125108,07/07/2019,,Active,,4,3,Paris
+100040,Sandrine,Martin,20/03/1988,F,RD,DevOps Engineer,97549,22/02/2021,,Active,,3,4,Paris
+100041,Maxime,Simon,01/11/1989,M,RD,Data Scientist,81114,30/07/2022,,LOA,,3,4,Paris
+100042,Nicolas,Laurent,07/03/2000,M,RD,Data Scientist,73201,25/06/2018,,Active,,1,5,Paris
+100043,Maxime,Robert,02/04/1998,M,RD,Software Engineer,122383,15/06/2021,,LOA,,3,4,Paris
+100044,Laurence,Laurent,21/11/1977,M,RD,Senior Software Engineer,102662,21/10/2022,,Active,,4,2,Paris
+100045,Valérie,Blanc,27/01/1995,F,RD,R&D Analyst,136162,04/09/2021,,LOA,,3,5,Paris
+100046,Céline,Thomas,10/03/1990,F,RD,Software Engineer,133517,27/11/2017,,Active,,3,3,Paris
+100047,Julie,Leroy,24/01/1985,M,RD,DevOps Engineer,89769,02/08/2018,,Active,,3,4,Paris
+100048,Nicolas,Robert,14/04/1988,F,RD,QA Engineer,97110,17/09/2018,,LOA,,4,3,Paris
+100049,Xavier,Bernard,29/10/1995,M,RD,R&D Analyst,121116,08/04/2019,,Active,,4,5,Paris
+100050,Céline,Chevalier,22/01/1997,M,RD,DevOps Engineer,133654,22/06/2017,,Active,,1,3,Paris
+100051,Céline,Garnier,19/12/1990,F,RD,DevOps Engineer,147580,06/06/2016,,Active,,3,1,Paris
+100052,Thomas,Simon,25/02/1978,F,RD,R&D Analyst,129598,25/07/2015,,Active,,3,4,Paris
+100053,Laurence,Leroy,03/09/1973,M,RD,DevOps Engineer,99389,10/04/2020,16/10/2023,Terminated,Resignation,4,4,Paris
+100054,Alexandre,Laurent,11/12/1978,M,RD,Senior Software Engineer,132070,25/03/2015,,Active,,4,4,Paris
+100055,Xavier,Leroy,19/07/1986,F,RD,Lead Engineer,110768,18/11/2016,,Active,,2,1,Paris
+100056,Valérie,Richard,17/10/1987,M,RD,Software Engineer,109529,07/01/2023,,Active,,4,4,Paris
+100057,Sophie,Petit,24/11/1993,M,RD,R&D Analyst,114725,21/10/2019,,Active,,1,3,Paris
+100058,Laurence,Petit,06/07/1998,M,RD,QA Engineer,138386,27/02/2020,,LOA,,4,3,Paris
+100059,Nathalie,Simon,16/07/1989,M,RD,QA Engineer,81359,14/03/2023,,Active,,3,3,Paris
+100060,Romain,Richard,02/02/1985,F,RD,Lead Engineer,133904,28/04/2015,,Active,,3,4,Paris
+100061,Sandrine,Leroy,07/12/1994,M,RD,QA Engineer,101635,11/02/2015,,Active,,4,4,Paris
+100062,Xavier,Thomas,22/12/1998,F,RD,Lead Engineer,108566,25/12/2022,,Active,,3,4,Paris
+100063,Isabelle,Thomas,30/10/1994,M,RD,Software Engineer,129473,14/12/2020,,Active,,3,3,Paris
+100064,François,Durand,14/01/1994,F,RD,QA Engineer,133464,19/07/2023,,Active,,3,4,Paris
+100065,Sandrine,Martin,06/07/1974,M,RD,Lead Engineer,109618,06/03/2017,,Active,,1,4,Paris
+100066,Sophie,Chevalier,08/02/1983,M,RD,R&D Analyst,71607,27/10/2022,,LOA,,3,3,Paris
+100067,Camille,Dubois,29/04/1981,M,RD,Software Engineer,134454,10/05/2020,,Active,,2,4,Paris
+100068,Thomas,Martin,27/10/1973,F,RD,Data Scientist,148135,13/10/2017,,LOA,,4,3,Paris
+100069,Maxime,Simon,04/05/1983,F,RD,QA Engineer,77894,07/08/2021,,Active,,3,4,Paris
+100070,Vincent,Lambert,14/11/1981,F,RD,DevOps Engineer,79838,29/05/2022,28/07/2023,Terminated,Retirement,2,3,Paris
+100071,Nathalie,Martin,19/06/1971,M,RD,QA Engineer,79329,06/08/2017,,Active,,4,5,Paris
+100072,Valérie,Lambert,26/01/1989,M,RD,Lead Engineer,88643,15/04/2016,,Active,,2,3,Paris
+100073,Céline,Martin,13/09/1989,M,RD,Software Engineer,105683,24/05/2016,,Active,,3,4,Paris
+100074,Sophie,Robert,16/06/1984,M,RD,QA Engineer,145392,08/10/2021,,Active,,3,1,Paris
+100075,Romain,Dubois,10/11/1977,M,RD,QA Engineer,93788,11/04/2020,,LOA,,4,3,Paris
+100076,Nicolas,Thomas,10/08/1985,F,RD,DevOps Engineer,113228,31/07/2019,,Active,,3,4,Paris
+100077,Patricia,Dubois,27/05/1990,F,RD,Software Engineer,122976,27/12/2015,,Active,,4,4,Paris
+100078,Maxime,Robert,07/06/1972,M,RD,Data Scientist,127939,07/02/2017,,LOA,,4,3,Paris
+100079,Claire,Simon,29/09/1991,F,RD,Software Engineer,110730,12/05/2016,14/07/2023,Terminated,Retirement,3,4,Paris
+100080,Marie,Simon,09/04/1975,F,RD,R&D Analyst,136698,07/04/2022,,LOA,,4,3,Paris
+100081,Julie,Simon,23/09/1994,F,RD,Lead Engineer,106208,15/08/2016,,Active,,4,5,Paris
+100082,Antoine,Bernard,09/09/1982,M,RD,Data Scientist,128529,21/02/2023,,LOA,,3,3,Paris
+100083,Julien,Simon,08/06/1984,M,RD,Software Engineer,120196,11/02/2017,,Active,,3,4,Paris
+100084,Céline,Thomas,07/02/1987,M,RD,Lead Engineer,74852,01/05/2019,,Active,,2,5,Paris
+100085,Maxime,Durand,05/08/1993,M,RD,Lead Engineer,79807,15/02/2020,04/06/2021,Terminated,Other,3,5,Paris
+100086,Xavier,Richard,24/02/1999,M,RD,Software Engineer,133956,25/11/2015,,LOA,,4,2,Paris
+100087,Vincent,Martin,16/03/1980,F,RD,Software Engineer,91805,17/05/2023,02/01/2024,Terminated,Resignation,4,5,Paris
+100088,Sophie,Martin,30/01/1986,M,RD,Senior Software Engineer,124008,16/03/2019,,Active,,3,4,Paris
+100089,Nicolas,Richard,19/10/1997,F,RD,DevOps Engineer,130443,30/08/2022,,Active,,3,3,Paris
+100090,Maxime,Martin,24/05/2000,M,RD,DevOps Engineer,147014,16/02/2021,,LOA,,3,5,Paris
+100091,Maxime,Martin,08/12/1978,M,RD,DevOps Engineer,119986,25/04/2019,,Active,,3,4,Paris
+100092,Alexandre,Richard,25/04/1982,M,RD,QA Engineer,135107,03/02/2015,,Active,,4,5,Paris
+100093,Sandrine,Petit,29/10/1979,F,RD,Lead Engineer,82735,20/02/2022,,Active,,4,4,Paris
+100094,Sophie,Petit,24/11/1975,F,RD,Lead Engineer,93021,05/01/2016,,Active,,3,4,Paris
+100095,Olivier,Leroy,19/05/1977,M,RD,Software Engineer,114396,18/11/2017,,LOA,,4,3,Paris
+100096,Julie,Richard,01/01/1995,F,RD,DevOps Engineer,140329,07/02/2019,19/03/2022,Terminated,Resignation,2,3,Paris
+100097,Romain,Richard,23/08/1998,M,RD,Lead Engineer,73280,02/03/2019,,Active,,3,5,Paris
+100098,Julie,Dupont,03/07/1998,M,RD,Lead Engineer,85292,16/03/2020,,Active,,2,5,Paris
+100099,Marie,Durand,13/07/1980,F,RD,Senior Software Engineer,140804,10/01/2021,,LOA,,3,4,Paris
+100100,Vincent,Durand,14/12/1991,F,RD,Senior Software Engineer,118566,26/11/2021,,Active,,3,3,Paris
+100101,Marie,Petit,04/06/1994,M,RD,QA Engineer,94878,26/03/2022,,LOA,,4,5,Paris
+100102,Nicolas,Lambert,14/10/1998,F,RD,Data Scientist,113713,04/03/2022,,Active,,3,2,Paris
+100103,Nicolas,Chevalier,18/04/1979,F,RD,Lead Engineer,89340,29/07/2021,,Active,,4,4,Paris
+100104,Thomas,Chevalier,30/03/1981,F,RD,Data Scientist,71947,15/12/2023,,Active,,3,4,Paris
+100105,Alexandre,Garnier,26/11/1981,M,RD,QA Engineer,84896,03/08/2015,,LOA,,4,3,Paris
+100106,Olivier,Durand,11/04/1990,M,RD,Software Engineer,109535,25/08/2020,,Active,,3,5,Paris
+100107,Julien,Robert,11/10/2000,F,RD,Senior Software Engineer,80589,18/03/2016,,LOA,,3,3,Paris
+100108,Sandrine,Chevalier,02/08/1984,M,RD,DevOps Engineer,136263,10/04/2019,,Active,,3,2,Paris
+100109,Vincent,Chevalier,24/08/1979,M,RD,DevOps Engineer,114424,28/10/2019,,Active,,4,3,Paris
+100110,François,Robert,08/01/1984,M,RD,R&D Analyst,78799,17/06/2022,,Active,,2,2,Paris
+100111,Céline,Petit,02/11/1975,M,RD,QA Engineer,123845,28/03/2021,17/11/2024,Terminated,Layoff,3,4,Paris
+100112,Céline,Dubois,26/11/1982,F,RD,Senior Software Engineer,136507,25/09/2021,,Active,,3,4,Paris
+100113,Isabelle,Chevalier,28/06/1986,M,RD,Data Scientist,143526,15/04/2016,,Active,,4,4,Paris
+100114,Alexandre,Leroy,20/04/1971,M,RD,Data Scientist,116009,08/01/2017,,Active,,1,5,Paris
+100115,Nicolas,Fontaine,27/05/1998,F,RD,Lead Engineer,125028,06/05/2015,22/12/2022,Terminated,Retirement,3,3,Paris
+100116,Romain,Dupont,11/05/1972,M,RD,Data Scientist,105665,29/09/2016,,Active,,3,3,Paris
+100117,Laurence,Leroy,02/09/1979,F,RD,R&D Analyst,84534,20/06/2023,,Active,,3,4,Paris
+100118,Valérie,Martin,15/01/1972,M,RD,Senior Software Engineer,96794,22/06/2017,,Active,,3,3,Paris
+100119,Claire,Moreau,20/05/1975,M,RD,Data Scientist,86932,01/02/2015,,LOA,,3,4,Paris
+100120,Valérie,Petit,26/03/1973,M,RD,Lead Engineer,72456,15/06/2019,,Active,,3,2,Paris
+100121,Laurence,Richard,19/09/1998,M,RD,R&D Analyst,112568,07/09/2019,,LOA,,2,5,Paris
+100122,Nicolas,Robert,01/10/1974,M,RD,Lead Engineer,80308,23/09/2017,,LOA,,3,3,Paris
+100123,François,Garnier,05/06/1973,F,RD,QA Engineer,116019,21/09/2020,,Active,,4,4,Paris
+100124,Julie,Durand,27/07/1976,F,RD,R&D Analyst,93218,14/11/2017,,Active,,4,4,Paris
+100125,Romain,Simon,21/07/2000,M,RD,R&D Analyst,111436,01/05/2021,,Active,,2,2,Paris
+100126,Antoine,Dubois,15/10/1985,M,RD,DevOps Engineer,77456,09/09/2020,09/10/2023,Terminated,Other,3,3,Paris
+100127,Sandrine,Blanc,01/04/1987,M,RD,R&D Analyst,144928,10/03/2020,,Active,,4,3,Paris
+100128,Thomas,Dubois,18/03/1990,M,RD,DevOps Engineer,136132,28/02/2016,,Active,,3,2,Paris
+100129,Maxime,Blanc,13/06/1993,F,RD,Data Scientist,120779,02/11/2021,,Active,,3,3,Paris
+100130,Vincent,Moreau,15/12/1972,M,RD,Data Scientist,103029,12/09/2018,21/10/2023,Terminated,Other,4,4,Paris
+100131,François,Dupont,21/02/1996,F,RD,Software Engineer,121374,11/06/2022,,Active,,2,4,Paris
+100132,Patricia,Richard,12/11/1998,M,RD,Lead Engineer,82249,17/11/2023,,Active,,3,3,Paris
+100133,Isabelle,Martin,01/02/1978,M,RD,Lead Engineer,99693,27/05/2017,,LOA,,4,3,Paris
+100134,Olivier,Chevalier,14/08/1993,M,RD,DevOps Engineer,119377,04/06/2015,,Active,,2,3,Paris
+100135,Camille,Simon,17/12/1971,M,RD,Senior Software Engineer,107346,10/08/2019,,Active,,4,4,Paris
+100136,Julie,Martin,15/01/1991,M,RD,R&D Analyst,106932,05/03/2017,,LOA,,4,4,Paris
+100137,Pierre,Fontaine,20/03/1981,F,RD,Software Engineer,83446,02/08/2015,,Active,,4,4,Paris
+100138,Nicolas,Garnier,28/03/1982,M,RD,R&D Analyst,82021,15/01/2020,,Active,,4,3,Paris
+100139,Alexandre,Robert,22/05/1972,M,RD,Software Engineer,80696,12/06/2019,,Active,,3,1,Paris
+100140,Thomas,Fontaine,20/09/1971,M,RD,Software Engineer,131487,21/03/2018,,LOA,,3,1,Paris
+100141,Antoine,Lambert,15/09/1976,M,RD,Senior Software Engineer,107762,25/02/2021,,LOA,,3,2,Paris
+100142,Vincent,Simon,26/10/1972,F,RD,Senior Software Engineer,140261,30/03/2016,,LOA,,1,4,Paris
+100143,Claire,Robert,26/01/1970,F,RD,Data Scientist,81221,23/11/2021,,LOA,,3,3,Paris
+100144,Olivier,Blanc,10/11/1994,M,RD,Software Engineer,120709,25/03/2015,,LOA,,4,3,Paris
+100145,Nicolas,Petit,25/10/1980,M,RD,Lead Engineer,113583,22/03/2023,,Active,,2,3,Paris
+100146,Valérie,Simon,20/06/1991,F,RD,QA Engineer,129988,31/01/2022,,Active,,1,3,Paris
+100147,Sophie,Moreau,29/11/1983,F,RD,Lead Engineer,74799,12/10/2020,,LOA,,4,3,Paris
+100148,Vincent,Moreau,04/04/1982,M,RD,Senior Software Engineer,127637,24/05/2016,,LOA,,4,3,Paris
+100149,Xavier,Thomas,24/06/1986,F,RD,Senior Software Engineer,80345,10/12/2023,,Active,,3,5,Paris
+100150,Claire,Moreau,08/08/1974,M,RD,DevOps Engineer,128447,24/11/2015,,Active,,3,3,Paris
+100151,Isabelle,Simon,25/11/1971,F,RD,Software Engineer,127008,25/02/2023,,Active,,3,5,Paris
+100152,Valérie,Richard,19/04/1986,M,RD,R&D Analyst,88714,02/10/2020,,Active,,4,4,Paris
+100153,Thomas,Dupont,02/08/1980,M,RD,R&D Analyst,144349,24/09/2023,,Active,,1,3,Paris
+100154,Isabelle,Simon,13/06/1973,M,RD,Software Engineer,111207,08/06/2021,,Active,,3,3,Paris
+100155,Céline,Garnier,21/05/1992,M,RD,Data Scientist,104116,21/10/2020,,Active,,4,3,Paris
+100156,Xavier,Thomas,24/12/1978,M,RD,Software Engineer,92630,17/05/2016,,Active,,4,3,Paris
+100157,Valérie,Petit,29/11/1972,M,RD,Software Engineer,92818,02/03/2021,,Active,,4,4,Paris
+100158,Thomas,Laurent,29/02/1992,F,RD,Software Engineer,142305,18/04/2015,,Active,,2,5,Paris
+100159,Julien,Thomas,31/07/1993,M,RD,DevOps Engineer,111553,10/08/2019,,Active,,3,3,Paris
+100160,Isabelle,Fontaine,24/09/1994,M,RD,Software Engineer,135911,05/03/2022,,Active,,4,2,Paris
+100161,Thomas,Martin,21/05/1977,M,RD,Lead Engineer,138012,25/10/2016,,Active,,4,5,Paris
+100162,Vincent,Chevalier,24/04/1982,F,RD,Senior Software Engineer,92103,27/05/2016,,Active,,3,4,Paris
+100163,Céline,Moreau,14/04/1995,M,RD,Lead Engineer,75958,18/06/2015,,Active,,4,4,Paris
+100164,Romain,Robert,23/09/1997,F,RD,DevOps Engineer,109596,02/03/2022,01/06/2024,Terminated,Layoff,3,4,Paris
+100165,Claire,Simon,10/04/1973,F,RD,Lead Engineer,130875,21/09/2022,12/06/2024,Terminated,Other,3,4,Paris
+100166,Céline,Petit,20/11/1987,M,RD,Senior Software Engineer,101685,19/06/2016,,Active,,3,3,Paris
+100167,Marie,Dubois,07/01/1983,F,RD,DevOps Engineer,90932,23/04/2019,,LOA,,4,5,Paris
+100168,Pierre,Garnier,08/05/1992,M,RD,R&D Analyst,73037,09/10/2020,,Active,,2,3,Paris
+100169,Pierre,Petit,08/03/1972,F,RD,Senior Software Engineer,140345,27/07/2015,,LOA,,1,2,Paris
+100170,Céline,Petit,02/02/1988,M,RD,R&D Analyst,142512,07/02/2019,14/04/2020,Terminated,Retirement,3,3,Paris
+100171,Antoine,Durand,10/10/1975,M,RD,Data Scientist,117920,01/02/2016,,Active,,4,3,Paris
+100172,Olivier,Dubois,13/01/1972,F,RD,Data Scientist,138069,09/06/2015,,Active,,3,4,Paris
+100173,François,Moreau,16/04/1977,F,RD,R&D Analyst,114089,29/05/2019,,Active,,3,4,Paris
+100174,Claire,Thomas,30/09/1970,M,RD,QA Engineer,146507,17/02/2019,,Active,,3,5,Paris
+100175,Sandrine,Thomas,29/11/1981,M,RD,DevOps Engineer,146483,09/05/2022,,Active,,3,4,Paris
+100176,Julien,Fontaine,15/07/2000,M,RD,R&D Analyst,72482,19/09/2017,05/12/2023,Terminated,Resignation,3,3,Paris
+100177,Laurence,Blanc,06/06/1997,F,RD,DevOps Engineer,137984,15/04/2020,,Active,,3,3,Paris
+100178,Olivier,Richard,28/01/1984,F,RD,DevOps Engineer,116437,10/12/2016,,Active,,4,5,Paris
+100179,Sandrine,Thomas,17/08/1978,M,RD,DevOps Engineer,109008,06/10/2017,,Active,,4,4,Paris
+100180,François,Thomas,24/08/1985,F,RD,R&D Analyst,85974,14/04/2021,,Active,,3,4,Paris
+100181,Thomas,Martin,21/11/1971,M,RD,Senior Software Engineer,127983,24/03/2018,,Active,,4,4,Paris
+100182,Patricia,Leroy,19/03/1995,F,RD,Data Scientist,146917,22/10/2022,,Active,,3,2,Paris
+100183,Vincent,Laurent,10/05/1972,F,RD,Senior Software Engineer,88018,15/02/2016,,LOA,,1,4,Paris
+100184,Vincent,Thomas,02/06/1991,F,RD,Software Engineer,107409,18/04/2022,,Active,,3,5,Paris
+100185,Julie,Chevalier,04/09/1971,M,RD,DevOps Engineer,122034,18/12/2016,,Active,,4,3,Paris
+100186,Sophie,Bernard,21/05/1983,M,RD,R&D Analyst,129552,15/05/2021,,Active,,4,4,Paris
+100187,Olivier,Simon,29/03/1982,F,RD,Software Engineer,130150,28/02/2017,,Active,,3,4,Paris
+100188,Claire,Lambert,15/11/1977,M,RD,Software Engineer,137538,07/11/2021,,LOA,,3,3,Paris
+100189,Thomas,Thomas,07/07/1984,F,RD,DevOps Engineer,104995,13/10/2017,24/02/2022,Terminated,Retirement,4,3,Paris
+100190,Alexandre,Leroy,28/04/1999,M,RD,Data Scientist,131000,12/01/2019,,Active,,3,3,Paris
+100191,Xavier,Durand,26/08/1998,M,RD,Data Scientist,87507,23/04/2018,,Active,,3,3,Paris
+100192,Laurence,Chevalier,14/02/1991,M,RD,R&D Analyst,148094,30/06/2023,,Active,,4,2,Paris
+100193,Xavier,Petit,03/07/1973,M,RD,Data Scientist,140341,29/04/2021,,Active,,2,3,Paris
+100194,Marie,Lambert,28/02/1996,F,RD,Data Scientist,129432,25/06/2020,02/11/2023,Terminated,Other,2,3,Paris
+100195,Patricia,Simon,06/03/2000,M,RD,Software Engineer,70395,16/06/2018,,LOA,,4,4,Paris
+100196,Isabelle,Dupont,11/04/1994,F,RD,Senior Software Engineer,74159,04/09/2015,,Active,,3,3,Paris
+100197,Isabelle,Richard,13/02/1990,F,RD,Data Scientist,85549,27/03/2019,,Active,,2,4,Paris
+100198,Céline,Laurent,26/02/1970,F,RD,Senior Software Engineer,125591,25/06/2023,22/05/2024,Terminated,Other,3,4,Paris
+100199,Isabelle,Fontaine,14/05/1982,F,RD,Software Engineer,124950,11/02/2017,,Active,,3,5,Paris
+100200,Pierre,Dupont,12/07/1974,F,RD,QA Engineer,122725,29/08/2021,04/06/2022,Terminated,Retirement,3,4,Paris
+100201,Thomas,Blanc,23/12/1982,M,RD,Senior Software Engineer,148370,17/08/2017,,Active,,4,4,Paris
+100202,Thomas,Blanc,01/12/1979,M,RD,DevOps Engineer,147550,21/08/2019,,Active,,4,5,Paris
+100203,Patricia,Thomas,08/02/1972,F,RD,Lead Engineer,111777,11/11/2018,,LOA,,4,3,Paris
+100204,Camille,Chevalier,30/03/1991,F,RD,R&D Analyst,130689,14/09/2017,,Active,,4,4,Paris
+100205,Olivier,Fontaine,04/06/1987,M,RD,Software Engineer,80363,21/09/2017,,Active,,4,5,Paris
+100206,Céline,Lambert,24/04/1972,M,RD,DevOps Engineer,94662,04/01/2018,,Active,,4,4,Paris
+100207,Pierre,Thomas,16/05/1979,M,RD,QA Engineer,94906,25/09/2018,,Active,,4,2,Paris
+100208,Julie,Lambert,17/10/1987,F,RD,Lead Engineer,131112,07/09/2017,,Active,,3,3,Paris
+100209,Olivier,Thomas,27/11/1990,M,RD,Data Scientist,96624,08/02/2016,,LOA,,3,3,Paris
+100210,Céline,Fontaine,23/09/1970,F,RD,Data Scientist,89976,04/12/2017,,LOA,,2,3,Paris
+100211,Nathalie,Chevalier,14/05/1999,F,RD,Lead Engineer,134303,06/09/2022,,LOA,,3,4,Paris
+100212,Thomas,Chevalier,27/11/1991,F,RD,QA Engineer,74433,23/01/2017,,Active,,4,2,Paris
+100213,Alexandre,Robert,02/03/1976,M,RD,Data Scientist,98668,27/01/2022,,Active,,3,3,Paris
+100214,Nathalie,Thomas,15/09/1970,M,RD,Lead Engineer,72192,28/01/2015,,LOA,,3,3,Paris
+100215,Olivier,Robert,16/01/1978,M,RD,Lead Engineer,95156,14/03/2016,,Active,,3,3,Paris
+100216,Julien,Dupont,26/09/1986,M,RD,DevOps Engineer,109318,22/07/2019,,Active,,4,5,Paris
+100217,Nicolas,Richard,05/01/1987,M,RD,QA Engineer,71238,25/03/2019,,Active,,4,2,Paris
+100218,Vincent,Moreau,20/05/1995,F,RD,Data Scientist,97710,26/01/2016,,Active,,4,4,Paris
+100219,Antoine,Dubois,03/05/1973,F,RD,Senior Software Engineer,111220,04/09/2022,,Active,,1,3,Paris
+100220,Nicolas,Martin,15/04/1977,F,RD,QA Engineer,113480,28/04/2021,,LOA,,3,4,Paris
+100221,Giovanni,Gallo,29/05/1972,M,SALES,Sales Manager,89660,05/02/2016,,Active,,4,5,Milan
+100222,Marco,Marino,18/03/1990,M,SALES,Sales Representative,62172,02/07/2020,,LOA,,4,4,Milan
+100223,Sara,Ricci,19/04/1973,M,SALES,Sales Representative,60110,03/12/2015,,LOA,,4,3,Milan
+100224,Marco,Greco,13/12/1989,M,SALES,Business Development Manager,55721,14/01/2019,,Active,,2,3,Milan
+100225,Martina,Esposito,07/03/1971,M,SALES,Sales Representative,89193,03/01/2016,,Active,,4,5,Milan
+100226,Martina,Conti,19/10/1973,M,SALES,Senior Sales Rep,84151,16/02/2023,,Active,,2,3,Milan
+100227,Sara,Marino,14/02/1992,M,SALES,Account Manager,69644,20/08/2016,09/06/2022,Terminated,Layoff,3,2,Milan
+100228,Laura,Colombo,16/07/1990,F,SALES,Account Manager,71772,14/03/2016,,Active,,4,3,Milan
+100229,Riccardo,De Luca,16/03/1999,F,SALES,Sales Manager,95566,31/08/2021,,Active,,3,3,Milan
+100230,Sara,Mancini,01/11/1995,M,SALES,Business Development Manager,103509,08/10/2023,,LOA,,4,3,Milan
+100231,Federica,Romano,31/07/2000,F,SALES,Sales Representative,78734,11/08/2023,,LOA,,4,5,Milan
+100232,Laura,Bianchi,30/05/1998,F,SALES,Business Development Manager,101712,25/05/2018,,Active,,3,3,Milan
+100233,Lorenzo,Vitale,22/09/1992,F,SALES,Sales Director,95982,04/10/2022,,Active,,4,4,Milan
+100234,Francesca,Ricci,02/07/1999,M,SALES,Account Manager,92272,15/06/2022,,Active,,4,3,Milan
+100235,Francesca,Rossi,04/06/1974,F,SALES,Business Development Manager,74518,25/11/2017,,Active,,3,4,Milan
+100236,Andrea,Gallo,07/02/1971,M,SALES,Account Manager,57606,31/05/2020,,LOA,,4,4,Milan
+100237,Riccardo,Costa,13/04/1979,M,SALES,Sales Representative,78715,04/11/2020,,LOA,,4,3,Milan
+100238,Giulia,Esposito,06/01/1971,M,SALES,Business Development Manager,83816,06/11/2018,,Active,,2,3,Milan
+100239,Stefano,Ricci,03/03/1988,F,SALES,Sales Manager,51913,23/01/2022,,LOA,,4,5,Milan
+100240,Martina,Conti,14/03/1970,M,SALES,Senior Sales Rep,87837,26/11/2022,,Active,,2,5,Milan
+100241,Riccardo,Colombo,11/07/1990,M,SALES,Sales Manager,91884,11/04/2016,,LOA,,3,3,Milan
+100242,Francesca,Gallo,15/10/1985,M,SALES,Sales Representative,88677,19/02/2020,,Active,,2,3,Milan
+100243,Sara,Esposito,19/03/1978,F,SALES,Senior Sales Rep,89087,10/03/2019,,LOA,,2,3,Milan
+100244,Federica,Romano,22/11/1994,F,SALES,Account Manager,70616,14/11/2016,,Active,,4,4,Milan
+100245,Laura,Bianchi,02/10/1978,M,SALES,Sales Manager,94872,22/04/2019,,LOA,,3,4,Milan
+100246,Valentina,Ferrari,13/05/1995,F,SALES,Senior Sales Rep,52142,07/05/2015,,Active,,3,4,Milan
+100247,Laura,Vitale,30/11/1992,F,SALES,Sales Representative,103954,08/04/2016,,Active,,4,4,Milan
+100248,Federica,Colombo,26/01/1989,F,SALES,Account Manager,107331,24/02/2016,,Active,,4,3,Milan
+100249,Stefano,Esposito,18/08/1980,M,SALES,Senior Sales Rep,91469,09/05/2017,,Active,,3,4,Milan
+100250,Giulia,Gallo,16/11/1993,F,SALES,Business Development Manager,96140,25/02/2018,,Active,,3,4,Milan
+100251,Andrea,De Luca,29/08/1972,M,SALES,Senior Sales Rep,66362,09/02/2018,,Active,,2,3,Milan
+100252,Laura,Bianchi,26/11/1995,F,SALES,Sales Representative,79621,03/02/2022,,LOA,,2,4,Milan
+100253,Giovanni,Marino,22/07/1986,F,SALES,Sales Representative,50162,06/02/2020,,Active,,4,5,Milan
+100254,Elena,Ferrari,22/12/1993,F,SALES,Account Manager,82421,18/06/2019,,LOA,,3,4,Milan
+100255,Andrea,Mancini,02/06/1985,M,SALES,Sales Representative,91037,27/08/2022,,Active,,4,3,Milan
+100256,Stefano,Costa,12/01/1970,F,SALES,Sales Representative,60418,19/10/2019,,Active,,4,5,Milan
+100257,Davide,Ferrari,06/09/1986,M,SALES,Senior Sales Rep,75974,14/06/2022,,Active,,3,4,Milan
+100258,Luca,Esposito,18/01/1970,F,SALES,Sales Representative,64823,24/05/2017,,Active,,3,3,Milan
+100259,Francesca,De Luca,06/12/1975,M,SALES,Senior Sales Rep,56763,10/05/2020,30/12/2022,Terminated,Resignation,3,5,Milan
+100260,Andrea,Bianchi,25/01/1973,F,SALES,Senior Sales Rep,73015,12/12/2020,,Active,,4,4,Milan
+100261,Stefano,Colombo,21/11/1973,F,SALES,Account Manager,97841,16/02/2016,,Active,,3,5,Milan
+100262,Chiara,Marino,01/12/1998,F,SALES,Senior Sales Rep,105567,12/12/2015,,Active,,4,5,Milan
+100263,Giovanni,Colombo,29/07/1987,M,SALES,Business Development Manager,75289,25/04/2018,,Active,,2,4,Milan
+100264,Giovanni,Rossi,14/03/1986,M,SALES,Sales Representative,85806,20/07/2018,,LOA,,4,4,Milan
+100265,Luca,Rossi,05/10/1981,M,SALES,Sales Manager,68775,02/06/2017,03/05/2020,Terminated,Other,3,4,Milan
+100266,Lorenzo,Ferrari,25/09/1998,F,SALES,Senior Sales Rep,55478,06/01/2021,,Active,,3,4,Milan
+100267,Federica,Bruno,12/07/1987,F,SALES,Senior Sales Rep,95788,30/07/2021,,Active,,3,5,Milan
+100268,Chiara,Ferrari,28/06/1989,M,SALES,Sales Representative,93652,20/04/2016,,Active,,4,4,Milan
+100269,Andrea,Rossi,08/05/1977,M,SALES,Account Manager,74370,26/07/2020,,Active,,2,4,Milan
+100270,Marco,Bruno,05/04/1989,M,SALES,Account Manager,91125,19/01/2018,,Active,,2,3,Milan
+100271,Laura,Romano,30/06/1986,M,SALES,Business Development Manager,94179,06/10/2016,,Active,,4,3,Milan
+100272,Giulia,Rossi,20/12/1980,M,SALES,Business Development Manager,61728,08/07/2015,,LOA,,4,5,Milan
+100273,Chiara,Bruno,19/02/1981,F,SALES,Business Development Manager,104132,01/09/2019,,Active,,2,3,Milan
+100274,Valentina,Ricci,19/02/1993,M,SALES,Account Manager,106756,08/07/2015,,Active,,3,5,Milan
+100275,Federica,Costa,11/05/1970,M,SALES,Sales Manager,65897,20/02/2019,,Active,,3,4,Milan
+100276,Federica,Ricci,02/10/1976,F,SALES,Sales Representative,85490,27/01/2015,,Active,,3,5,Milan
+100277,Marco,Conti,18/10/1983,M,SALES,Senior Sales Rep,82245,01/03/2016,,Active,,4,5,Milan
+100278,Luca,Russo,20/05/1980,M,SALES,Senior Sales Rep,99014,29/10/2020,,Active,,2,2,Milan
+100279,Luca,Russo,06/07/1989,F,SALES,Sales Manager,67104,06/06/2022,,Active,,4,5,Milan
+100280,Riccardo,Costa,14/03/1982,M,SALES,Sales Manager,57141,14/08/2017,19/02/2021,Terminated,Retirement,2,3,Milan
+100281,Martina,Esposito,15/01/1994,M,SALES,Sales Representative,70205,07/01/2019,,Active,,3,5,Milan
+100282,Sara,Russo,24/08/1979,F,SALES,Account Manager,75968,04/09/2018,,Active,,3,4,Milan
+100283,Marco,Conti,14/04/1990,F,SALES,Sales Representative,80280,27/03/2021,,Active,,2,4,Milan
+100284,Giulia,Ricci,12/11/1975,M,SALES,Sales Representative,92250,22/03/2017,,Active,,2,4,Milan
+100285,Luca,Colombo,23/12/1998,M,SALES,Senior Sales Rep,58029,22/12/2019,,Active,,1,3,Milan
+100286,Martina,Conti,03/04/1992,M,SALES,Account Manager,73196,01/05/2015,,LOA,,3,3,Milan
+100287,Andrea,Russo,19/07/1997,F,SALES,Sales Representative,77000,11/12/2021,,Active,,4,3,Milan
+100288,Lorenzo,Bianchi,21/10/1988,M,SALES,Sales Manager,102570,27/03/2017,,Active,,3,1,Milan
+100289,Laura,Vitale,28/09/1991,M,SALES,Senior Sales Rep,67723,10/11/2018,,Active,,2,3,Milan
+100290,Davide,Russo,28/02/1991,M,SALES,Business Development Manager,56562,08/12/2020,,Active,,3,3,Milan
+100291,Chiara,Conti,01/12/1985,M,SALES,Account Manager,109898,12/12/2016,,Active,,3,4,Milan
+100292,Andrea,Colombo,30/01/1992,M,SALES,Sales Representative,55915,29/01/2021,,LOA,,2,4,Milan
+100293,Laura,Rossi,18/11/1984,M,SALES,Account Manager,96985,20/11/2021,,Active,,2,4,Milan
+100294,Marco,Bianchi,25/04/1996,M,SALES,Sales Director,106404,26/11/2022,,Active,,3,2,Milan
+100295,Francesca,Bruno,16/07/1983,F,SALES,Account Manager,101894,14/08/2018,,Active,,3,4,Milan
+100296,Federica,Gallo,06/01/1980,F,SALES,Senior Sales Rep,70107,19/06/2022,,Active,,4,3,Milan
+100297,Lorenzo,Russo,03/03/1978,M,SALES,Account Manager,87063,03/10/2021,,Active,,2,4,Milan
+100298,Chiara,Gallo,01/05/1984,M,SALES,Account Manager,97794,18/11/2016,,Active,,4,3,Milan
+100299,Chiara,Ferrari,21/09/1985,F,SALES,Senior Sales Rep,75292,17/11/2017,,Active,,3,3,Milan
+100300,Laura,Conti,03/10/1985,F,SALES,Sales Manager,92661,14/02/2021,,LOA,,4,3,Milan
+100301,Giulia,Greco,25/11/1970,M,SALES,Sales Director,72400,29/07/2018,,Active,,2,3,Milan
+100302,Federica,Ferrari,27/02/1985,M,SALES,Sales Manager,78267,30/08/2021,,LOA,,4,3,Milan
+100303,Giulia,Esposito,07/11/1984,F,SALES,Sales Director,97319,21/04/2017,,LOA,,4,4,Milan
+100304,Sara,Ricci,21/04/1974,M,SALES,Account Manager,53572,23/07/2015,,LOA,,3,3,Milan
+100305,Laura,Colombo,09/05/1974,M,SALES,Sales Manager,81035,16/04/2015,,Active,,4,3,Milan
+100306,Laura,Marino,02/02/1974,F,SALES,Sales Representative,108031,14/03/2022,,Active,,3,3,Milan
+100307,Stefano,Costa,25/10/1981,M,SALES,Sales Director,99298,15/07/2017,,Active,,4,2,Milan
+100308,Federica,De Luca,15/06/1996,M,SALES,Sales Manager,77435,20/07/2017,,LOA,,4,4,Milan
+100309,Chiara,Mancini,29/05/1983,M,SALES,Sales Director,87435,20/11/2015,,Active,,4,4,Milan
+100310,Andrea,Esposito,22/02/1990,M,SALES,Sales Representative,102983,09/12/2016,,Active,,2,2,Milan
+100311,Matteo,Bianchi,10/09/1996,F,SALES,Account Manager,75434,22/11/2017,,Active,,3,4,Milan
+100312,Stefano,Rossi,13/12/1997,M,SALES,Business Development Manager,77160,03/08/2021,,LOA,,2,4,Milan
+100313,Francesca,Esposito,01/11/1982,M,SALES,Sales Manager,75103,02/01/2021,,LOA,,4,4,Milan
+100314,Valentina,Marino,29/01/1988,M,SALES,Senior Sales Rep,75938,12/08/2016,,LOA,,4,3,Milan
+100315,Laura,Marino,16/09/1986,M,SALES,Sales Director,68372,24/03/2015,,Active,,4,5,Milan
+100316,Chiara,Bianchi,25/06/1983,M,SALES,Senior Sales Rep,97762,05/05/2023,,Active,,3,4,Milan
+100317,Matteo,De Luca,25/09/1991,F,SALES,Sales Director,83768,08/07/2023,,Active,,4,2,Milan
+100318,Lorenzo,Bianchi,08/07/1993,M,SALES,Account Manager,66350,18/05/2021,13/12/2022,Terminated,Retirement,1,2,Milan
+100319,Davide,Gallo,28/10/1990,F,SALES,Senior Sales Rep,65855,30/08/2020,,Active,,3,4,Milan
+100320,Federica,Gallo,11/06/1985,F,SALES,Business Development Manager,68682,31/10/2016,,Active,,1,2,Milan
+100321,Chiara,Ricci,26/05/2000,F,SALES,Sales Director,51314,26/04/2017,,LOA,,4,5,Milan
+100322,Laura,Bianchi,15/01/1999,M,SALES,Sales Director,66540,10/12/2016,,Active,,3,5,Milan
+100323,Martina,Conti,23/08/1985,M,SALES,Business Development Manager,94380,24/02/2020,,LOA,,3,4,Milan
+100324,Marco,Luccini,18/09/1999,M,SALES,Account Manager,94853,13/03/2019,,Active,,2,2,Milan
+100325,Davide,Marino,07/06/1999,M,SALES,Sales Representative,59825,22/12/2022,,Active,,3,3,Milan
+100326,Lorenzo,Bruno,15/07/2000,M,SALES,Sales Director,67001,27/07/2016,,LOA,,4,3,Milan
+100327,Matteo,Bruno,23/12/1979,M,SALES,Sales Director,83247,12/09/2022,,LOA,,3,3,Milan
+100328,Valentina,Greco,19/05/1974,M,SALES,Account Manager,99998,12/04/2020,,Active,,4,5,Milan
+100329,Chiara,Gallo,08/01/1980,M,SALES,Sales Representative,74358,07/05/2023,,LOA,,3,3,Milan
+100330,Giulia,Ferrari,08/03/1991,F,SALES,Senior Sales Rep,69553,07/03/2017,,LOA,,3,5,Milan
+100331,Matteo,Bruno,10/05/1988,F,SALES,Sales Representative,70734,21/05/2021,,LOA,,4,3,Milan
+100332,Riccardo,Romano,22/01/1984,F,SALES,Senior Sales Rep,99885,11/02/2022,15/11/2023,Terminated,Layoff,4,4,Milan
+100333,Luca,Bianchi,25/07/1997,F,SALES,Senior Sales Rep,81286,12/11/2019,,LOA,,3,2,Milan
+100334,Marco,Bruno,27/10/1993,M,SALES,Sales Representative,95450,19/02/2017,09/01/2020,Terminated,Retirement,4,3,Milan
+100335,Giovanni,Greco,29/06/1977,F,SALES,Account Manager,79879,25/09/2015,,Active,,4,4,Milan
+100336,Andrea,Bruno,28/12/1991,F,SALES,Senior Sales Rep,51253,11/01/2019,,Active,,3,4,Milan
+100337,Marco,Luccini,31/07/1977,F,SALES,Business Development Manager,107445,19/05/2016,,Active,,3,4,Milan
+100338,Giulia,Esposito,27/04/1999,M,SALES,Sales Director,74920,22/03/2015,25/08/2020,Terminated,Other,2,3,Milan
+100339,Matteo,Rossi,05/07/1983,F,SALES,Sales Representative,89690,20/09/2019,,Active,,4,3,Milan
+100340,Francesca,Greco,11/02/1975,M,SALES,Senior Sales Rep,63090,20/10/2023,,Active,,4,5,Milan
+100341,Martina,Greco,12/03/1977,M,SALES,Sales Representative,71666,11/06/2015,,Active,,3,1,Milan
+100342,Laura,Bianchi,15/01/1974,M,SALES,Account Manager,92227,28/09/2023,,Active,,3,5,Milan
+100343,Stefano,Russo,24/06/1974,M,SALES,Sales Representative,102533,16/12/2016,,Active,,4,3,Milan
+100344,Giulia,Rossi,17/03/1976,M,SALES,Sales Director,108623,10/06/2022,,Active,,3,4,Milan
+100345,Elena,Bruno,16/03/1978,M,SALES,Sales Manager,104768,11/04/2016,,LOA,,3,5,Milan
+100346,Francesca,Bianchi,18/08/1972,F,SALES,Account Manager,94459,14/10/2016,,LOA,,3,4,Milan
+100347,Marco,Bianchi,02/09/1991,M,SALES,Sales Representative,53012,22/06/2020,,LOA,,2,4,Milan
+100348,Chiara,Bruno,14/04/1993,M,SALES,Sales Director,93366,12/11/2020,,Active,,4,4,Milan
+100349,Andrea,Vitale,29/06/1997,F,SALES,Account Manager,106978,12/08/2015,17/11/2020,Terminated,Other,2,4,Milan
+100350,Riccardo,Marino,04/04/1972,F,SALES,Business Development Manager,103549,07/09/2020,,LOA,,3,3,Milan
+100351,Luca,Mancini,20/01/1990,F,SALES,Business Development Manager,56726,18/07/2018,,LOA,,3,2,Milan
+100352,Luca,Greco,20/10/1992,M,SALES,Sales Manager,73812,22/04/2021,,LOA,,4,4,Milan
+100353,Federica,Mancini,25/06/1999,M,SALES,Account Manager,99762,28/01/2019,,Active,,4,1,Milan
+100354,Federica,Luccini,09/10/1986,M,SALES,Sales Manager,59204,15/11/2022,,Active,,4,4,Milan
+100355,Davide,Colombo,31/05/1978,M,SALES,Account Manager,79952,09/05/2016,,LOA,,4,3,Milan
+100356,Martina,Russo,29/05/1998,M,SALES,Sales Manager,93152,16/07/2022,,LOA,,3,4,Milan
+100357,Giovanni,Russo,26/10/1994,M,SALES,Business Development Manager,101188,08/11/2019,,LOA,,4,3,Milan
+100358,Andrea,Esposito,19/05/1987,F,SALES,Sales Director,107762,17/05/2022,,Active,,3,5,Milan
+100359,Davide,Conti,19/05/1985,F,SALES,Business Development Manager,77049,19/04/2018,,Active,,3,5,Milan
+100360,Federica,Bruno,31/10/1994,M,SALES,Sales Director,96817,04/02/2022,,Active,,3,3,Milan
+100361,Valentina,Luccini,03/05/1994,F,SALES,Sales Director,86849,14/10/2022,,Active,,3,4,Milan
+100362,Federica,Greco,12/12/1988,F,SALES,Account Manager,59524,22/02/2015,,Active,,2,2,Milan
+100363,Sara,Marino,27/07/1976,F,SALES,Sales Manager,99387,12/09/2015,,Active,,3,3,Milan
+100364,Federica,Ricci,11/01/1999,M,SALES,Sales Director,75007,17/04/2021,,Active,,3,5,Milan
+100365,Federica,Russo,01/08/1970,M,SALES,Account Manager,109735,05/05/2023,,LOA,,3,4,Milan
+100366,Federica,Colombo,06/09/1978,M,SALES,Sales Representative,61389,19/04/2018,,Active,,4,2,Milan
+100367,Davide,Vitale,08/11/1981,F,SALES,Sales Representative,71663,16/06/2016,,Active,,3,5,Milan
+100368,Riccardo,Russo,20/01/1998,F,SALES,Sales Director,101767,26/11/2021,,Active,,3,3,Milan
+100369,Giovanni,Ricci,01/04/1978,M,SALES,Senior Sales Rep,85591,02/11/2020,29/02/2024,Terminated,Retirement,3,2,Milan
+100370,Riccardo,Bruno,09/03/1986,F,SALES,Sales Representative,103981,17/04/2018,,LOA,,4,4,Milan
+100371,Stefano,Ricci,23/10/1998,M,SALES,Sales Representative,94731,18/11/2021,,Active,,4,3,Milan
+100372,Davide,Vitale,08/09/1982,F,SALES,Account Manager,102613,12/04/2015,,Active,,3,4,Milan
+100373,Riccardo,Luccini,11/09/1973,F,SALES,Senior Sales Rep,54290,29/01/2016,,Active,,3,4,Milan
+100374,Francesca,Colombo,14/02/1994,F,SALES,Senior Sales Rep,103526,18/11/2022,,LOA,,4,4,Milan
+100375,Stefano,Bruno,13/09/1971,M,SALES,Account Manager,54616,25/12/2015,30/12/2020,Terminated,Layoff,3,3,Milan
+100376,Lorenzo,Costa,09/04/1998,F,SALES,Sales Director,94125,15/07/2019,,Active,,2,1,Milan
+100377,Luca,Russo,04/04/1973,M,SALES,Account Manager,101569,05/01/2019,,Active,,4,4,Milan
+100378,Lorenzo,Conti,22/08/1999,F,SALES,Business Development Manager,98939,07/05/2015,,Active,,3,4,Milan
+100379,Andrea,Greco,19/05/2000,M,SALES,Sales Representative,86275,01/12/2023,,Active,,4,3,Milan
+100380,Lorenzo,Vitale,24/07/1994,M,SALES,Senior Sales Rep,77043,15/12/2015,,Active,,4,5,Milan
+100381,Valentina,Ricci,03/09/1997,F,SALES,Business Development Manager,105853,01/11/2017,,Active,,2,4,Milan
+100382,Federica,Ferrari,15/01/1983,F,SALES,Sales Director,81928,14/07/2022,20/04/2023,Terminated,Retirement,4,3,Milan
+100383,Francesca,Greco,16/10/1997,F,SALES,Sales Director,79533,13/10/2015,,Active,,3,4,Milan
+100384,Andrea,Gallo,10/03/1984,M,SALES,Sales Manager,101489,21/10/2019,,Active,,3,4,Milan
+100385,Elena,Bianchi,26/06/2000,M,SALES,Business Development Manager,79186,22/03/2023,,LOA,,3,3,Milan
+100386,Valentina,Ferrari,03/08/1982,M,SALES,Sales Representative,98073,27/07/2016,,Active,,4,2,Milan
+100387,Giovanni,Rossi,07/02/1996,M,SALES,Business Development Manager,86149,29/06/2021,,Active,,3,5,Milan
+100388,Andrea,Gallo,10/08/1987,F,SALES,Account Manager,80454,03/07/2017,,Active,,3,2,Milan
+100389,Marco,Ricci,18/07/1997,M,SALES,Sales Director,60434,03/09/2022,,Active,,2,5,Milan
+100390,Laura,Gallo,25/10/1971,F,SALES,Senior Sales Rep,67324,15/06/2017,,Active,,3,2,Milan
+100391,Elena,Conti,26/01/1991,M,SALES,Account Manager,56764,06/02/2020,,Active,,4,4,Milan
+100392,Federica,Romano,24/11/1986,M,SALES,Business Development Manager,66487,01/05/2022,,Active,,3,5,Milan
+100393,Elena,Gallo,03/11/1991,F,SALES,Sales Representative,107804,21/11/2023,,Active,,2,3,Milan
+100394,Davide,Colombo,27/09/1976,M,SALES,Sales Manager,77172,04/02/2017,,Active,,4,4,Milan
+100395,Laura,Colombo,02/07/1996,F,SALES,Senior Sales Rep,65969,22/10/2016,,LOA,,1,4,Milan
+100396,Giovanni,Russo,03/09/1995,F,SALES,Sales Representative,76571,24/08/2016,12/06/2021,Terminated,Retirement,3,4,Milan
+100397,Luca,Colombo,24/02/1990,M,SALES,Business Development Manager,64376,20/10/2021,,LOA,,4,4,Milan
+100398,Giovanni,Marino,10/07/1977,F,SALES,Senior Sales Rep,88705,14/02/2023,,LOA,,2,3,Milan
+100399,Marco,Colombo,13/06/1993,M,SALES,Business Development Manager,56311,27/08/2020,,Active,,2,5,Milan
+100400,Federica,Luccini,10/04/1975,M,SALES,Sales Director,85342,17/01/2016,,Active,,4,5,Milan
+100401,Giovanni,De Luca,13/08/1986,F,IT,Network Engineer,102579,27/06/2015,,LOA,,3,4,Milan
+100402,Francesca,De Luca,03/01/1976,M,IT,Network Engineer,68564,08/11/2017,,Active,,3,4,Milan
+100403,Marco,Rossi,05/12/1995,F,IT,IT Manager,92896,10/11/2020,,Active,,3,4,Milan
+100404,Francesca,Bianchi,10/02/1989,M,IT,Security Analyst,77758,22/04/2022,,Active,,3,4,Milan
+100405,Matteo,De Luca,07/10/1994,F,IT,Network Engineer,86640,16/10/2023,,Active,,3,3,Milan
+100406,Elena,Conti,12/03/1976,M,IT,Systems Administrator,101321,24/05/2022,,Active,,4,3,Milan
+100407,Lorenzo,Bruno,12/09/1994,M,IT,IT Support Specialist,75500,20/11/2021,,Active,,4,1,Milan
+100408,Laura,De Luca,15/12/1973,F,IT,IT Manager,89913,20/09/2015,,Active,,1,3,Milan
+100409,Giovanni,Greco,19/10/1996,M,IT,Security Analyst,82398,24/08/2015,,Active,,3,3,Milan
+100410,Sara,Colombo,05/07/1971,M,IT,Security Analyst,61107,17/10/2023,,Active,,4,3,Milan
+100411,Valentina,Ferrari,18/05/1982,M,IT,Security Analyst,88409,29/09/2023,,LOA,,3,1,Milan
+100412,Luca,Vitale,06/10/1982,M,IT,Systems Administrator,103445,22/02/2023,,Active,,3,4,Milan
+100413,Lorenzo,Rossi,17/09/1981,F,IT,IT Support Specialist,54743,17/12/2016,,Active,,3,3,Milan
+100414,Davide,Vitale,16/10/1995,M,IT,Database Administrator,81695,21/10/2017,,LOA,,4,4,Milan
+100415,Stefano,Rossi,15/08/1991,F,IT,Systems Administrator,101685,21/04/2016,,LOA,,4,4,Milan
+100416,Martina,Gallo,03/03/1993,M,IT,Network Engineer,56095,03/01/2021,23/12/2022,Terminated,Retirement,3,4,Milan
+100417,Federica,Romano,18/05/1991,M,IT,IT Manager,98900,09/07/2018,,Active,,4,5,Milan
+100418,Chiara,Ricci,27/11/1981,F,IT,IT Support Specialist,73332,26/04/2017,,Active,,2,2,Milan
+100419,Marco,Vitale,24/11/1971,F,IT,Database Administrator,108859,29/05/2020,,Active,,4,5,Milan
+100420,Laura,Romano,05/12/1992,M,IT,Cloud Engineer,84454,21/02/2018,,Active,,4,3,Milan
+100421,Giovanni,Gallo,30/08/1987,M,IT,IT Support Specialist,95760,12/09/2022,,LOA,,3,3,Milan
+100422,Matteo,Conti,24/01/1996,M,IT,Cloud Engineer,85950,17/02/2016,,Active,,3,3,Milan
+100423,Elena,Romano,16/05/1992,M,IT,Cloud Engineer,105989,03/10/2019,,Active,,3,3,Milan
+100424,Chiara,Esposito,09/02/1982,F,IT,IT Manager,59558,23/08/2017,,LOA,,4,4,Milan
+100425,Valentina,De Luca,30/05/1992,M,IT,IT Support Specialist,69663,04/07/2016,,Active,,3,5,Milan
+100426,Francesca,Romano,10/09/1972,F,IT,Network Engineer,56311,01/06/2017,,LOA,,3,3,Milan
+100427,Federica,Vitale,24/07/1981,M,IT,Cloud Engineer,63038,10/11/2018,05/09/2020,Terminated,Layoff,3,4,Milan
+100428,Sara,Gallo,01/08/1984,F,IT,Systems Administrator,74973,20/07/2022,,LOA,,3,3,Milan
+100429,Riccardo,De Luca,26/04/1998,F,IT,Security Analyst,60616,13/11/2021,,Active,,3,3,Milan
+100430,Davide,Conti,03/03/1982,M,IT,Systems Administrator,84140,28/12/2019,,Active,,4,3,Milan
+100431,Andrea,Ricci,12/09/1999,M,IT,IT Manager,60938,27/10/2017,,Active,,3,2,Milan
+100432,Giulia,Rossi,23/10/1987,M,IT,IT Manager,67200,16/11/2020,,Active,,3,2,Milan
+100433,Chiara,Ricci,30/09/1982,M,IT,Network Engineer,104953,21/12/2019,,Active,,2,2,Milan
+100434,Laura,Costa,01/04/1994,M,IT,Security Analyst,61602,20/01/2018,,Active,,3,3,Milan
+100435,Martina,Luccini,13/09/1998,M,IT,Network Engineer,85367,04/03/2022,,Active,,3,2,Milan
+100436,Martina,Marino,26/12/1976,M,IT,IT Manager,68793,28/05/2018,07/12/2022,Terminated,Retirement,3,1,Milan
+100437,Sara,Rossi,23/04/1989,F,IT,Cloud Engineer,85927,13/12/2023,,Active,,3,3,Milan
+100438,Lorenzo,Ricci,29/04/1977,F,IT,Systems Administrator,64456,07/01/2023,,LOA,,3,3,Milan
+100439,Davide,Greco,02/02/1999,M,IT,Network Engineer,62320,02/05/2023,,Active,,4,3,Milan
+100440,Stefano,Costa,17/03/1982,M,IT,IT Support Specialist,51271,09/11/2022,,Active,,2,5,Milan
+100441,Francesca,Greco,28/01/1982,F,IT,Network Engineer,55911,27/05/2016,,Active,,2,4,Milan
+100442,Sara,Mancini,29/08/1986,F,IT,IT Support Specialist,55257,14/03/2020,,Active,,4,5,Milan
+100443,Lorenzo,Ferrari,14/05/1994,M,IT,Security Analyst,104280,09/04/2020,,Active,,1,5,Milan
+100444,Lorenzo,Costa,01/02/1981,F,IT,Systems Administrator,98190,10/04/2023,,Active,,4,4,Milan
+100445,Lorenzo,Greco,29/06/1984,F,IT,Network Engineer,84139,11/10/2016,,Active,,2,4,Milan
+100446,Elena,Russo,28/11/1999,F,IT,Network Engineer,78453,11/06/2017,,Active,,3,3,Milan
+100447,Francesca,Conti,26/11/1980,M,IT,Systems Administrator,60157,06/02/2015,,LOA,,3,2,Milan
+100448,Luca,Bruno,16/01/1998,F,IT,Network Engineer,101869,03/09/2015,13/08/2023,Terminated,Retirement,2,4,Milan
+100449,Elena,Costa,28/08/1978,M,IT,IT Manager,66429,29/03/2015,,Active,,4,4,Milan
+100450,Sara,Vitale,26/12/1991,M,IT,Cloud Engineer,97998,16/02/2017,,Active,,3,5,Milan
+100451,Valentina,Ferrari,29/10/1993,M,IT,Cloud Engineer,74059,26/09/2016,,Active,,3,4,Milan
+100452,Valentina,Rossi,19/10/1997,F,IT,Database Administrator,97251,31/01/2019,,Active,,2,5,Milan
+100453,Matteo,Luccini,24/08/2000,F,IT,IT Support Specialist,68555,30/07/2020,,Active,,3,4,Milan
+100454,Giovanni,Ferrari,19/12/1971,M,IT,Cloud Engineer,57015,15/06/2016,,Active,,3,2,Milan
+100455,Laura,Luccini,28/12/1997,F,IT,Systems Administrator,64465,12/11/2022,,Active,,3,2,Milan
+100456,Luca,Costa,30/08/1998,F,IT,Network Engineer,102051,06/09/2015,,LOA,,4,4,Milan
+100457,Giulia,Ferrari,20/08/1983,M,IT,Systems Administrator,97524,16/11/2015,,Active,,3,3,Milan
+100458,Chiara,Romano,19/01/1995,M,IT,Security Analyst,87785,27/05/2023,,Active,,3,3,Milan
+100459,Francesca,Romano,03/02/1978,F,IT,Network Engineer,84989,02/03/2021,,Active,,4,3,Milan
+100460,Federica,Bruno,04/09/1986,M,IT,IT Manager,89872,16/08/2019,,LOA,,3,4,Milan
+100461,Davide,Gallo,18/04/1990,M,IT,Network Engineer,68643,07/01/2020,,Active,,3,4,Milan
+100462,Sara,Ricci,21/08/1979,M,IT,Systems Administrator,83506,13/07/2018,10/08/2024,Terminated,Layoff,3,5,Milan
+100463,Giulia,Costa,15/12/1985,M,IT,IT Support Specialist,66374,01/10/2016,,Active,,3,4,Milan
+100464,Lorenzo,Colombo,18/06/1973,M,IT,Cloud Engineer,81999,11/02/2023,,LOA,,4,4,Milan
+100465,Sara,Russo,07/11/1995,M,IT,Database Administrator,107658,12/04/2019,24/04/2020,Terminated,Layoff,4,3,Milan
+100466,Chiara,Rossi,08/06/1998,M,IT,Systems Administrator,84365,20/09/2023,,Active,,1,4,Milan
+100467,Giovanni,Ricci,14/11/1976,M,IT,Systems Administrator,99338,26/07/2015,,LOA,,3,4,Milan
+100468,Sara,Conti,22/08/1976,F,IT,IT Support Specialist,98844,25/06/2016,,LOA,,1,3,Milan
+100469,Giovanni,De Luca,07/11/1975,F,IT,Cloud Engineer,75907,19/07/2023,,Active,,4,3,Milan
+100470,Chiara,Ricci,19/03/1973,M,IT,Network Engineer,55871,26/12/2017,,Active,,2,3,Milan
+100471,Matteo,Bruno,15/06/1985,M,IT,IT Manager,72919,29/08/2021,,Active,,3,5,Milan
+100472,Andrea,Costa,06/01/1972,M,IT,Security Analyst,99658,14/08/2017,,Active,,4,2,Milan
+100473,Chiara,Bianchi,27/11/1982,M,IT,Security Analyst,79495,26/02/2015,,Active,,3,3,Milan
+100474,Matteo,Colombo,06/07/1994,M,IT,Security Analyst,97836,13/11/2020,,LOA,,4,4,Milan
+100475,Lorenzo,Luccini,14/12/1971,M,IT,IT Manager,101720,12/11/2017,,Active,,4,3,Milan
+100476,Luca,Conti,16/08/1999,M,IT,IT Manager,51250,16/01/2018,,Active,,3,5,Milan
+100477,Lorenzo,Luccini,20/06/1974,F,IT,Security Analyst,63033,16/07/2018,,Active,,3,3,Milan
+100478,Giulia,Ricci,30/09/1993,M,IT,Security Analyst,51204,02/06/2018,,LOA,,3,3,Milan
+100479,Chiara,Luccini,17/05/1982,M,IT,Network Engineer,86368,11/09/2015,,LOA,,4,3,Milan
+100480,Andrea,Ferrari,23/02/1987,F,IT,Network Engineer,65752,02/11/2020,,Active,,3,3,Milan
+100481,Riccardo,Costa,28/04/1994,M,IT,Systems Administrator,85478,23/06/2016,,Active,,4,3,Milan
+100482,Giovanni,Bianchi,17/04/1989,M,IT,IT Support Specialist,54444,21/08/2023,,Active,,3,5,Milan
+100483,Riccardo,Bianchi,29/04/1971,F,IT,Security Analyst,69880,02/08/2023,,LOA,,3,5,Milan
+100484,Andrea,Colombo,16/10/1974,M,IT,Systems Administrator,87161,22/06/2016,,Active,,3,4,Milan
+100485,Elena,Ferrari,13/11/2000,M,IT,Systems Administrator,62057,30/09/2023,,LOA,,4,4,Milan
+100486,Matteo,Ricci,13/06/1971,F,IT,Systems Administrator,77069,01/08/2019,,Active,,3,4,Milan
+100487,Luca,Romano,15/09/1989,F,IT,IT Support Specialist,108168,02/12/2021,,Active,,3,3,Milan
+100488,Lorenzo,Bruno,06/09/1987,M,IT,IT Support Specialist,57164,09/11/2021,,Active,,3,4,Milan
+100489,Giovanni,Vitale,30/09/1987,F,IT,Database Administrator,69082,31/03/2023,12/04/2024,Terminated,Resignation,3,5,Milan
+100490,Stefano,Romano,13/12/1988,M,IT,IT Manager,109223,20/04/2018,,Active,,2,4,Milan
+100491,Giovanni,Esposito,24/01/1978,M,IT,IT Manager,77103,25/09/2023,,Active,,3,1,Milan
+100492,Matteo,Costa,17/01/1974,M,IT,Network Engineer,55976,21/10/2017,,Active,,2,3,Milan
+100493,Giovanni,Conti,14/12/1992,M,IT,Network Engineer,74943,12/11/2021,,LOA,,1,3,Milan
+100494,Andrea,Romano,27/06/1976,M,IT,IT Manager,70189,02/01/2017,,Active,,3,4,Milan
+100495,Valentina,Esposito,26/11/1975,M,IT,Database Administrator,80057,10/04/2017,16/04/2024,Terminated,Layoff,3,4,Milan
+100496,Laura,Ricci,24/09/1979,M,IT,Systems Administrator,78958,08/08/2021,,LOA,,2,4,Milan
+100497,Davide,Vitale,25/04/1979,M,IT,Cloud Engineer,52406,20/07/2015,,Active,,2,2,Milan
+100498,Sara,Bruno,07/12/1973,M,IT,Security Analyst,94046,20/07/2015,,Active,,3,4,Milan
+100499,Federica,Romano,05/06/1990,M,IT,IT Manager,100365,28/05/2023,,Active,,3,3,Milan
+100500,Martina,Vitale,29/11/1972,M,IT,Security Analyst,71575,14/04/2018,,Active,,3,4,Milan
+100501,Giulia,Esposito,19/08/1995,F,IT,Security Analyst,97452,08/03/2023,,Active,,4,5,Milan
+100502,Martina,Bruno,25/08/1981,M,IT,Security Analyst,90258,22/11/2020,,Active,,3,4,Milan
+100503,Laura,Romano,03/05/1997,F,IT,IT Support Specialist,57746,11/08/2017,,Active,,1,4,Milan
+100504,Martina,De Luca,16/01/1972,F,IT,Database Administrator,91983,29/09/2018,,Active,,3,3,Milan
+100505,Sara,Greco,23/09/1992,M,IT,Cloud Engineer,94946,02/03/2021,,Active,,3,3,Milan
+100506,Marco,Romano,14/09/1978,M,IT,Systems Administrator,102248,15/09/2018,,LOA,,1,3,Milan
+100507,Federica,Bruno,30/09/1990,F,IT,Cloud Engineer,69617,17/10/2023,,Active,,3,4,Milan
+100508,Marco,Colombo,26/11/1995,M,IT,IT Manager,59784,08/09/2022,,Active,,3,2,Milan
+100509,Valentina,Conti,29/05/1978,M,IT,IT Manager,96520,03/09/2021,,Active,,1,3,Milan
+100510,Elena,Costa,30/07/1983,F,IT,IT Support Specialist,74524,04/06/2017,,Active,,4,4,Milan
+100511,Giovanni,Rossi,26/08/1991,F,IT,Network Engineer,98001,10/08/2020,,Active,,4,3,Milan
+100512,Francesca,Luccini,10/05/2000,F,IT,IT Support Specialist,75400,27/06/2016,,Active,,4,4,Milan
+100513,Giulia,Ferrari,13/12/1984,M,IT,Cloud Engineer,100212,27/03/2020,,Active,,4,3,Milan
+100514,Matteo,Bruno,30/12/1978,M,IT,Network Engineer,93982,27/02/2017,,Active,,2,3,Milan
+100515,Marco,Vitale,22/01/1993,M,IT,Database Administrator,70872,24/02/2016,,Active,,3,5,Milan
+100516,Chiara,Romano,13/03/1973,M,IT,Security Analyst,79074,29/06/2018,,Active,,2,1,Milan
+100517,Francesca,Conti,31/05/1972,M,IT,Security Analyst,108410,19/12/2015,,Active,,3,5,Milan
+100518,Elena,Greco,27/11/1984,F,IT,Security Analyst,87210,22/03/2017,,Active,,2,4,Milan
+100519,Francesca,Costa,04/12/1983,F,IT,Cloud Engineer,65184,04/09/2022,,LOA,,4,3,Milan
+100520,Elena,Conti,24/03/1978,M,IT,IT Support Specialist,79706,05/11/2022,,Active,,3,2,Milan
+100521,Laura,Costa,30/08/1977,M,IT,IT Support Specialist,56745,02/03/2018,,Active,,3,4,Milan
+100522,Federica,Ferrari,21/07/1983,M,IT,IT Manager,90689,22/12/2020,,LOA,,3,3,Milan
+100523,Luca,Bruno,05/05/1979,F,IT,Systems Administrator,101598,13/10/2022,,LOA,,3,4,Milan
+100524,Laura,Esposito,25/07/1996,M,IT,Cloud Engineer,61545,07/09/2021,,Active,,3,3,Milan
+100525,Lorenzo,Bruno,04/03/1992,M,IT,Database Administrator,103545,26/03/2022,,Active,,2,4,Milan
+100526,Andrea,Bianchi,27/04/1990,M,IT,Cloud Engineer,63478,16/12/2020,,LOA,,4,3,Milan
+100527,Martina,Gallo,02/01/1974,M,IT,Cloud Engineer,105869,14/07/2021,20/11/2024,Terminated,Other,3,3,Milan
+100528,Marco,Vitale,11/02/1986,M,IT,Network Engineer,78292,25/03/2016,,Active,,4,3,Milan
+100529,Lorenzo,Conti,10/07/1989,F,IT,Network Engineer,59114,10/02/2021,,Active,,2,3,Milan
+100530,Andrea,Greco,22/01/2000,F,IT,Security Analyst,51029,29/05/2016,,Active,,2,5,Milan
+100531,Andrea,Ferrari,27/02/1976,F,IT,IT Manager,77898,15/03/2022,,LOA,,3,3,Milan
+100532,Stefano,Conti,09/12/1985,M,IT,Cloud Engineer,82647,13/07/2017,,Active,,4,3,Milan
+100533,Martina,Vitale,08/11/1995,M,IT,IT Support Specialist,57416,12/02/2019,18/03/2020,Terminated,Other,3,5,Milan
+100534,Giovanni,Marino,09/11/1990,F,IT,Security Analyst,80962,18/10/2020,16/09/2024,Terminated,Resignation,3,4,Milan
+100535,Federica,Greco,02/07/1997,M,IT,Security Analyst,79755,05/08/2015,,Active,,3,3,Milan
+100536,Martina,Gallo,21/03/1983,M,IT,Systems Administrator,67068,30/03/2018,,Active,,2,3,Milan
+100537,Giulia,Greco,02/01/1998,M,IT,Network Engineer,83134,22/04/2015,,Active,,2,4,Milan
+100538,Davide,Marino,11/07/1981,F,IT,Database Administrator,98428,28/02/2015,,Active,,2,3,Milan
+100539,Davide,Ricci,02/10/1991,F,IT,Database Administrator,55531,10/01/2017,,Active,,4,4,Milan
+100540,Laura,De Luca,10/03/1987,F,IT,Security Analyst,87863,01/09/2017,,Active,,4,3,Milan
+100541,Francesca,Russo,08/07/1977,M,IT,Systems Administrator,98899,15/03/2020,,Active,,4,5,Milan
+100542,Lorenzo,Mancini,12/10/1981,F,IT,Security Analyst,68926,17/08/2016,,LOA,,4,3,Milan
+100543,Giovanni,Russo,15/05/1974,M,IT,Network Engineer,92733,16/12/2020,,LOA,,4,3,Milan
+100544,Davide,Conti,07/09/1990,M,IT,Security Analyst,100495,02/09/2023,,Active,,2,3,Milan
+100545,Riccardo,Vitale,23/06/1970,F,IT,Network Engineer,56402,18/07/2022,24/03/2023,Terminated,Resignation,3,4,Milan
+100546,Sara,Marino,30/08/1978,F,IT,Cloud Engineer,93031,20/05/2015,07/07/2020,Terminated,Resignation,4,3,Milan
+100547,Francesca,Ferrari,15/02/1997,M,IT,Security Analyst,95590,16/06/2016,,Active,,2,3,Milan
+100548,Stefano,Marino,25/02/1989,M,IT,IT Support Specialist,60614,06/10/2022,,Active,,4,3,Milan
+100549,Lorenzo,Bruno,11/09/1972,F,IT,Systems Administrator,78873,23/11/2017,,Active,,2,5,Milan
+100550,Lorenzo,Romano,15/12/1998,M,IT,Security Analyst,90236,08/07/2020,,LOA,,3,5,Milan
+100551,Francesca,Russo,09/04/1973,M,IT,Security Analyst,51229,16/10/2015,,Active,,4,3,Milan
+100552,Giulia,Conti,14/12/1981,M,IT,IT Manager,50242,12/09/2016,,LOA,,3,5,Milan
+100553,Martina,Conti,22/02/1973,F,IT,Network Engineer,57943,21/01/2021,,LOA,,3,5,Milan
+100554,Sara,Conti,23/06/1972,M,IT,Database Administrator,85037,02/02/2022,,Active,,4,3,Milan
+100555,Sara,Colombo,03/12/1977,F,IT,Security Analyst,95605,21/03/2021,12/11/2023,Terminated,Retirement,3,2,Milan
+100556,Laura,Ferrari,21/05/1998,M,IT,Systems Administrator,62654,29/11/2019,,Active,,1,5,Milan
+100557,Lorenzo,Ferrari,01/04/1994,F,IT,Security Analyst,52427,20/03/2022,,LOA,,3,3,Milan
+100558,Lorenzo,Esposito,01/07/1979,M,IT,IT Support Specialist,59761,02/05/2022,,LOA,,4,3,Milan
+100559,Andrea,Mancini,01/05/1999,M,IT,Security Analyst,95960,20/03/2015,,Active,,3,1,Milan
+100560,Sara,Esposito,19/06/1990,M,IT,Systems Administrator,57482,08/11/2021,,Active,,3,4,Milan
+100561,Matteo,De Luca,18/02/1985,M,IT,Database Administrator,94832,11/04/2023,,Active,,3,3,Milan
+100562,Giulia,Romano,18/01/1985,F,IT,IT Manager,61013,16/09/2015,,Active,,4,4,Milan
+100563,Giulia,Bianchi,26/06/1974,F,IT,IT Support Specialist,51024,15/11/2023,,LOA,,4,2,Milan
+100564,Luca,Greco,02/09/1988,F,IT,IT Manager,63510,11/10/2022,,LOA,,2,3,Milan
+100565,Chiara,Romano,22/05/1997,F,IT,Network Engineer,55768,04/10/2022,03/10/2023,Terminated,Other,3,4,Milan
+100566,Marco,Vitale,27/07/1980,F,IT,Cloud Engineer,73717,25/02/2017,,Active,,4,5,Milan
+100567,Stefano,Colombo,26/05/1982,F,IT,IT Support Specialist,82605,06/08/2015,,Active,,2,4,Milan
+100568,Elena,Greco,27/05/1979,M,IT,Systems Administrator,56843,16/11/2019,,LOA,,4,5,Milan
+100569,Marco,Mancini,05/02/1993,F,IT,Security Analyst,87995,20/04/2016,26/04/2021,Terminated,Other,3,3,Milan
+100570,Chiara,Esposito,18/08/1984,M,IT,Cloud Engineer,74610,21/07/2017,19/02/2024,Terminated,Other,4,2,Milan
+100571,Giulia,De Luca,02/07/1976,F,IT,Systems Administrator,75384,04/06/2017,,LOA,,3,3,Milan
+100572,Davide,Colombo,25/01/1985,M,IT,IT Manager,58945,05/06/2016,10/03/2023,Terminated,Resignation,2,3,Milan
+100573,Riccardo,Ricci,29/03/1983,F,IT,Database Administrator,86225,08/10/2021,,Active,,4,2,Milan
+100574,Laura,Colombo,15/07/1996,M,IT,Systems Administrator,97842,23/04/2020,,Active,,3,5,Milan
+100575,Martina,Ricci,18/07/1996,M,IT,Database Administrator,52898,02/09/2016,,Active,,1,3,Milan
+100576,Giulia,De Luca,28/10/1993,M,IT,IT Support Specialist,82459,04/06/2019,,Active,,3,4,Milan
+100577,Matteo,Bianchi,29/01/1986,F,IT,IT Manager,81443,26/04/2018,,Active,,4,3,Milan
+100578,Marco,Costa,21/10/1990,M,IT,Security Analyst,101764,28/08/2023,,LOA,,4,4,Milan
+100579,Luca,Conti,26/12/2000,M,IT,Cloud Engineer,99341,25/09/2018,,Active,,3,5,Milan
+100580,Matteo,Ferrari,31/10/1997,M,IT,IT Support Specialist,109638,07/10/2018,,Active,,4,5,Milan
+100581,Elena,Costa,09/10/1997,F,OPS,Operations Manager,71620,17/06/2015,,Active,,4,4,Milan
+100582,Riccardo,Ricci,17/03/1994,F,OPS,Operations Director,56001,10/04/2016,,Active,,3,3,Milan
+100583,Davide,Russo,04/11/1972,F,OPS,Process Engineer,69516,08/03/2019,,LOA,,4,3,Milan
+100584,Sara,Costa,08/11/1997,M,OPS,Operations Manager,65007,16/02/2019,,Active,,2,3,Milan
+100585,Luca,Esposito,23/05/1977,M,OPS,Operations Director,44863,04/02/2018,,Active,,4,4,Milan
+100586,Sara,De Luca,11/08/2000,M,OPS,Supply Chain Specialist,62533,26/01/2021,,LOA,,3,4,Milan
+100587,Luca,Rossi,03/06/1980,F,OPS,Logistics Coordinator,57465,29/10/2020,,LOA,,4,4,Milan
+100588,Giovanni,Vitale,22/12/1989,M,OPS,Supply Chain Specialist,46254,19/02/2020,,Active,,4,3,Milan
+100589,Giulia,Bianchi,03/11/1985,M,OPS,Operations Manager,45537,10/03/2018,,Active,,4,3,Milan
+100590,Valentina,Ricci,31/03/1975,F,OPS,Operations Director,52066,18/06/2015,,Active,,3,3,Milan
+100591,Riccardo,Gallo,20/08/1976,M,OPS,Logistics Coordinator,54763,08/03/2019,,Active,,2,1,Milan
+100592,Stefano,Bruno,31/12/1976,F,OPS,Process Engineer,54369,18/01/2015,,Active,,3,3,Milan
+100593,Stefano,Bruno,29/11/2000,F,OPS,Process Engineer,71107,05/04/2016,,Active,,2,1,Milan
+100594,Stefano,Gallo,24/02/1974,F,OPS,Supply Chain Specialist,69500,29/08/2018,06/08/2023,Terminated,Retirement,3,5,Milan
+100595,Marco,Ferrari,25/02/1994,F,OPS,Process Engineer,60848,30/12/2019,,Active,,2,3,Milan
+100596,Giulia,Gallo,01/11/1987,M,OPS,Supply Chain Specialist,60304,28/08/2016,,LOA,,3,3,Milan
+100597,Stefano,Vitale,06/12/1973,M,OPS,Logistics Coordinator,63999,02/06/2017,,LOA,,3,4,Milan
+100598,Andrea,Ferrari,11/06/1976,F,OPS,Logistics Coordinator,73710,01/05/2017,,Active,,4,2,Milan
+100599,Martina,Romano,07/12/1994,M,OPS,Logistics Coordinator,47190,07/03/2020,,Active,,4,3,Milan
+100600,Sara,Greco,01/03/1992,M,OPS,Operations Director,35160,09/04/2021,,Active,,2,3,Milan
+100601,Francesca,Greco,17/09/1988,F,OPS,Operations Analyst,42822,04/01/2017,,Active,,4,4,Milan
+100602,Elena,Mancini,16/05/1995,M,OPS,Supply Chain Specialist,59458,22/11/2019,,LOA,,3,4,Milan
+100603,Giulia,Bianchi,04/05/1984,F,OPS,Operations Director,45702,03/03/2020,,Active,,2,3,Milan
+100604,Giulia,Greco,31/01/1983,M,OPS,Operations Analyst,47701,09/12/2020,,Active,,4,3,Milan
+100605,Valentina,Vitale,21/06/1984,M,OPS,Operations Manager,58758,19/07/2018,,Active,,2,4,Milan
+100606,Andrea,Luccini,16/08/1982,M,OPS,Operations Manager,45684,08/03/2019,,LOA,,2,3,Milan
+100607,Federica,Luccini,13/11/1993,F,OPS,Operations Manager,65178,28/12/2022,,Active,,4,2,Milan
+100608,Laura,Gallo,23/12/1983,M,OPS,Operations Director,69283,01/10/2022,,LOA,,4,3,Milan
+100609,Marco,Esposito,23/12/1979,M,OPS,Operations Analyst,55147,11/06/2016,,Active,,2,3,Milan
+100610,Francesca,Ferrari,05/11/1970,F,OPS,Process Engineer,47868,09/09/2023,,LOA,,2,4,Milan
+100611,Giulia,Mancini,03/05/1975,M,OPS,Operations Manager,43112,02/11/2017,09/09/2021,Terminated,Resignation,4,3,Milan
+100612,Elena,Rossi,27/01/1974,F,OPS,Operations Director,57795,19/08/2016,,Active,,3,5,Milan
+100613,Chiara,Luccini,31/07/1995,M,OPS,Operations Manager,49221,07/10/2015,30/03/2023,Terminated,Resignation,4,5,Milan
+100614,Marco,Esposito,08/08/1979,M,OPS,Operations Analyst,73625,27/08/2020,,LOA,,2,4,Milan
+100615,Elena,Conti,09/01/1989,F,OPS,Operations Manager,55596,27/05/2017,,LOA,,2,2,Milan
+100616,Elena,Greco,29/12/1994,F,OPS,Supply Chain Specialist,60217,05/02/2023,04/07/2024,Terminated,Other,3,4,Milan
+100617,Chiara,Vitale,08/04/1988,F,OPS,Operations Director,39561,05/04/2018,,LOA,,4,4,Milan
+100618,Valentina,Rossi,29/03/2000,M,OPS,Operations Manager,69253,06/07/2020,,LOA,,4,2,Milan
+100619,Lorenzo,Esposito,27/07/1977,F,OPS,Operations Analyst,48124,23/09/2015,,Active,,3,5,Milan
+100620,Martina,Mancini,30/06/1982,F,OPS,Logistics Coordinator,61229,30/07/2023,,Active,,3,4,Milan
+100621,Giovanni,Marino,11/08/1976,F,OPS,Operations Manager,67069,12/08/2023,,Active,,3,4,Milan
+100622,Francesca,Russo,22/01/1973,M,OPS,Process Engineer,74622,02/08/2020,,Active,,4,3,Milan
+100623,Francesca,Ferrari,28/08/1999,M,OPS,Process Engineer,48233,06/06/2023,,LOA,,3,4,Milan
+100624,Federica,Bruno,01/04/1994,M,OPS,Logistics Coordinator,60141,16/02/2021,18/10/2021,Terminated,Other,3,5,Milan
+100625,Giulia,Russo,07/12/1977,F,OPS,Logistics Coordinator,67209,30/03/2021,,Active,,3,3,Milan
+100626,Francesca,Mancini,11/08/1999,F,OPS,Logistics Coordinator,71847,18/03/2021,,LOA,,4,4,Milan
+100627,Laura,Conti,03/09/1997,M,OPS,Supply Chain Specialist,39025,02/08/2022,,Active,,1,2,Milan
+100628,Marco,Bruno,27/01/1987,M,OPS,Operations Manager,58020,03/02/2016,,Active,,2,3,Milan
+100629,Luca,Ferrari,05/09/1983,M,OPS,Logistics Coordinator,56372,13/04/2016,,Active,,1,4,Milan
+100630,Giovanni,De Luca,17/12/1981,M,OPS,Operations Analyst,59755,25/03/2015,,Active,,3,3,Milan
+100631,Francesca,Colombo,26/01/1985,F,OPS,Logistics Coordinator,54629,27/07/2020,,Active,,3,3,Milan
+100632,Federica,Colombo,22/11/1982,M,OPS,Process Engineer,41026,22/12/2017,20/03/2023,Terminated,Other,4,4,Milan
+100633,Davide,Ferrari,30/05/1995,M,OPS,Supply Chain Specialist,57761,26/12/2023,,LOA,,4,4,Milan
+100634,Sara,De Luca,06/10/1999,M,OPS,Process Engineer,51466,20/01/2021,,LOA,,3,3,Milan
+100635,Marco,Luccini,15/05/1978,F,OPS,Logistics Coordinator,69912,20/06/2021,,LOA,,4,5,Milan
+100636,Giulia,Luccini,01/01/1979,M,OPS,Operations Analyst,54678,01/02/2019,,Active,,4,3,Milan
+100637,Martina,Marino,16/11/1982,F,OPS,Operations Manager,50629,31/03/2022,,Active,,2,3,Milan
+100638,Stefano,Mancini,11/02/1995,M,OPS,Supply Chain Specialist,45443,22/11/2019,,Active,,3,1,Milan
+100639,Valentina,Russo,18/10/1991,M,OPS,Logistics Coordinator,54528,10/10/2023,19/05/2024,Terminated,Layoff,4,5,Milan
+100640,Luca,Conti,21/04/1976,M,OPS,Supply Chain Specialist,73038,24/08/2017,,Active,,4,5,Milan
+100641,Luca,Ricci,27/11/1996,F,OPS,Operations Director,73294,15/05/2016,,Active,,4,4,Milan
+100642,Martina,Colombo,21/06/1976,F,OPS,Logistics Coordinator,61763,13/03/2016,,Active,,3,4,Milan
+100643,Elena,Esposito,13/03/1984,M,OPS,Supply Chain Specialist,44496,13/02/2021,,Active,,3,4,Milan
+100644,Giulia,Russo,25/12/2000,M,OPS,Supply Chain Specialist,60211,05/11/2023,,Active,,3,5,Milan
+100645,Federica,Ricci,05/11/1989,M,OPS,Supply Chain Specialist,40914,11/05/2019,15/03/2022,Terminated,Layoff,4,4,Milan
+100646,Valentina,Costa,28/04/1998,F,OPS,Logistics Coordinator,52959,23/07/2018,,LOA,,4,4,Milan
+100647,Martina,Bruno,12/12/1988,F,OPS,Process Engineer,39349,16/02/2016,,Active,,3,4,Milan
+100648,Stefano,Rossi,03/05/1972,M,OPS,Supply Chain Specialist,43918,12/03/2022,,LOA,,1,3,Milan
+100649,Luca,Esposito,29/01/1977,M,OPS,Logistics Coordinator,61890,19/10/2017,,Active,,4,3,Milan
+100650,Davide,Romano,02/11/2000,F,OPS,Logistics Coordinator,40531,26/08/2021,,Active,,3,3,Milan
+100651,Chiara,Rossi,12/01/1971,M,OPS,Operations Manager,65305,06/04/2021,,Active,,2,4,Milan
+100652,Lorenzo,De Luca,06/12/1996,M,OPS,Logistics Coordinator,72174,01/12/2017,,Active,,2,4,Milan
+100653,Laura,Esposito,26/01/1980,F,OPS,Operations Manager,67385,01/01/2023,,Active,,3,3,Milan
+100654,Matteo,Greco,18/05/2000,M,OPS,Process Engineer,36885,14/02/2017,,LOA,,3,3,Milan
+100655,Chiara,Gallo,24/02/1996,F,OPS,Operations Director,65728,03/09/2022,,Active,,2,3,Milan
+100656,Matteo,Conti,27/12/1988,F,OPS,Operations Manager,71503,04/04/2023,,Active,,2,3,Milan
+100657,Elena,Russo,29/03/1970,F,OPS,Process Engineer,60866,04/11/2017,,LOA,,4,3,Milan
+100658,Valentina,Marino,15/08/1977,M,OPS,Logistics Coordinator,43645,25/08/2020,,Active,,2,4,Milan
+100659,Davide,Esposito,20/01/1984,F,OPS,Supply Chain Specialist,58631,30/06/2015,,LOA,,4,3,Milan
+100660,Davide,Luccini,16/01/1984,M,OPS,Operations Director,44913,20/11/2019,,Active,,3,5,Milan
+100661,Giulia,Colombo,01/09/1976,F,OPS,Operations Analyst,52054,12/08/2015,,Active,,2,3,Milan
+100662,Giulia,Costa,29/12/1985,F,OPS,Operations Analyst,42372,14/12/2022,,LOA,,4,5,Milan
+100663,Luca,Colombo,29/09/1982,M,OPS,Operations Analyst,73382,09/01/2017,,Active,,3,5,Milan
+100664,Valentina,De Luca,12/06/1973,M,OPS,Operations Analyst,36701,05/10/2017,,Active,,3,5,Milan
+100665,Elena,Esposito,06/07/1984,F,OPS,Operations Analyst,52650,21/09/2016,31/07/2022,Terminated,Other,3,1,Milan
+100666,Stefano,Bruno,14/07/1995,M,OPS,Operations Analyst,53543,13/06/2016,,Active,,3,2,Milan
+100667,Lorenzo,Ferrari,22/11/1987,M,OPS,Logistics Coordinator,36344,11/11/2017,,LOA,,4,3,Milan
+100668,Andrea,Esposito,24/05/1983,M,OPS,Supply Chain Specialist,43604,03/07/2020,,Active,,3,2,Milan
+100669,Matteo,Mancini,25/12/1989,M,OPS,Logistics Coordinator,62691,09/05/2019,,LOA,,4,4,Milan
+100670,Luca,Russo,10/01/1993,F,OPS,Operations Director,45162,31/10/2018,,Active,,4,4,Milan
+100671,Luca,Greco,02/01/1991,M,OPS,Supply Chain Specialist,44739,27/11/2019,21/11/2024,Terminated,Other,4,4,Milan
+100672,Giovanni,De Luca,04/04/1983,F,OPS,Logistics Coordinator,42053,17/05/2021,18/04/2022,Terminated,Resignation,3,3,Milan
+100673,Davide,Gallo,07/06/1981,M,OPS,Logistics Coordinator,65335,26/07/2021,18/11/2024,Terminated,Resignation,2,3,Milan
+100674,Luca,De Luca,09/05/1983,M,OPS,Operations Manager,52371,09/07/2018,,LOA,,3,5,Milan
+100675,Valentina,Ferrari,04/02/1997,F,OPS,Operations Analyst,70020,28/11/2017,,Active,,1,3,Milan
+100676,Laura,Costa,04/03/1988,F,OPS,Operations Director,58640,18/05/2022,,LOA,,4,5,Milan
+100677,Sara,Ferrari,12/08/1975,F,OPS,Operations Director,36757,07/07/2016,17/08/2020,Terminated,Resignation,3,4,Milan
+100678,Martina,Vitale,25/07/1978,F,OPS,Operations Manager,66063,19/12/2015,,LOA,,3,2,Milan
+100679,Laura,Mancini,18/11/1970,F,OPS,Supply Chain Specialist,72318,16/01/2020,,Active,,4,3,Milan
+100680,Francesca,De Luca,24/08/1988,M,OPS,Operations Director,66948,23/07/2020,,Active,,3,4,Milan
+100681,Laura,Ricci,21/09/1972,M,OPS,Logistics Coordinator,39162,03/12/2020,24/08/2024,Terminated,Layoff,3,4,Milan
+100682,Laura,Gallo,10/02/1990,M,OPS,Process Engineer,47596,28/10/2022,,Active,,3,3,Milan
+100683,Riccardo,Costa,19/11/1975,F,OPS,Operations Manager,58609,16/04/2018,,LOA,,4,4,Milan
+100684,Matteo,Greco,25/12/2000,M,OPS,Logistics Coordinator,48073,27/05/2023,27/07/2024,Terminated,Retirement,2,4,Milan
+100685,Sara,Ricci,25/05/1979,F,OPS,Process Engineer,58399,30/03/2021,02/11/2021,Terminated,Layoff,4,3,Milan
+100686,Luca,Bruno,26/04/1989,M,OPS,Supply Chain Specialist,49686,11/04/2016,,Active,,3,5,Milan
+100687,Federica,Marino,12/10/1976,M,OPS,Operations Analyst,63693,27/09/2022,,Active,,4,5,Milan
+100688,Francesca,Vitale,19/11/1971,M,OPS,Logistics Coordinator,58700,08/09/2020,,Active,,2,3,Milan
+100689,Laura,Esposito,02/12/1976,M,OPS,Operations Analyst,48231,04/04/2022,,Active,,3,3,Milan
+100690,Laura,Bruno,12/11/1982,F,OPS,Operations Manager,62198,30/08/2020,,Active,,3,4,Milan
+100691,Martina,Ricci,10/03/1976,M,OPS,Operations Analyst,68826,29/12/2023,,LOA,,4,3,Milan
+100692,Andrea,Rossi,17/03/1993,F,OPS,Operations Director,63447,13/10/2015,06/10/2021,Terminated,Other,2,4,Milan
+100693,Giulia,Luccini,08/04/1983,F,OPS,Process Engineer,57554,14/09/2019,,Active,,1,3,Milan
+100694,Andrea,Conti,06/01/1990,M,OPS,Operations Analyst,61509,22/03/2022,,LOA,,4,5,Milan
+100695,Federica,Bruno,30/06/1987,M,OPS,Process Engineer,70441,18/02/2023,,Active,,3,2,Milan
+100696,Giovanni,Bruno,08/07/1998,M,OPS,Operations Analyst,54919,17/10/2016,28/12/2024,Terminated,Layoff,4,5,Milan
+100697,Elena,Marino,15/02/1998,M,OPS,Logistics Coordinator,64408,09/09/2020,,Active,,3,4,Milan
+100698,Chiara,Vitale,18/09/1996,M,OPS,Operations Manager,44173,15/08/2017,,Active,,4,4,Milan
+100699,Riccardo,Luccini,15/02/1996,M,OPS,Logistics Coordinator,41421,27/02/2017,,Active,,2,3,Milan
+100700,Luca,Russo,22/01/1989,M,OPS,Process Engineer,59202,16/06/2016,,LOA,,4,3,Milan
+100701,Lorenzo,Marino,18/03/1996,M,OPS,Operations Manager,62323,05/08/2020,,LOA,,4,3,Milan
+100702,Stefano,Bianchi,08/01/1993,F,OPS,Process Engineer,66021,07/12/2020,,Active,,1,3,Milan
+100703,Francesca,De Luca,13/12/1974,M,OPS,Supply Chain Specialist,69260,10/05/2016,,Active,,2,3,Milan
+100704,Sara,Mancini,04/04/1971,M,OPS,Operations Director,54999,15/11/2023,,LOA,,4,3,Milan
+100705,Marco,Esposito,24/07/1994,F,OPS,Supply Chain Specialist,72556,29/11/2018,01/04/2020,Terminated,Other,3,3,Milan
+100706,Laura,Bianchi,19/03/1976,F,OPS,Process Engineer,44763,29/08/2020,,LOA,,4,3,Milan
+100707,Martina,Conti,11/06/1980,M,OPS,Operations Director,53178,08/06/2019,,Active,,3,5,Milan
+100708,Sara,Vitale,10/12/1998,M,OPS,Process Engineer,70509,22/05/2016,,Active,,3,2,Milan
+100709,Matteo,Mancini,19/07/1992,M,OPS,Operations Director,53019,18/03/2015,,Active,,4,3,Milan
+100710,Stefano,Ferrari,07/12/1993,M,OPS,Operations Analyst,36524,21/10/2021,,Active,,3,3,Milan
+100711,Riccardo,Conti,15/07/1981,M,OPS,Operations Analyst,46020,08/01/2016,,Active,,3,3,Milan
+100712,Sara,De Luca,10/06/2000,F,OPS,Operations Manager,38833,24/11/2016,28/10/2021,Terminated,Retirement,3,2,Milan
+100713,Riccardo,Marino,05/11/1986,F,OPS,Operations Analyst,68333,10/05/2016,05/05/2021,Terminated,Retirement,4,3,Milan
+100714,Giulia,Bruno,07/11/1990,M,OPS,Operations Analyst,61705,15/03/2021,,LOA,,3,5,Milan
+100715,Federica,Esposito,18/01/1981,M,OPS,Operations Director,72240,23/07/2023,,Active,,3,2,Milan
+100716,Matteo,Bianchi,30/09/1986,M,OPS,Operations Analyst,62771,22/01/2021,,Active,,4,4,Milan
+100717,Stefano,Greco,18/04/1999,M,OPS,Supply Chain Specialist,51442,16/11/2016,14/09/2022,Terminated,Layoff,4,3,Milan
+100718,Giovanni,Greco,16/01/1972,F,OPS,Operations Manager,40879,23/10/2016,,Active,,3,2,Milan
+100719,Davide,De Luca,17/06/1979,M,OPS,Supply Chain Specialist,52128,05/11/2021,,Active,,4,4,Milan
+100720,Riccardo,Bruno,13/06/1979,F,OPS,Logistics Coordinator,43763,27/02/2020,,Active,,3,1,Milan
+100721,Marco,Romano,14/07/1988,M,OPS,Operations Director,70266,26/03/2021,,LOA,,2,5,Milan
+100722,Federica,Rossi,16/02/2000,M,OPS,Operations Director,74407,29/12/2019,,Active,,3,3,Milan
+100723,Francesca,Costa,14/08/1986,M,OPS,Operations Manager,53424,01/03/2017,,Active,,4,4,Milan
+100724,Sara,Ricci,05/07/1980,M,OPS,Operations Manager,67298,15/07/2020,,Active,,4,4,Milan
+100725,Matteo,Conti,23/12/1974,M,OPS,Operations Director,71161,10/02/2018,,LOA,,2,4,Milan
+100726,Valentina,Ferrari,20/05/1996,M,OPS,Operations Director,72349,09/06/2016,,Active,,4,5,Milan
+100727,Matteo,Rossi,27/05/2000,M,OPS,Operations Analyst,62991,22/12/2020,,LOA,,3,5,Milan
+100728,Martina,De Luca,17/04/1982,M,OPS,Operations Director,58689,13/05/2016,,LOA,,3,2,Milan
+100729,Giulia,Marino,04/11/1988,F,OPS,Operations Analyst,47753,20/12/2020,,Active,,3,5,Milan
+100730,Martina,Ferrari,19/03/1981,F,OPS,Operations Analyst,41339,17/03/2017,,Active,,1,3,Milan
+100731,Riccardo,Marino,01/02/1981,M,OPS,Operations Analyst,56862,17/03/2016,,Active,,3,3,Milan
+100732,Stefano,Esposito,19/01/1998,M,OPS,Operations Director,37185,03/01/2020,,Active,,3,5,Milan
+100733,Andrea,Russo,28/10/1989,M,OPS,Supply Chain Specialist,41673,13/08/2015,,LOA,,4,4,Milan
+100734,Lorenzo,Esposito,09/09/1997,F,OPS,Process Engineer,60160,08/06/2023,,Active,,3,3,Milan
+100735,Francesca,Bruno,14/03/1999,M,OPS,Operations Analyst,56508,30/07/2022,,LOA,,3,2,Milan
+100736,Luca,Colombo,18/09/1995,M,OPS,Operations Manager,62591,31/05/2016,,Active,,3,4,Milan
+100737,Andrea,Russo,18/09/1972,F,OPS,Operations Manager,58445,06/06/2016,,LOA,,3,5,Milan
+100738,Laura,Greco,23/01/1997,F,OPS,Operations Manager,73432,05/11/2018,,Active,,4,3,Milan
+100739,Federica,Russo,07/12/1988,M,OPS,Operations Director,48189,09/11/2018,,Active,,4,3,Milan
+100740,Stefano,Bruno,12/12/1995,F,OPS,Operations Analyst,56536,07/05/2021,,Active,,2,3,Milan
+100741,Julie,Bernard,27/08/1998,F,HR,Recruiter,53968,02/07/2017,,LOA,,3,4,Paris
+100742,Pierre,Richard,07/04/1978,F,HR,HR Manager,41967,28/01/2015,,Active,,3,3,Paris
+100743,Vincent,Petit,21/12/1971,F,HR,Recruiter,54348,02/05/2015,,Active,,4,4,Paris
+100744,Julie,Garnier,17/10/1978,M,HR,HR Director,41375,30/03/2015,,Active,,4,3,Paris
+100745,François,Lambert,08/09/1983,M,HR,HR Manager,74532,12/02/2020,,Active,,4,5,Paris
+100746,Marie,Fontaine,13/11/1975,M,HR,HR Business Partner,60837,30/11/2023,,LOA,,3,5,Paris
+100747,Sandrine,Lambert,08/01/1994,M,HR,HR Business Partner,43490,19/04/2018,,Active,,3,3,Paris
+100748,Romain,Thomas,22/05/1979,M,HR,Compensation Analyst,73332,27/02/2023,22/04/2024,Terminated,Resignation,3,5,Paris
+100749,Nathalie,Blanc,29/10/1990,M,HR,Recruiter,71673,03/01/2017,,Active,,4,4,Paris
+100750,Julien,Dubois,18/04/1979,M,HR,HR Manager,65945,18/06/2017,,LOA,,3,3,Paris
+100751,Camille,Petit,02/06/1981,M,HR,HR Manager,74001,05/03/2021,20/02/2022,Terminated,Layoff,3,4,Paris
+100752,Sandrine,Moreau,11/02/1989,M,HR,HR Business Partner,72606,22/01/2020,,LOA,,3,3,Paris
+100753,Julie,Leroy,13/12/1998,F,HR,Recruiter,72883,07/11/2015,,Active,,3,4,Paris
+100754,Marie,Durand,14/03/1973,F,HR,HR Director,84243,15/01/2019,14/02/2021,Terminated,Layoff,3,3,Paris
+100755,Pierre,Fontaine,13/05/1994,M,HR,HR Director,66464,05/12/2017,05/09/2021,Terminated,Layoff,4,4,Paris
+100756,Nathalie,Blanc,11/09/1976,M,HR,HR Manager,55317,17/06/2019,,Active,,3,4,Paris
+100757,François,Dupont,17/01/1984,F,HR,Recruiter,68749,08/02/2017,,LOA,,3,4,Paris
+100758,Romain,Fontaine,16/09/1983,F,HR,HR Manager,54777,11/04/2023,25/11/2024,Terminated,Layoff,3,4,Paris
+100759,Claire,Moreau,30/04/1996,M,HR,Compensation Analyst,50072,06/04/2015,,Active,,4,5,Paris
+100760,Sandrine,Richard,08/02/1987,M,HR,Compensation Analyst,65325,16/04/2017,,Active,,2,2,Paris
+100761,Vincent,Martin,08/03/1974,F,HR,HR Specialist,79542,03/12/2016,,Active,,3,3,Paris
+100762,Claire,Lambert,15/06/1980,F,HR,Recruiter,43765,07/04/2018,,Active,,3,1,Paris
+100763,Julien,Garnier,20/12/1974,F,HR,HR Business Partner,65493,12/06/2016,,LOA,,4,5,Paris
+100764,Claire,Robert,27/10/1999,F,HR,Recruiter,53302,28/04/2020,,Active,,3,4,Paris
+100765,Alexandre,Fontaine,29/12/1989,F,HR,HR Manager,61554,20/09/2015,,Active,,4,5,Paris
+100766,Romain,Dubois,01/02/1974,F,HR,HR Business Partner,59493,25/03/2018,,LOA,,3,4,Paris
+100767,Julie,Garnier,16/09/1997,F,HR,HR Specialist,77264,23/03/2023,,LOA,,2,4,Paris
+100768,Camille,Leroy,05/03/1998,F,HR,HR Specialist,72341,11/01/2021,,Active,,3,4,Paris
+100769,Nicolas,Durand,17/08/1992,M,HR,HR Manager,50802,06/08/2023,,LOA,,3,4,Paris
+100770,Nicolas,Simon,05/02/1987,M,HR,HR Business Partner,42475,08/11/2018,,Active,,1,2,Paris
+100771,Valérie,Simon,30/09/1991,M,HR,HR Business Partner,49191,04/03/2020,28/09/2023,Terminated,Retirement,3,3,Paris
+100772,Alexandre,Durand,13/12/1977,F,HR,Recruiter,45084,19/04/2018,,LOA,,4,1,Paris
+100773,Maxime,Petit,25/12/1977,F,HR,HR Director,43129,06/06/2017,,Active,,4,4,Paris
+100774,Julien,Martin,01/12/1989,M,HR,HR Business Partner,53221,03/08/2015,,Active,,4,3,Paris
+100775,Nicolas,Bernard,30/11/1988,F,HR,HR Specialist,84561,25/04/2015,,Active,,4,3,Paris
+100776,Céline,Garnier,23/12/1971,F,HR,Compensation Analyst,76834,30/08/2019,,Active,,3,4,Paris
+100777,Laurence,Durand,04/06/1980,F,HR,HR Manager,40982,25/05/2017,,Active,,3,3,Paris
+100778,Maxime,Laurent,17/12/1972,F,HR,Compensation Analyst,44412,19/05/2022,,Active,,4,3,Paris
+100779,Marie,Chevalier,14/07/1995,F,HR,HR Director,61256,03/12/2016,,Active,,4,4,Paris
+100780,François,Garnier,02/07/1998,F,HR,Compensation Analyst,44424,17/07/2023,,Active,,3,4,Paris
+100781,Julien,Blanc,26/09/1998,F,HR,Recruiter,41390,27/04/2023,,Active,,3,5,Paris
+100782,Céline,Robert,04/12/1980,F,HR,HR Director,59438,13/12/2021,29/10/2022,Terminated,Layoff,3,3,Paris
+100783,Julie,Simon,29/09/1984,M,HR,HR Specialist,67190,03/07/2016,,Active,,3,3,Paris
+100784,Céline,Moreau,17/05/1985,F,HR,Recruiter,54578,19/09/2017,,Active,,3,3,Paris
+100785,Maxime,Bernard,24/11/1972,F,HR,HR Business Partner,49275,06/07/2020,31/01/2022,Terminated,Resignation,4,2,Paris
+100786,Patricia,Lambert,07/08/1980,M,HR,HR Business Partner,52945,09/09/2020,20/10/2023,Terminated,Layoff,3,3,Paris
+100787,Claire,Simon,06/07/1998,M,HR,HR Manager,63565,04/04/2017,,LOA,,3,3,Paris
+100788,Olivier,Robert,28/12/1976,F,HR,Compensation Analyst,45454,25/11/2023,,LOA,,4,5,Paris
+100789,Thomas,Chevalier,18/11/1977,M,HR,HR Specialist,58561,19/11/2017,,Active,,3,4,Paris
+100790,Thomas,Thomas,12/10/1978,M,HR,HR Manager,72813,25/09/2016,,Active,,4,3,Paris
+100791,Julien,Petit,25/03/1987,F,HR,Compensation Analyst,42544,28/06/2020,,Active,,4,2,Paris
+100792,Pierre,Robert,14/06/1981,F,HR,HR Specialist,72022,26/08/2023,,Active,,3,3,Paris
+100793,Laurence,Laurent,14/11/1980,F,HR,HR Director,49691,10/05/2020,16/11/2022,Terminated,Resignation,3,3,Paris
+100794,Antoine,Laurent,04/01/1997,F,HR,HR Manager,47650,26/06/2021,,Active,,4,4,Paris
+100795,Xavier,Dupont,05/04/1993,F,HR,Compensation Analyst,56572,12/02/2017,,Active,,4,4,Paris
+100796,Romain,Martin,18/06/1988,F,HR,HR Business Partner,81692,10/06/2023,,Active,,3,4,Paris
+100797,Céline,Lambert,08/11/1987,M,HR,HR Manager,40103,03/11/2022,,Active,,2,4,Paris
+100798,Laurence,Martin,01/05/1989,M,HR,HR Specialist,52977,29/11/2016,,Active,,3,4,Paris
+100799,Romain,Lambert,30/04/1978,F,HR,HR Specialist,66790,03/04/2017,09/01/2021,Terminated,Retirement,3,5,Paris
+100800,Nicolas,Martin,05/11/1973,F,HR,HR Director,41944,28/03/2019,,Active,,3,3,Paris
+100801,Alexandre,Dubois,08/12/1981,M,HR,Compensation Analyst,53832,07/06/2023,,Active,,3,1,Paris
+100802,Antoine,Thomas,25/03/1991,M,HR,Recruiter,64299,28/06/2023,,LOA,,4,3,Paris
+100803,Isabelle,Richard,23/12/1986,F,HR,HR Director,40202,06/11/2021,04/05/2023,Terminated,Layoff,3,4,Paris
+100804,Alexandre,Durand,20/10/1993,F,HR,HR Manager,69616,18/02/2018,,Active,,3,4,Paris
+100805,Laurence,Lambert,21/02/1970,M,HR,HR Director,81535,26/02/2022,,Active,,3,2,Paris
+100806,Valérie,Simon,23/06/1980,M,HR,HR Manager,68043,21/10/2021,,Active,,4,5,Paris
+100807,Céline,Richard,08/03/1983,M,HR,HR Specialist,77479,22/10/2021,,Active,,4,4,Paris
+100808,Nathalie,Dupont,09/07/1983,F,HR,Compensation Analyst,69247,19/07/2022,,LOA,,4,4,Paris
+100809,Julie,Lambert,24/08/1977,F,HR,Recruiter,68501,13/06/2023,,Active,,4,1,Paris
+100810,Antoine,Laurent,22/07/1981,F,HR,HR Director,75031,20/06/2022,,Active,,3,4,Paris
+100811,Julie,Dupont,21/11/1998,M,HR,HR Business Partner,76824,06/11/2018,,LOA,,4,3,Paris
+100812,Antoine,Durand,20/01/1983,F,HR,Recruiter,52331,26/12/2015,,Active,,4,2,Paris
+100813,François,Richard,18/11/1995,F,HR,HR Director,67767,07/04/2023,04/11/2023,Terminated,Retirement,3,3,Paris
+100814,Olivier,Laurent,13/10/1974,F,HR,HR Business Partner,49483,08/06/2019,11/10/2024,Terminated,Other,4,3,Paris
+100815,Valérie,Simon,12/08/1976,F,HR,HR Specialist,60980,29/09/2021,,Active,,3,5,Paris
+100816,Xavier,Thomas,23/04/1998,M,HR,HR Director,61832,02/06/2017,,LOA,,2,4,Paris
+100817,Xavier,Dubois,12/01/1978,F,HR,HR Director,41413,19/06/2020,,Active,,3,3,Paris
+100818,Isabelle,Richard,18/07/1987,F,HR,HR Specialist,52785,22/10/2015,,Active,,4,4,Paris
+100819,François,Dubois,22/08/1983,F,HR,HR Business Partner,71617,18/02/2020,,Active,,3,3,Paris
+100820,Céline,Bernard,01/04/1986,F,HR,HR Business Partner,64677,21/02/2023,,Active,,4,3,Paris
+100821,Marie,Petit,04/04/1991,M,HR,HR Business Partner,82604,05/01/2017,,Active,,3,3,Paris
+100822,Julie,Dubois,01/05/1975,F,HR,HR Director,51304,13/09/2017,,Active,,4,3,Paris
+100823,Maxime,Richard,07/05/1982,M,HR,HR Director,47864,03/02/2022,,Active,,2,2,Paris
+100824,Julie,Bernard,28/04/1996,M,HR,HR Manager,46196,04/06/2021,,LOA,,4,3,Paris
+100825,Claire,Fontaine,18/06/1974,F,HR,Compensation Analyst,41294,25/08/2018,31/10/2024,Terminated,Retirement,3,4,Paris
+100826,Nicolas,Blanc,25/03/1996,F,HR,Compensation Analyst,83160,16/01/2021,,Active,,4,3,Paris
+100827,Alexandre,Chevalier,23/01/1990,F,HR,Compensation Analyst,77688,23/12/2023,,Active,,3,3,Paris
+100828,Sophie,Dupont,06/08/1975,M,HR,Compensation Analyst,83133,04/09/2020,,Active,,1,3,Paris
+100829,Valérie,Chevalier,16/12/1989,M,HR,HR Director,63076,26/07/2016,,Active,,3,4,Paris
+100830,Valérie,Dubois,20/08/1980,M,HR,Recruiter,48795,31/05/2015,,Active,,3,3,Paris
+100831,Thomas,Robert,03/05/1973,M,HR,HR Director,66218,02/03/2021,,LOA,,3,5,Paris
+100832,Xavier,Fontaine,15/01/1994,F,HR,HR Director,82308,14/04/2017,09/02/2024,Terminated,Layoff,2,3,Paris
+100833,Sandrine,Garnier,29/10/1988,M,HR,Recruiter,41698,20/09/2016,,LOA,,4,3,Paris
+100834,Patricia,Durand,06/09/2000,M,HR,Recruiter,45831,24/02/2021,,Active,,3,3,Paris
+100835,Julie,Leroy,11/06/1970,F,HR,Compensation Analyst,46881,06/02/2016,,Active,,4,2,Paris
+100836,Romain,Thomas,15/04/1974,M,HR,HR Business Partner,57763,06/12/2020,,Active,,3,5,Paris
+100837,Julien,Garnier,26/06/1985,M,HR,Compensation Analyst,78817,25/04/2023,,LOA,,2,1,Paris
+100838,Valérie,Fontaine,26/05/1976,F,HR,HR Business Partner,81890,01/04/2019,,Active,,4,4,Paris
+100839,Laurence,Simon,19/03/1978,M,HR,HR Director,58797,03/12/2019,,LOA,,3,3,Paris
+100840,Claire,Dupont,17/09/1983,F,HR,HR Specialist,45208,24/07/2019,,Active,,2,3,Paris
+100841,Romain,Dubois,17/10/1973,F,ADMIN,Office Manager,62786,04/05/2023,,LOA,,4,5,Paris
+100842,Nathalie,Blanc,25/09/2000,F,ADMIN,Administrative Assistant,35910,04/08/2022,,Active,,3,5,Paris
+100843,Xavier,Chevalier,24/06/1985,F,ADMIN,Administrative Manager,64402,27/09/2017,,Active,,4,4,Paris
+100844,Camille,Dupont,19/06/1986,F,ADMIN,Administrative Assistant,67473,30/06/2016,,Active,,3,3,Paris
+100845,Valérie,Laurent,08/03/1994,M,ADMIN,Administrative Manager,66662,06/08/2023,,Active,,3,3,Paris
+100846,Pierre,Martin,04/11/1998,F,ADMIN,Facilities Coordinator,66999,12/10/2020,,Active,,2,1,Paris
+100847,Claire,Petit,22/10/1974,M,ADMIN,Office Manager,58234,22/01/2015,,Active,,1,3,Paris
+100848,Olivier,Blanc,23/11/1976,M,ADMIN,Facilities Coordinator,45199,10/08/2019,,LOA,,4,3,Paris
+100849,Isabelle,Martin,08/05/1986,F,ADMIN,Office Manager,63742,21/10/2019,,Active,,4,3,Paris
+100850,Céline,Robert,06/04/1970,M,ADMIN,Facilities Coordinator,47423,11/01/2019,,Active,,3,3,Paris
+100851,Sophie,Garnier,20/11/1999,M,ADMIN,Office Manager,62596,26/03/2017,,Active,,3,4,Paris
+100852,Julien,Blanc,11/06/1987,M,ADMIN,Office Manager,43265,22/06/2016,,Active,,2,4,Paris
+100853,Valérie,Moreau,10/04/1989,M,ADMIN,Facilities Coordinator,53970,11/09/2021,,LOA,,3,2,Paris
+100854,Sandrine,Fontaine,07/12/1992,F,ADMIN,Facilities Coordinator,51210,04/02/2017,,Active,,4,3,Paris
+100855,Xavier,Blanc,31/05/1997,M,ADMIN,Office Manager,42894,12/01/2017,,Active,,2,2,Paris
+100856,Laurence,Bernard,27/08/1997,F,ADMIN,Office Manager,69404,28/03/2017,14/04/2020,Terminated,Other,3,4,Paris
+100857,François,Robert,01/07/1991,F,ADMIN,Executive Assistant,42212,09/09/2015,,Active,,3,3,Paris
+100858,Julie,Moreau,19/02/1972,F,ADMIN,Administrative Assistant,53698,14/01/2017,16/04/2020,Terminated,Layoff,3,5,Paris
+100859,Camille,Leroy,15/01/1992,F,ADMIN,Office Manager,35895,29/01/2019,,Active,,4,4,Paris
+100860,Isabelle,Petit,01/06/1996,M,ADMIN,Administrative Assistant,48764,06/12/2020,,Active,,3,2,Paris
+100861,Vincent,Durand,04/11/1971,F,ADMIN,Administrative Manager,64213,30/07/2021,,Active,,4,2,Paris
+100862,François,Martin,10/04/1991,M,ADMIN,Executive Assistant,43377,15/07/2023,,Active,,2,4,Paris
+100863,Isabelle,Petit,12/02/1990,M,ADMIN,Administrative Manager,66642,23/01/2022,,LOA,,3,5,Paris
+100864,Camille,Leroy,14/10/1975,M,ADMIN,Administrative Manager,61050,01/04/2018,05/03/2023,Terminated,Resignation,3,4,Paris
+100865,Camille,Simon,05/11/1992,M,ADMIN,Office Manager,74794,23/04/2019,,LOA,,3,3,Paris
+100866,Pierre,Bernard,01/01/1993,M,ADMIN,Administrative Assistant,49439,09/02/2020,,Active,,3,3,Paris
+100867,Julie,Dubois,07/12/1993,F,ADMIN,Office Manager,43714,02/09/2017,,Active,,3,4,Paris
+100868,Patricia,Durand,23/01/1970,F,ADMIN,Executive Assistant,40455,10/04/2022,,Active,,4,5,Paris
+100869,Laurence,Martin,24/07/1984,F,ADMIN,Executive Assistant,49370,23/08/2015,,Active,,4,3,Paris
+100870,Patricia,Durand,13/11/2000,M,ADMIN,Office Manager,74606,14/04/2019,,Active,,3,4,Paris
+100871,Antoine,Lambert,03/02/1996,M,ADMIN,Executive Assistant,64232,23/01/2022,,LOA,,3,4,Paris
+100872,Nathalie,Dupont,31/03/1992,F,ADMIN,Executive Assistant,72333,13/01/2017,,Active,,3,4,Paris
+100873,Claire,Garnier,21/12/1977,M,ADMIN,Facilities Coordinator,44405,03/06/2019,,Active,,2,3,Paris
+100874,Céline,Blanc,28/02/1976,M,ADMIN,Administrative Assistant,41535,24/02/2023,,Active,,3,1,Paris
+100875,Thomas,Laurent,01/10/1973,M,ADMIN,Administrative Assistant,41969,01/01/2018,,Active,,3,4,Paris
+100876,Thomas,Thomas,01/04/1995,F,ADMIN,Executive Assistant,66385,25/12/2019,,Active,,2,2,Paris
+100877,Marie,Bernard,31/12/1971,M,ADMIN,Administrative Assistant,62216,26/02/2016,,Active,,2,5,Paris
+100878,Laurence,Richard,11/08/1976,F,ADMIN,Office Manager,42366,18/12/2018,,Active,,3,5,Paris
+100879,Claire,Petit,03/06/1973,M,ADMIN,Administrative Manager,37840,26/11/2021,,Active,,3,3,Paris
+100880,Sandrine,Garnier,23/06/2000,M,ADMIN,Facilities Coordinator,53809,08/10/2019,,Active,,3,2,Paris
+100881,Antoine,Dupont,05/02/1970,M,ADMIN,Facilities Coordinator,44684,31/08/2016,,Active,,3,4,Paris
+100882,Marie,Robert,29/06/1982,M,ADMIN,Facilities Coordinator,58108,15/08/2016,18/09/2020,Terminated,Retirement,3,3,Paris
+100883,Vincent,Moreau,14/03/1976,M,ADMIN,Facilities Coordinator,62437,30/12/2023,,Active,,3,4,Paris
+100884,Patricia,Laurent,03/04/1987,M,ADMIN,Office Manager,72871,09/12/2015,,LOA,,4,4,Paris
+100885,Julie,Petit,16/02/1970,M,ADMIN,Administrative Assistant,71593,12/04/2017,,Active,,3,3,Paris
+100886,Isabelle,Petit,02/04/1976,M,ADMIN,Office Manager,48810,22/04/2018,,LOA,,4,2,Paris
+100887,Xavier,Fontaine,07/12/1986,M,ADMIN,Administrative Manager,41947,22/03/2023,22/04/2024,Terminated,Layoff,4,2,Paris
+100888,Alexandre,Fontaine,21/05/1986,F,ADMIN,Office Manager,62295,01/08/2016,06/06/2020,Terminated,Resignation,2,3,Paris
+100889,Xavier,Martin,03/02/1991,M,ADMIN,Administrative Assistant,35865,13/08/2019,,LOA,,3,3,Paris
+100890,Camille,Blanc,12/03/1977,M,ADMIN,Administrative Manager,71317,14/02/2015,,LOA,,4,3,Paris
+100891,Claire,Laurent,02/01/1989,M,ADMIN,Office Manager,59743,04/10/2016,,Active,,4,2,Paris
+100892,Sandrine,Dubois,27/10/1979,F,ADMIN,Facilities Coordinator,66287,26/05/2019,,Active,,3,4,Paris
+100893,Sophie,Petit,03/01/1999,F,ADMIN,Executive Assistant,40099,04/10/2019,,Active,,3,4,Paris
+100894,Julie,Martin,20/04/1977,M,ADMIN,Administrative Manager,35719,27/01/2021,,Active,,4,3,Paris
+100895,Vincent,Dubois,12/10/1980,F,ADMIN,Executive Assistant,66706,07/01/2018,13/03/2023,Terminated,Resignation,1,3,Paris
+100896,Isabelle,Martin,11/11/1987,M,ADMIN,Facilities Coordinator,43488,10/08/2020,,LOA,,4,2,Paris
+100897,Marie,Blanc,26/09/1976,M,ADMIN,Office Manager,73427,08/04/2015,,LOA,,4,2,Paris
+100898,Valérie,Simon,14/07/1973,F,ADMIN,Administrative Manager,44231,07/01/2022,10/07/2024,Terminated,Retirement,4,3,Paris
+100899,Céline,Blanc,25/04/1985,M,ADMIN,Administrative Assistant,58613,07/01/2020,,Active,,3,5,Paris
+100900,Julie,Lambert,19/05/1997,F,ADMIN,Administrative Manager,35979,21/10/2021,22/09/2022,Terminated,Other,2,5,Paris
+100901,Nathalie,Durand,27/05/1990,M,ADMIN,Administrative Assistant,39467,08/07/2018,,Active,,3,3,Paris
+100902,Camille,Simon,28/07/1981,M,ADMIN,Executive Assistant,43124,22/04/2020,,LOA,,4,4,Paris
+100903,Julien,Robert,18/10/1997,M,ADMIN,Administrative Manager,55555,19/08/2022,,Active,,3,4,Paris
+100904,Antoine,Dubois,03/11/1997,F,ADMIN,Facilities Coordinator,35520,22/03/2022,05/12/2024,Terminated,Retirement,2,2,Paris
+100905,Romain,Richard,10/04/1973,F,ADMIN,Facilities Coordinator,57867,02/07/2017,,LOA,,3,4,Paris
+100906,Nicolas,Garnier,11/11/1974,M,ADMIN,Administrative Manager,56543,14/06/2019,,Active,,2,3,Paris
+100907,Pierre,Thomas,17/02/1975,F,ADMIN,Administrative Assistant,44536,14/02/2018,,Active,,3,3,Paris
+100908,Julien,Dubois,20/03/1986,M,ADMIN,Facilities Coordinator,38544,09/11/2023,,LOA,,3,1,Paris
+100909,Antoine,Garnier,01/10/1973,M,ADMIN,Executive Assistant,64584,03/08/2016,09/04/2022,Terminated,Resignation,4,4,Paris
+100910,Sophie,Dupont,23/03/1989,F,ADMIN,Facilities Coordinator,48015,01/11/2018,,Active,,3,3,Paris
+100911,Xavier,Garnier,05/08/1989,M,ADMIN,Administrative Assistant,71759,23/12/2018,,LOA,,4,4,Paris
+100912,Sandrine,Fontaine,10/07/1984,M,ADMIN,Facilities Coordinator,44863,13/06/2022,,Active,,4,5,Paris
+100913,Marie,Robert,15/10/1981,M,ADMIN,Administrative Assistant,64447,02/11/2020,,LOA,,3,4,Paris
+100914,Céline,Lambert,06/11/1988,F,ADMIN,Office Manager,59743,23/10/2022,,Active,,3,3,Paris
+100915,Alexandre,Petit,27/04/1986,M,ADMIN,Facilities Coordinator,43175,08/03/2015,,Active,,4,4,Paris
+100916,Laurence,Petit,19/10/1985,F,ADMIN,Administrative Manager,46522,30/01/2021,,Active,,3,3,Paris
+100917,Camille,Chevalier,21/07/1989,M,ADMIN,Administrative Assistant,53562,12/04/2019,,LOA,,4,5,Paris
+100918,Marie,Dupont,21/02/1999,M,ADMIN,Administrative Manager,67532,09/03/2015,,LOA,,4,4,Paris
+100919,Vincent,Simon,31/07/1992,M,ADMIN,Facilities Coordinator,48885,08/07/2021,,Active,,3,3,Paris
+100920,Pierre,Thomas,01/08/1975,M,ADMIN,Office Manager,60939,07/12/2018,,LOA,,1,3,Paris
+100921,Claire,Leroy,19/07/1999,M,ADMIN,Administrative Assistant,35272,19/12/2017,,LOA,,4,3,Paris
+100922,Thomas,Petit,12/04/1993,M,ADMIN,Facilities Coordinator,72498,25/04/2023,,Active,,4,3,Paris
+100923,Sandrine,Richard,25/04/1972,F,ADMIN,Executive Assistant,60586,27/12/2023,,LOA,,4,3,Paris
+100924,Camille,Robert,12/05/1980,M,ADMIN,Executive Assistant,42757,12/02/2016,,Active,,3,4,Paris
+100925,Camille,Moreau,21/02/1979,M,ADMIN,Administrative Manager,73881,17/01/2016,14/06/2022,Terminated,Resignation,2,4,Paris
+100926,Romain,Richard,19/02/1971,M,ADMIN,Office Manager,58469,29/04/2023,,LOA,,2,4,Paris
+100927,Pierre,Chevalier,01/01/1981,M,ADMIN,Administrative Assistant,38391,22/02/2023,,LOA,,3,5,Paris
+100928,Marie,Durand,06/08/1990,M,ADMIN,Facilities Coordinator,52170,06/09/2021,,Active,,4,2,Paris
+100929,Pierre,Richard,08/07/1974,M,ADMIN,Facilities Coordinator,66884,04/07/2020,,LOA,,4,2,Paris
+100930,François,Simon,24/03/1977,F,ADMIN,Executive Assistant,74757,06/01/2017,,Active,,4,2,Paris
+100931,Nathalie,Chevalier,24/03/1970,M,MGMT,Chief Technology Officer,95276,10/10/2016,,Active,,3,4,Paris
+100932,Thomas,Lambert,15/05/1986,M,MGMT,Product Manager,88161,15/04/2016,,Active,,3,4,Paris
+100933,Antoine,Thomas,09/12/1978,M,MGMT,Product Manager,134985,12/01/2016,,Active,,3,5,Paris
+100934,Camille,Lambert,26/10/2000,M,MGMT,Product Manager,146499,17/01/2023,,LOA,,4,4,Paris
+100935,Céline,Thomas,11/06/1989,F,MGMT,Chief Technology Officer,84097,02/01/2020,,Active,,3,3,Paris
+100936,Isabelle,Dupont,28/02/1990,M,MGMT,General Manager,123714,16/11/2016,,Active,,3,4,Paris
+100937,Isabelle,Richard,06/05/1971,M,MGMT,General Manager,94368,14/04/2016,,Active,,3,2,Paris
+100938,Isabelle,Fontaine,08/02/1984,M,MGMT,Product Manager,98019,15/05/2016,10/11/2023,Terminated,Resignation,3,4,Paris
+100939,Nicolas,Richard,21/09/1982,M,MGMT,General Manager,143525,30/09/2021,,Active,,3,4,Paris
+100940,Romain,Robert,07/08/2000,M,MGMT,Project Manager,95837,25/06/2023,,Active,,1,4,Paris
+100941,Laurence,Durand,27/07/1975,M,MGMT,Project Manager,120181,29/01/2020,,Active,,3,1,Paris
+100942,Alexandre,Simon,04/10/1982,M,MGMT,General Manager,139922,20/06/2016,,LOA,,4,2,Paris
+100943,Nicolas,Thomas,08/04/1974,M,MGMT,Program Director,115327,28/08/2019,,Active,,3,4,Paris
+100944,Sandrine,Dubois,24/08/1987,F,MGMT,Project Manager,85913,07/05/2018,,LOA,,4,5,Paris
+100945,Julie,Dubois,20/06/1970,M,MGMT,Program Director,99667,22/07/2016,,Active,,2,3,Paris
+100946,Alexandre,Dubois,25/08/1981,M,MGMT,VP Engineering,104567,21/10/2023,12/05/2024,Terminated,Layoff,3,4,Paris
+100947,Xavier,Garnier,07/03/1976,M,MGMT,VP Engineering,89398,17/07/2021,,Active,,4,5,Paris
+100948,Valérie,Durand,28/05/1993,F,MGMT,Product Manager,106771,01/12/2020,,LOA,,3,4,Paris
+100949,Antoine,Martin,18/09/1973,M,MGMT,VP Engineering,96986,16/12/2018,,Active,,4,2,Paris
+100950,Pierre,Bernard,29/01/2000,M,MGMT,Chief Technology Officer,133916,04/06/2017,,LOA,,2,3,Paris
+100951,Olivier,Moreau,27/12/1983,M,MGMT,Program Director,83849,12/12/2022,,Active,,4,3,Paris
+100952,Maxime,Blanc,09/02/1979,F,MGMT,Chief Technology Officer,125455,30/09/2023,,Active,,2,3,Paris
+100953,Thomas,Simon,22/10/1974,M,MGMT,Chief Technology Officer,94514,10/05/2023,,Active,,3,3,Paris
+100954,Isabelle,Leroy,23/04/1975,F,MGMT,Project Manager,122026,04/03/2021,31/01/2024,Terminated,Retirement,3,4,Paris
+100955,Antoine,Petit,22/05/1974,F,MGMT,Program Director,108535,21/07/2015,,LOA,,2,3,Paris
+100956,Sandrine,Thomas,07/04/1993,M,MGMT,Project Manager,102629,11/11/2019,,Active,,4,3,Paris
+100957,Romain,Leroy,16/09/1980,M,MGMT,General Manager,123026,27/09/2015,,Active,,3,2,Paris
+100958,Nathalie,Lambert,03/09/1977,M,MGMT,Chief Technology Officer,107745,24/10/2023,,Active,,4,2,Paris
+100959,Nathalie,Martin,10/11/2000,M,MGMT,Project Manager,94555,04/09/2017,,Active,,3,3,Paris
+100960,Laurence,Moreau,08/12/1970,F,MGMT,Chief Technology Officer,71275,28/12/2016,,Active,,3,5,Paris
+100961,Nathalie,Laurent,14/03/1991,M,MGMT,Project Manager,138848,24/03/2016,05/02/2020,Terminated,Layoff,3,4,Paris
+100962,Claire,Moreau,21/04/1990,M,MGMT,Program Director,103231,02/07/2020,,Active,,3,1,Paris
+100963,Xavier,Moreau,25/03/1993,M,MGMT,Project Manager,105381,08/09/2023,,LOA,,4,4,Paris
+100964,Laurence,Laurent,31/07/1999,F,MGMT,Program Director,145705,03/08/2016,,Active,,4,5,Paris
+100965,Céline,Dupont,11/09/1978,F,MGMT,Chief Technology Officer,141423,28/03/2019,,Active,,4,3,Paris
+100966,Antoine,Petit,09/11/1984,F,MGMT,Program Director,94978,21/05/2019,,Active,,1,4,Paris
+100967,Marie,Robert,31/05/1990,M,MGMT,General Manager,84442,10/05/2021,,Active,,4,4,Paris
+100968,Maxime,Fontaine,20/06/1993,F,MGMT,Project Manager,133809,01/04/2018,,Active,,3,4,Paris
+100969,Sophie,Lambert,11/09/1982,F,MGMT,Project Manager,70667,26/08/2021,,LOA,,3,4,Paris
+100970,Antoine,Fontaine,16/09/1985,M,MGMT,VP Engineering,105477,06/03/2018,,Active,,2,4,Paris
+100971,Nicolas,Martin,26/10/1979,M,MGMT,Project Manager,120625,12/05/2015,,Active,,3,5,Paris
+100972,Claire,Martin,10/10/1977,M,MGMT,Product Manager,88242,28/04/2021,,Active,,4,3,Paris
+100973,Patricia,Lambert,04/07/1983,F,MGMT,VP Engineering,94034,03/06/2018,06/03/2023,Terminated,Other,3,5,Paris
+100974,Thomas,Blanc,28/10/1989,M,MGMT,VP Engineering,116424,14/10/2022,,Active,,3,3,Paris
+100975,Alexandre,Chevalier,09/03/1971,F,MGMT,Program Director,109634,07/08/2023,,Active,,4,4,Paris
+100976,Sandrine,Chevalier,16/05/1995,F,MGMT,Chief Technology Officer,122814,16/04/2018,26/09/2024,Terminated,Other,4,3,Paris
+100977,Sophie,Dupont,15/06/1972,F,MGMT,VP Engineering,147901,11/01/2018,,Active,,2,3,Paris
+100978,Sophie,Durand,23/03/1996,M,MGMT,VP Engineering,137667,25/07/2022,,Active,,2,4,Paris
+100979,Julie,Fontaine,01/07/1983,F,MGMT,Chief Technology Officer,96306,17/01/2022,,Active,,2,1,Paris
+100980,Olivier,Durand,02/02/1981,M,MGMT,Program Director,128171,16/04/2017,,Active,,3,5,Paris
+100981,Nathalie,Garnier,16/07/1980,F,MGMT,Product Manager,86147,17/02/2021,,LOA,,3,4,Paris
+100982,Céline,Laurent,29/08/1977,F,MGMT,Chief Technology Officer,132975,26/09/2020,,Active,,3,4,Paris
+100983,Isabelle,Leroy,20/07/1987,F,MGMT,Program Director,124643,30/04/2019,,Active,,4,3,Paris
+100984,Marie,Richard,30/06/1970,F,MGMT,General Manager,116494,05/07/2021,,LOA,,4,3,Paris
+100985,Antoine,Bernard,06/02/1977,F,MGMT,General Manager,138820,05/01/2019,,Active,,3,2,Paris
+100986,Isabelle,Moreau,12/08/1990,F,MGMT,General Manager,109705,08/01/2023,,Active,,4,2,Paris
+100987,Julien,Thomas,06/03/1997,F,MGMT,Chief Technology Officer,112477,23/05/2022,,Active,,3,4,Paris
+100988,Julien,Dupont,07/01/1972,M,MGMT,General Manager,82653,01/05/2015,,Active,,4,4,Paris
+100989,François,Laurent,12/08/1980,F,MGMT,Program Director,125057,07/03/2016,,Active,,4,2,Paris
+100990,Sophie,Dupont,22/10/1989,M,MGMT,Product Manager,112094,24/07/2023,,Active,,2,3,Paris
+100991,Patricia,Lambert,12/10/1978,M,MGMT,Chief Technology Officer,96370,31/10/2017,,Active,,4,3,Paris
+100992,Nicolas,Bernard,22/03/1998,F,MGMT,Project Manager,117128,01/07/2022,31/01/2023,Terminated,Retirement,4,4,Paris
+100993,Camille,Blanc,04/04/1992,M,MGMT,Product Manager,116151,17/02/2017,,LOA,,3,5,Paris
+100994,Maxime,Robert,21/01/1998,M,MGMT,Product Manager,137796,21/03/2019,,Active,,3,2,Paris
+100995,Sandrine,Chevalier,04/11/1984,M,MGMT,Product Manager,121173,03/04/2015,,Active,,4,2,Paris
+100996,Nicolas,Chevalier,23/10/1995,M,MGMT,Chief Technology Officer,77424,15/09/2017,,Active,,3,5,Paris
+100997,Antoine,Bernard,13/06/1971,F,MGMT,General Manager,77784,16/10/2018,,Active,,2,4,Paris
+100998,Valérie,Dubois,27/07/1980,M,MGMT,Chief Technology Officer,79275,14/07/2020,09/03/2024,Terminated,Resignation,4,4,Paris
+100999,Patricia,Thomas,23/10/1975,M,MGMT,VP Engineering,135089,13/01/2018,,Active,,3,4,Paris
+101000,Claire,Laurent,18/12/1970,F,MGMT,General Manager,149709,15/08/2015,20/05/2024,Terminated,Retirement,4,4,Paris

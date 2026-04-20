@@ -1,0 +1,1858 @@
+EmployeeID,ChangeDate,FromJobTitle,ToJobTitle,SalaryBefore,SalaryAfter,ChangeType,DepartmentCode,Site
+100001,03/07/2017,,Software Engineer,,70366,Hire,RD,Paris
+100001,28/07/2019,Software Engineer,Data Scientist,70366,71069,Lateral_Move,RD,Paris
+100001,11/04/2024,Data Scientist,Software Engineer,71069,67515,Demotion,RD,Paris
+100002,19/04/2015,,Software Engineer,,106883,Hire,RD,Paris
+100003,12/02/2018,,Software Engineer,,72428,Hire,RD,Paris
+100003,09/08/2022,Software Engineer,Data Scientist,72428,78222,Promotion,RD,Paris
+100004,05/01/2021,,Software Engineer,,122014,Hire,RD,Paris
+100005,07/07/2015,,Software Engineer,,76963,Hire,RD,Paris
+100006,08/05/2017,,Software Engineer,,70731,Hire,RD,Paris
+100007,05/09/2022,,Software Engineer,,56326,Hire,RD,Paris
+100008,08/05/2022,,Software Engineer,,93243,Hire,RD,Paris
+100008,30/06/2023,Software Engineer,R&D Analyst,93243,100702,Promotion,RD,Paris
+100008,02/09/2024,R&D Analyst,DevOps Engineer,100702,108758,Promotion,RD,Paris
+100009,24/06/2019,,Software Engineer,,120081,Hire,RD,Paris
+100010,26/09/2019,,Software Engineer,,115588,Hire,RD,Paris
+100010,26/09/2020,Software Engineer,Lead Engineer,115588,124835,Promotion,RD,Paris
+100010,10/01/2024,Lead Engineer,Software Engineer,124835,118593,Demotion,RD,Paris
+100011,08/01/2021,,Software Engineer,,82840,Hire,RD,Paris
+100011,02/04/2022,Software Engineer,DevOps Engineer,82840,83668,Lateral_Move,RD,Paris
+100011,09/02/2024,DevOps Engineer,Software Engineer,83668,84504,Lateral_Move,RD,Paris
+100012,11/03/2016,,Software Engineer,,110796,Hire,RD,Paris
+100012,31/08/2022,Software Engineer,QA Engineer,110796,105256,Demotion,RD,Paris
+100013,19/09/2021,,Software Engineer,,98572,Hire,RD,Paris
+100013,01/07/2023,Software Engineer,Lead Engineer,98572,99557,Lateral_Move,RD,Paris
+100014,19/11/2015,,Software Engineer,,69037,Hire,RD,Paris
+100014,11/10/2017,Software Engineer,Data Scientist,69037,69727,Lateral_Move,RD,Paris
+100015,30/09/2019,,Software Engineer,,106367,Hire,RD,Paris
+100015,20/12/2022,Software Engineer,QA Engineer,106367,107430,Lateral_Move,RD,Paris
+100016,09/07/2017,,Software Engineer,,86075,Hire,RD,Paris
+100016,15/12/2019,Software Engineer,DevOps Engineer,86075,92961,Promotion,RD,Paris
+100017,18/10/2015,,Software Engineer,,79125,Hire,RD,Paris
+100017,03/03/2017,Software Engineer,Data Scientist,79125,85455,Promotion,RD,Paris
+100017,07/01/2023,Data Scientist,R&D Analyst,85455,86309,Lateral_Move,RD,Paris
+100018,26/07/2019,,Software Engineer,,99948,Hire,RD,Paris
+100018,11/02/2024,Software Engineer,Software Engineer,99948,94950,Demotion,RD,Paris
+100019,08/07/2019,,Software Engineer,,74583,Hire,RD,Paris
+100020,05/11/2015,,Software Engineer,,125170,Hire,RD,Paris
+100020,02/04/2019,Software Engineer,R&D Analyst,125170,126421,Lateral_Move,RD,Paris
+100021,25/05/2020,,Software Engineer,,81180,Hire,RD,Paris
+100021,28/07/2021,Software Engineer,Data Scientist,81180,87674,Promotion,RD,Paris
+100021,13/07/2024,Data Scientist,Data Scientist,87674,88550,Lateral_Move,RD,Paris
+100022,04/06/2022,,Software Engineer,,85891,Hire,RD,Paris
+100023,25/07/2015,,Software Engineer,,117827,Hire,RD,Paris
+100023,07/01/2017,Software Engineer,Senior Software Engineer,117827,127253,Promotion,RD,Paris
+100023,12/05/2018,Senior Software Engineer,DevOps Engineer,127253,137433,Promotion,RD,Paris
+100024,06/05/2016,,Software Engineer,,116953,Hire,RD,Paris
+100024,02/05/2023,Software Engineer,QA Engineer,116953,111105,Demotion,RD,Paris
+100024,26/08/2024,QA Engineer,QA Engineer,111105,119993,Promotion,RD,Paris
+100025,04/12/2017,,Software Engineer,,84688,Hire,RD,Paris
+100026,21/02/2020,,Software Engineer,,110206,Hire,RD,Paris
+100026,14/01/2024,Software Engineer,Senior Software Engineer,110206,119022,Promotion,RD,Paris
+100027,08/10/2016,,Software Engineer,,109072,Hire,RD,Paris
+100027,23/02/2019,Software Engineer,DevOps Engineer,109072,117797,Promotion,RD,Paris
+100028,14/03/2016,,Software Engineer,,89637,Hire,RD,Paris
+100029,28/07/2015,,Software Engineer,,62151,Hire,RD,Paris
+100029,13/04/2017,Software Engineer,DevOps Engineer,62151,59043,Demotion,RD,Paris
+100029,19/12/2020,DevOps Engineer,Lead Engineer,59043,63766,Promotion,RD,Paris
+100030,30/11/2022,,Software Engineer,,69796,Hire,RD,Paris
+100031,13/03/2021,,Software Engineer,,97106,Hire,RD,Paris
+100031,28/06/2022,Software Engineer,Data Scientist,97106,104874,Promotion,RD,Paris
+100031,20/01/2024,Data Scientist,DevOps Engineer,104874,113263,Promotion,RD,Paris
+100032,19/10/2017,,Software Engineer,,110001,Hire,RD,Paris
+100033,04/01/2017,,Software Engineer,,89623,Hire,RD,Paris
+100033,21/02/2018,Software Engineer,QA Engineer,89623,96792,Promotion,RD,Paris
+100033,07/04/2023,QA Engineer,Senior Software Engineer,96792,97759,Lateral_Move,RD,Paris
+100034,28/03/2017,,Software Engineer,,83991,Hire,RD,Paris
+100034,28/06/2019,Software Engineer,R&D Analyst,83991,79791,Demotion,RD,Paris
+100034,30/11/2024,R&D Analyst,Senior Software Engineer,79791,86174,Promotion,RD,Paris
+100035,06/09/2018,,Software Engineer,,88877,Hire,RD,Paris
+100036,05/12/2017,,Software Engineer,,63579,Hire,RD,Paris
+100037,27/04/2019,,Software Engineer,,66981,Hire,RD,Paris
+100038,02/11/2019,,Software Engineer,,83673,Hire,RD,Paris
+100038,30/06/2023,Software Engineer,Senior Software Engineer,83673,90366,Promotion,RD,Paris
+100039,07/07/2019,,Software Engineer,,99736,Hire,RD,Paris
+100039,08/09/2020,Software Engineer,DevOps Engineer,99736,107714,Promotion,RD,Paris
+100040,22/02/2021,,Software Engineer,,79710,Hire,RD,Paris
+100040,23/09/2022,Software Engineer,DevOps Engineer,79710,86086,Promotion,RD,Paris
+100040,17/07/2024,DevOps Engineer,R&D Analyst,86086,92972,Promotion,RD,Paris
+100041,30/07/2022,,Software Engineer,,61713,Hire,RD,Paris
+100041,16/02/2024,Software Engineer,Data Scientist,61713,62330,Lateral_Move,RD,Paris
+100042,25/06/2018,,Software Engineer,,64509,Hire,RD,Paris
+100042,07/08/2021,Software Engineer,R&D Analyst,64509,69669,Promotion,RD,Paris
+100042,08/11/2024,R&D Analyst,Lead Engineer,69669,70365,Lateral_Move,RD,Paris
+100043,15/06/2021,,Software Engineer,,94776,Hire,RD,Paris
+100044,21/10/2022,,Software Engineer,,91597,Hire,RD,Paris
+100044,26/12/2023,Software Engineer,Software Engineer,91597,98924,Promotion,RD,Paris
+100045,04/09/2021,,Software Engineer,,107308,Hire,RD,Paris
+100045,08/12/2022,Software Engineer,Data Scientist,107308,115892,Promotion,RD,Paris
+100046,27/11/2017,,Software Engineer,,107716,Hire,RD,Paris
+100047,02/08/2018,,Software Engineer,,71990,Hire,RD,Paris
+100047,10/04/2021,Software Engineer,Software Engineer,71990,68390,Demotion,RD,Paris
+100047,23/10/2023,Software Engineer,Data Scientist,68390,69073,Lateral_Move,RD,Paris
+100048,17/09/2018,,Software Engineer,,73481,Hire,RD,Paris
+100048,11/07/2022,Software Engineer,Data Scientist,73481,79359,Promotion,RD,Paris
+100049,08/04/2019,,Software Engineer,,91247,Hire,RD,Paris
+100050,22/06/2017,,Software Engineer,,105308,Hire,RD,Paris
+100050,02/10/2018,Software Engineer,QA Engineer,105308,113732,Promotion,RD,Paris
+100050,20/10/2024,QA Engineer,DevOps Engineer,113732,122830,Promotion,RD,Paris
+100051,06/06/2016,,Software Engineer,,132355,Hire,RD,Paris
+100052,25/07/2015,,Software Engineer,,101589,Hire,RD,Paris
+100052,23/11/2019,Software Engineer,Lead Engineer,101589,109716,Promotion,RD,Paris
+100053,10/04/2020,,Software Engineer,,82706,Hire,RD,Paris
+100053,04/11/2022,Software Engineer,Lead Engineer,82706,89322,Promotion,RD,Paris
+100054,25/03/2015,,Software Engineer,,106374,Hire,RD,Paris
+100054,27/01/2020,Software Engineer,Lead Engineer,106374,107437,Lateral_Move,RD,Paris
+100055,18/11/2016,,Software Engineer,,93332,Hire,RD,Paris
+100055,04/02/2020,Software Engineer,Data Scientist,93332,100798,Promotion,RD,Paris
+100055,19/09/2022,Data Scientist,R&D Analyst,100798,108861,Promotion,RD,Paris
+100056,07/01/2023,,Software Engineer,,86708,Hire,RD,Paris
+100056,29/04/2024,Software Engineer,Senior Software Engineer,86708,93644,Promotion,RD,Paris
+100057,21/10/2019,,Software Engineer,,88391,Hire,RD,Paris
+100057,04/08/2022,Software Engineer,QA Engineer,88391,89274,Lateral_Move,RD,Paris
+100058,27/02/2020,,Software Engineer,,105530,Hire,RD,Paris
+100058,11/09/2023,Software Engineer,Software Engineer,105530,113972,Promotion,RD,Paris
+100059,14/03/2023,,Software Engineer,,72843,Hire,RD,Paris
+100059,12/07/2024,Software Engineer,Lead Engineer,72843,78670,Promotion,RD,Paris
+100060,28/04/2015,,Software Engineer,,104332,Hire,RD,Paris
+100061,11/02/2015,,Software Engineer,,80092,Hire,RD,Paris
+100062,25/12/2022,,Software Engineer,,91967,Hire,RD,Paris
+100063,14/12/2020,,Software Engineer,,99235,Hire,RD,Paris
+100063,24/02/2023,Software Engineer,Senior Software Engineer,99235,107173,Promotion,RD,Paris
+100063,14/09/2024,Senior Software Engineer,QA Engineer,107173,108244,Lateral_Move,RD,Paris
+100064,19/07/2023,,Software Engineer,,119995,Hire,RD,Paris
+100065,06/03/2017,,Software Engineer,,92552,Hire,RD,Paris
+100065,07/11/2021,Software Engineer,Lead Engineer,92552,87924,Demotion,RD,Paris
+100065,27/01/2023,Lead Engineer,DevOps Engineer,87924,94957,Promotion,RD,Paris
+100066,27/10/2022,,Software Engineer,,61430,Hire,RD,Paris
+100066,02/02/2024,Software Engineer,DevOps Engineer,61430,66344,Promotion,RD,Paris
+100067,10/05/2020,,Software Engineer,,110449,Hire,RD,Paris
+100068,13/10/2017,,Software Engineer,,130230,Hire,RD,Paris
+100068,19/11/2018,Software Engineer,Data Scientist,130230,131532,Lateral_Move,RD,Paris
+100068,26/12/2020,Data Scientist,DevOps Engineer,131532,132847,Lateral_Move,RD,Paris
+100069,07/08/2021,,Software Engineer,,60206,Hire,RD,Paris
+100070,29/05/2022,,Software Engineer,,70390,Hire,RD,Paris
+100071,06/08/2017,,Software Engineer,,65497,Hire,RD,Paris
+100071,26/11/2018,Software Engineer,Data Scientist,65497,66151,Lateral_Move,RD,Paris
+100072,15/04/2016,,Software Engineer,,69305,Hire,RD,Paris
+100072,20/09/2020,Software Engineer,DevOps Engineer,69305,74849,Promotion,RD,Paris
+100073,24/05/2016,,Software Engineer,,80296,Hire,RD,Paris
+100073,05/06/2024,Software Engineer,Data Scientist,80296,81098,Lateral_Move,RD,Paris
+100074,08/10/2021,,Software Engineer,,109294,Hire,RD,Paris
+100074,28/03/2024,Software Engineer,QA Engineer,109294,110386,Lateral_Move,RD,Paris
+100075,11/04/2020,,Software Engineer,,76804,Hire,RD,Paris
+100075,07/01/2024,Software Engineer,QA Engineer,76804,82948,Promotion,RD,Paris
+100076,31/07/2019,,Software Engineer,,99628,Hire,RD,Paris
+100076,08/03/2023,Software Engineer,R&D Analyst,99628,107598,Promotion,RD,Paris
+100076,01/06/2024,R&D Analyst,R&D Analyst,107598,108673,Lateral_Move,RD,Paris
+100077,27/12/2015,,Software Engineer,,92299,Hire,RD,Paris
+100077,28/06/2017,Software Engineer,Software Engineer,92299,87684,Demotion,RD,Paris
+100077,16/02/2019,Software Engineer,Data Scientist,87684,88560,Lateral_Move,RD,Paris
+100078,07/02/2017,,Software Engineer,,107284,Hire,RD,Paris
+100078,11/03/2024,Software Engineer,Software Engineer,107284,108356,Lateral_Move,RD,Paris
+100079,12/05/2016,,Software Engineer,,92585,Hire,RD,Paris
+100079,31/07/2018,Software Engineer,DevOps Engineer,92585,99991,Promotion,RD,Paris
+100079,15/09/2020,DevOps Engineer,Senior Software Engineer,99991,107990,Promotion,RD,Paris
+100080,07/04/2022,,Software Engineer,,112353,Hire,RD,Paris
+100080,20/05/2023,Software Engineer,Data Scientist,112353,121341,Promotion,RD,Paris
+100080,27/07/2024,Data Scientist,DevOps Engineer,121341,131048,Promotion,RD,Paris
+100081,15/08/2016,,Software Engineer,,88117,Hire,RD,Paris
+100081,19/04/2023,Software Engineer,QA Engineer,88117,95166,Promotion,RD,Paris
+100081,21/04/2024,QA Engineer,Senior Software Engineer,95166,102779,Promotion,RD,Paris
+100082,21/02/2023,,Software Engineer,,109326,Hire,RD,Paris
+100082,28/08/2024,Software Engineer,Senior Software Engineer,109326,118072,Promotion,RD,Paris
+100083,11/02/2017,,Software Engineer,,101539,Hire,RD,Paris
+100083,09/05/2023,Software Engineer,Software Engineer,101539,109662,Promotion,RD,Paris
+100084,01/05/2019,,Software Engineer,,61138,Hire,RD,Paris
+100085,15/02/2020,,Software Engineer,,60477,Hire,RD,Paris
+100085,20/02/2021,Software Engineer,Lead Engineer,60477,65315,Promotion,RD,Paris
+100086,25/11/2015,,Software Engineer,,109160,Hire,RD,Paris
+100086,28/01/2023,Software Engineer,QA Engineer,109160,117892,Promotion,RD,Paris
+100086,30/11/2024,QA Engineer,Data Scientist,117892,127323,Promotion,RD,Paris
+100087,17/05/2023,,Software Engineer,,72460,Hire,RD,Paris
+100088,16/03/2019,,Software Engineer,,99725,Hire,RD,Paris
+100089,30/08/2022,,Software Engineer,,113758,Hire,RD,Paris
+100089,20/03/2024,Software Engineer,R&D Analyst,113758,122858,Promotion,RD,Paris
+100090,16/02/2021,,Software Engineer,,127410,Hire,RD,Paris
+100090,26/06/2024,Software Engineer,DevOps Engineer,127410,128684,Lateral_Move,RD,Paris
+100091,25/04/2019,,Software Engineer,,99193,Hire,RD,Paris
+100091,08/05/2020,Software Engineer,Senior Software Engineer,99193,107128,Promotion,RD,Paris
+100092,03/02/2015,,Software Engineer,,119180,Hire,RD,Paris
+100092,21/11/2019,Software Engineer,R&D Analyst,119180,128714,Promotion,RD,Paris
+100092,29/07/2022,R&D Analyst,Software Engineer,128714,130001,Lateral_Move,RD,Paris
+100093,20/02/2022,,Software Engineer,,69457,Hire,RD,Paris
+100093,19/11/2023,Software Engineer,R&D Analyst,69457,75013,Promotion,RD,Paris
+100093,23/11/2024,R&D Analyst,Data Scientist,75013,81014,Promotion,RD,Paris
+100094,05/01/2016,,Software Engineer,,81147,Hire,RD,Paris
+100094,17/07/2018,Software Engineer,R&D Analyst,81147,81958,Lateral_Move,RD,Paris
+100095,18/11/2017,,Software Engineer,,86954,Hire,RD,Paris
+100095,08/12/2022,Software Engineer,QA Engineer,86954,82606,Demotion,RD,Paris
+100095,29/03/2024,QA Engineer,Software Engineer,82606,83432,Lateral_Move,RD,Paris
+100096,07/02/2019,,Software Engineer,,112965,Hire,RD,Paris
+100097,02/03/2019,,Software Engineer,,61433,Hire,RD,Paris
+100098,16/03/2020,,Software Engineer,,72411,Hire,RD,Paris
+100098,27/04/2022,Software Engineer,Software Engineer,72411,78203,Promotion,RD,Paris
+100098,29/08/2024,Software Engineer,DevOps Engineer,78203,84459,Promotion,RD,Paris
+100099,10/01/2021,,Software Engineer,,117768,Hire,RD,Paris
+100100,26/11/2021,,Software Engineer,,104141,Hire,RD,Paris
+100100,01/02/2023,Software Engineer,Lead Engineer,104141,105182,Lateral_Move,RD,Paris
+100101,26/03/2022,,Software Engineer,,77562,Hire,RD,Paris
+100101,10/10/2023,Software Engineer,Senior Software Engineer,77562,83766,Promotion,RD,Paris
+100101,22/11/2024,Senior Software Engineer,R&D Analyst,83766,79577,Demotion,RD,Paris
+100102,04/03/2022,,Software Engineer,,97875,Hire,RD,Paris
+100102,21/10/2024,Software Engineer,Senior Software Engineer,97875,105705,Promotion,RD,Paris
+100103,29/07/2021,,Software Engineer,,78369,Hire,RD,Paris
+100104,15/12/2023,,Software Engineer,,58098,Hire,RD,Paris
+100105,03/08/2015,,Software Engineer,,72254,Hire,RD,Paris
+100105,10/05/2022,Software Engineer,R&D Analyst,72254,72976,Lateral_Move,RD,Paris
+100105,08/08/2023,R&D Analyst,Data Scientist,72976,78814,Promotion,RD,Paris
+100106,25/08/2020,,Software Engineer,,97492,Hire,RD,Paris
+100106,30/01/2024,Software Engineer,R&D Analyst,97492,98466,Lateral_Move,RD,Paris
+100107,18/03/2016,,Software Engineer,,63928,Hire,RD,Paris
+100107,02/06/2019,Software Engineer,R&D Analyst,63928,60731,Demotion,RD,Paris
+100108,10/04/2019,,Software Engineer,,102714,Hire,RD,Paris
+100108,04/05/2022,Software Engineer,Software Engineer,102714,110931,Promotion,RD,Paris
+100109,28/10/2019,,Software Engineer,,95001,Hire,RD,Paris
+100110,17/06/2022,,Software Engineer,,65887,Hire,RD,Paris
+100111,28/03/2021,,Software Engineer,,93250,Hire,RD,Paris
+100111,04/03/2023,Software Engineer,Software Engineer,93250,100710,Promotion,RD,Paris
+100112,25/09/2021,,Software Engineer,,115505,Hire,RD,Paris
+100112,31/05/2023,Software Engineer,R&D Analyst,115505,116660,Lateral_Move,RD,Paris
+100113,15/04/2016,,Software Engineer,,125135,Hire,RD,Paris
+100114,08/01/2017,,Software Engineer,,91536,Hire,RD,Paris
+100114,16/11/2023,Software Engineer,Senior Software Engineer,91536,92451,Lateral_Move,RD,Paris
+100114,17/11/2024,Senior Software Engineer,QA Engineer,92451,99847,Promotion,RD,Paris
+100115,06/05/2015,,Software Engineer,,104836,Hire,RD,Paris
+100115,03/11/2016,Software Engineer,Data Scientist,104836,105884,Lateral_Move,RD,Paris
+100115,14/09/2020,Data Scientist,DevOps Engineer,105884,114354,Promotion,RD,Paris
+100116,29/09/2016,,Software Engineer,,88921,Hire,RD,Paris
+100116,13/03/2023,Software Engineer,DevOps Engineer,88921,89810,Lateral_Move,RD,Paris
+100117,20/06/2023,,Software Engineer,,68915,Hire,RD,Paris
+100117,03/08/2024,Software Engineer,R&D Analyst,68915,74428,Promotion,RD,Paris
+100118,22/06/2017,,Software Engineer,,86425,Hire,RD,Paris
+100119,01/02/2015,,Software Engineer,,72824,Hire,RD,Paris
+100119,17/09/2023,Software Engineer,R&D Analyst,72824,73552,Lateral_Move,RD,Paris
+100120,15/06/2019,,Software Engineer,,62665,Hire,RD,Paris
+100121,07/09/2019,,Software Engineer,,85171,Hire,RD,Paris
+100122,23/09/2017,,Software Engineer,,61013,Hire,RD,Paris
+100122,25/04/2022,Software Engineer,QA Engineer,61013,61623,Lateral_Move,RD,Paris
+100122,07/05/2023,QA Engineer,Software Engineer,61623,66552,Promotion,RD,Paris
+100123,21/09/2020,,Software Engineer,,100130,Hire,RD,Paris
+100123,06/09/2022,Software Engineer,Data Scientist,100130,108140,Promotion,RD,Paris
+100124,14/11/2017,,Software Engineer,,77829,Hire,RD,Paris
+100124,03/05/2020,Software Engineer,Software Engineer,77829,84055,Promotion,RD,Paris
+100124,23/05/2023,Software Engineer,Lead Engineer,84055,90779,Promotion,RD,Paris
+100125,01/05/2021,,Software Engineer,,99213,Hire,RD,Paris
+100126,09/09/2020,,Software Engineer,,67220,Hire,RD,Paris
+100127,10/03/2020,,Software Engineer,,111042,Hire,RD,Paris
+100127,20/09/2022,Software Engineer,Software Engineer,111042,105489,Demotion,RD,Paris
+100128,28/02/2016,,Software Engineer,,115740,Hire,RD,Paris
+100128,08/07/2024,Software Engineer,Software Engineer,115740,109953,Demotion,RD,Paris
+100129,02/11/2021,,Software Engineer,,99889,Hire,RD,Paris
+100129,30/12/2023,Software Engineer,Software Engineer,99889,94894,Demotion,RD,Paris
+100130,12/09/2018,,Software Engineer,,84077,Hire,RD,Paris
+100131,11/06/2022,,Software Engineer,,96250,Hire,RD,Paris
+100131,20/06/2024,Software Engineer,Lead Engineer,96250,97212,Lateral_Move,RD,Paris
+100132,17/11/2023,,Software Engineer,,67365,Hire,RD,Paris
+100133,27/05/2017,,Software Engineer,,79337,Hire,RD,Paris
+100134,04/06/2015,,Software Engineer,,91874,Hire,RD,Paris
+100135,10/08/2019,,Software Engineer,,82126,Hire,RD,Paris
+100136,05/03/2017,,Software Engineer,,90744,Hire,RD,Paris
+100136,25/10/2018,Software Engineer,DevOps Engineer,90744,91651,Lateral_Move,RD,Paris
+100136,08/08/2021,DevOps Engineer,Software Engineer,91651,92567,Lateral_Move,RD,Paris
+100137,02/08/2015,,Software Engineer,,67677,Hire,RD,Paris
+100137,15/08/2020,Software Engineer,R&D Analyst,67677,68353,Lateral_Move,RD,Paris
+100138,15/01/2020,,Software Engineer,,62393,Hire,RD,Paris
+100139,12/06/2019,,Software Engineer,,67783,Hire,RD,Paris
+100140,21/03/2018,,Software Engineer,,115449,Hire,RD,Paris
+100140,23/06/2024,Software Engineer,Software Engineer,115449,109676,Demotion,RD,Paris
+100141,25/02/2021,,Software Engineer,,81765,Hire,RD,Paris
+100141,17/08/2024,Software Engineer,Lead Engineer,81765,88306,Promotion,RD,Paris
+100142,30/03/2016,,Software Engineer,,118606,Hire,RD,Paris
+100143,23/11/2021,,Software Engineer,,70948,Hire,RD,Paris
+100144,25/03/2015,,Software Engineer,,94656,Hire,RD,Paris
+100144,14/08/2017,Software Engineer,Software Engineer,94656,89923,Demotion,RD,Paris
+100145,22/03/2023,,Software Engineer,,100218,Hire,RD,Paris
+100145,23/03/2024,Software Engineer,Senior Software Engineer,100218,108235,Promotion,RD,Paris
+100146,31/01/2022,,Software Engineer,,100138,Hire,RD,Paris
+100146,04/05/2023,Software Engineer,R&D Analyst,100138,101139,Lateral_Move,RD,Paris
+100147,12/10/2020,,Software Engineer,,66716,Hire,RD,Paris
+100147,09/03/2024,Software Engineer,QA Engineer,66716,72053,Promotion,RD,Paris
+100148,24/05/2016,,Software Engineer,,97385,Hire,RD,Paris
+100148,30/09/2019,Software Engineer,QA Engineer,97385,105175,Promotion,RD,Paris
+100149,10/12/2023,,Software Engineer,,62730,Hire,RD,Paris
+100150,24/11/2015,,Software Engineer,,107915,Hire,RD,Paris
+100150,05/04/2018,Software Engineer,Data Scientist,107915,102519,Demotion,RD,Paris
+100150,05/03/2022,Data Scientist,DevOps Engineer,102519,110720,Promotion,RD,Paris
+100151,25/02/2023,,Software Engineer,,100427,Hire,RD,Paris
+100151,17/03/2024,Software Engineer,DevOps Engineer,100427,108461,Promotion,RD,Paris
+100152,02/10/2020,,Software Engineer,,72929,Hire,RD,Paris
+100152,03/12/2023,Software Engineer,DevOps Engineer,72929,78763,Promotion,RD,Paris
+100153,24/09/2023,,Software Engineer,,117364,Hire,RD,Paris
+100154,08/06/2021,,Software Engineer,,86382,Hire,RD,Paris
+100154,01/09/2024,Software Engineer,Data Scientist,86382,93292,Promotion,RD,Paris
+100155,21/10/2020,,Software Engineer,,81087,Hire,RD,Paris
+100155,18/02/2022,Software Engineer,DevOps Engineer,81087,87573,Promotion,RD,Paris
+100156,17/05/2016,,Software Engineer,,77844,Hire,RD,Paris
+100156,05/09/2022,Software Engineer,R&D Analyst,77844,84071,Promotion,RD,Paris
+100157,02/03/2021,,Software Engineer,,72555,Hire,RD,Paris
+100157,22/08/2024,Software Engineer,Lead Engineer,72555,73280,Lateral_Move,RD,Paris
+100158,18/04/2015,,Software Engineer,,116811,Hire,RD,Paris
+100159,10/08/2019,,Software Engineer,,90969,Hire,RD,Paris
+100159,13/11/2020,Software Engineer,Software Engineer,90969,98246,Promotion,RD,Paris
+100160,05/03/2022,,Software Engineer,,107492,Hire,RD,Paris
+100160,24/11/2024,Software Engineer,Lead Engineer,107492,116091,Promotion,RD,Paris
+100161,25/10/2016,,Software Engineer,,104860,Hire,RD,Paris
+100161,23/07/2018,Software Engineer,QA Engineer,104860,113248,Promotion,RD,Paris
+100161,10/02/2023,QA Engineer,Senior Software Engineer,113248,122307,Promotion,RD,Paris
+100162,27/05/2016,,Software Engineer,,76903,Hire,RD,Paris
+100162,10/12/2023,Software Engineer,DevOps Engineer,76903,83055,Promotion,RD,Paris
+100163,18/06/2015,,Software Engineer,,68338,Hire,RD,Paris
+100164,02/03/2022,,Software Engineer,,87676,Hire,RD,Paris
+100164,10/04/2024,Software Engineer,Senior Software Engineer,87676,94690,Promotion,RD,Paris
+100165,21/09/2022,,Software Engineer,,110003,Hire,RD,Paris
+100165,15/10/2023,Software Engineer,QA Engineer,110003,111103,Lateral_Move,RD,Paris
+100166,19/06/2016,,Software Engineer,,78007,Hire,RD,Paris
+100167,23/04/2019,,Software Engineer,,79315,Hire,RD,Paris
+100167,09/07/2023,Software Engineer,QA Engineer,79315,85660,Promotion,RD,Paris
+100167,11/07/2024,QA Engineer,Data Scientist,85660,92512,Promotion,RD,Paris
+100168,09/10/2020,,Software Engineer,,57831,Hire,RD,Paris
+100169,27/07/2015,,Software Engineer,,118407,Hire,RD,Paris
+100170,07/02/2019,,Software Engineer,,107390,Hire,RD,Paris
+100171,01/02/2016,,Software Engineer,,103553,Hire,RD,Paris
+100171,29/10/2024,Software Engineer,Software Engineer,103553,111837,Promotion,RD,Paris
+100172,09/06/2015,,Software Engineer,,115539,Hire,RD,Paris
+100172,30/08/2017,Software Engineer,Data Scientist,115539,124782,Promotion,RD,Paris
+100172,15/05/2021,Data Scientist,Data Scientist,124782,134764,Promotion,RD,Paris
+100173,29/05/2019,,Software Engineer,,93418,Hire,RD,Paris
+100173,29/05/2024,Software Engineer,R&D Analyst,93418,100891,Promotion,RD,Paris
+100174,17/02/2019,,Software Engineer,,128491,Hire,RD,Paris
+100175,09/05/2022,,Software Engineer,,120006,Hire,RD,Paris
+100175,23/11/2024,Software Engineer,R&D Analyst,120006,114005,Demotion,RD,Paris
+100176,19/09/2017,,Software Engineer,,59387,Hire,RD,Paris
+100176,25/02/2022,Software Engineer,Data Scientist,59387,64137,Promotion,RD,Paris
+100176,07/09/2023,Data Scientist,DevOps Engineer,64137,60930,Demotion,RD,Paris
+100177,15/04/2020,,Software Engineer,,113910,Hire,RD,Paris
+100178,10/12/2016,,Software Engineer,,103612,Hire,RD,Paris
+100178,02/06/2024,Software Engineer,R&D Analyst,103612,104648,Lateral_Move,RD,Paris
+100179,06/10/2017,,Software Engineer,,89162,Hire,RD,Paris
+100179,11/07/2022,Software Engineer,QA Engineer,89162,96294,Promotion,RD,Paris
+100179,01/02/2024,QA Engineer,Senior Software Engineer,96294,103997,Promotion,RD,Paris
+100180,14/04/2021,,Software Engineer,,75592,Hire,RD,Paris
+100181,24/03/2018,,Software Engineer,,106952,Hire,RD,Paris
+100181,06/01/2024,Software Engineer,Senior Software Engineer,106952,115508,Promotion,RD,Paris
+100182,22/10/2022,,Software Engineer,,116823,Hire,RD,Paris
+100182,07/11/2024,Software Engineer,Lead Engineer,116823,117991,Lateral_Move,RD,Paris
+100183,15/02/2016,,Software Engineer,,74739,Hire,RD,Paris
+100183,24/01/2023,Software Engineer,Lead Engineer,74739,75486,Lateral_Move,RD,Paris
+100184,18/04/2022,,Software Engineer,,81111,Hire,RD,Paris
+100185,18/12/2016,,Software Engineer,,107681,Hire,RD,Paris
+100186,15/05/2021,,Software Engineer,,109840,Hire,RD,Paris
+100187,28/02/2017,,Software Engineer,,110837,Hire,RD,Paris
+100187,28/11/2023,Software Engineer,Senior Software Engineer,110837,119703,Promotion,RD,Paris
+100188,07/11/2021,,Software Engineer,,117730,Hire,RD,Paris
+100189,13/10/2017,,Software Engineer,,92155,Hire,RD,Paris
+100190,12/01/2019,,Software Engineer,,101685,Hire,RD,Paris
+100190,24/11/2024,Software Engineer,R&D Analyst,101685,102701,Lateral_Move,RD,Paris
+100191,23/04/2018,,Software Engineer,,70314,Hire,RD,Paris
+100192,30/06/2023,,Software Engineer,,124712,Hire,RD,Paris
+100192,13/08/2024,Software Engineer,Lead Engineer,124712,134688,Promotion,RD,Paris
+100193,29/04/2021,,Software Engineer,,126107,Hire,RD,Paris
+100194,25/06/2020,,Software Engineer,,103633,Hire,RD,Paris
+100194,15/11/2022,Software Engineer,Lead Engineer,103633,111923,Promotion,RD,Paris
+100195,16/06/2018,,Software Engineer,,63043,Hire,RD,Paris
+100195,19/07/2019,Software Engineer,Data Scientist,63043,63673,Lateral_Move,RD,Paris
+100196,04/09/2015,,Software Engineer,,61690,Hire,RD,Paris
+100197,27/03/2019,,Software Engineer,,74294,Hire,RD,Paris
+100197,04/08/2020,Software Engineer,Data Scientist,74294,70579,Demotion,RD,Paris
+100197,21/10/2021,Data Scientist,Senior Software Engineer,70579,71284,Lateral_Move,RD,Paris
+100198,25/06/2023,,Software Engineer,,100103,Hire,RD,Paris
+100199,11/02/2017,,Software Engineer,,110761,Hire,RD,Paris
+100199,05/04/2023,Software Engineer,QA Engineer,110761,119621,Promotion,RD,Paris
+100200,29/08/2021,,Software Engineer,,107775,Hire,RD,Paris
+100201,17/08/2017,,Software Engineer,,130889,Hire,RD,Paris
+100201,17/08/2018,Software Engineer,Lead Engineer,130889,132197,Lateral_Move,RD,Paris
+100201,17/05/2021,Lead Engineer,Software Engineer,132197,133518,Lateral_Move,RD,Paris
+100202,21/08/2019,,Software Engineer,,128583,Hire,RD,Paris
+100202,26/05/2022,Software Engineer,Data Scientist,128583,138869,Promotion,RD,Paris
+100203,11/11/2018,,Software Engineer,,93537,Hire,RD,Paris
+100204,14/09/2017,,Software Engineer,,107726,Hire,RD,Paris
+100205,21/09/2017,,Software Engineer,,64558,Hire,RD,Paris
+100205,11/03/2024,Software Engineer,Senior Software Engineer,64558,69722,Promotion,RD,Paris
+100206,04/01/2018,,Software Engineer,,74246,Hire,RD,Paris
+100207,25/09/2018,,Software Engineer,,76361,Hire,RD,Paris
+100207,07/07/2021,Software Engineer,Lead Engineer,76361,77124,Lateral_Move,RD,Paris
+100208,07/09/2017,,Software Engineer,,109631,Hire,RD,Paris
+100208,07/06/2024,Software Engineer,R&D Analyst,109631,118401,Promotion,RD,Paris
+100209,08/02/2016,,Software Engineer,,77486,Hire,RD,Paris
+100209,31/12/2019,Software Engineer,DevOps Engineer,77486,83684,Promotion,RD,Paris
+100210,04/12/2017,,Software Engineer,,76651,Hire,RD,Paris
+100210,07/02/2019,Software Engineer,QA Engineer,76651,77417,Lateral_Move,RD,Paris
+100211,06/09/2022,,Software Engineer,,112784,Hire,RD,Paris
+100211,31/12/2023,Software Engineer,QA Engineer,112784,113911,Lateral_Move,RD,Paris
+100212,23/01/2017,,Software Engineer,,59333,Hire,RD,Paris
+100212,22/09/2019,Software Engineer,DevOps Engineer,59333,64079,Promotion,RD,Paris
+100212,06/07/2022,DevOps Engineer,DevOps Engineer,64079,69205,Promotion,RD,Paris
+100213,27/01/2022,,Software Engineer,,83366,Hire,RD,Paris
+100213,08/05/2023,Software Engineer,Senior Software Engineer,83366,84199,Lateral_Move,RD,Paris
+100213,08/09/2024,Senior Software Engineer,R&D Analyst,84199,90934,Promotion,RD,Paris
+100214,28/01/2015,,Software Engineer,,56424,Hire,RD,Paris
+100215,14/03/2016,,Software Engineer,,83983,Hire,RD,Paris
+100216,22/07/2019,,Software Engineer,,93546,Hire,RD,Paris
+100216,29/12/2021,Software Engineer,QA Engineer,93546,101029,Promotion,RD,Paris
+100217,25/03/2019,,Software Engineer,,62851,Hire,RD,Paris
+100217,04/05/2024,Software Engineer,Data Scientist,62851,67879,Promotion,RD,Paris
+100218,26/01/2016,,Software Engineer,,84503,Hire,RD,Paris
+100219,04/09/2022,,Software Engineer,,93824,Hire,RD,Paris
+100219,19/02/2024,Software Engineer,DevOps Engineer,93824,94762,Lateral_Move,RD,Paris
+100220,28/04/2021,,Software Engineer,,98861,Hire,RD,Paris
+100221,05/02/2016,,Sales Representative,,75895,Hire,SALES,Milan
+100222,02/07/2020,,Sales Representative,,46772,Hire,SALES,Milan
+100223,03/12/2015,,Sales Representative,,46919,Hire,SALES,Milan
+100223,18/02/2020,Sales Representative,Senior Sales Rep,46919,50672,Promotion,SALES,Milan
+100223,15/12/2021,Senior Sales Rep,Senior Sales Rep,50672,54725,Promotion,SALES,Milan
+100224,14/01/2019,,Sales Representative,,49970,Hire,SALES,Milan
+100224,05/01/2022,Sales Representative,Account Manager,49970,50469,Lateral_Move,SALES,Milan
+100225,03/01/2016,,Sales Representative,,71632,Hire,SALES,Milan
+100225,30/07/2018,Sales Representative,Senior Sales Rep,71632,72348,Lateral_Move,SALES,Milan
+100226,16/02/2023,,Sales Representative,,66159,Hire,SALES,Milan
+100227,20/08/2016,,Sales Representative,,54607,Hire,SALES,Milan
+100227,16/09/2017,Sales Representative,Account Manager,54607,58975,Promotion,SALES,Milan
+100227,31/10/2020,Account Manager,Sales Director,58975,63693,Promotion,SALES,Milan
+100228,14/03/2016,,Sales Representative,,63375,Hire,SALES,Milan
+100229,31/08/2021,,Sales Representative,,82108,Hire,SALES,Milan
+100229,22/08/2024,Sales Representative,Sales Director,82108,88676,Promotion,SALES,Milan
+100230,08/10/2023,,Sales Representative,,85551,Hire,SALES,Milan
+100230,27/10/2024,Sales Representative,Sales Director,85551,86406,Lateral_Move,SALES,Milan
+100231,11/08/2023,,Sales Representative,,64874,Hire,SALES,Milan
+100231,23/10/2024,Sales Representative,Account Manager,64874,70063,Promotion,SALES,Milan
+100232,25/05/2018,,Sales Representative,,84639,Hire,SALES,Milan
+100232,28/01/2023,Sales Representative,Account Manager,84639,91410,Promotion,SALES,Milan
+100233,04/10/2022,,Sales Representative,,73539,Hire,SALES,Milan
+100233,15/11/2023,Sales Representative,Sales Representative,73539,74274,Lateral_Move,SALES,Milan
+100233,17/11/2024,Sales Representative,Sales Representative,74274,80215,Promotion,SALES,Milan
+100234,15/06/2022,,Sales Representative,,71586,Hire,SALES,Milan
+100234,15/11/2024,Sales Representative,Sales Representative,71586,68006,Demotion,SALES,Milan
+100235,25/11/2017,,Sales Representative,,60146,Hire,SALES,Milan
+100235,08/12/2022,Sales Representative,Account Manager,60146,60747,Lateral_Move,SALES,Milan
+100236,31/05/2020,,Sales Representative,,50321,Hire,SALES,Milan
+100236,23/05/2024,Sales Representative,Senior Sales Rep,50321,54346,Promotion,SALES,Milan
+100237,04/11/2020,,Sales Representative,,67256,Hire,SALES,Milan
+100237,19/03/2023,Sales Representative,Senior Sales Rep,67256,72636,Promotion,SALES,Milan
+100238,06/11/2018,,Sales Representative,,73809,Hire,SALES,Milan
+100238,17/11/2024,Sales Representative,Sales Director,73809,70118,Demotion,SALES,Milan
+100239,23/01/2022,,Sales Representative,,39105,Hire,SALES,Milan
+100239,19/11/2024,Sales Representative,Sales Manager,39105,42233,Promotion,SALES,Milan
+100240,26/11/2022,,Sales Representative,,71827,Hire,SALES,Milan
+100240,23/04/2024,Sales Representative,Sales Director,71827,77573,Promotion,SALES,Milan
+100241,11/04/2016,,Sales Representative,,70644,Hire,SALES,Milan
+100241,15/12/2023,Sales Representative,Account Manager,70644,71350,Lateral_Move,SALES,Milan
+100242,19/02/2020,,Sales Representative,,72484,Hire,SALES,Milan
+100243,10/03/2019,,Sales Representative,,78049,Hire,SALES,Milan
+100243,06/08/2024,Sales Representative,Account Manager,78049,84292,Promotion,SALES,Milan
+100244,14/11/2016,,Sales Representative,,54525,Hire,SALES,Milan
+100244,27/09/2021,Sales Representative,Sales Representative,54525,58887,Promotion,SALES,Milan
+100245,22/04/2019,,Sales Representative,,82142,Hire,SALES,Milan
+100245,19/01/2023,Sales Representative,Senior Sales Rep,82142,82963,Lateral_Move,SALES,Milan
+100245,03/07/2024,Senior Sales Rep,Sales Representative,82963,89600,Promotion,SALES,Milan
+100246,07/05/2015,,Sales Representative,,39385,Hire,SALES,Milan
+100247,08/04/2016,,Sales Representative,,92040,Hire,SALES,Milan
+100248,24/02/2016,,Sales Representative,,89483,Hire,SALES,Milan
+100248,29/05/2022,Sales Representative,Sales Representative,89483,90377,Lateral_Move,SALES,Milan
+100248,10/07/2023,Sales Representative,Business Development Manager,90377,85858,Demotion,SALES,Milan
+100249,09/05/2017,,Sales Representative,,78937,Hire,SALES,Milan
+100250,25/02/2018,,Sales Representative,,82921,Hire,SALES,Milan
+100251,09/02/2018,,Sales Representative,,59309,Hire,SALES,Milan
+100251,23/04/2023,Sales Representative,Sales Representative,59309,59902,Lateral_Move,SALES,Milan
+100251,02/07/2024,Sales Representative,Sales Representative,59902,64694,Promotion,SALES,Milan
+100252,03/02/2022,,Sales Representative,,69273,Hire,SALES,Milan
+100252,30/03/2024,Sales Representative,Sales Manager,69273,74814,Promotion,SALES,Milan
+100253,06/02/2020,,Sales Representative,,42364,Hire,SALES,Milan
+100253,10/08/2021,Sales Representative,Sales Representative,42364,45753,Promotion,SALES,Milan
+100254,18/06/2019,,Sales Representative,,69487,Hire,SALES,Milan
+100254,09/02/2022,Sales Representative,Sales Manager,69487,75045,Promotion,SALES,Milan
+100255,27/08/2022,,Sales Representative,,75477,Hire,SALES,Milan
+100255,01/01/2024,Sales Representative,Senior Sales Rep,75477,76231,Lateral_Move,SALES,Milan
+100256,19/10/2019,,Sales Representative,,49814,Hire,SALES,Milan
+100256,15/12/2020,Sales Representative,Business Development Manager,49814,50312,Lateral_Move,SALES,Milan
+100257,14/06/2022,,Sales Representative,,66543,Hire,SALES,Milan
+100257,24/08/2023,Sales Representative,Senior Sales Rep,66543,71866,Promotion,SALES,Milan
+100258,24/05/2017,,Sales Representative,,53608,Hire,SALES,Milan
+100258,06/09/2020,Sales Representative,Senior Sales Rep,53608,57896,Promotion,SALES,Milan
+100258,21/04/2024,Senior Sales Rep,Sales Manager,57896,58474,Lateral_Move,SALES,Milan
+100259,10/05/2020,,Sales Representative,,50055,Hire,SALES,Milan
+100259,25/08/2022,Sales Representative,Senior Sales Rep,50055,47552,Demotion,SALES,Milan
+100260,12/12/2020,,Sales Representative,,55327,Hire,SALES,Milan
+100261,16/02/2016,,Sales Representative,,76652,Hire,SALES,Milan
+100261,23/01/2019,Sales Representative,Business Development Manager,76652,82784,Promotion,SALES,Milan
+100261,17/07/2023,Business Development Manager,Sales Director,82784,89406,Promotion,SALES,Milan
+100262,12/12/2015,,Sales Representative,,93712,Hire,SALES,Milan
+100262,01/10/2018,Sales Representative,Business Development Manager,93712,101208,Promotion,SALES,Milan
+100262,06/05/2022,Business Development Manager,Senior Sales Rep,101208,96147,Demotion,SALES,Milan
+100263,25/04/2018,,Sales Representative,,58333,Hire,SALES,Milan
+100263,30/12/2023,Sales Representative,Sales Representative,58333,55416,Demotion,SALES,Milan
+100264,20/07/2018,,Sales Representative,,72822,Hire,SALES,Milan
+100264,10/12/2020,Sales Representative,Business Development Manager,72822,73550,Lateral_Move,SALES,Milan
+100264,15/05/2023,Business Development Manager,Sales Manager,73550,79434,Promotion,SALES,Milan
+100265,02/06/2017,,Sales Representative,,61336,Hire,SALES,Milan
+100266,06/01/2021,,Sales Representative,,46409,Hire,SALES,Milan
+100266,18/10/2022,Sales Representative,Account Manager,46409,46873,Lateral_Move,SALES,Milan
+100267,30/07/2021,,Sales Representative,,75188,Hire,SALES,Milan
+100267,13/11/2024,Sales Representative,Sales Director,75188,81203,Promotion,SALES,Milan
+100268,20/04/2016,,Sales Representative,,80222,Hire,SALES,Milan
+100268,25/11/2021,Sales Representative,Account Manager,80222,81024,Lateral_Move,SALES,Milan
+100269,26/07/2020,,Sales Representative,,57608,Hire,SALES,Milan
+100270,19/01/2018,,Sales Representative,,78246,Hire,SALES,Milan
+100270,27/03/2021,Sales Representative,Sales Representative,78246,84505,Promotion,SALES,Milan
+100270,13/04/2023,Sales Representative,Senior Sales Rep,84505,91265,Promotion,SALES,Milan
+100271,06/10/2016,,Sales Representative,,74652,Hire,SALES,Milan
+100272,08/07/2015,,Sales Representative,,49210,Hire,SALES,Milan
+100272,31/12/2018,Sales Representative,Sales Director,49210,53146,Promotion,SALES,Milan
+100273,01/09/2019,,Sales Representative,,80719,Hire,SALES,Milan
+100273,09/12/2023,Sales Representative,Business Development Manager,80719,87176,Promotion,SALES,Milan
+100274,08/07/2015,,Sales Representative,,86297,Hire,SALES,Milan
+100275,20/02/2019,,Sales Representative,,50923,Hire,SALES,Milan
+100276,27/01/2015,,Sales Representative,,74719,Hire,SALES,Milan
+100276,29/10/2019,Sales Representative,Sales Director,74719,80696,Promotion,SALES,Milan
+100276,21/02/2022,Sales Director,Sales Director,80696,81502,Lateral_Move,SALES,Milan
+100277,01/03/2016,,Sales Representative,,69127,Hire,SALES,Milan
+100278,29/10/2020,,Sales Representative,,82703,Hire,SALES,Milan
+100279,06/06/2022,,Sales Representative,,52944,Hire,SALES,Milan
+100280,14/08/2017,,Sales Representative,,48717,Hire,SALES,Milan
+100280,24/11/2020,Sales Representative,Account Manager,48717,49204,Lateral_Move,SALES,Milan
+100281,07/01/2019,,Sales Representative,,62632,Hire,SALES,Milan
+100281,28/05/2021,Sales Representative,Business Development Manager,62632,67642,Promotion,SALES,Milan
+100282,04/09/2018,,Sales Representative,,59443,Hire,SALES,Milan
+100282,21/01/2024,Sales Representative,Senior Sales Rep,59443,64198,Promotion,SALES,Milan
+100283,27/03/2021,,Sales Representative,,63698,Hire,SALES,Milan
+100283,18/03/2024,Sales Representative,Sales Director,63698,68793,Promotion,SALES,Milan
+100284,22/03/2017,,Sales Representative,,74876,Hire,SALES,Milan
+100284,15/09/2021,Sales Representative,Sales Representative,74876,75624,Lateral_Move,SALES,Milan
+100284,23/05/2023,Sales Representative,Sales Director,75624,81673,Promotion,SALES,Milan
+100285,22/12/2019,,Sales Representative,,49827,Hire,SALES,Milan
+100286,01/05/2015,,Sales Representative,,63849,Hire,SALES,Milan
+100287,11/12/2021,,Sales Representative,,58940,Hire,SALES,Milan
+100288,27/03/2017,,Sales Representative,,83465,Hire,SALES,Milan
+100288,19/01/2021,Sales Representative,Sales Representative,83465,84299,Lateral_Move,SALES,Milan
+100288,09/03/2024,Sales Representative,Account Manager,84299,91042,Promotion,SALES,Milan
+100289,10/11/2018,,Sales Representative,,57923,Hire,SALES,Milan
+100289,24/11/2024,Sales Representative,Business Development Manager,57923,62556,Promotion,SALES,Milan
+100290,08/12/2020,,Sales Representative,,49350,Hire,SALES,Milan
+100291,12/12/2016,,Sales Representative,,95082,Hire,SALES,Milan
+100291,24/03/2020,Sales Representative,Sales Manager,95082,90327,Demotion,SALES,Milan
+100292,29/01/2021,,Sales Representative,,45887,Hire,SALES,Milan
+100292,02/05/2022,Sales Representative,Senior Sales Rep,45887,49557,Promotion,SALES,Milan
+100292,05/10/2023,Senior Sales Rep,Business Development Manager,49557,53521,Promotion,SALES,Milan
+100293,20/11/2021,,Sales Representative,,85189,Hire,SALES,Milan
+100293,05/05/2023,Sales Representative,Sales Manager,85189,92004,Promotion,SALES,Milan
+100293,27/05/2024,Sales Manager,Sales Manager,92004,99364,Promotion,SALES,Milan
+100294,26/11/2022,,Sales Representative,,91894,Hire,SALES,Milan
+100294,11/06/2024,Sales Representative,Senior Sales Rep,91894,92812,Lateral_Move,SALES,Milan
+100295,14/08/2018,,Sales Representative,,80326,Hire,SALES,Milan
+100295,26/08/2020,Sales Representative,Sales Manager,80326,86752,Promotion,SALES,Milan
+100295,13/05/2024,Sales Manager,Business Development Manager,86752,93692,Promotion,SALES,Milan
+100296,19/06/2022,,Sales Representative,,54637,Hire,SALES,Milan
+100297,03/10/2021,,Sales Representative,,65485,Hire,SALES,Milan
+100298,18/11/2016,,Sales Representative,,76481,Hire,SALES,Milan
+100298,18/04/2021,Sales Representative,Sales Manager,76481,77245,Lateral_Move,SALES,Milan
+100298,20/01/2023,Sales Manager,Business Development Manager,77245,83424,Promotion,SALES,Milan
+100299,17/11/2017,,Sales Representative,,57756,Hire,SALES,Milan
+100300,14/02/2021,,Sales Representative,,78262,Hire,SALES,Milan
+100301,29/07/2018,,Sales Representative,,57326,Hire,SALES,Milan
+100301,25/12/2020,Sales Representative,Account Manager,57326,61912,Promotion,SALES,Milan
+100302,30/08/2021,,Sales Representative,,59142,Hire,SALES,Milan
+100302,11/11/2024,Sales Representative,Sales Manager,59142,63873,Promotion,SALES,Milan
+100303,21/04/2017,,Sales Representative,,74464,Hire,SALES,Milan
+100304,23/07/2015,,Sales Representative,,44387,Hire,SALES,Milan
+100304,08/11/2019,Sales Representative,Sales Manager,44387,44830,Lateral_Move,SALES,Milan
+100305,16/04/2015,,Sales Representative,,60903,Hire,SALES,Milan
+100305,19/03/2021,Sales Representative,Sales Manager,60903,61512,Lateral_Move,SALES,Milan
+100305,30/09/2023,Sales Manager,Sales Manager,61512,66432,Promotion,SALES,Milan
+100306,14/03/2022,,Sales Representative,,93854,Hire,SALES,Milan
+100306,30/03/2024,Sales Representative,Senior Sales Rep,93854,94792,Lateral_Move,SALES,Milan
+100307,15/07/2017,,Sales Representative,,76780,Hire,SALES,Milan
+100308,20/07/2017,,Sales Representative,,65186,Hire,SALES,Milan
+100308,06/08/2020,Sales Representative,Account Manager,65186,65837,Lateral_Move,SALES,Milan
+100309,20/11/2015,,Sales Representative,,73966,Hire,SALES,Milan
+100310,09/12/2016,,Sales Representative,,87791,Hire,SALES,Milan
+100311,22/11/2017,,Sales Representative,,56715,Hire,SALES,Milan
+100311,03/10/2020,Sales Representative,Business Development Manager,56715,53879,Demotion,SALES,Milan
+100312,03/08/2021,,Sales Representative,,68222,Hire,SALES,Milan
+100312,21/08/2024,Sales Representative,Account Manager,68222,73679,Promotion,SALES,Milan
+100313,02/01/2021,,Sales Representative,,66135,Hire,SALES,Milan
+100313,23/08/2023,Sales Representative,Sales Representative,66135,71425,Promotion,SALES,Milan
+100313,10/10/2024,Sales Representative,Sales Representative,71425,72139,Lateral_Move,SALES,Milan
+100314,12/08/2016,,Sales Representative,,60088,Hire,SALES,Milan
+100314,11/12/2023,Sales Representative,Account Manager,60088,64895,Promotion,SALES,Milan
+100315,24/03/2015,,Sales Representative,,56242,Hire,SALES,Milan
+100316,05/05/2023,,Sales Representative,,84661,Hire,SALES,Milan
+100316,27/09/2024,Sales Representative,Sales Manager,84661,85507,Lateral_Move,SALES,Milan
+100317,08/07/2023,,Sales Representative,,66454,Hire,SALES,Milan
+100317,10/07/2024,Sales Representative,Business Development Manager,66454,63131,Demotion,SALES,Milan
+100318,18/05/2021,,Sales Representative,,52376,Hire,SALES,Milan
+100318,09/08/2022,Sales Representative,Business Development Manager,52376,49757,Demotion,SALES,Milan
+100319,30/08/2020,,Sales Representative,,50515,Hire,SALES,Milan
+100320,31/10/2016,,Sales Representative,,60510,Hire,SALES,Milan
+100320,28/07/2022,Sales Representative,Sales Manager,60510,65350,Promotion,SALES,Milan
+100320,05/07/2024,Sales Manager,Senior Sales Rep,65350,70578,Promotion,SALES,Milan
+100321,26/04/2017,,Sales Representative,,43456,Hire,SALES,Milan
+100322,10/12/2016,,Sales Representative,,50971,Hire,SALES,Milan
+100323,24/02/2020,,Sales Representative,,76484,Hire,SALES,Milan
+100324,13/03/2019,,Sales Representative,,74157,Hire,SALES,Milan
+100324,16/01/2023,Sales Representative,Sales Manager,74157,80089,Promotion,SALES,Milan
+100325,22/12/2022,,Sales Representative,,51372,Hire,SALES,Milan
+100325,18/09/2024,Sales Representative,Sales Manager,51372,48803,Demotion,SALES,Milan
+100326,27/07/2016,,Sales Representative,,51658,Hire,SALES,Milan
+100327,12/09/2022,,Sales Representative,,70404,Hire,SALES,Milan
+100327,20/09/2024,Sales Representative,Account Manager,70404,76036,Promotion,SALES,Milan
+100328,12/04/2020,,Sales Representative,,89244,Hire,SALES,Milan
+100328,22/04/2022,Sales Representative,Senior Sales Rep,89244,90136,Lateral_Move,SALES,Milan
+100329,07/05/2023,,Sales Representative,,61601,Hire,SALES,Milan
+100330,07/03/2017,,Sales Representative,,54271,Hire,SALES,Milan
+100330,20/09/2022,Sales Representative,Sales Director,54271,58612,Promotion,SALES,Milan
+100331,21/05/2021,,Sales Representative,,56497,Hire,SALES,Milan
+100331,16/01/2023,Sales Representative,Sales Representative,56497,61016,Promotion,SALES,Milan
+100332,11/02/2022,,Sales Representative,,79641,Hire,SALES,Milan
+100333,12/11/2019,,Sales Representative,,65628,Hire,SALES,Milan
+100333,20/04/2022,Sales Representative,Sales Representative,65628,70878,Promotion,SALES,Milan
+100334,19/02/2017,,Sales Representative,,74218,Hire,SALES,Milan
+100334,11/10/2019,Sales Representative,Sales Manager,74218,74960,Lateral_Move,SALES,Milan
+100335,25/09/2015,,Sales Representative,,65300,Hire,SALES,Milan
+100335,12/05/2022,Sales Representative,Senior Sales Rep,65300,70524,Promotion,SALES,Milan
+100336,11/01/2019,,Sales Representative,,45201,Hire,SALES,Milan
+100336,29/09/2024,Sales Representative,Account Manager,45201,48817,Promotion,SALES,Milan
+100337,19/05/2016,,Sales Representative,,86156,Hire,SALES,Milan
+100337,10/07/2020,Sales Representative,Sales Representative,86156,93048,Promotion,SALES,Milan
+100337,08/08/2022,Sales Representative,Business Development Manager,93048,100491,Promotion,SALES,Milan
+100338,22/03/2015,,Sales Representative,,66403,Hire,SALES,Milan
+100339,20/09/2019,,Sales Representative,,70767,Hire,SALES,Milan
+100340,20/10/2023,,Sales Representative,,49328,Hire,SALES,Milan
+100341,11/06/2015,,Sales Representative,,55619,Hire,SALES,Milan
+100342,28/09/2023,,Sales Representative,,78847,Hire,SALES,Milan
+100342,25/11/2024,Sales Representative,Sales Manager,78847,85154,Promotion,SALES,Milan
+100343,16/12/2016,,Sales Representative,,82139,Hire,SALES,Milan
+100343,28/10/2021,Sales Representative,Senior Sales Rep,82139,82960,Lateral_Move,SALES,Milan
+100344,10/06/2022,,Sales Representative,,86034,Hire,SALES,Milan
+100344,15/02/2024,Sales Representative,Business Development Manager,86034,86894,Lateral_Move,SALES,Milan
+100345,11/04/2016,,Sales Representative,,91596,Hire,SALES,Milan
+100345,18/05/2019,Sales Representative,Senior Sales Rep,91596,98923,Promotion,SALES,Milan
+100345,21/07/2022,Senior Sales Rep,Senior Sales Rep,98923,106836,Promotion,SALES,Milan
+100346,14/10/2016,,Sales Representative,,80402,Hire,SALES,Milan
+100346,02/07/2019,Sales Representative,Sales Representative,80402,81206,Lateral_Move,SALES,Milan
+100347,22/06/2020,,Sales Representative,,43887,Hire,SALES,Milan
+100347,24/07/2023,Sales Representative,Sales Director,43887,47397,Promotion,SALES,Milan
+100348,12/11/2020,,Sales Representative,,70368,Hire,SALES,Milan
+100348,14/11/2022,Sales Representative,Sales Manager,70368,75997,Promotion,SALES,Milan
+100349,12/08/2015,,Sales Representative,,80506,Hire,SALES,Milan
+100350,07/09/2020,,Sales Representative,,90592,Hire,SALES,Milan
+100350,22/01/2023,Sales Representative,Sales Representative,90592,91497,Lateral_Move,SALES,Milan
+100350,18/03/2024,Sales Representative,Account Manager,91497,98816,Promotion,SALES,Milan
+100351,18/07/2018,,Sales Representative,,47423,Hire,SALES,Milan
+100351,17/10/2021,Sales Representative,Senior Sales Rep,47423,51216,Promotion,SALES,Milan
+100351,09/08/2023,Senior Sales Rep,Sales Director,51216,55313,Promotion,SALES,Milan
+100352,22/04/2021,,Sales Representative,,63466,Hire,SALES,Milan
+100352,28/02/2023,Sales Representative,Business Development Manager,63466,64100,Lateral_Move,SALES,Milan
+100353,28/01/2019,,Sales Representative,,80391,Hire,SALES,Milan
+100353,17/08/2024,Sales Representative,Sales Manager,80391,81194,Lateral_Move,SALES,Milan
+100354,15/11/2022,,Sales Representative,,50916,Hire,SALES,Milan
+100354,10/01/2024,Sales Representative,Sales Manager,50916,51425,Lateral_Move,SALES,Milan
+100355,09/05/2016,,Sales Representative,,69908,Hire,SALES,Milan
+100356,16/07/2022,,Sales Representative,,83286,Hire,SALES,Milan
+100357,08/11/2019,,Sales Representative,,79089,Hire,SALES,Milan
+100358,17/05/2022,,Sales Representative,,91477,Hire,SALES,Milan
+100358,06/11/2023,Sales Representative,Business Development Manager,91477,92391,Lateral_Move,SALES,Milan
+100359,19/04/2018,,Sales Representative,,63466,Hire,SALES,Milan
+100359,28/06/2023,Sales Representative,Sales Manager,63466,60292,Demotion,SALES,Milan
+100360,04/02/2022,,Sales Representative,,81905,Hire,SALES,Milan
+100361,14/10/2022,,Sales Representative,,70074,Hire,SALES,Milan
+100361,04/12/2023,Sales Representative,Sales Representative,70074,66570,Demotion,SALES,Milan
+100362,22/02/2015,,Sales Representative,,51548,Hire,SALES,Milan
+100362,14/09/2017,Sales Representative,Sales Manager,51548,52063,Lateral_Move,SALES,Milan
+100362,22/06/2024,Sales Manager,Sales Representative,52063,52583,Lateral_Move,SALES,Milan
+100363,12/09/2015,,Sales Representative,,81132,Hire,SALES,Milan
+100363,24/04/2023,Sales Representative,Sales Representative,81132,81943,Lateral_Move,SALES,Milan
+100363,30/07/2024,Sales Representative,Sales Director,81943,88498,Promotion,SALES,Milan
+100364,17/04/2021,,Sales Representative,,63462,Hire,SALES,Milan
+100364,28/08/2023,Sales Representative,Sales Representative,63462,68538,Promotion,SALES,Milan
+100365,05/05/2023,,Sales Representative,,95276,Hire,SALES,Milan
+100366,19/04/2018,,Sales Representative,,51125,Hire,SALES,Milan
+100366,19/05/2019,Sales Representative,Sales Representative,51125,55215,Promotion,SALES,Milan
+100366,15/07/2020,Sales Representative,Business Development Manager,55215,59632,Promotion,SALES,Milan
+100367,16/06/2016,,Sales Representative,,55565,Hire,SALES,Milan
+100367,29/01/2022,Sales Representative,Senior Sales Rep,55565,56120,Lateral_Move,SALES,Milan
+100368,26/11/2021,,Sales Representative,,85509,Hire,SALES,Milan
+100369,02/11/2020,,Sales Representative,,73780,Hire,SALES,Milan
+100370,17/04/2018,,Sales Representative,,86877,Hire,SALES,Milan
+100370,01/12/2020,Sales Representative,Sales Representative,86877,93827,Promotion,SALES,Milan
+100370,11/12/2022,Sales Representative,Account Manager,93827,101333,Promotion,SALES,Milan
+100371,18/11/2021,,Sales Representative,,74425,Hire,SALES,Milan
+100371,20/07/2023,Sales Representative,Sales Representative,74425,75169,Lateral_Move,SALES,Milan
+100371,03/10/2024,Sales Representative,Sales Director,75169,75920,Lateral_Move,SALES,Milan
+100372,12/04/2015,,Sales Representative,,78460,Hire,SALES,Milan
+100372,02/04/2018,Sales Representative,Senior Sales Rep,78460,84736,Promotion,SALES,Milan
+100372,28/10/2021,Senior Sales Rep,Senior Sales Rep,84736,85583,Lateral_Move,SALES,Milan
+100373,29/01/2016,,Sales Representative,,44029,Hire,SALES,Milan
+100373,20/12/2021,Sales Representative,Business Development Manager,44029,44469,Lateral_Move,SALES,Milan
+100374,18/11/2022,,Sales Representative,,79853,Hire,SALES,Milan
+100375,25/12/2015,,Sales Representative,,48952,Hire,SALES,Milan
+100375,05/04/2017,Sales Representative,Sales Director,48952,49441,Lateral_Move,SALES,Milan
+100376,15/07/2019,,Sales Representative,,72496,Hire,SALES,Milan
+100376,10/09/2022,Sales Representative,Senior Sales Rep,72496,68871,Demotion,SALES,Milan
+100377,05/01/2019,,Sales Representative,,76525,Hire,SALES,Milan
+100377,10/07/2020,Sales Representative,Business Development Manager,76525,82647,Promotion,SALES,Milan
+100378,07/05/2015,,Sales Representative,,80728,Hire,SALES,Milan
+100379,01/12/2023,,Sales Representative,,67333,Hire,SALES,Milan
+100380,15/12/2015,,Sales Representative,,61226,Hire,SALES,Milan
+100380,29/09/2020,Sales Representative,Senior Sales Rep,61226,66124,Promotion,SALES,Milan
+100381,01/11/2017,,Sales Representative,,93318,Hire,SALES,Milan
+100381,03/08/2020,Sales Representative,Business Development Manager,93318,94251,Lateral_Move,SALES,Milan
+100382,14/07/2022,,Sales Representative,,71460,Hire,SALES,Milan
+100383,13/10/2015,,Sales Representative,,69964,Hire,SALES,Milan
+100383,14/10/2022,Sales Representative,Sales Director,69964,75561,Promotion,SALES,Milan
+100383,16/07/2024,Sales Director,Business Development Manager,75561,81605,Promotion,SALES,Milan
+100384,21/10/2019,,Sales Representative,,90321,Hire,SALES,Milan
+100385,22/03/2023,,Sales Representative,,66000,Hire,SALES,Milan
+100385,17/06/2024,Sales Representative,Senior Sales Rep,66000,71280,Promotion,SALES,Milan
+100386,27/07/2016,,Sales Representative,,81737,Hire,SALES,Milan
+100386,25/09/2021,Sales Representative,Senior Sales Rep,81737,82554,Lateral_Move,SALES,Milan
+100386,22/09/2024,Senior Sales Rep,Business Development Manager,82554,89158,Promotion,SALES,Milan
+100387,29/06/2021,,Sales Representative,,66682,Hire,SALES,Milan
+100388,03/07/2017,,Sales Representative,,63679,Hire,SALES,Milan
+100388,08/10/2023,Sales Representative,Senior Sales Rep,63679,68773,Promotion,SALES,Milan
+100388,08/11/2024,Senior Sales Rep,Senior Sales Rep,68773,74274,Promotion,SALES,Milan
+100389,03/09/2022,,Sales Representative,,48992,Hire,SALES,Milan
+100389,12/01/2024,Sales Representative,Sales Manager,48992,49481,Lateral_Move,SALES,Milan
+100390,15/06/2017,,Sales Representative,,54277,Hire,SALES,Milan
+100390,20/03/2024,Sales Representative,Sales Director,54277,54819,Lateral_Move,SALES,Milan
+100391,06/02/2020,,Sales Representative,,44951,Hire,SALES,Milan
+100392,01/05/2022,,Sales Representative,,53816,Hire,SALES,Milan
+100393,21/11/2023,,Sales Representative,,96488,Hire,SALES,Milan
+100393,26/11/2024,Sales Representative,Account Manager,96488,91663,Demotion,SALES,Milan
+100394,04/02/2017,,Sales Representative,,58900,Hire,SALES,Milan
+100394,31/05/2024,Sales Representative,Sales Representative,58900,63612,Promotion,SALES,Milan
+100395,22/10/2016,,Sales Representative,,55114,Hire,SALES,Milan
+100396,24/08/2016,,Sales Representative,,63628,Hire,SALES,Milan
+100396,17/04/2018,Sales Representative,Senior Sales Rep,63628,64264,Lateral_Move,SALES,Milan
+100396,11/07/2020,Senior Sales Rep,Sales Representative,64264,64906,Lateral_Move,SALES,Milan
+100397,20/10/2021,,Sales Representative,,52110,Hire,SALES,Milan
+100397,21/02/2024,Sales Representative,Sales Director,52110,52631,Lateral_Move,SALES,Milan
+100398,14/02/2023,,Sales Representative,,67055,Hire,SALES,Milan
+100399,27/08/2020,,Sales Representative,,42858,Hire,SALES,Milan
+100399,16/10/2023,Sales Representative,Sales Manager,42858,40715,Demotion,SALES,Milan
+100399,16/11/2024,Sales Manager,Sales Director,40715,43972,Promotion,SALES,Milan
+100400,17/01/2016,,Sales Representative,,64864,Hire,SALES,Milan
+100400,03/08/2020,Sales Representative,Business Development Manager,64864,70053,Promotion,SALES,Milan
+100400,08/02/2024,Business Development Manager,Business Development Manager,70053,70753,Lateral_Move,SALES,Milan
+100401,27/06/2015,,IT Support Specialist,,88644,Hire,IT,Milan
+100402,08/11/2017,,IT Support Specialist,,54055,Hire,IT,Milan
+100403,10/11/2020,,IT Support Specialist,,71727,Hire,IT,Milan
+100403,14/09/2022,IT Support Specialist,Database Administrator,71727,77465,Promotion,IT,Milan
+100404,22/04/2022,,IT Support Specialist,,63616,Hire,IT,Milan
+100404,20/10/2024,IT Support Specialist,Systems Administrator,63616,64252,Lateral_Move,IT,Milan
+100405,16/10/2023,,IT Support Specialist,,76415,Hire,IT,Milan
+100405,01/12/2024,IT Support Specialist,IT Support Specialist,76415,72594,Demotion,IT,Milan
+100406,24/05/2022,,IT Support Specialist,,89133,Hire,IT,Milan
+100406,22/02/2024,IT Support Specialist,Security Analyst,89133,96263,Promotion,IT,Milan
+100407,20/11/2021,,IT Support Specialist,,61284,Hire,IT,Milan
+100407,31/07/2023,IT Support Specialist,Security Analyst,61284,61896,Lateral_Move,IT,Milan
+100408,20/09/2015,,IT Support Specialist,,68588,Hire,IT,Milan
+100408,23/07/2023,IT Support Specialist,IT Support Specialist,68588,74075,Promotion,IT,Milan
+100408,18/09/2024,IT Support Specialist,IT Manager,74075,80001,Promotion,IT,Milan
+100409,24/08/2015,,IT Support Specialist,,63548,Hire,IT,Milan
+100410,17/10/2023,,IT Support Specialist,,46297,Hire,IT,Milan
+100410,16/11/2024,IT Support Specialist,Network Engineer,46297,50000,Promotion,IT,Milan
+100411,29/09/2023,,IT Support Specialist,,67606,Hire,IT,Milan
+100411,30/11/2024,IT Support Specialist,Database Administrator,67606,73014,Promotion,IT,Milan
+100412,22/02/2023,,IT Support Specialist,,79869,Hire,IT,Milan
+100412,15/11/2024,IT Support Specialist,IT Support Specialist,79869,75875,Demotion,IT,Milan
+100413,17/12/2016,,IT Support Specialist,,41340,Hire,IT,Milan
+100413,09/05/2024,IT Support Specialist,Network Engineer,41340,44647,Promotion,IT,Milan
+100414,21/10/2017,,IT Support Specialist,,72838,Hire,IT,Milan
+100414,27/01/2023,IT Support Specialist,IT Manager,72838,78665,Promotion,IT,Milan
+100415,21/04/2016,,IT Support Specialist,,84022,Hire,IT,Milan
+100415,20/12/2019,IT Support Specialist,IT Support Specialist,84022,90743,Promotion,IT,Milan
+100416,03/01/2021,,IT Support Specialist,,45148,Hire,IT,Milan
+100416,20/08/2022,IT Support Specialist,IT Manager,45148,45599,Lateral_Move,IT,Milan
+100417,09/07/2018,,IT Support Specialist,,76494,Hire,IT,Milan
+100418,26/04/2017,,IT Support Specialist,,56156,Hire,IT,Milan
+100418,13/02/2023,IT Support Specialist,Security Analyst,56156,60648,Promotion,IT,Milan
+100418,22/09/2024,Security Analyst,Database Administrator,60648,65499,Promotion,IT,Milan
+100419,29/05/2020,,IT Support Specialist,,91442,Hire,IT,Milan
+100419,09/12/2021,IT Support Specialist,Security Analyst,91442,92356,Lateral_Move,IT,Milan
+100420,21/02/2018,,IT Support Specialist,,73804,Hire,IT,Milan
+100420,06/10/2024,IT Support Specialist,Network Engineer,73804,74542,Lateral_Move,IT,Milan
+100421,12/09/2022,,IT Support Specialist,,80639,Hire,IT,Milan
+100421,02/10/2023,IT Support Specialist,Systems Administrator,80639,87090,Promotion,IT,Milan
+100422,17/02/2016,,IT Support Specialist,,66056,Hire,IT,Milan
+100423,03/10/2019,,IT Support Specialist,,85661,Hire,IT,Milan
+100423,28/05/2022,IT Support Specialist,Network Engineer,85661,86517,Lateral_Move,IT,Milan
+100423,22/08/2023,Network Engineer,Systems Administrator,86517,93438,Promotion,IT,Milan
+100424,23/08/2017,,IT Support Specialist,,45671,Hire,IT,Milan
+100424,19/05/2021,IT Support Specialist,IT Manager,45671,49324,Promotion,IT,Milan
+100425,04/07/2016,,IT Support Specialist,,53673,Hire,IT,Milan
+100425,30/11/2020,IT Support Specialist,Systems Administrator,53673,54209,Lateral_Move,IT,Milan
+100426,01/06/2017,,IT Support Specialist,,43487,Hire,IT,Milan
+100426,23/01/2020,IT Support Specialist,IT Support Specialist,43487,43921,Lateral_Move,IT,Milan
+100426,14/06/2021,IT Support Specialist,Security Analyst,43921,44360,Lateral_Move,IT,Milan
+100427,10/11/2018,,IT Support Specialist,,49906,Hire,IT,Milan
+100427,23/02/2020,IT Support Specialist,Network Engineer,49906,53898,Promotion,IT,Milan
+100428,20/07/2022,,IT Support Specialist,,60022,Hire,IT,Milan
+100428,01/12/2024,IT Support Specialist,Security Analyst,60022,64823,Promotion,IT,Milan
+100429,13/11/2021,,IT Support Specialist,,52369,Hire,IT,Milan
+100429,10/06/2023,IT Support Specialist,Network Engineer,52369,56558,Promotion,IT,Milan
+100430,28/12/2019,,IT Support Specialist,,75054,Hire,IT,Milan
+100430,24/08/2024,IT Support Specialist,Cloud Engineer,75054,71301,Demotion,IT,Milan
+100431,27/10/2017,,IT Support Specialist,,51926,Hire,IT,Milan
+100432,16/11/2020,,IT Support Specialist,,51757,Hire,IT,Milan
+100432,09/11/2023,IT Support Specialist,Systems Administrator,51757,55897,Promotion,IT,Milan
+100433,21/12/2019,,IT Support Specialist,,78868,Hire,IT,Milan
+100433,20/09/2021,IT Support Specialist,Network Engineer,78868,85177,Promotion,IT,Milan
+100433,09/06/2023,Network Engineer,IT Manager,85177,86028,Lateral_Move,IT,Milan
+100434,20/01/2018,,IT Support Specialist,,46288,Hire,IT,Milan
+100435,04/03/2022,,IT Support Specialist,,64026,Hire,IT,Milan
+100435,21/11/2023,IT Support Specialist,Database Administrator,64026,64666,Lateral_Move,IT,Milan
+100436,28/05/2018,,IT Support Specialist,,53034,Hire,IT,Milan
+100436,16/07/2019,IT Support Specialist,IT Manager,53034,57276,Promotion,IT,Milan
+100436,15/03/2022,IT Manager,Database Administrator,57276,61858,Promotion,IT,Milan
+100437,13/12/2023,,IT Support Specialist,,68826,Hire,IT,Milan
+100438,07/01/2023,,IT Support Specialist,,50858,Hire,IT,Milan
+100438,27/09/2024,IT Support Specialist,Systems Administrator,50858,54926,Promotion,IT,Milan
+100439,02/05/2023,,IT Support Specialist,,55040,Hire,IT,Milan
+100440,09/11/2022,,IT Support Specialist,,45071,Hire,IT,Milan
+100441,27/05/2016,,IT Support Specialist,,47824,Hire,IT,Milan
+100441,01/01/2021,IT Support Specialist,IT Support Specialist,47824,51649,Promotion,IT,Milan
+100442,14/03/2020,,IT Support Specialist,,47537,Hire,IT,Milan
+100443,09/04/2020,,IT Support Specialist,,82255,Hire,IT,Milan
+100443,23/08/2024,IT Support Specialist,IT Support Specialist,82255,78142,Demotion,IT,Milan
+100444,10/04/2023,,IT Support Specialist,,80346,Hire,IT,Milan
+100444,07/11/2024,IT Support Specialist,IT Manager,80346,86773,Promotion,IT,Milan
+100445,11/10/2016,,IT Support Specialist,,69243,Hire,IT,Milan
+100445,06/07/2019,IT Support Specialist,Database Administrator,69243,74782,Promotion,IT,Milan
+100446,11/06/2017,,IT Support Specialist,,68170,Hire,IT,Milan
+100447,06/02/2015,,IT Support Specialist,,48500,Hire,IT,Milan
+100447,06/03/2016,IT Support Specialist,Network Engineer,48500,52380,Promotion,IT,Milan
+100447,17/03/2024,Network Engineer,Systems Administrator,52380,56570,Promotion,IT,Milan
+100448,03/09/2015,,IT Support Specialist,,88854,Hire,IT,Milan
+100448,17/10/2017,IT Support Specialist,Database Administrator,88854,84411,Demotion,IT,Milan
+100448,26/06/2023,Database Administrator,Database Administrator,84411,85255,Lateral_Move,IT,Milan
+100449,29/03/2015,,IT Support Specialist,,55407,Hire,IT,Milan
+100449,17/03/2018,IT Support Specialist,Network Engineer,55407,59839,Promotion,IT,Milan
+100450,16/02/2017,,IT Support Specialist,,83964,Hire,IT,Milan
+100450,22/06/2022,IT Support Specialist,Network Engineer,83964,90681,Promotion,IT,Milan
+100451,26/09/2016,,IT Support Specialist,,65203,Hire,IT,Milan
+100451,08/04/2019,IT Support Specialist,Network Engineer,65203,70419,Promotion,IT,Milan
+100452,31/01/2019,,IT Support Specialist,,87457,Hire,IT,Milan
+100452,24/07/2024,IT Support Specialist,IT Manager,87457,94453,Promotion,IT,Milan
+100453,30/07/2020,,IT Support Specialist,,53705,Hire,IT,Milan
+100453,30/12/2022,IT Support Specialist,IT Manager,53705,58001,Promotion,IT,Milan
+100454,15/06/2016,,IT Support Specialist,,49940,Hire,IT,Milan
+100454,30/09/2024,IT Support Specialist,Network Engineer,49940,53935,Promotion,IT,Milan
+100455,12/11/2022,,IT Support Specialist,,53977,Hire,IT,Milan
+100455,04/05/2024,IT Support Specialist,Network Engineer,53977,58295,Promotion,IT,Milan
+100456,06/09/2015,,IT Support Specialist,,86371,Hire,IT,Milan
+100456,18/05/2020,IT Support Specialist,Security Analyst,86371,93280,Promotion,IT,Milan
+100456,07/12/2021,Security Analyst,Systems Administrator,93280,100742,Promotion,IT,Milan
+100457,16/11/2015,,IT Support Specialist,,78652,Hire,IT,Milan
+100458,27/05/2023,,IT Support Specialist,,78481,Hire,IT,Milan
+100458,14/11/2024,IT Support Specialist,Database Administrator,78481,84759,Promotion,IT,Milan
+100459,02/03/2021,,IT Support Specialist,,70733,Hire,IT,Milan
+100459,24/08/2024,IT Support Specialist,IT Support Specialist,70733,76391,Promotion,IT,Milan
+100460,16/08/2019,,IT Support Specialist,,76332,Hire,IT,Milan
+100460,14/08/2022,IT Support Specialist,IT Support Specialist,76332,77095,Lateral_Move,IT,Milan
+100461,07/01/2020,,IT Support Specialist,,55728,Hire,IT,Milan
+100461,13/11/2023,IT Support Specialist,Database Administrator,55728,60186,Promotion,IT,Milan
+100461,30/11/2024,Database Administrator,Security Analyst,60186,65000,Promotion,IT,Milan
+100462,13/07/2018,,IT Support Specialist,,64371,Hire,IT,Milan
+100462,02/01/2024,IT Support Specialist,IT Manager,64371,65014,Lateral_Move,IT,Milan
+100463,01/10/2016,,IT Support Specialist,,53489,Hire,IT,Milan
+100463,10/11/2017,IT Support Specialist,Cloud Engineer,53489,54023,Lateral_Move,IT,Milan
+100463,10/02/2020,Cloud Engineer,Cloud Engineer,54023,58344,Promotion,IT,Milan
+100464,11/02/2023,,IT Support Specialist,,67497,Hire,IT,Milan
+100465,12/04/2019,,IT Support Specialist,,87345,Hire,IT,Milan
+100466,20/09/2023,,IT Support Specialist,,70581,Hire,IT,Milan
+100466,20/11/2024,IT Support Specialist,Systems Administrator,70581,71286,Lateral_Move,IT,Milan
+100467,26/07/2015,,IT Support Specialist,,75728,Hire,IT,Milan
+100467,15/04/2021,IT Support Specialist,Systems Administrator,75728,81786,Promotion,IT,Milan
+100467,17/09/2022,Systems Administrator,Database Administrator,81786,88328,Promotion,IT,Milan
+100468,25/06/2016,,IT Support Specialist,,82031,Hire,IT,Milan
+100469,19/07/2023,,IT Support Specialist,,63224,Hire,IT,Milan
+100470,26/12/2017,,IT Support Specialist,,42896,Hire,IT,Milan
+100471,29/08/2021,,IT Support Specialist,,58691,Hire,IT,Milan
+100471,06/06/2023,IT Support Specialist,Security Analyst,58691,63386,Promotion,IT,Milan
+100471,10/07/2024,Security Analyst,Cloud Engineer,63386,64019,Lateral_Move,IT,Milan
+100472,14/08/2017,,IT Support Specialist,,86436,Hire,IT,Milan
+100473,26/02/2015,,IT Support Specialist,,60092,Hire,IT,Milan
+100473,07/08/2016,IT Support Specialist,IT Manager,60092,60692,Lateral_Move,IT,Milan
+100473,20/05/2020,IT Manager,Cloud Engineer,60692,65547,Promotion,IT,Milan
+100474,13/11/2020,,IT Support Specialist,,84089,Hire,IT,Milan
+100475,12/11/2017,,IT Support Specialist,,77027,Hire,IT,Milan
+100476,16/01/2018,,IT Support Specialist,,45756,Hire,IT,Milan
+100476,01/06/2024,IT Support Specialist,Database Administrator,45756,46213,Lateral_Move,IT,Milan
+100477,16/07/2018,,IT Support Specialist,,47849,Hire,IT,Milan
+100478,02/06/2018,,IT Support Specialist,,40415,Hire,IT,Milan
+100479,11/09/2015,,IT Support Specialist,,73646,Hire,IT,Milan
+100479,20/10/2021,IT Support Specialist,Cloud Engineer,73646,79537,Promotion,IT,Milan
+100480,02/11/2020,,IT Support Specialist,,52023,Hire,IT,Milan
+100480,20/03/2022,IT Support Specialist,Systems Administrator,52023,56184,Promotion,IT,Milan
+100480,23/12/2023,Systems Administrator,IT Manager,56184,56745,Lateral_Move,IT,Milan
+100481,23/06/2016,,IT Support Specialist,,75317,Hire,IT,Milan
+100481,29/09/2021,IT Support Specialist,IT Manager,75317,81342,Promotion,IT,Milan
+100481,19/09/2024,IT Manager,Systems Administrator,81342,82155,Lateral_Move,IT,Milan
+100482,21/08/2023,,IT Support Specialist,,41398,Hire,IT,Milan
+100483,02/08/2023,,IT Support Specialist,,55052,Hire,IT,Milan
+100484,22/06/2016,,IT Support Specialist,,71555,Hire,IT,Milan
+100485,30/09/2023,,IT Support Specialist,,55074,Hire,IT,Milan
+100486,01/08/2019,,IT Support Specialist,,61644,Hire,IT,Milan
+100486,24/09/2024,IT Support Specialist,Systems Administrator,61644,66575,Promotion,IT,Milan
+100487,02/12/2021,,IT Support Specialist,,94319,Hire,IT,Milan
+100487,25/04/2023,IT Support Specialist,Database Administrator,94319,95262,Lateral_Move,IT,Milan
+100487,17/07/2024,Database Administrator,Cloud Engineer,95262,96214,Lateral_Move,IT,Milan
+100488,09/11/2021,,IT Support Specialist,,44371,Hire,IT,Milan
+100488,19/12/2023,IT Support Specialist,Network Engineer,44371,47920,Promotion,IT,Milan
+100489,31/03/2023,,IT Support Specialist,,61020,Hire,IT,Milan
+100490,20/04/2018,,IT Support Specialist,,96326,Hire,IT,Milan
+100491,25/09/2023,,IT Support Specialist,,68855,Hire,IT,Milan
+100492,21/10/2017,,IT Support Specialist,,42079,Hire,IT,Milan
+100493,12/11/2021,,IT Support Specialist,,65753,Hire,IT,Milan
+100493,29/03/2024,IT Support Specialist,Systems Administrator,65753,71013,Promotion,IT,Milan
+100494,02/01/2017,,IT Support Specialist,,53137,Hire,IT,Milan
+100495,10/04/2017,,IT Support Specialist,,60240,Hire,IT,Milan
+100495,13/06/2020,IT Support Specialist,Systems Administrator,60240,65059,Promotion,IT,Milan
+100496,08/08/2021,,IT Support Specialist,,62023,Hire,IT,Milan
+100496,15/12/2022,IT Support Specialist,IT Support Specialist,62023,62643,Lateral_Move,IT,Milan
+100497,20/07/2015,,IT Support Specialist,,47157,Hire,IT,Milan
+100498,20/07/2015,,IT Support Specialist,,84290,Hire,IT,Milan
+100498,14/09/2023,IT Support Specialist,Network Engineer,84290,91033,Promotion,IT,Milan
+100499,28/05/2023,,IT Support Specialist,,82231,Hire,IT,Milan
+100499,18/06/2024,IT Support Specialist,IT Manager,82231,83053,Lateral_Move,IT,Milan
+100500,14/04/2018,,IT Support Specialist,,57299,Hire,IT,Milan
+100500,01/12/2021,IT Support Specialist,Security Analyst,57299,61882,Promotion,IT,Milan
+100501,08/03/2023,,IT Support Specialist,,77120,Hire,IT,Milan
+100501,18/11/2024,IT Support Specialist,IT Support Specialist,77120,83289,Promotion,IT,Milan
+100502,22/11/2020,,IT Support Specialist,,79799,Hire,IT,Milan
+100503,11/08/2017,,IT Support Specialist,,47356,Hire,IT,Milan
+100503,28/07/2023,IT Support Specialist,Cloud Engineer,47356,51144,Promotion,IT,Milan
+100503,24/10/2024,Cloud Engineer,IT Manager,51144,48586,Demotion,IT,Milan
+100504,29/09/2018,,IT Support Specialist,,69256,Hire,IT,Milan
+100505,02/03/2021,,IT Support Specialist,,75434,Hire,IT,Milan
+100505,02/08/2024,IT Support Specialist,IT Support Specialist,75434,81468,Promotion,IT,Milan
+100506,15/09/2018,,IT Support Specialist,,77539,Hire,IT,Milan
+100507,17/10/2023,,IT Support Specialist,,53954,Hire,IT,Milan
+100508,08/09/2022,,IT Support Specialist,,45908,Hire,IT,Milan
+100508,16/03/2024,IT Support Specialist,IT Manager,45908,46367,Lateral_Move,IT,Milan
+100509,03/09/2021,,IT Support Specialist,,77205,Hire,IT,Milan
+100509,18/05/2023,IT Support Specialist,Database Administrator,77205,83381,Promotion,IT,Milan
+100510,04/06/2017,,IT Support Specialist,,62288,Hire,IT,Milan
+100510,20/08/2022,IT Support Specialist,Cloud Engineer,62288,67271,Promotion,IT,Milan
+100510,31/03/2024,Cloud Engineer,Network Engineer,67271,67943,Lateral_Move,IT,Milan
+100511,10/08/2020,,IT Support Specialist,,75577,Hire,IT,Milan
+100511,07/11/2022,IT Support Specialist,IT Support Specialist,75577,76332,Lateral_Move,IT,Milan
+100511,16/10/2024,IT Support Specialist,Network Engineer,76332,77095,Lateral_Move,IT,Milan
+100512,27/06/2016,,IT Support Specialist,,65164,Hire,IT,Milan
+100512,18/08/2022,IT Support Specialist,Database Administrator,65164,70377,Promotion,IT,Milan
+100512,28/03/2024,Database Administrator,IT Support Specialist,70377,71080,Lateral_Move,IT,Milan
+100513,27/03/2020,,IT Support Specialist,,86048,Hire,IT,Milan
+100513,26/11/2022,IT Support Specialist,Security Analyst,86048,92931,Promotion,IT,Milan
+100513,25/09/2024,Security Analyst,IT Support Specialist,92931,100365,Promotion,IT,Milan
+100514,27/02/2017,,IT Support Specialist,,82078,Hire,IT,Milan
+100514,01/08/2020,IT Support Specialist,Systems Administrator,82078,88644,Promotion,IT,Milan
+100514,09/11/2024,Systems Administrator,Cloud Engineer,88644,89530,Lateral_Move,IT,Milan
+100515,24/02/2016,,IT Support Specialist,,55443,Hire,IT,Milan
+100515,18/04/2023,IT Support Specialist,Database Administrator,55443,59878,Promotion,IT,Milan
+100515,01/07/2024,Database Administrator,Systems Administrator,59878,64668,Promotion,IT,Milan
+100516,29/06/2018,,IT Support Specialist,,59706,Hire,IT,Milan
+100516,24/12/2021,IT Support Specialist,Cloud Engineer,59706,60303,Lateral_Move,IT,Milan
+100517,19/12/2015,,IT Support Specialist,,85712,Hire,IT,Milan
+100517,03/02/2017,IT Support Specialist,Cloud Engineer,85712,92568,Promotion,IT,Milan
+100517,04/09/2022,Cloud Engineer,Systems Administrator,92568,99973,Promotion,IT,Milan
+100518,22/03/2017,,IT Support Specialist,,75774,Hire,IT,Milan
+100518,17/05/2023,IT Support Specialist,Security Analyst,75774,81835,Promotion,IT,Milan
+100518,11/10/2024,Security Analyst,IT Manager,81835,82653,Lateral_Move,IT,Milan
+100519,04/09/2022,,IT Support Specialist,,58252,Hire,IT,Milan
+100519,09/01/2024,IT Support Specialist,IT Support Specialist,58252,62912,Promotion,IT,Milan
+100520,05/11/2022,,IT Support Specialist,,61400,Hire,IT,Milan
+100521,02/03/2018,,IT Support Specialist,,46012,Hire,IT,Milan
+100521,21/01/2020,IT Support Specialist,Systems Administrator,46012,49692,Promotion,IT,Milan
+100521,18/06/2023,Systems Administrator,IT Manager,49692,50188,Lateral_Move,IT,Milan
+100522,22/12/2020,,IT Support Specialist,,75807,Hire,IT,Milan
+100522,12/02/2022,IT Support Specialist,Security Analyst,75807,76565,Lateral_Move,IT,Milan
+100522,28/04/2023,Security Analyst,Database Administrator,76565,77330,Lateral_Move,IT,Milan
+100523,13/10/2022,,IT Support Specialist,,76911,Hire,IT,Milan
+100523,18/04/2024,IT Support Specialist,Systems Administrator,76911,77680,Lateral_Move,IT,Milan
+100524,07/09/2021,,IT Support Specialist,,49252,Hire,IT,Milan
+100524,13/05/2024,IT Support Specialist,Database Administrator,49252,53192,Promotion,IT,Milan
+100525,26/03/2022,,IT Support Specialist,,84987,Hire,IT,Milan
+100525,27/01/2024,IT Support Specialist,Database Administrator,84987,85836,Lateral_Move,IT,Milan
+100526,16/12/2020,,IT Support Specialist,,52503,Hire,IT,Milan
+100526,14/06/2023,IT Support Specialist,Database Administrator,52503,56703,Promotion,IT,Milan
+100527,14/07/2021,,IT Support Specialist,,80594,Hire,IT,Milan
+100528,25/03/2016,,IT Support Specialist,,70356,Hire,IT,Milan
+100529,10/02/2021,,IT Support Specialist,,47577,Hire,IT,Milan
+100529,31/01/2024,IT Support Specialist,IT Manager,47577,51383,Promotion,IT,Milan
+100530,29/05/2016,,IT Support Specialist,,44032,Hire,IT,Milan
+100530,14/11/2022,IT Support Specialist,Security Analyst,44032,47554,Promotion,IT,Milan
+100531,15/03/2022,,IT Support Specialist,,60238,Hire,IT,Milan
+100532,13/07/2017,,IT Support Specialist,,66586,Hire,IT,Milan
+100533,12/02/2019,,IT Support Specialist,,44680,Hire,IT,Milan
+100533,12/02/2020,IT Support Specialist,Security Analyst,44680,48254,Promotion,IT,Milan
+100534,18/10/2020,,IT Support Specialist,,61231,Hire,IT,Milan
+100535,05/08/2015,,IT Support Specialist,,68500,Hire,IT,Milan
+100536,30/03/2018,,IT Support Specialist,,53504,Hire,IT,Milan
+100537,22/04/2015,,IT Support Specialist,,66784,Hire,IT,Milan
+100538,28/02/2015,,IT Support Specialist,,77294,Hire,IT,Milan
+100538,04/05/2018,IT Support Specialist,Systems Administrator,77294,73429,Demotion,IT,Milan
+100539,10/01/2017,,IT Support Specialist,,42488,Hire,IT,Milan
+100539,18/09/2022,IT Support Specialist,IT Support Specialist,42488,45887,Promotion,IT,Milan
+100540,01/09/2017,,IT Support Specialist,,66674,Hire,IT,Milan
+100540,16/01/2020,IT Support Specialist,IT Manager,66674,67340,Lateral_Move,IT,Milan
+100541,15/03/2020,,IT Support Specialist,,81745,Hire,IT,Milan
+100541,10/01/2024,IT Support Specialist,IT Support Specialist,81745,82562,Lateral_Move,IT,Milan
+100542,17/08/2016,,IT Support Specialist,,57641,Hire,IT,Milan
+100543,16/12/2020,,IT Support Specialist,,81332,Hire,IT,Milan
+100543,23/07/2023,IT Support Specialist,Security Analyst,81332,82145,Lateral_Move,IT,Milan
+100544,02/09/2023,,IT Support Specialist,,83636,Hire,IT,Milan
+100545,18/07/2022,,IT Support Specialist,,45556,Hire,IT,Milan
+100546,20/05/2015,,IT Support Specialist,,81121,Hire,IT,Milan
+100547,16/06/2016,,IT Support Specialist,,78303,Hire,IT,Milan
+100547,19/03/2024,IT Support Specialist,Security Analyst,78303,79086,Lateral_Move,IT,Milan
+100548,06/10/2022,,IT Support Specialist,,47030,Hire,IT,Milan
+100549,23/11/2017,,IT Support Specialist,,64276,Hire,IT,Milan
+100549,20/08/2019,IT Support Specialist,IT Manager,64276,69418,Promotion,IT,Milan
+100550,08/07/2020,,IT Support Specialist,,75310,Hire,IT,Milan
+100550,21/01/2022,IT Support Specialist,IT Support Specialist,75310,81334,Promotion,IT,Milan
+100551,16/10/2015,,IT Support Specialist,,44919,Hire,IT,Milan
+100551,05/04/2019,IT Support Specialist,Security Analyst,44919,48512,Promotion,IT,Milan
+100551,12/12/2021,Security Analyst,Security Analyst,48512,52392,Promotion,IT,Milan
+100552,12/09/2016,,IT Support Specialist,,41540,Hire,IT,Milan
+100553,21/01/2021,,IT Support Specialist,,47672,Hire,IT,Milan
+100553,01/06/2022,IT Support Specialist,Network Engineer,47672,51485,Promotion,IT,Milan
+100554,02/02/2022,,IT Support Specialist,,66127,Hire,IT,Milan
+100555,21/03/2021,,IT Support Specialist,,82835,Hire,IT,Milan
+100555,30/11/2022,IT Support Specialist,Cloud Engineer,82835,83663,Lateral_Move,IT,Milan
+100556,29/11/2019,,IT Support Specialist,,49133,Hire,IT,Milan
+100556,05/05/2022,IT Support Specialist,Database Administrator,49133,49624,Lateral_Move,IT,Milan
+100556,13/01/2024,Database Administrator,Cloud Engineer,49624,53593,Promotion,IT,Milan
+100557,20/03/2022,,IT Support Specialist,,40227,Hire,IT,Milan
+100557,02/05/2023,IT Support Specialist,IT Support Specialist,40227,40629,Lateral_Move,IT,Milan
+100557,26/08/2024,IT Support Specialist,IT Manager,40629,43879,Promotion,IT,Milan
+100558,02/05/2022,,IT Support Specialist,,53576,Hire,IT,Milan
+100558,20/08/2024,IT Support Specialist,Database Administrator,53576,54111,Lateral_Move,IT,Milan
+100559,20/03/2015,,IT Support Specialist,,81983,Hire,IT,Milan
+100559,15/02/2019,IT Support Specialist,Cloud Engineer,81983,88541,Promotion,IT,Milan
+100560,08/11/2021,,IT Support Specialist,,48623,Hire,IT,Milan
+100561,11/04/2023,,IT Support Specialist,,75287,Hire,IT,Milan
+100561,19/08/2024,IT Support Specialist,Systems Administrator,75287,76039,Lateral_Move,IT,Milan
+100562,16/09/2015,,IT Support Specialist,,49139,Hire,IT,Milan
+100562,29/10/2020,IT Support Specialist,Security Analyst,49139,53070,Promotion,IT,Milan
+100563,15/11/2023,,IT Support Specialist,,40036,Hire,IT,Milan
+100563,23/11/2024,IT Support Specialist,Systems Administrator,40036,43238,Promotion,IT,Milan
+100564,11/10/2022,,IT Support Specialist,,56025,Hire,IT,Milan
+100564,23/12/2023,IT Support Specialist,Systems Administrator,56025,56585,Lateral_Move,IT,Milan
+100565,04/10/2022,,IT Support Specialist,,49499,Hire,IT,Milan
+100566,25/02/2017,,IT Support Specialist,,55828,Hire,IT,Milan
+100566,21/09/2018,IT Support Specialist,IT Manager,55828,60294,Promotion,IT,Milan
+100566,29/03/2024,IT Manager,IT Support Specialist,60294,65117,Promotion,IT,Milan
+100567,06/08/2015,,IT Support Specialist,,73927,Hire,IT,Milan
+100567,26/05/2020,IT Support Specialist,Cloud Engineer,73927,79841,Promotion,IT,Milan
+100567,07/07/2021,Cloud Engineer,Security Analyst,79841,80639,Lateral_Move,IT,Milan
+100568,16/11/2019,,IT Support Specialist,,42762,Hire,IT,Milan
+100568,21/02/2023,IT Support Specialist,Systems Administrator,42762,40623,Demotion,IT,Milan
+100568,26/02/2024,Systems Administrator,Cloud Engineer,40623,43872,Promotion,IT,Milan
+100569,20/04/2016,,IT Support Specialist,,69891,Hire,IT,Milan
+100569,21/04/2019,IT Support Specialist,Systems Administrator,69891,70589,Lateral_Move,IT,Milan
+100569,09/01/2021,Systems Administrator,Cloud Engineer,70589,76236,Promotion,IT,Milan
+100570,21/07/2017,,IT Support Specialist,,61922,Hire,IT,Milan
+100571,04/06/2017,,IT Support Specialist,,61168,Hire,IT,Milan
+100571,24/04/2020,IT Support Specialist,Security Analyst,61168,66061,Promotion,IT,Milan
+100571,08/11/2023,Security Analyst,Network Engineer,66061,71345,Promotion,IT,Milan
+100572,05/06/2016,,IT Support Specialist,,49246,Hire,IT,Milan
+100572,14/12/2017,IT Support Specialist,Database Administrator,49246,49738,Lateral_Move,IT,Milan
+100573,08/10/2021,,IT Support Specialist,,76779,Hire,IT,Milan
+100573,06/04/2024,IT Support Specialist,Cloud Engineer,76779,82921,Promotion,IT,Milan
+100574,23/04/2020,,IT Support Specialist,,77989,Hire,IT,Milan
+100575,02/09/2016,,IT Support Specialist,,41454,Hire,IT,Milan
+100575,02/12/2018,IT Support Specialist,Network Engineer,41454,41868,Lateral_Move,IT,Milan
+100575,13/07/2020,Network Engineer,Cloud Engineer,41868,45217,Promotion,IT,Milan
+100576,04/06/2019,,IT Support Specialist,,73908,Hire,IT,Milan
+100576,02/04/2022,IT Support Specialist,Cloud Engineer,73908,79820,Promotion,IT,Milan
+100576,03/12/2023,Cloud Engineer,IT Support Specialist,79820,86205,Promotion,IT,Milan
+100577,26/04/2018,,IT Support Specialist,,65598,Hire,IT,Milan
+100577,09/06/2024,IT Support Specialist,Systems Administrator,65598,62318,Demotion,IT,Milan
+100578,28/08/2023,,IT Support Specialist,,79969,Hire,IT,Milan
+100578,17/11/2024,IT Support Specialist,Cloud Engineer,79969,86366,Promotion,IT,Milan
+100579,25/09/2018,,IT Support Specialist,,87739,Hire,IT,Milan
+100579,18/12/2021,IT Support Specialist,Systems Administrator,87739,94758,Promotion,IT,Milan
+100579,31/08/2023,Systems Administrator,Cloud Engineer,94758,95705,Lateral_Move,IT,Milan
+100580,07/10/2018,,IT Support Specialist,,84055,Hire,IT,Milan
+100580,05/07/2024,IT Support Specialist,IT Manager,84055,90779,Promotion,IT,Milan
+100581,17/06/2015,,Operations Analyst,,61828,Hire,OPS,Milan
+100581,23/08/2019,Operations Analyst,Operations Analyst,61828,66774,Promotion,OPS,Milan
+100582,10/04/2016,,Operations Analyst,,48569,Hire,OPS,Milan
+100582,03/04/2023,Operations Analyst,Operations Analyst,48569,52454,Promotion,OPS,Milan
+100583,08/03/2019,,Operations Analyst,,58479,Hire,OPS,Milan
+100583,27/08/2022,Operations Analyst,Supply Chain Specialist,58479,63157,Promotion,OPS,Milan
+100584,16/02/2019,,Operations Analyst,,53516,Hire,OPS,Milan
+100584,30/03/2024,Operations Analyst,Operations Manager,53516,57797,Promotion,OPS,Milan
+100585,04/02/2018,,Operations Analyst,,34507,Hire,OPS,Milan
+100585,01/12/2020,Operations Analyst,Process Engineer,34507,37267,Promotion,OPS,Milan
+100585,13/08/2022,Process Engineer,Process Engineer,37267,40248,Promotion,OPS,Milan
+100586,26/01/2021,,Operations Analyst,,48383,Hire,OPS,Milan
+100587,29/10/2020,,Operations Analyst,,50077,Hire,OPS,Milan
+100588,19/02/2020,,Operations Analyst,,38190,Hire,OPS,Milan
+100589,10/03/2018,,Operations Analyst,,36874,Hire,OPS,Milan
+100589,18/07/2022,Operations Analyst,Operations Director,36874,39823,Promotion,OPS,Milan
+100590,18/06/2015,,Operations Analyst,,42641,Hire,OPS,Milan
+100590,13/11/2021,Operations Analyst,Operations Director,42641,46052,Promotion,OPS,Milan
+100591,08/03/2019,,Operations Analyst,,44037,Hire,OPS,Milan
+100591,27/06/2020,Operations Analyst,Operations Director,44037,44477,Lateral_Move,OPS,Milan
+100592,18/01/2015,,Operations Analyst,,47602,Hire,OPS,Milan
+100593,05/04/2016,,Operations Analyst,,58565,Hire,OPS,Milan
+100594,29/08/2018,,Operations Analyst,,60166,Hire,OPS,Milan
+100594,30/04/2020,Operations Analyst,Operations Analyst,60166,64979,Promotion,OPS,Milan
+100595,30/12/2019,,Operations Analyst,,52218,Hire,OPS,Milan
+100596,28/08/2016,,Operations Analyst,,49097,Hire,OPS,Milan
+100596,07/10/2018,Operations Analyst,Operations Manager,49097,49587,Lateral_Move,OPS,Milan
+100596,05/07/2021,Operations Manager,Operations Director,49587,50082,Lateral_Move,OPS,Milan
+100597,02/06/2017,,Operations Analyst,,48583,Hire,OPS,Milan
+100597,11/12/2018,Operations Analyst,Operations Analyst,48583,52469,Promotion,OPS,Milan
+100597,22/06/2023,Operations Analyst,Supply Chain Specialist,52469,56666,Promotion,OPS,Milan
+100598,01/05/2017,,Operations Analyst,,62719,Hire,OPS,Milan
+100598,26/05/2021,Operations Analyst,Process Engineer,62719,67736,Promotion,OPS,Milan
+100598,11/08/2024,Process Engineer,Logistics Coordinator,67736,73154,Promotion,OPS,Milan
+100599,07/03/2020,,Operations Analyst,,41100,Hire,OPS,Milan
+100599,28/12/2022,Operations Analyst,Logistics Coordinator,41100,44388,Promotion,OPS,Milan
+100599,08/04/2024,Logistics Coordinator,Supply Chain Specialist,44388,47939,Promotion,OPS,Milan
+100600,09/04/2021,,Operations Analyst,,29279,Hire,OPS,Milan
+100601,04/01/2017,,Operations Analyst,,35499,Hire,OPS,Milan
+100601,02/08/2020,Operations Analyst,Operations Manager,35499,38338,Promotion,OPS,Milan
+100601,18/10/2022,Operations Manager,Operations Analyst,38338,38721,Lateral_Move,OPS,Milan
+100602,22/11/2019,,Operations Analyst,,52965,Hire,OPS,Milan
+100603,03/03/2020,,Operations Analyst,,37018,Hire,OPS,Milan
+100603,29/08/2022,Operations Analyst,Operations Director,37018,39979,Promotion,OPS,Milan
+100603,21/10/2024,Operations Director,Process Engineer,39979,43177,Promotion,OPS,Milan
+100604,09/12/2020,,Operations Analyst,,39455,Hire,OPS,Milan
+100604,24/09/2022,Operations Analyst,Logistics Coordinator,39455,42611,Promotion,OPS,Milan
+100604,03/03/2024,Logistics Coordinator,Operations Director,42611,43037,Lateral_Move,OPS,Milan
+100605,19/07/2018,,Operations Analyst,,46600,Hire,OPS,Milan
+100606,08/03/2019,,Operations Analyst,,40491,Hire,OPS,Milan
+100607,28/12/2022,,Operations Analyst,,57556,Hire,OPS,Milan
+100608,01/10/2022,,Operations Analyst,,57434,Hire,OPS,Milan
+100609,11/06/2016,,Operations Analyst,,43139,Hire,OPS,Milan
+100609,28/09/2017,Operations Analyst,Operations Director,43139,46590,Promotion,OPS,Milan
+100609,28/08/2020,Operations Director,Supply Chain Specialist,46590,50317,Promotion,OPS,Milan
+100610,09/09/2023,,Operations Analyst,,41114,Hire,OPS,Milan
+100611,02/11/2017,,Operations Analyst,,34547,Hire,OPS,Milan
+100611,30/12/2019,Operations Analyst,Process Engineer,34547,37310,Promotion,OPS,Milan
+100611,26/05/2021,Process Engineer,Logistics Coordinator,37310,40294,Promotion,OPS,Milan
+100612,19/08/2016,,Operations Analyst,,47828,Hire,OPS,Milan
+100613,07/10/2015,,Operations Analyst,,37732,Hire,OPS,Milan
+100613,03/05/2021,Operations Analyst,Operations Director,37732,35845,Demotion,OPS,Milan
+100614,27/08/2020,,Operations Analyst,,56973,Hire,OPS,Milan
+100615,27/05/2017,,Operations Analyst,,43851,Hire,OPS,Milan
+100615,19/12/2022,Operations Analyst,Operations Director,43851,41658,Demotion,OPS,Milan
+100615,21/12/2023,Operations Director,Process Engineer,41658,44990,Promotion,OPS,Milan
+100616,05/02/2023,,Operations Analyst,,48117,Hire,OPS,Milan
+100616,03/04/2024,Operations Analyst,Supply Chain Specialist,48117,51966,Promotion,OPS,Milan
+100617,05/04/2018,,Operations Analyst,,34810,Hire,OPS,Milan
+100617,16/11/2024,Operations Analyst,Supply Chain Specialist,34810,37594,Promotion,OPS,Milan
+100618,06/07/2020,,Operations Analyst,,53150,Hire,OPS,Milan
+100619,23/09/2015,,Operations Analyst,,41966,Hire,OPS,Milan
+100619,30/10/2023,Operations Analyst,Operations Manager,41966,45323,Promotion,OPS,Milan
+100619,18/11/2024,Operations Manager,Process Engineer,45323,48948,Promotion,OPS,Milan
+100620,30/07/2023,,Operations Analyst,,51651,Hire,OPS,Milan
+100620,18/09/2024,Operations Analyst,Operations Director,51651,52167,Lateral_Move,OPS,Milan
+100621,12/08/2023,,Operations Analyst,,56177,Hire,OPS,Milan
+100622,02/08/2020,,Operations Analyst,,57704,Hire,OPS,Milan
+100622,10/10/2021,Operations Analyst,Operations Analyst,57704,62320,Promotion,OPS,Milan
+100623,06/06/2023,,Operations Analyst,,41516,Hire,OPS,Milan
+100623,20/09/2024,Operations Analyst,Operations Analyst,41516,41931,Lateral_Move,OPS,Milan
+100624,16/02/2021,,Operations Analyst,,51619,Hire,OPS,Milan
+100625,30/03/2021,,Operations Analyst,,57623,Hire,OPS,Milan
+100626,18/03/2021,,Operations Analyst,,63593,Hire,OPS,Milan
+100626,17/05/2024,Operations Analyst,Operations Director,63593,68680,Promotion,OPS,Milan
+100627,02/08/2022,,Operations Analyst,,30354,Hire,OPS,Milan
+100627,03/03/2024,Operations Analyst,Operations Analyst,30354,30657,Lateral_Move,OPS,Milan
+100628,03/02/2016,,Operations Analyst,,44980,Hire,OPS,Milan
+100628,05/09/2023,Operations Analyst,Operations Manager,44980,48578,Promotion,OPS,Milan
+100629,13/04/2016,,Operations Analyst,,43614,Hire,OPS,Milan
+100629,23/07/2020,Operations Analyst,Operations Manager,43614,47103,Promotion,OPS,Milan
+100630,25/03/2015,,Operations Analyst,,51555,Hire,OPS,Milan
+100630,02/08/2021,Operations Analyst,Process Engineer,51555,55679,Promotion,OPS,Milan
+100631,27/07/2020,,Operations Analyst,,42461,Hire,OPS,Milan
+100631,30/03/2024,Operations Analyst,Logistics Coordinator,42461,45857,Promotion,OPS,Milan
+100632,22/12/2017,,Operations Analyst,,33785,Hire,OPS,Milan
+100633,26/12/2023,,Operations Analyst,,47199,Hire,OPS,Milan
+100634,20/01/2021,,Operations Analyst,,45510,Hire,OPS,Milan
+100634,20/06/2022,Operations Analyst,Operations Analyst,45510,49150,Promotion,OPS,Milan
+100635,20/06/2021,,Operations Analyst,,60530,Hire,OPS,Milan
+100635,07/02/2023,Operations Analyst,Operations Director,60530,65372,Promotion,OPS,Milan
+100636,01/02/2019,,Operations Analyst,,46326,Hire,OPS,Milan
+100636,02/11/2020,Operations Analyst,Supply Chain Specialist,46326,46789,Lateral_Move,OPS,Milan
+100637,31/03/2022,,Operations Analyst,,40347,Hire,OPS,Milan
+100638,22/11/2019,,Operations Analyst,,40454,Hire,OPS,Milan
+100639,10/10/2023,,Operations Analyst,,48729,Hire,OPS,Milan
+100640,24/08/2017,,Operations Analyst,,63152,Hire,OPS,Milan
+100640,26/05/2019,Operations Analyst,Operations Director,63152,68204,Promotion,OPS,Milan
+100640,26/01/2024,Operations Director,Supply Chain Specialist,68204,68886,Lateral_Move,OPS,Milan
+100641,15/05/2016,,Operations Analyst,,61459,Hire,OPS,Milan
+100641,19/01/2020,Operations Analyst,Logistics Coordinator,61459,62073,Lateral_Move,OPS,Milan
+100641,25/09/2021,Logistics Coordinator,Supply Chain Specialist,62073,62693,Lateral_Move,OPS,Milan
+100642,13/03/2016,,Operations Analyst,,49869,Hire,OPS,Milan
+100643,13/02/2021,,Operations Analyst,,38820,Hire,OPS,Milan
+100644,05/11/2023,,Operations Analyst,,49995,Hire,OPS,Milan
+100645,11/05/2019,,Operations Analyst,,36660,Hire,OPS,Milan
+100645,01/04/2021,Operations Analyst,Logistics Coordinator,36660,39592,Promotion,OPS,Milan
+100646,23/07/2018,,Operations Analyst,,45886,Hire,OPS,Milan
+100647,16/02/2016,,Operations Analyst,,34586,Hire,OPS,Milan
+100647,31/08/2018,Operations Analyst,Process Engineer,34586,37352,Promotion,OPS,Milan
+100647,07/10/2021,Process Engineer,Operations Manager,37352,40340,Promotion,OPS,Milan
+100648,12/03/2022,,Operations Analyst,,35004,Hire,OPS,Milan
+100649,19/10/2017,,Operations Analyst,,55693,Hire,OPS,Milan
+100650,26/08/2021,,Operations Analyst,,31695,Hire,OPS,Milan
+100650,03/02/2023,Operations Analyst,Supply Chain Specialist,31695,34230,Promotion,OPS,Milan
+100651,06/04/2021,,Operations Analyst,,51893,Hire,OPS,Milan
+100652,01/12/2017,,Operations Analyst,,61071,Hire,OPS,Milan
+100653,01/01/2023,,Operations Analyst,,53256,Hire,OPS,Milan
+100653,20/01/2024,Operations Analyst,Operations Analyst,53256,57516,Promotion,OPS,Milan
+100654,14/02/2017,,Operations Analyst,,31464,Hire,OPS,Milan
+100654,09/05/2023,Operations Analyst,Operations Manager,31464,33981,Promotion,OPS,Milan
+100655,03/09/2022,,Operations Analyst,,54382,Hire,OPS,Milan
+100655,07/08/2024,Operations Analyst,Supply Chain Specialist,54382,58732,Promotion,OPS,Milan
+100656,04/04/2023,,Operations Analyst,,54325,Hire,OPS,Milan
+100657,04/11/2017,,Operations Analyst,,52925,Hire,OPS,Milan
+100658,25/08/2020,,Operations Analyst,,34220,Hire,OPS,Milan
+100658,20/11/2022,Operations Analyst,Supply Chain Specialist,34220,36957,Promotion,OPS,Milan
+100658,15/01/2024,Supply Chain Specialist,Operations Manager,36957,39913,Promotion,OPS,Milan
+100659,30/06/2015,,Operations Analyst,,51587,Hire,OPS,Milan
+100660,20/11/2019,,Operations Analyst,,37302,Hire,OPS,Milan
+100660,04/11/2023,Operations Analyst,Operations Analyst,37302,35436,Demotion,OPS,Milan
+100661,12/08/2015,,Operations Analyst,,39990,Hire,OPS,Milan
+100661,08/09/2020,Operations Analyst,Supply Chain Specialist,39990,43189,Promotion,OPS,Milan
+100661,09/09/2023,Supply Chain Specialist,Supply Chain Specialist,43189,46644,Promotion,OPS,Milan
+100662,14/12/2022,,Operations Analyst,,32795,Hire,OPS,Milan
+100663,09/01/2017,,Operations Analyst,,62212,Hire,OPS,Milan
+100663,12/01/2018,Operations Analyst,Operations Manager,62212,62834,Lateral_Move,OPS,Milan
+100664,05/10/2017,,Operations Analyst,,31604,Hire,OPS,Milan
+100664,14/01/2023,Operations Analyst,Operations Director,31604,34132,Promotion,OPS,Milan
+100665,21/09/2016,,Operations Analyst,,43802,Hire,OPS,Milan
+100666,13/06/2016,,Operations Analyst,,47357,Hire,OPS,Milan
+100666,05/09/2021,Operations Analyst,Operations Manager,47357,51145,Promotion,OPS,Milan
+100667,11/11/2017,,Operations Analyst,,27663,Hire,OPS,Milan
+100667,08/05/2020,Operations Analyst,Operations Analyst,27663,27939,Lateral_Move,OPS,Milan
+100667,15/07/2022,Operations Analyst,Process Engineer,27939,26542,Demotion,OPS,Milan
+100668,03/07/2020,,Operations Analyst,,37531,Hire,OPS,Milan
+100669,09/05/2019,,Operations Analyst,,49587,Hire,OPS,Milan
+100669,01/03/2021,Operations Analyst,Logistics Coordinator,49587,50082,Lateral_Move,OPS,Milan
+100669,13/09/2024,Logistics Coordinator,Operations Director,50082,47577,Demotion,OPS,Milan
+100670,31/10/2018,,Operations Analyst,,35880,Hire,OPS,Milan
+100671,27/11/2019,,Operations Analyst,,33594,Hire,OPS,Milan
+100671,15/04/2022,Operations Analyst,Operations Analyst,33594,36281,Promotion,OPS,Milan
+100672,17/05/2021,,Operations Analyst,,32825,Hire,OPS,Milan
+100673,26/07/2021,,Operations Analyst,,54607,Hire,OPS,Milan
+100673,05/11/2023,Operations Analyst,Logistics Coordinator,54607,55153,Lateral_Move,OPS,Milan
+100674,09/07/2018,,Operations Analyst,,46221,Hire,OPS,Milan
+100674,25/10/2022,Operations Analyst,Logistics Coordinator,46221,49918,Promotion,OPS,Milan
+100675,28/11/2017,,Operations Analyst,,58288,Hire,OPS,Milan
+100675,23/09/2022,Operations Analyst,Operations Analyst,58288,58870,Lateral_Move,OPS,Milan
+100676,18/05/2022,,Operations Analyst,,44369,Hire,OPS,Milan
+100677,07/07/2016,,Operations Analyst,,28574,Hire,OPS,Milan
+100677,30/06/2020,Operations Analyst,Operations Director,28574,30859,Promotion,OPS,Milan
+100678,19/12/2015,,Operations Analyst,,58552,Hire,OPS,Milan
+100678,29/03/2017,Operations Analyst,Operations Director,58552,63236,Promotion,OPS,Milan
+100679,16/01/2020,,Operations Analyst,,63476,Hire,OPS,Milan
+100679,02/07/2021,Operations Analyst,Process Engineer,63476,68554,Promotion,OPS,Milan
+100679,02/01/2023,Process Engineer,Operations Director,68554,69239,Lateral_Move,OPS,Milan
+100680,23/07/2020,,Operations Analyst,,52078,Hire,OPS,Milan
+100680,05/02/2023,Operations Analyst,Operations Manager,52078,56244,Promotion,OPS,Milan
+100681,03/12/2020,,Operations Analyst,,33572,Hire,OPS,Milan
+100681,17/07/2024,Operations Analyst,Operations Manager,33572,36257,Promotion,OPS,Milan
+100682,28/10/2022,,Operations Analyst,,37746,Hire,OPS,Milan
+100682,11/12/2023,Operations Analyst,Supply Chain Specialist,37746,40765,Promotion,OPS,Milan
+100683,16/04/2018,,Operations Analyst,,52033,Hire,OPS,Milan
+100684,27/05/2023,,Operations Analyst,,43094,Hire,OPS,Milan
+100684,10/06/2024,Operations Analyst,Supply Chain Specialist,43094,46541,Promotion,OPS,Milan
+100685,30/03/2021,,Operations Analyst,,47398,Hire,OPS,Milan
+100686,11/04/2016,,Operations Analyst,,42110,Hire,OPS,Milan
+100687,27/09/2022,,Operations Analyst,,48824,Hire,OPS,Milan
+100688,08/09/2020,,Operations Analyst,,47651,Hire,OPS,Milan
+100689,04/04/2022,,Operations Analyst,,40717,Hire,OPS,Milan
+100690,30/08/2020,,Operations Analyst,,55453,Hire,OPS,Milan
+100690,08/09/2024,Operations Analyst,Logistics Coordinator,55453,52680,Demotion,OPS,Milan
+100691,29/12/2023,,Operations Analyst,,54666,Hire,OPS,Milan
+100692,13/10/2015,,Operations Analyst,,49656,Hire,OPS,Milan
+100692,30/05/2019,Operations Analyst,Operations Manager,49656,50152,Lateral_Move,OPS,Milan
+100693,14/09/2019,,Operations Analyst,,51359,Hire,OPS,Milan
+100693,26/04/2023,Operations Analyst,Operations Director,51359,48791,Demotion,OPS,Milan
+100693,17/09/2024,Operations Director,Supply Chain Specialist,48791,49278,Lateral_Move,OPS,Milan
+100694,22/03/2022,,Operations Analyst,,51913,Hire,OPS,Milan
+100694,13/08/2023,Operations Analyst,Operations Manager,51913,56066,Promotion,OPS,Milan
+100694,30/11/2024,Operations Manager,Operations Manager,56066,53262,Demotion,OPS,Milan
+100695,18/02/2023,,Operations Analyst,,62861,Hire,OPS,Milan
+100695,26/04/2024,Operations Analyst,Operations Director,62861,63489,Lateral_Move,OPS,Milan
+100696,17/10/2016,,Operations Analyst,,43053,Hire,OPS,Milan
+100697,09/09/2020,,Operations Analyst,,55433,Hire,OPS,Milan
+100698,15/08/2017,,Operations Analyst,,38358,Hire,OPS,Milan
+100698,26/09/2024,Operations Analyst,Process Engineer,38358,41426,Promotion,OPS,Milan
+100699,27/02/2017,,Operations Analyst,,36904,Hire,OPS,Milan
+100700,16/06/2016,,Operations Analyst,,51886,Hire,OPS,Milan
+100701,05/08/2020,,Operations Analyst,,50075,Hire,OPS,Milan
+100701,20/05/2022,Operations Analyst,Supply Chain Specialist,50075,54081,Promotion,OPS,Milan
+100702,07/12/2020,,Operations Analyst,,57661,Hire,OPS,Milan
+100702,01/02/2022,Operations Analyst,Operations Director,57661,58237,Lateral_Move,OPS,Milan
+100703,10/05/2016,,Operations Analyst,,58809,Hire,OPS,Milan
+100704,15/11/2023,,Operations Analyst,,43310,Hire,OPS,Milan
+100705,29/11/2018,,Operations Analyst,,64836,Hire,OPS,Milan
+100705,01/12/2019,Operations Analyst,Operations Analyst,64836,61594,Demotion,OPS,Milan
+100706,29/08/2020,,Operations Analyst,,35015,Hire,OPS,Milan
+100707,08/06/2019,,Operations Analyst,,40971,Hire,OPS,Milan
+100707,06/03/2024,Operations Analyst,Supply Chain Specialist,40971,38922,Demotion,OPS,Milan
+100708,22/05/2016,,Operations Analyst,,62110,Hire,OPS,Milan
+100708,13/03/2024,Operations Analyst,Operations Manager,62110,62731,Lateral_Move,OPS,Milan
+100709,18/03/2015,,Operations Analyst,,46814,Hire,OPS,Milan
+100709,12/10/2018,Operations Analyst,Logistics Coordinator,46814,47282,Lateral_Move,OPS,Milan
+100709,13/02/2022,Logistics Coordinator,Operations Analyst,47282,44917,Demotion,OPS,Milan
+100710,21/10/2021,,Operations Analyst,,32246,Hire,OPS,Milan
+100710,15/12/2023,Operations Analyst,Operations Director,32246,30633,Demotion,OPS,Milan
+100711,08/01/2016,,Operations Analyst,,36599,Hire,OPS,Milan
+100712,24/11/2016,,Operations Analyst,,31372,Hire,OPS,Milan
+100712,28/03/2018,Operations Analyst,Process Engineer,31372,33881,Promotion,OPS,Milan
+100712,19/08/2019,Process Engineer,Operations Analyst,33881,36591,Promotion,OPS,Milan
+100713,10/05/2016,,Operations Analyst,,51444,Hire,OPS,Milan
+100714,15/03/2021,,Operations Analyst,,46326,Hire,OPS,Milan
+100714,16/06/2022,Operations Analyst,Operations Manager,46326,50032,Promotion,OPS,Milan
+100714,31/12/2023,Operations Manager,Operations Analyst,50032,50532,Lateral_Move,OPS,Milan
+100715,23/07/2023,,Operations Analyst,,64982,Hire,OPS,Milan
+100716,22/01/2021,,Operations Analyst,,47888,Hire,OPS,Milan
+100716,08/06/2022,Operations Analyst,Process Engineer,47888,51719,Promotion,OPS,Milan
+100716,01/12/2024,Process Engineer,Supply Chain Specialist,51719,52236,Lateral_Move,OPS,Milan
+100717,16/11/2016,,Operations Analyst,,40100,Hire,OPS,Milan
+100718,23/10/2016,,Operations Analyst,,33770,Hire,OPS,Milan
+100718,15/10/2020,Operations Analyst,Logistics Coordinator,33770,32081,Demotion,OPS,Milan
+100718,23/05/2023,Logistics Coordinator,Logistics Coordinator,32081,34647,Promotion,OPS,Milan
+100719,05/11/2021,,Operations Analyst,,42542,Hire,OPS,Milan
+100719,06/11/2022,Operations Analyst,Process Engineer,42542,45945,Promotion,OPS,Milan
+100720,27/02/2020,,Operations Analyst,,38097,Hire,OPS,Milan
+100720,18/02/2022,Operations Analyst,Logistics Coordinator,38097,41144,Promotion,OPS,Milan
+100720,21/01/2024,Logistics Coordinator,Operations Manager,41144,41555,Lateral_Move,OPS,Milan
+100721,26/03/2021,,Operations Analyst,,52700,Hire,OPS,Milan
+100721,29/09/2024,Operations Analyst,Operations Analyst,52700,53227,Lateral_Move,OPS,Milan
+100722,29/12/2019,,Operations Analyst,,60443,Hire,OPS,Milan
+100722,03/06/2021,Operations Analyst,Logistics Coordinator,60443,65278,Promotion,OPS,Milan
+100723,01/03/2017,,Operations Analyst,,43992,Hire,OPS,Milan
+100723,02/07/2024,Operations Analyst,Logistics Coordinator,43992,44431,Lateral_Move,OPS,Milan
+100724,15/07/2020,,Operations Analyst,,53809,Hire,OPS,Milan
+100724,11/11/2021,Operations Analyst,Operations Manager,53809,54347,Lateral_Move,OPS,Milan
+100725,10/02/2018,,Operations Analyst,,54252,Hire,OPS,Milan
+100725,13/07/2019,Operations Analyst,Logistics Coordinator,54252,54794,Lateral_Move,OPS,Milan
+100726,09/06/2016,,Operations Analyst,,60701,Hire,OPS,Milan
+100726,15/03/2024,Operations Analyst,Supply Chain Specialist,60701,61308,Lateral_Move,OPS,Milan
+100727,22/12/2020,,Operations Analyst,,52825,Hire,OPS,Milan
+100728,13/05/2016,,Operations Analyst,,47562,Hire,OPS,Milan
+100728,10/12/2018,Operations Analyst,Operations Director,47562,51366,Promotion,OPS,Milan
+100728,06/04/2021,Operations Director,Operations Manager,51366,55475,Promotion,OPS,Milan
+100729,20/12/2020,,Operations Analyst,,36555,Hire,OPS,Milan
+100730,17/03/2017,,Operations Analyst,,32107,Hire,OPS,Milan
+100730,15/05/2020,Operations Analyst,Operations Director,32107,34675,Promotion,OPS,Milan
+100730,20/08/2024,Operations Director,Logistics Coordinator,34675,37449,Promotion,OPS,Milan
+100731,17/03/2016,,Operations Analyst,,46369,Hire,OPS,Milan
+100731,13/07/2021,Operations Analyst,Operations Analyst,46369,46832,Lateral_Move,OPS,Milan
+100731,06/12/2023,Operations Analyst,Supply Chain Specialist,46832,47300,Lateral_Move,OPS,Milan
+100732,03/01/2020,,Operations Analyst,,29324,Hire,OPS,Milan
+100732,13/10/2024,Operations Analyst,Operations Analyst,29324,27857,Demotion,OPS,Milan
+100733,13/08/2015,,Operations Analyst,,34262,Hire,OPS,Milan
+100734,08/06/2023,,Operations Analyst,,45497,Hire,OPS,Milan
+100735,30/07/2022,,Operations Analyst,,50040,Hire,OPS,Milan
+100735,25/11/2023,Operations Analyst,Supply Chain Specialist,50040,50540,Lateral_Move,OPS,Milan
+100736,31/05/2016,,Operations Analyst,,52475,Hire,OPS,Milan
+100737,06/06/2016,,Operations Analyst,,51677,Hire,OPS,Milan
+100737,11/10/2023,Operations Analyst,Operations Analyst,51677,49093,Demotion,OPS,Milan
+100737,12/11/2024,Operations Analyst,Operations Manager,49093,53020,Promotion,OPS,Milan
+100738,05/11/2018,,Operations Analyst,,57384,Hire,OPS,Milan
+100738,23/02/2023,Operations Analyst,Operations Analyst,57384,61974,Promotion,OPS,Milan
+100739,09/11/2018,,Operations Analyst,,39696,Hire,OPS,Milan
+100740,07/05/2021,,Operations Analyst,,42771,Hire,OPS,Milan
+100740,21/06/2023,Operations Analyst,Operations Manager,42771,46192,Promotion,OPS,Milan
+100741,02/07/2017,,HR Specialist,,42255,Hire,HR,Paris
+100741,29/10/2023,HR Specialist,Recruiter,42255,45635,Promotion,HR,Paris
+100742,28/01/2015,,HR Specialist,,32834,Hire,HR,Paris
+100742,23/05/2018,HR Specialist,Compensation Analyst,32834,33162,Lateral_Move,HR,Paris
+100742,19/08/2022,Compensation Analyst,Recruiter,33162,35814,Promotion,HR,Paris
+100743,02/05/2015,,HR Specialist,,41202,Hire,HR,Paris
+100743,05/09/2017,HR Specialist,HR Director,41202,44498,Promotion,HR,Paris
+100743,18/03/2023,HR Director,HR Specialist,44498,48057,Promotion,HR,Paris
+100744,30/03/2015,,HR Specialist,,36518,Hire,HR,Paris
+100744,28/07/2018,HR Specialist,Compensation Analyst,36518,39439,Promotion,HR,Paris
+100745,12/02/2020,,HR Specialist,,62383,Hire,HR,Paris
+100745,04/08/2022,HR Specialist,HR Director,62383,67373,Promotion,HR,Paris
+100746,30/11/2023,,HR Specialist,,49759,Hire,HR,Paris
+100747,19/04/2018,,HR Specialist,,37198,Hire,HR,Paris
+100748,27/02/2023,,HR Specialist,,58695,Hire,HR,Paris
+100748,13/03/2024,HR Specialist,Compensation Analyst,58695,63390,Promotion,HR,Paris
+100749,03/01/2017,,HR Specialist,,57744,Hire,HR,Paris
+100750,18/06/2017,,HR Specialist,,57858,Hire,HR,Paris
+100750,02/01/2019,HR Specialist,HR Specialist,57858,58436,Lateral_Move,HR,Paris
+100750,02/08/2022,HR Specialist,HR Director,58436,63110,Promotion,HR,Paris
+100751,05/03/2021,,HR Specialist,,65263,Hire,HR,Paris
+100752,22/01/2020,,HR Specialist,,54719,Hire,HR,Paris
+100752,04/10/2022,HR Specialist,HR Specialist,54719,59096,Promotion,HR,Paris
+100753,07/11/2015,,HR Specialist,,61631,Hire,HR,Paris
+100754,15/01/2019,,HR Specialist,,68548,Hire,HR,Paris
+100754,17/06/2020,HR Specialist,Compensation Analyst,68548,69233,Lateral_Move,HR,Paris
+100755,05/12/2017,,HR Specialist,,51386,Hire,HR,Paris
+100755,27/03/2021,HR Specialist,Compensation Analyst,51386,51899,Lateral_Move,HR,Paris
+100756,17/06/2019,,HR Specialist,,42919,Hire,HR,Paris
+100756,26/10/2021,HR Specialist,HR Specialist,42919,46352,Promotion,HR,Paris
+100757,08/02/2017,,HR Specialist,,61522,Hire,HR,Paris
+100758,11/04/2023,,HR Specialist,,45248,Hire,HR,Paris
+100758,03/09/2024,HR Specialist,Recruiter,45248,48867,Promotion,HR,Paris
+100759,06/04/2015,,HR Specialist,,38844,Hire,HR,Paris
+100759,27/06/2016,HR Specialist,HR Business Partner,38844,41951,Promotion,HR,Paris
+100759,31/03/2022,HR Business Partner,HR Manager,41951,42370,Lateral_Move,HR,Paris
+100760,16/04/2017,,HR Specialist,,54441,Hire,HR,Paris
+100761,03/12/2016,,HR Specialist,,60336,Hire,HR,Paris
+100762,07/04/2018,,HR Specialist,,35783,Hire,HR,Paris
+100762,11/10/2023,HR Specialist,Compensation Analyst,35783,36140,Lateral_Move,HR,Paris
+100763,12/06/2016,,HR Specialist,,53681,Hire,HR,Paris
+100763,07/09/2019,HR Specialist,HR Specialist,53681,57975,Promotion,HR,Paris
+100764,28/04/2020,,HR Specialist,,43612,Hire,HR,Paris
+100764,25/12/2021,HR Specialist,HR Business Partner,43612,47100,Promotion,HR,Paris
+100765,20/09/2015,,HR Specialist,,48946,Hire,HR,Paris
+100765,29/12/2023,HR Specialist,HR Manager,48946,52861,Promotion,HR,Paris
+100766,25/03/2018,,HR Specialist,,48304,Hire,HR,Paris
+100766,06/07/2024,HR Specialist,HR Manager,48304,52168,Promotion,HR,Paris
+100767,23/03/2023,,HR Specialist,,68442,Hire,HR,Paris
+100768,11/01/2021,,HR Specialist,,63626,Hire,HR,Paris
+100769,06/08/2023,,HR Specialist,,39693,Hire,HR,Paris
+100769,27/10/2024,HR Specialist,HR Manager,39693,42868,Promotion,HR,Paris
+100770,08/11/2018,,HR Specialist,,37993,Hire,HR,Paris
+100770,06/05/2022,HR Specialist,Recruiter,37993,38372,Lateral_Move,HR,Paris
+100770,24/10/2024,Recruiter,HR Specialist,38372,41441,Promotion,HR,Paris
+100771,04/03/2020,,HR Specialist,,40090,Hire,HR,Paris
+100771,11/11/2022,HR Specialist,HR Director,40090,43297,Promotion,HR,Paris
+100772,19/04/2018,,HR Specialist,,35384,Hire,HR,Paris
+100773,06/06/2017,,HR Specialist,,37427,Hire,HR,Paris
+100773,10/12/2019,HR Specialist,HR Manager,37427,37801,Lateral_Move,HR,Paris
+100773,15/11/2024,HR Manager,HR Director,37801,38179,Lateral_Move,HR,Paris
+100774,03/08/2015,,HR Specialist,,42876,Hire,HR,Paris
+100774,10/08/2021,HR Specialist,HR Director,42876,46306,Promotion,HR,Paris
+100774,21/11/2023,HR Director,HR Specialist,46306,50010,Promotion,HR,Paris
+100775,25/04/2015,,HR Specialist,,75898,Hire,HR,Paris
+100776,30/08/2019,,HR Specialist,,64850,Hire,HR,Paris
+100776,26/01/2021,HR Specialist,HR Business Partner,64850,65498,Lateral_Move,HR,Paris
+100776,21/06/2022,HR Business Partner,HR Business Partner,65498,70737,Promotion,HR,Paris
+100777,25/05/2017,,HR Specialist,,36559,Hire,HR,Paris
+100777,02/11/2019,HR Specialist,HR Specialist,36559,36924,Lateral_Move,HR,Paris
+100778,19/05/2022,,HR Specialist,,39763,Hire,HR,Paris
+100778,11/10/2024,HR Specialist,Compensation Analyst,39763,40160,Lateral_Move,HR,Paris
+100779,03/12/2016,,HR Specialist,,52571,Hire,HR,Paris
+100779,23/08/2023,HR Specialist,HR Director,52571,53096,Lateral_Move,HR,Paris
+100779,14/11/2024,HR Director,HR Director,53096,53626,Lateral_Move,HR,Paris
+100780,17/07/2023,,HR Specialist,,37780,Hire,HR,Paris
+100781,27/04/2023,,HR Specialist,,36313,Hire,HR,Paris
+100781,18/08/2024,HR Specialist,HR Director,36313,36676,Lateral_Move,HR,Paris
+100782,13/12/2021,,HR Specialist,,45283,Hire,HR,Paris
+100783,03/07/2016,,HR Specialist,,52127,Hire,HR,Paris
+100784,19/09/2017,,HR Specialist,,46487,Hire,HR,Paris
+100785,06/07/2020,,HR Specialist,,41879,Hire,HR,Paris
+100785,10/11/2021,HR Specialist,HR Specialist,41879,39785,Demotion,HR,Paris
+100786,09/09/2020,,HR Specialist,,42217,Hire,HR,Paris
+100787,04/04/2017,,HR Specialist,,55553,Hire,HR,Paris
+100787,23/02/2020,HR Specialist,Recruiter,55553,59997,Promotion,HR,Paris
+100787,28/05/2022,Recruiter,HR Manager,59997,56997,Demotion,HR,Paris
+100788,25/11/2023,,HR Specialist,,39427,Hire,HR,Paris
+100789,19/11/2017,,HR Specialist,,49482,Hire,HR,Paris
+100789,15/07/2022,HR Specialist,Recruiter,49482,53440,Promotion,HR,Paris
+100789,20/11/2023,Recruiter,HR Specialist,53440,53974,Lateral_Move,HR,Paris
+100790,25/09/2016,,HR Specialist,,56523,Hire,HR,Paris
+100791,28/06/2020,,HR Specialist,,37575,Hire,HR,Paris
+100791,27/06/2023,HR Specialist,Recruiter,37575,40581,Promotion,HR,Paris
+100792,26/08/2023,,HR Specialist,,58944,Hire,HR,Paris
+100792,13/11/2024,HR Specialist,HR Specialist,58944,63659,Promotion,HR,Paris
+100793,10/05/2020,,HR Specialist,,43858,Hire,HR,Paris
+100794,26/06/2021,,HR Specialist,,38568,Hire,HR,Paris
+100794,27/11/2022,HR Specialist,HR Manager,38568,36639,Demotion,HR,Paris
+100795,12/02/2017,,HR Specialist,,49557,Hire,HR,Paris
+100796,10/06/2023,,HR Specialist,,66669,Hire,HR,Paris
+100796,13/08/2024,HR Specialist,HR Director,66669,72002,Promotion,HR,Paris
+100797,03/11/2022,,HR Specialist,,35461,Hire,HR,Paris
+100797,06/09/2024,HR Specialist,HR Director,35461,38297,Promotion,HR,Paris
+100798,29/11/2016,,HR Specialist,,45255,Hire,HR,Paris
+100798,16/05/2021,HR Specialist,HR Manager,45255,45707,Lateral_Move,HR,Paris
+100799,03/04/2017,,HR Specialist,,54874,Hire,HR,Paris
+100799,02/12/2018,HR Specialist,Recruiter,54874,59263,Promotion,HR,Paris
+100800,28/03/2019,,HR Specialist,,33071,Hire,HR,Paris
+100800,27/09/2021,HR Specialist,HR Business Partner,33071,33401,Lateral_Move,HR,Paris
+100801,07/06/2023,,HR Specialist,,47643,Hire,HR,Paris
+100802,28/06/2023,,HR Specialist,,56385,Hire,HR,Paris
+100803,06/11/2021,,HR Specialist,,34935,Hire,HR,Paris
+100803,31/03/2023,HR Specialist,HR Business Partner,34935,37729,Promotion,HR,Paris
+100804,18/02/2018,,HR Specialist,,56537,Hire,HR,Paris
+100804,15/11/2021,HR Specialist,Compensation Analyst,56537,61059,Promotion,HR,Paris
+100805,26/02/2022,,HR Specialist,,67848,Hire,HR,Paris
+100805,20/12/2023,HR Specialist,Compensation Analyst,67848,73275,Promotion,HR,Paris
+100806,21/10/2021,,HR Specialist,,57381,Hire,HR,Paris
+100806,04/01/2023,HR Specialist,HR Specialist,57381,61971,Promotion,HR,Paris
+100807,22/10/2021,,HR Specialist,,60660,Hire,HR,Paris
+100808,19/07/2022,,HR Specialist,,55559,Hire,HR,Paris
+100808,27/06/2024,HR Specialist,HR Business Partner,55559,56114,Lateral_Move,HR,Paris
+100809,13/06/2023,,HR Specialist,,58120,Hire,HR,Paris
+100809,16/08/2024,HR Specialist,Recruiter,58120,62769,Promotion,HR,Paris
+100810,20/06/2022,,HR Specialist,,60447,Hire,HR,Paris
+100811,06/11/2018,,HR Specialist,,63548,Hire,HR,Paris
+100811,16/12/2021,HR Specialist,HR Specialist,63548,64183,Lateral_Move,HR,Paris
+100811,27/05/2023,HR Specialist,Compensation Analyst,64183,60973,Demotion,HR,Paris
+100812,26/12/2015,,HR Specialist,,40388,Hire,HR,Paris
+100812,02/02/2023,HR Specialist,HR Manager,40388,43619,Promotion,HR,Paris
+100812,27/11/2024,HR Manager,Recruiter,43619,44055,Lateral_Move,HR,Paris
+100813,07/04/2023,,HR Specialist,,56523,Hire,HR,Paris
+100814,08/06/2019,,HR Specialist,,39878,Hire,HR,Paris
+100814,29/06/2021,HR Specialist,HR Specialist,39878,43068,Promotion,HR,Paris
+100814,23/05/2024,HR Specialist,HR Director,43068,43498,Lateral_Move,HR,Paris
+100815,29/09/2021,,HR Specialist,,47435,Hire,HR,Paris
+100815,25/03/2023,HR Specialist,HR Specialist,47435,51229,Promotion,HR,Paris
+100815,27/04/2024,HR Specialist,HR Manager,51229,55327,Promotion,HR,Paris
+100816,02/06/2017,,HR Specialist,,48116,Hire,HR,Paris
+100816,13/10/2021,HR Specialist,HR Business Partner,48116,51965,Promotion,HR,Paris
+100817,19/06/2020,,HR Specialist,,34786,Hire,HR,Paris
+100817,06/07/2024,HR Specialist,HR Specialist,34786,35133,Lateral_Move,HR,Paris
+100818,22/10/2015,,HR Specialist,,42941,Hire,HR,Paris
+100818,26/05/2024,HR Specialist,HR Specialist,42941,43370,Lateral_Move,HR,Paris
+100819,18/02/2020,,HR Specialist,,57539,Hire,HR,Paris
+100820,21/02/2023,,HR Specialist,,49717,Hire,HR,Paris
+100821,05/01/2017,,HR Specialist,,67971,Hire,HR,Paris
+100821,19/07/2024,HR Specialist,Recruiter,67971,64572,Demotion,HR,Paris
+100822,13/09/2017,,HR Specialist,,40219,Hire,HR,Paris
+100823,03/02/2022,,HR Specialist,,42902,Hire,HR,Paris
+100823,19/09/2023,HR Specialist,HR Director,42902,46334,Promotion,HR,Paris
+100824,04/06/2021,,HR Specialist,,40407,Hire,HR,Paris
+100824,06/07/2024,HR Specialist,HR Specialist,40407,43639,Promotion,HR,Paris
+100825,25/08/2018,,HR Specialist,,35276,Hire,HR,Paris
+100825,28/09/2019,HR Specialist,Compensation Analyst,35276,35628,Lateral_Move,HR,Paris
+100825,22/04/2024,Compensation Analyst,HR Manager,35628,38478,Promotion,HR,Paris
+100826,16/01/2021,,HR Specialist,,71446,Hire,HR,Paris
+100826,18/08/2024,HR Specialist,HR Director,71446,77161,Promotion,HR,Paris
+100827,23/12/2023,,HR Specialist,,62948,Hire,HR,Paris
+100828,04/09/2020,,HR Specialist,,70378,Hire,HR,Paris
+100828,02/02/2022,HR Specialist,Recruiter,70378,76008,Promotion,HR,Paris
+100829,26/07/2016,,HR Specialist,,47788,Hire,HR,Paris
+100830,31/05/2015,,HR Specialist,,43198,Hire,HR,Paris
+100830,05/10/2018,HR Specialist,HR Director,43198,43629,Lateral_Move,HR,Paris
+100831,02/03/2021,,HR Specialist,,54324,Hire,HR,Paris
+100831,12/09/2023,HR Specialist,Recruiter,54324,54867,Lateral_Move,HR,Paris
+100832,14/04/2017,,HR Specialist,,62323,Hire,HR,Paris
+100832,06/10/2020,HR Specialist,HR Manager,62323,67308,Promotion,HR,Paris
+100833,20/09/2016,,HR Specialist,,31999,Hire,HR,Paris
+100833,25/09/2017,HR Specialist,Recruiter,31999,34558,Promotion,HR,Paris
+100834,24/02/2021,,HR Specialist,,35394,Hire,HR,Paris
+100834,11/06/2024,HR Specialist,HR Specialist,35394,35747,Lateral_Move,HR,Paris
+100835,06/02/2016,,HR Specialist,,39576,Hire,HR,Paris
+100836,06/12/2020,,HR Specialist,,50918,Hire,HR,Paris
+100837,25/04/2023,,HR Specialist,,63984,Hire,HR,Paris
+100837,15/07/2024,HR Specialist,Recruiter,63984,69102,Promotion,HR,Paris
+100838,01/04/2019,,HR Specialist,,64256,Hire,HR,Paris
+100839,03/12/2019,,HR Specialist,,46059,Hire,HR,Paris
+100839,31/08/2022,HR Specialist,Recruiter,46059,43756,Demotion,HR,Paris
+100839,03/05/2024,Recruiter,HR Specialist,43756,47256,Promotion,HR,Paris
+100840,24/07/2019,,HR Specialist,,35565,Hire,HR,Paris
+100840,15/09/2023,HR Specialist,Recruiter,35565,35920,Lateral_Move,HR,Paris
+100840,25/09/2024,Recruiter,HR Manager,35920,38793,Promotion,HR,Paris
+100841,04/05/2023,,Administrative Assistant,,49598,Hire,ADMIN,Paris
+100842,04/08/2022,,Administrative Assistant,,31761,Hire,ADMIN,Paris
+100842,04/11/2023,Administrative Assistant,Facilities Coordinator,31761,32078,Lateral_Move,ADMIN,Paris
+100843,27/09/2017,,Administrative Assistant,,56238,Hire,ADMIN,Paris
+100843,15/06/2021,Administrative Assistant,Executive Assistant,56238,60737,Promotion,ADMIN,Paris
+100844,30/06/2016,,Administrative Assistant,,55948,Hire,ADMIN,Paris
+100844,05/02/2021,Administrative Assistant,Office Manager,55948,60423,Promotion,ADMIN,Paris
+100845,06/08/2023,,Administrative Assistant,,50275,Hire,ADMIN,Paris
+100846,12/10/2020,,Administrative Assistant,,50356,Hire,ADMIN,Paris
+100847,22/01/2015,,Administrative Assistant,,49027,Hire,ADMIN,Paris
+100847,23/01/2017,Administrative Assistant,Executive Assistant,49027,46575,Demotion,ADMIN,Paris
+100847,12/06/2023,Executive Assistant,Administrative Manager,46575,50301,Promotion,ADMIN,Paris
+100848,10/08/2019,,Administrative Assistant,,38139,Hire,ADMIN,Paris
+100848,13/10/2020,Administrative Assistant,Office Manager,38139,41190,Promotion,ADMIN,Paris
+100849,21/10/2019,,Administrative Assistant,,50753,Hire,ADMIN,Paris
+100850,11/01/2019,,Administrative Assistant,,36539,Hire,ADMIN,Paris
+100850,17/04/2020,Administrative Assistant,Office Manager,36539,36904,Lateral_Move,ADMIN,Paris
+100851,26/03/2017,,Administrative Assistant,,51572,Hire,ADMIN,Paris
+100851,30/06/2020,Administrative Assistant,Facilities Coordinator,51572,55697,Promotion,ADMIN,Paris
+100851,08/06/2024,Facilities Coordinator,Administrative Assistant,55697,60152,Promotion,ADMIN,Paris
+100852,22/06/2016,,Administrative Assistant,,34616,Hire,ADMIN,Paris
+100852,22/04/2020,Administrative Assistant,Executive Assistant,34616,32885,Demotion,ADMIN,Paris
+100852,22/04/2023,Executive Assistant,Facilities Coordinator,32885,35515,Promotion,ADMIN,Paris
+100853,11/09/2021,,Administrative Assistant,,42032,Hire,ADMIN,Paris
+100854,04/02/2017,,Administrative Assistant,,39930,Hire,ADMIN,Paris
+100855,12/01/2017,,Administrative Assistant,,33074,Hire,ADMIN,Paris
+100855,13/11/2024,Administrative Assistant,Office Manager,33074,35719,Promotion,ADMIN,Paris
+100856,28/03/2017,,Administrative Assistant,,58473,Hire,ADMIN,Paris
+100856,06/08/2019,Administrative Assistant,Executive Assistant,58473,59057,Lateral_Move,ADMIN,Paris
+100857,09/09/2015,,Administrative Assistant,,36304,Hire,ADMIN,Paris
+100858,14/01/2017,,Administrative Assistant,,42935,Hire,ADMIN,Paris
+100858,25/10/2018,Administrative Assistant,Executive Assistant,42935,46369,Promotion,ADMIN,Paris
+100859,29/01/2019,,Administrative Assistant,,30701,Hire,ADMIN,Paris
+100859,01/04/2020,Administrative Assistant,Administrative Manager,30701,31008,Lateral_Move,ADMIN,Paris
+100859,07/01/2022,Administrative Manager,Facilities Coordinator,31008,33488,Promotion,ADMIN,Paris
+100860,06/12/2020,,Administrative Assistant,,40033,Hire,ADMIN,Paris
+100861,30/07/2021,,Administrative Assistant,,55015,Hire,ADMIN,Paris
+100861,07/12/2023,Administrative Assistant,Administrative Assistant,55015,55565,Lateral_Move,ADMIN,Paris
+100862,15/07/2023,,Administrative Assistant,,34884,Hire,ADMIN,Paris
+100863,23/01/2022,,Administrative Assistant,,56610,Hire,ADMIN,Paris
+100863,05/05/2023,Administrative Assistant,Office Manager,56610,53779,Demotion,ADMIN,Paris
+100863,27/11/2024,Office Manager,Administrative Assistant,53779,58081,Promotion,ADMIN,Paris
+100864,01/04/2018,,Administrative Assistant,,46006,Hire,ADMIN,Paris
+100865,23/04/2019,,Administrative Assistant,,62687,Hire,ADMIN,Paris
+100865,07/11/2022,Administrative Assistant,Administrative Assistant,62687,63313,Lateral_Move,ADMIN,Paris
+100866,09/02/2020,,Administrative Assistant,,39208,Hire,ADMIN,Paris
+100867,02/09/2017,,Administrative Assistant,,37965,Hire,ADMIN,Paris
+100868,10/04/2022,,Administrative Assistant,,34357,Hire,ADMIN,Paris
+100869,23/08/2015,,Administrative Assistant,,43544,Hire,ADMIN,Paris
+100870,14/04/2019,,Administrative Assistant,,62126,Hire,ADMIN,Paris
+100870,17/01/2024,Administrative Assistant,Facilities Coordinator,62126,67096,Promotion,ADMIN,Paris
+100871,23/01/2022,,Administrative Assistant,,56497,Hire,ADMIN,Paris
+100872,13/01/2017,,Administrative Assistant,,60979,Hire,ADMIN,Paris
+100873,03/06/2019,,Administrative Assistant,,33333,Hire,ADMIN,Paris
+100873,31/03/2022,Administrative Assistant,Administrative Assistant,33333,35999,Promotion,ADMIN,Paris
+100873,16/09/2023,Administrative Assistant,Facilities Coordinator,35999,36358,Lateral_Move,ADMIN,Paris
+100874,24/02/2023,,Administrative Assistant,,35356,Hire,ADMIN,Paris
+100875,01/01/2018,,Administrative Assistant,,35304,Hire,ADMIN,Paris
+100875,07/11/2023,Administrative Assistant,Executive Assistant,35304,35657,Lateral_Move,ADMIN,Paris
+100876,25/12/2019,,Administrative Assistant,,57544,Hire,ADMIN,Paris
+100876,07/09/2023,Administrative Assistant,Facilities Coordinator,57544,58119,Lateral_Move,ADMIN,Paris
+100876,19/11/2024,Facilities Coordinator,Facilities Coordinator,58119,58700,Lateral_Move,ADMIN,Paris
+100877,26/02/2016,,Administrative Assistant,,49537,Hire,ADMIN,Paris
+100877,25/09/2020,Administrative Assistant,Administrative Assistant,49537,53499,Promotion,ADMIN,Paris
+100877,04/05/2022,Administrative Assistant,Facilities Coordinator,53499,57778,Promotion,ADMIN,Paris
+100878,18/12/2018,,Administrative Assistant,,35884,Hire,ADMIN,Paris
+100878,13/03/2023,Administrative Assistant,Administrative Manager,35884,38754,Promotion,ADMIN,Paris
+100879,26/11/2021,,Administrative Assistant,,30137,Hire,ADMIN,Paris
+100879,24/12/2023,Administrative Assistant,Office Manager,30137,30438,Lateral_Move,ADMIN,Paris
+100880,08/10/2019,,Administrative Assistant,,48299,Hire,ADMIN,Paris
+100880,16/01/2023,Administrative Assistant,Executive Assistant,48299,45884,Demotion,ADMIN,Paris
+100881,31/08/2016,,Administrative Assistant,,35824,Hire,ADMIN,Paris
+100881,13/10/2018,Administrative Assistant,Office Manager,35824,36182,Lateral_Move,ADMIN,Paris
+100881,19/12/2019,Office Manager,Administrative Manager,36182,34372,Demotion,ADMIN,Paris
+100882,15/08/2016,,Administrative Assistant,,45577,Hire,ADMIN,Paris
+100882,04/03/2018,Administrative Assistant,Office Manager,45577,46032,Lateral_Move,ADMIN,Paris
+100883,30/12/2023,,Administrative Assistant,,53278,Hire,ADMIN,Paris
+100884,09/12/2015,,Administrative Assistant,,60902,Hire,ADMIN,Paris
+100884,30/10/2019,Administrative Assistant,Executive Assistant,60902,65774,Promotion,ADMIN,Paris
+100884,16/07/2022,Executive Assistant,Office Manager,65774,71035,Promotion,ADMIN,Paris
+100885,12/04/2017,,Administrative Assistant,,61130,Hire,ADMIN,Paris
+100885,04/04/2022,Administrative Assistant,Office Manager,61130,66020,Promotion,ADMIN,Paris
+100886,22/04/2018,,Administrative Assistant,,39138,Hire,ADMIN,Paris
+100886,20/04/2023,Administrative Assistant,Executive Assistant,39138,42269,Promotion,ADMIN,Paris
+100887,22/03/2023,,Administrative Assistant,,32814,Hire,ADMIN,Paris
+100888,01/08/2016,,Administrative Assistant,,55290,Hire,ADMIN,Paris
+100889,13/08/2019,,Administrative Assistant,,31707,Hire,ADMIN,Paris
+100889,28/10/2022,Administrative Assistant,Office Manager,31707,32024,Lateral_Move,ADMIN,Paris
+100889,27/02/2024,Office Manager,Facilities Coordinator,32024,30422,Demotion,ADMIN,Paris
+100890,14/02/2015,,Administrative Assistant,,62093,Hire,ADMIN,Paris
+100891,04/10/2016,,Administrative Assistant,,49490,Hire,ADMIN,Paris
+100891,11/05/2019,Administrative Assistant,Administrative Assistant,49490,53449,Promotion,ADMIN,Paris
+100892,26/05/2019,,Administrative Assistant,,53080,Hire,ADMIN,Paris
+100892,10/10/2023,Administrative Assistant,Executive Assistant,53080,57326,Promotion,ADMIN,Paris
+100893,04/10/2019,,Administrative Assistant,,31301,Hire,ADMIN,Paris
+100893,28/03/2022,Administrative Assistant,Executive Assistant,31301,31614,Lateral_Move,ADMIN,Paris
+100894,27/01/2021,,Administrative Assistant,,29231,Hire,ADMIN,Paris
+100894,06/06/2023,Administrative Assistant,Facilities Coordinator,29231,29523,Lateral_Move,ADMIN,Paris
+100894,24/07/2024,Facilities Coordinator,Office Manager,29523,31884,Promotion,ADMIN,Paris
+100895,07/01/2018,,Administrative Assistant,,51630,Hire,ADMIN,Paris
+100895,07/11/2019,Administrative Assistant,Administrative Manager,51630,55760,Promotion,ADMIN,Paris
+100896,10/08/2020,,Administrative Assistant,,39103,Hire,ADMIN,Paris
+100897,08/04/2015,,Administrative Assistant,,58737,Hire,ADMIN,Paris
+100897,24/10/2019,Administrative Assistant,Administrative Manager,58737,63435,Promotion,ADMIN,Paris
+100897,26/10/2021,Administrative Manager,Office Manager,63435,68509,Promotion,ADMIN,Paris
+100898,07/01/2022,,Administrative Assistant,,38936,Hire,ADMIN,Paris
+100899,07/01/2020,,Administrative Assistant,,52471,Hire,ADMIN,Paris
+100900,21/10/2021,,Administrative Assistant,,31188,Hire,ADMIN,Paris
+100901,08/07/2018,,Administrative Assistant,,29670,Hire,ADMIN,Paris
+100901,14/09/2024,Administrative Assistant,Administrative Assistant,29670,32043,Promotion,ADMIN,Paris
+100902,22/04/2020,,Administrative Assistant,,32464,Hire,ADMIN,Paris
+100902,12/11/2021,Administrative Assistant,Administrative Assistant,32464,35061,Promotion,ADMIN,Paris
+100902,01/02/2023,Administrative Assistant,Administrative Assistant,35061,35411,Lateral_Move,ADMIN,Paris
+100903,19/08/2022,,Administrative Assistant,,47788,Hire,ADMIN,Paris
+100903,21/01/2024,Administrative Assistant,Facilities Coordinator,47788,51611,Promotion,ADMIN,Paris
+100904,22/03/2022,,Administrative Assistant,,26705,Hire,ADMIN,Paris
+100905,02/07/2017,,Administrative Assistant,,51603,Hire,ADMIN,Paris
+100905,03/01/2022,Administrative Assistant,Office Manager,51603,55731,Promotion,ADMIN,Paris
+100905,02/07/2023,Office Manager,Executive Assistant,55731,56288,Lateral_Move,ADMIN,Paris
+100906,14/06/2019,,Administrative Assistant,,47552,Hire,ADMIN,Paris
+100906,25/11/2020,Administrative Assistant,Executive Assistant,47552,51356,Promotion,ADMIN,Paris
+100906,20/12/2023,Executive Assistant,Facilities Coordinator,51356,55464,Promotion,ADMIN,Paris
+100907,14/02/2018,,Administrative Assistant,,36166,Hire,ADMIN,Paris
+100907,13/03/2022,Administrative Assistant,Administrative Assistant,36166,34357,Demotion,ADMIN,Paris
+100907,25/10/2023,Administrative Assistant,Office Manager,34357,37105,Promotion,ADMIN,Paris
+100908,09/11/2023,,Administrative Assistant,,33473,Hire,ADMIN,Paris
+100908,12/11/2024,Administrative Assistant,Administrative Manager,33473,33807,Lateral_Move,ADMIN,Paris
+100909,03/08/2016,,Administrative Assistant,,49701,Hire,ADMIN,Paris
+100910,01/11/2018,,Administrative Assistant,,40239,Hire,ADMIN,Paris
+100910,09/09/2021,Administrative Assistant,Executive Assistant,40239,40641,Lateral_Move,ADMIN,Paris
+100910,11/05/2023,Executive Assistant,Executive Assistant,40641,43892,Promotion,ADMIN,Paris
+100911,23/12/2018,,Administrative Assistant,,62935,Hire,ADMIN,Paris
+100912,13/06/2022,,Administrative Assistant,,35284,Hire,ADMIN,Paris
+100912,06/04/2024,Administrative Assistant,Executive Assistant,35284,38106,Promotion,ADMIN,Paris
+100913,02/11/2020,,Administrative Assistant,,54148,Hire,ADMIN,Paris
+100913,10/12/2022,Administrative Assistant,Administrative Manager,54148,58479,Promotion,ADMIN,Paris
+100914,23/10/2022,,Administrative Assistant,,48413,Hire,ADMIN,Paris
+100914,02/08/2024,Administrative Assistant,Facilities Coordinator,48413,52286,Promotion,ADMIN,Paris
+100915,08/03/2015,,Administrative Assistant,,35613,Hire,ADMIN,Paris
+100916,30/01/2021,,Administrative Assistant,,36926,Hire,ADMIN,Paris
+100916,28/01/2023,Administrative Assistant,Administrative Manager,36926,39880,Promotion,ADMIN,Paris
+100917,12/04/2019,,Administrative Assistant,,48049,Hire,ADMIN,Paris
+100917,23/09/2021,Administrative Assistant,Office Manager,48049,51892,Promotion,ADMIN,Paris
+100918,09/03/2015,,Administrative Assistant,,53811,Hire,ADMIN,Paris
+100918,31/12/2021,Administrative Assistant,Office Manager,53811,58115,Promotion,ADMIN,Paris
+100919,08/07/2021,,Administrative Assistant,,41134,Hire,ADMIN,Paris
+100919,17/10/2022,Administrative Assistant,Administrative Assistant,41134,44424,Promotion,ADMIN,Paris
+100919,17/10/2024,Administrative Assistant,Facilities Coordinator,44424,44868,Lateral_Move,ADMIN,Paris
+100920,07/12/2018,,Administrative Assistant,,49209,Hire,ADMIN,Paris
+100920,18/09/2020,Administrative Assistant,Executive Assistant,49209,49701,Lateral_Move,ADMIN,Paris
+100920,27/10/2023,Executive Assistant,Facilities Coordinator,49701,53677,Promotion,ADMIN,Paris
+100921,19/12/2017,,Administrative Assistant,,28951,Hire,ADMIN,Paris
+100921,03/11/2020,Administrative Assistant,Office Manager,28951,31267,Promotion,ADMIN,Paris
+100922,25/04/2023,,Administrative Assistant,,58854,Hire,ADMIN,Paris
+100922,28/09/2024,Administrative Assistant,Facilities Coordinator,58854,55911,Demotion,ADMIN,Paris
+100923,27/12/2023,,Administrative Assistant,,53577,Hire,ADMIN,Paris
+100924,12/02/2016,,Administrative Assistant,,32110,Hire,ADMIN,Paris
+100924,08/10/2022,Administrative Assistant,Administrative Assistant,32110,34678,Promotion,ADMIN,Paris
+100924,17/04/2024,Administrative Assistant,Office Manager,34678,32944,Demotion,ADMIN,Paris
+100925,17/01/2016,,Administrative Assistant,,62592,Hire,ADMIN,Paris
+100925,25/04/2017,Administrative Assistant,Administrative Manager,62592,67599,Promotion,ADMIN,Paris
+100925,06/12/2018,Administrative Manager,Office Manager,67599,73006,Promotion,ADMIN,Paris
+100926,29/04/2023,,Administrative Assistant,,47869,Hire,ADMIN,Paris
+100927,22/02/2023,,Administrative Assistant,,34344,Hire,ADMIN,Paris
+100927,13/05/2024,Administrative Assistant,Administrative Manager,34344,34687,Lateral_Move,ADMIN,Paris
+100928,06/09/2021,,Administrative Assistant,,40839,Hire,ADMIN,Paris
+100929,04/07/2020,,Administrative Assistant,,52012,Hire,ADMIN,Paris
+100929,23/01/2022,Administrative Assistant,Facilities Coordinator,52012,56172,Promotion,ADMIN,Paris
+100929,04/07/2024,Facilities Coordinator,Executive Assistant,56172,60665,Promotion,ADMIN,Paris
+100930,06/01/2017,,Administrative Assistant,,59007,Hire,ADMIN,Paris
+100930,19/03/2022,Administrative Assistant,Administrative Manager,59007,59597,Lateral_Move,ADMIN,Paris
+100930,27/05/2024,Administrative Manager,Office Manager,59597,60192,Lateral_Move,ADMIN,Paris
+100931,10/10/2016,,Project Manager,,74993,Hire,MGMT,Paris
+100932,15/04/2016,,Project Manager,,73162,Hire,MGMT,Paris
+100932,17/02/2022,Project Manager,Chief Technology Officer,73162,73893,Lateral_Move,MGMT,Paris
+100933,12/01/2016,,Project Manager,,103652,Hire,MGMT,Paris
+100933,18/03/2019,Project Manager,Product Manager,103652,111944,Promotion,MGMT,Paris
+100933,21/09/2020,Product Manager,Program Director,111944,120899,Promotion,MGMT,Paris
+100934,17/01/2023,,Project Manager,,126837,Hire,MGMT,Paris
+100935,02/01/2020,,Project Manager,,67365,Hire,MGMT,Paris
+100936,16/11/2016,,Project Manager,,108883,Hire,MGMT,Paris
+100936,17/07/2019,Project Manager,Product Manager,108883,109971,Lateral_Move,MGMT,Paris
+100937,14/04/2016,,Project Manager,,78606,Hire,MGMT,Paris
+100938,15/05/2016,,Project Manager,,86219,Hire,MGMT,Paris
+100938,08/05/2019,Project Manager,Project Manager,86219,93116,Promotion,MGMT,Paris
+100939,30/09/2021,,Project Manager,,123910,Hire,MGMT,Paris
+100940,25/06/2023,,Project Manager,,76539,Hire,MGMT,Paris
+100940,06/07/2024,Project Manager,General Manager,76539,77304,Lateral_Move,MGMT,Paris
+100941,29/01/2020,,Project Manager,,107100,Hire,MGMT,Paris
+100942,20/06/2016,,Project Manager,,115957,Hire,MGMT,Paris
+100942,02/11/2020,Project Manager,VP Engineering,115957,117116,Lateral_Move,MGMT,Paris
+100942,06/10/2024,VP Engineering,Program Director,117116,118287,Lateral_Move,MGMT,Paris
+100943,28/08/2019,,Project Manager,,87731,Hire,MGMT,Paris
+100943,10/05/2023,Project Manager,Product Manager,87731,94749,Promotion,MGMT,Paris
+100943,08/10/2024,Product Manager,Project Manager,94749,95696,Lateral_Move,MGMT,Paris
+100944,07/05/2018,,Project Manager,,67415,Hire,MGMT,Paris
+100944,19/05/2023,Project Manager,General Manager,67415,68089,Lateral_Move,MGMT,Paris
+100944,26/08/2024,General Manager,General Manager,68089,73536,Promotion,MGMT,Paris
+100945,22/07/2016,,Project Manager,,83227,Hire,MGMT,Paris
+100945,12/11/2024,Project Manager,Project Manager,83227,79065,Demotion,MGMT,Paris
+100946,21/10/2023,,Project Manager,,81140,Hire,MGMT,Paris
+100947,17/07/2021,,Project Manager,,73363,Hire,MGMT,Paris
+100947,20/03/2024,Project Manager,Chief Technology Officer,73363,79232,Promotion,MGMT,Paris
+100948,01/12/2020,,Project Manager,,82532,Hire,MGMT,Paris
+100949,16/12/2018,,Project Manager,,81776,Hire,MGMT,Paris
+100949,27/05/2020,Project Manager,General Manager,81776,77687,Demotion,MGMT,Paris
+100949,05/09/2021,General Manager,VP Engineering,77687,83901,Promotion,MGMT,Paris
+100950,04/06/2017,,Project Manager,,108219,Hire,MGMT,Paris
+100950,26/04/2023,Project Manager,Program Director,108219,109301,Lateral_Move,MGMT,Paris
+100950,14/10/2024,Program Director,Program Director,109301,110394,Lateral_Move,MGMT,Paris
+100951,12/12/2022,,Project Manager,,69236,Hire,MGMT,Paris
+100951,25/02/2024,Project Manager,Chief Technology Officer,69236,69928,Lateral_Move,MGMT,Paris
+100952,30/09/2023,,Project Manager,,111176,Hire,MGMT,Paris
+100953,10/05/2023,,Project Manager,,78189,Hire,MGMT,Paris
+100953,04/11/2024,Project Manager,Product Manager,78189,84444,Promotion,MGMT,Paris
+100954,04/03/2021,,Project Manager,,98526,Hire,MGMT,Paris
+100954,28/07/2022,Project Manager,Chief Technology Officer,98526,106408,Promotion,MGMT,Paris
+100954,24/09/2023,Chief Technology Officer,Program Director,106408,114920,Promotion,MGMT,Paris
+100955,21/07/2015,,Project Manager,,82792,Hire,MGMT,Paris
+100955,22/07/2024,Project Manager,Chief Technology Officer,82792,83619,Lateral_Move,MGMT,Paris
+100956,11/11/2019,,Project Manager,,80154,Hire,MGMT,Paris
+100956,10/07/2023,Project Manager,Program Director,80154,86566,Promotion,MGMT,Paris
+100956,29/09/2024,Program Director,VP Engineering,86566,87431,Lateral_Move,MGMT,Paris
+100957,27/09/2015,,Project Manager,,102933,Hire,MGMT,Paris
+100957,16/04/2019,Project Manager,General Manager,102933,103962,Lateral_Move,MGMT,Paris
+100957,23/06/2022,General Manager,Chief Technology Officer,103962,98763,Demotion,MGMT,Paris
+100958,24/10/2023,,Project Manager,,84436,Hire,MGMT,Paris
+100959,04/09/2017,,Project Manager,,71194,Hire,MGMT,Paris
+100959,19/10/2020,Project Manager,Product Manager,71194,76889,Promotion,MGMT,Paris
+100959,07/10/2022,Product Manager,VP Engineering,76889,83040,Promotion,MGMT,Paris
+100960,28/12/2016,,Project Manager,,54560,Hire,MGMT,Paris
+100961,24/03/2016,,Project Manager,,123959,Hire,MGMT,Paris
+100961,15/06/2017,Project Manager,General Manager,123959,125198,Lateral_Move,MGMT,Paris
+100961,08/10/2019,General Manager,Program Director,125198,126449,Lateral_Move,MGMT,Paris
+100962,02/07/2020,,Project Manager,,87795,Hire,MGMT,Paris
+100963,08/09/2023,,Project Manager,,90957,Hire,MGMT,Paris
+100964,03/08/2016,,Project Manager,,124548,Hire,MGMT,Paris
+100964,27/01/2024,Project Manager,Chief Technology Officer,124548,125793,Lateral_Move,MGMT,Paris
+100965,28/03/2019,,Project Manager,,121679,Hire,MGMT,Paris
+100966,21/05/2019,,Project Manager,,80488,Hire,MGMT,Paris
+100967,10/05/2021,,Project Manager,,69576,Hire,MGMT,Paris
+100967,26/07/2024,Project Manager,Product Manager,69576,70271,Lateral_Move,MGMT,Paris
+100968,01/04/2018,,Project Manager,,110329,Hire,MGMT,Paris
+100968,31/12/2019,Project Manager,General Manager,110329,111432,Lateral_Move,MGMT,Paris
+100968,21/07/2023,General Manager,Chief Technology Officer,111432,112546,Lateral_Move,MGMT,Paris
+100969,26/08/2021,,Project Manager,,54883,Hire,MGMT,Paris
+100969,02/02/2024,Project Manager,Program Director,54883,55431,Lateral_Move,MGMT,Paris
+100970,06/03/2018,,Project Manager,,89114,Hire,MGMT,Paris
+100971,12/05/2015,,Project Manager,,93834,Hire,MGMT,Paris
+100971,13/06/2016,Project Manager,Product Manager,93834,101340,Promotion,MGMT,Paris
+100971,21/11/2023,Product Manager,Project Manager,101340,102353,Lateral_Move,MGMT,Paris
+100972,28/04/2021,,Project Manager,,68057,Hire,MGMT,Paris
+100973,03/06/2018,,Project Manager,,71135,Hire,MGMT,Paris
+100974,14/10/2022,,Project Manager,,94431,Hire,MGMT,Paris
+100975,07/08/2023,,Project Manager,,91145,Hire,MGMT,Paris
+100976,16/04/2018,,Project Manager,,105725,Hire,MGMT,Paris
+100976,19/08/2024,Project Manager,General Manager,105725,114183,Promotion,MGMT,Paris
+100977,11/01/2018,,Project Manager,,123397,Hire,MGMT,Paris
+100977,10/03/2020,Project Manager,General Manager,123397,133268,Promotion,MGMT,Paris
+100978,25/07/2022,,Project Manager,,114397,Hire,MGMT,Paris
+100978,25/04/2024,Project Manager,VP Engineering,114397,115540,Lateral_Move,MGMT,Paris
+100979,17/01/2022,,Project Manager,,81702,Hire,MGMT,Paris
+100980,16/04/2017,,Project Manager,,103328,Hire,MGMT,Paris
+100980,28/02/2021,Project Manager,Project Manager,103328,111594,Promotion,MGMT,Paris
+100980,05/11/2024,Project Manager,Program Director,111594,120521,Promotion,MGMT,Paris
+100981,17/02/2021,,Project Manager,,68657,Hire,MGMT,Paris
+100982,26/09/2020,,Project Manager,,101529,Hire,MGMT,Paris
+100982,27/02/2024,Project Manager,Chief Technology Officer,101529,109651,Promotion,MGMT,Paris
+100983,30/04/2019,,Project Manager,,106367,Hire,MGMT,Paris
+100983,17/09/2023,Project Manager,General Manager,106367,114876,Promotion,MGMT,Paris
+100983,30/11/2024,General Manager,Chief Technology Officer,114876,124066,Promotion,MGMT,Paris
+100984,05/07/2021,,Project Manager,,103141,Hire,MGMT,Paris
+100985,05/01/2019,,Project Manager,,124613,Hire,MGMT,Paris
+100985,16/11/2022,Project Manager,Chief Technology Officer,124613,134582,Promotion,MGMT,Paris
+100986,08/01/2023,,Project Manager,,89842,Hire,MGMT,Paris
+100986,29/11/2024,Project Manager,VP Engineering,89842,97029,Promotion,MGMT,Paris
+100987,23/05/2022,,Project Manager,,88895,Hire,MGMT,Paris
+100987,31/01/2024,Project Manager,Project Manager,88895,89783,Lateral_Move,MGMT,Paris
+100988,01/05/2015,,Project Manager,,72581,Hire,MGMT,Paris
+100988,21/03/2017,Project Manager,Chief Technology Officer,72581,73306,Lateral_Move,MGMT,Paris
+100989,07/03/2016,,Project Manager,,98714,Hire,MGMT,Paris
+100989,15/01/2022,Project Manager,VP Engineering,98714,99701,Lateral_Move,MGMT,Paris
+100990,24/07/2023,,Project Manager,,88519,Hire,MGMT,Paris
+100990,17/11/2024,Project Manager,Chief Technology Officer,88519,89404,Lateral_Move,MGMT,Paris
+100991,31/10/2017,,Project Manager,,78259,Hire,MGMT,Paris
+100992,01/07/2022,,Project Manager,,93359,Hire,MGMT,Paris
+100993,17/02/2017,,Project Manager,,103763,Hire,MGMT,Paris
+100994,21/03/2019,,Project Manager,,110872,Hire,MGMT,Paris
+100994,05/11/2024,Project Manager,Program Director,110872,119741,Promotion,MGMT,Paris
+100995,03/04/2015,,Project Manager,,98246,Hire,MGMT,Paris
+100996,15/09/2017,,Project Manager,,62215,Hire,MGMT,Paris
+100997,16/10/2018,,Project Manager,,68172,Hire,MGMT,Paris
+100997,05/10/2024,Project Manager,Program Director,68172,68853,Lateral_Move,MGMT,Paris
+100998,14/07/2020,,Project Manager,,61679,Hire,MGMT,Paris
+100998,30/01/2024,Project Manager,VP Engineering,61679,66613,Promotion,MGMT,Paris
+100999,13/01/2018,,Project Manager,,106922,Hire,MGMT,Paris
+100999,25/02/2021,Project Manager,VP Engineering,106922,115475,Promotion,MGMT,Paris
+101000,15/08/2015,,Project Manager,,118191,Hire,MGMT,Paris
+101000,21/03/2019,Project Manager,VP Engineering,118191,127646,Promotion,MGMT,Paris

@@ -2,7 +2,7 @@ package com.hrreporting;
 
 import com.formdev.flatlaf.FlatLightLaf;
 import com.hrreporting.db.DatabaseManager;
-import com.hrreporting.old_loaders.ETLPipeline;
+import com.hrreporting.etl.ETLPipeline;
 import com.hrreporting.ui.MainDashboard;
 
 import javax.swing.*;
@@ -37,7 +37,7 @@ public class Main {
             if (!DatabaseManager.isDatabasePopulated()) {
                 ETLPipeline.run();
             }
-            
+
             // Open the H2 database console. Access the console at http://localhost:8082 with JDBC URL: jdbc:h2:mem:hrdb, User Name: san, Password: (leave blank).
 //            org.h2.tools.Server.startWebServer(DatabaseManager.getConnection());
 //            DatabaseManager.close();

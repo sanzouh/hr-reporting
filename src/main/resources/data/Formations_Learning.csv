@@ -1,0 +1,2035 @@
+employee_id,employee_department,training_name,training_duration_days,training_cost_usd,start_date,completion_date,completion_status,site
+100001,R&D,Agile Scrum,5,737,2024-09-12,2024-09-22,Completed,Paris
+100002,R&D,Agile Scrum,3,702,2017-10-25,,InProgress,Paris
+100003,R&D,Agile Scrum,3,735,2018-10-23,,InProgress,Paris
+100003,R&D,Agile Scrum,2,747,2024-06-11,2024-06-22,Completed,Paris
+100004,R&D,Python Advanced,5,2483,2021-01-10,2021-01-16,Completed,Paris
+100005,R&D,Cloud Architecture,3,3011,2016-05-15,,Cancelled,Paris
+100006,R&D,Machine Learning,3,3416,2023-05-06,2023-05-10,Completed,Paris
+100007,R&D,Machine Learning,4,3618,2022-10-09,2022-10-15,Completed,Paris
+100008,R&D,Cloud Architecture,3,3432,2024-08-13,,Cancelled,Paris
+100008,R&D,Machine Learning,3,3018,2022-07-05,2022-07-11,Completed,Paris
+100008,R&D,Agile Scrum,3,801,2022-06-21,2022-07-01,Completed,Paris
+100009,R&D,SQL Optimization,2,1688,2023-08-07,,InProgress,Paris
+100009,R&D,DevOps CI/CD,2,1840,2022-03-08,2022-03-10,Completed,Paris
+100009,R&D,DevOps CI/CD,5,1760,2021-04-11,2021-04-27,Completed,Paris
+100010,R&D,SQL Optimization,1,1350,2021-01-26,,Cancelled,Paris
+100010,R&D,Machine Learning,2,3824,2019-11-12,,Cancelled,Paris
+100011,R&D,Python Advanced,5,2403,2021-03-25,2021-04-09,Completed,Paris
+100011,R&D,Python Advanced,3,2444,2024-02-04,2024-02-21,Completed,Paris
+100012,R&D,Agile Scrum,2,817,2017-12-29,2017-12-31,Completed,Paris
+100012,R&D,Cloud Architecture,5,2729,2018-12-12,,InProgress,Paris
+100013,R&D,Python Advanced,1,2343,2024-06-02,2024-06-10,Completed,Paris
+100014,R&D,Cloud Architecture,5,2791,2018-10-22,,Cancelled,Paris
+100014,R&D,Agile Scrum,3,828,2016-01-31,2016-02-12,Completed,Paris
+100014,R&D,SQL Optimization,1,1277,2017-10-07,2017-10-12,Completed,Paris
+100015,R&D,Python Advanced,1,2874,2022-03-25,2022-04-05,Completed,Paris
+100016,R&D,DevOps CI/CD,1,2163,2018-10-19,2018-10-31,Completed,Paris
+100016,R&D,DevOps CI/CD,5,2251,2017-07-23,2017-08-03,Completed,Paris
+100017,R&D,Machine Learning,4,3916,2017-06-23,2017-07-04,Completed,Paris
+100017,R&D,Machine Learning,4,3921,2016-02-03,2016-02-07,Completed,Paris
+100017,R&D,SQL Optimization,1,1289,2020-02-05,2020-02-12,Completed,Paris
+100018,R&D,Agile Scrum,2,893,2023-10-20,,InProgress,Paris
+100018,R&D,DevOps CI/CD,4,2083,2021-03-10,2021-03-23,Completed,Paris
+100018,R&D,Python Advanced,5,2752,2021-12-11,,InProgress,Paris
+100019,R&D,Machine Learning,4,3945,2023-07-01,2023-07-19,Completed,Paris
+100020,R&D,SQL Optimization,5,1370,2018-10-17,2018-11-02,Completed,Paris
+100020,R&D,Machine Learning,4,3221,2021-12-10,,InProgress,Paris
+100020,R&D,SQL Optimization,4,1613,2022-11-01,2022-11-06,Completed,Paris
+100021,R&D,Cloud Architecture,3,2657,2022-12-22,,InProgress,Paris
+100022,R&D,Cloud Architecture,3,3140,2024-04-06,,InProgress,Paris
+100022,R&D,DevOps CI/CD,4,2136,2023-01-29,2023-02-04,Completed,Paris
+100023,R&D,Cloud Architecture,3,2935,2021-02-15,,Cancelled,Paris
+100023,R&D,Agile Scrum,5,885,2018-09-08,,InProgress,Paris
+100024,R&D,Machine Learning,2,3856,2017-11-13,,InProgress,Paris
+100024,R&D,Machine Learning,3,3814,2019-10-18,2019-10-22,Completed,Paris
+100025,R&D,DevOps CI/CD,4,1959,2020-09-18,2020-09-27,Completed,Paris
+100026,R&D,SQL Optimization,5,1367,2020-03-20,,Cancelled,Paris
+100026,R&D,Agile Scrum,3,716,2021-09-17,2021-09-23,Completed,Paris
+100026,R&D,Machine Learning,5,3556,2021-03-05,2021-03-10,Completed,Paris
+100027,R&D,Machine Learning,5,3019,2022-08-13,,InProgress,Paris
+100027,R&D,Agile Scrum,2,728,2022-02-21,,InProgress,Paris
+100028,R&D,Agile Scrum,3,766,2020-07-21,2020-07-27,Completed,Paris
+100028,R&D,Agile Scrum,2,708,2017-09-15,2017-09-30,Completed,Paris
+100029,R&D,SQL Optimization,3,1570,2017-03-16,2017-03-25,Completed,Paris
+100029,R&D,Agile Scrum,3,697,2018-01-13,2018-01-25,Completed,Paris
+100030,R&D,Cloud Architecture,3,3435,2023-05-19,2023-06-01,Completed,Paris
+100030,R&D,SQL Optimization,1,1290,2024-08-27,,InProgress,Paris
+100031,R&D,Agile Scrum,2,835,2024-03-10,2024-03-14,Completed,Paris
+100031,R&D,Machine Learning,3,3213,2021-06-16,2021-07-03,Completed,Paris
+100032,R&D,DevOps CI/CD,3,1910,2024-06-23,2024-06-27,Completed,Paris
+100032,R&D,Cloud Architecture,1,3314,2019-03-27,,Cancelled,Paris
+100032,R&D,Python Advanced,2,2517,2018-01-23,,Cancelled,Paris
+100033,R&D,DevOps CI/CD,3,1931,2018-08-18,2018-08-23,Completed,Paris
+100033,R&D,Machine Learning,4,3598,2021-11-30,2021-12-14,Completed,Paris
+100034,R&D,DevOps CI/CD,3,1987,2021-08-07,,Cancelled,Paris
+100034,R&D,DevOps CI/CD,1,2047,2023-03-29,2023-04-04,Completed,Paris
+100034,R&D,Cloud Architecture,4,3203,2022-08-23,2022-09-10,Completed,Paris
+100035,R&D,Cloud Architecture,4,2962,2024-06-05,2024-06-21,Completed,Paris
+100035,R&D,Machine Learning,3,3188,2023-11-20,2023-12-02,Completed,Paris
+100036,R&D,Python Advanced,4,2581,2024-10-05,2024-10-23,Completed,Paris
+100036,R&D,Python Advanced,4,2530,2023-06-06,2023-06-15,Completed,Paris
+100037,R&D,Cloud Architecture,3,3273,2022-09-21,2022-10-01,Completed,Paris
+100037,R&D,Cloud Architecture,5,2952,2024-03-23,,Cancelled,Paris
+100038,R&D,SQL Optimization,2,1656,2023-09-08,2023-09-24,Completed,Paris
+100038,R&D,Machine Learning,2,3970,2020-05-06,,InProgress,Paris
+100039,R&D,DevOps CI/CD,5,2295,2024-08-19,,InProgress,Paris
+100039,R&D,SQL Optimization,3,1318,2024-04-26,,InProgress,Paris
+100039,R&D,Cloud Architecture,1,2955,2023-07-12,,InProgress,Paris
+100040,R&D,Cloud Architecture,3,3311,2023-06-02,2023-06-17,Completed,Paris
+100040,R&D,Python Advanced,2,2860,2024-06-09,2024-06-25,Completed,Paris
+100040,R&D,Python Advanced,2,2524,2021-12-30,2022-01-08,Completed,Paris
+100041,R&D,Machine Learning,1,3985,2023-11-21,2023-11-25,Completed,Paris
+100041,R&D,Agile Scrum,2,799,2024-01-26,2024-02-07,Completed,Paris
+100042,R&D,SQL Optimization,5,1321,2024-04-22,2024-04-27,Completed,Paris
+100043,R&D,Machine Learning,5,3802,2021-09-21,,Cancelled,Paris
+100043,R&D,DevOps CI/CD,1,2127,2022-08-15,2022-08-28,Completed,Paris
+100044,R&D,Machine Learning,2,3388,2024-10-23,,InProgress,Paris
+100044,R&D,Machine Learning,2,3262,2023-10-12,2023-10-24,Completed,Paris
+100044,R&D,Cloud Architecture,5,3322,2023-09-25,,Cancelled,Paris
+100045,R&D,Cloud Architecture,4,2606,2022-02-12,2022-02-24,Completed,Paris
+100045,R&D,Python Advanced,1,2251,2022-05-14,,Cancelled,Paris
+100046,R&D,DevOps CI/CD,5,1872,2020-04-02,2020-04-18,Completed,Paris
+100047,R&D,Agile Scrum,1,732,2023-01-29,,Cancelled,Paris
+100047,R&D,DevOps CI/CD,3,1786,2024-04-20,,Cancelled,Paris
+100048,R&D,SQL Optimization,4,1412,2022-05-02,,InProgress,Paris
+100049,R&D,Cloud Architecture,3,3182,2019-07-06,2019-07-15,Completed,Paris
+100049,R&D,SQL Optimization,4,1333,2020-09-13,2020-09-22,Completed,Paris
+100050,R&D,DevOps CI/CD,1,1947,2022-04-18,2022-04-27,Completed,Paris
+100050,R&D,Cloud Architecture,5,3092,2021-03-02,,InProgress,Paris
+100051,R&D,DevOps CI/CD,2,2116,2024-07-04,2024-07-10,Completed,Paris
+100051,R&D,DevOps CI/CD,1,2133,2020-04-06,2020-04-14,Completed,Paris
+100051,R&D,Machine Learning,1,3623,2024-09-07,,Cancelled,Paris
+100052,R&D,Cloud Architecture,1,2946,2023-02-05,,Cancelled,Paris
+100052,R&D,Machine Learning,1,3887,2023-08-29,2023-09-11,Completed,Paris
+100052,R&D,DevOps CI/CD,4,2041,2020-05-30,2020-06-08,Completed,Paris
+100053,R&D,SQL Optimization,5,1420,2022-01-22,,Cancelled,Paris
+100054,R&D,SQL Optimization,5,1414,2018-03-11,2018-03-27,Completed,Paris
+100054,R&D,DevOps CI/CD,2,1776,2021-06-12,2021-06-16,Completed,Paris
+100054,R&D,Agile Scrum,2,843,2017-09-07,,Cancelled,Paris
+100055,R&D,DevOps CI/CD,3,1914,2017-12-09,2017-12-13,Completed,Paris
+100055,R&D,Machine Learning,4,3269,2017-12-22,,Cancelled,Paris
+100055,R&D,Agile Scrum,2,779,2019-07-01,,InProgress,Paris
+100056,R&D,SQL Optimization,2,1582,2023-12-23,,InProgress,Paris
+100057,R&D,SQL Optimization,3,1427,2023-05-28,2023-06-01,Completed,Paris
+100057,R&D,Cloud Architecture,1,3236,2020-04-25,2020-05-08,Completed,Paris
+100058,R&D,Machine Learning,3,3103,2022-11-05,,Cancelled,Paris
+100059,R&D,SQL Optimization,4,1342,2023-05-29,,InProgress,Paris
+100060,R&D,SQL Optimization,4,1380,2024-05-13,2024-05-26,Completed,Paris
+100060,R&D,SQL Optimization,3,1506,2017-03-07,2017-03-13,Completed,Paris
+100060,R&D,Python Advanced,5,2229,2021-10-10,,Cancelled,Paris
+100061,R&D,Machine Learning,4,3443,2023-01-05,,Cancelled,Paris
+100062,R&D,Machine Learning,4,3185,2024-04-05,2024-04-18,Completed,Paris
+100062,R&D,Python Advanced,1,2320,2024-03-17,2024-03-26,Completed,Paris
+100062,R&D,DevOps CI/CD,1,2157,2024-02-08,2024-02-16,Completed,Paris
+100063,R&D,Agile Scrum,3,828,2022-02-14,,InProgress,Paris
+100063,R&D,Python Advanced,3,2756,2024-04-27,2024-05-01,Completed,Paris
+100063,R&D,Cloud Architecture,4,2670,2021-11-29,2021-12-15,Completed,Paris
+100064,R&D,Agile Scrum,2,788,2023-08-10,2023-08-22,Completed,Paris
+100065,R&D,DevOps CI/CD,4,2042,2020-02-20,,InProgress,Paris
+100065,R&D,Machine Learning,1,3476,2022-04-02,2022-04-15,Completed,Paris
+100066,R&D,Cloud Architecture,5,2855,2024-09-09,2024-09-15,Completed,Paris
+100067,R&D,SQL Optimization,5,1527,2024-07-19,,InProgress,Paris
+100067,R&D,Machine Learning,5,3976,2020-12-16,,Cancelled,Paris
+100067,R&D,SQL Optimization,3,1450,2020-11-12,2020-11-18,Completed,Paris
+100068,R&D,Agile Scrum,2,788,2022-01-23,2022-02-01,Completed,Paris
+100068,R&D,Machine Learning,1,3099,2024-06-11,2024-06-14,Completed,Paris
+100068,R&D,Agile Scrum,1,701,2024-03-27,2024-03-31,Completed,Paris
+100069,R&D,SQL Optimization,3,1368,2022-08-25,2022-09-11,Completed,Paris
+100069,R&D,Cloud Architecture,5,3160,2024-03-28,,InProgress,Paris
+100069,R&D,Python Advanced,2,2739,2023-04-26,2023-05-12,Completed,Paris
+100070,R&D,Python Advanced,5,2613,2023-01-21,,InProgress,Paris
+100070,R&D,Machine Learning,5,3037,2022-12-13,,Cancelled,Paris
+100071,R&D,Python Advanced,1,2862,2022-08-09,2022-08-13,Completed,Paris
+100071,R&D,Machine Learning,5,3755,2020-08-14,,InProgress,Paris
+100071,R&D,SQL Optimization,2,1643,2021-04-21,2021-05-04,Completed,Paris
+100072,R&D,Machine Learning,5,3699,2018-03-17,,Cancelled,Paris
+100072,R&D,SQL Optimization,5,1464,2022-11-28,,InProgress,Paris
+100072,R&D,DevOps CI/CD,2,1938,2023-04-18,2023-04-23,Completed,Paris
+100073,R&D,SQL Optimization,5,1279,2017-02-20,,Cancelled,Paris
+100073,R&D,Cloud Architecture,1,2614,2023-01-26,2023-02-09,Completed,Paris
+100073,R&D,Cloud Architecture,2,3205,2018-02-09,2018-02-20,Completed,Paris
+100074,R&D,SQL Optimization,1,1508,2023-04-16,,Cancelled,Paris
+100074,R&D,DevOps CI/CD,5,1750,2024-05-12,2024-05-19,Completed,Paris
+100074,R&D,Python Advanced,1,2442,2022-09-09,2022-09-24,Completed,Paris
+100075,R&D,Python Advanced,3,2666,2021-10-13,2021-10-27,Completed,Paris
+100075,R&D,Machine Learning,4,3852,2023-11-13,,Cancelled,Paris
+100076,R&D,Cloud Architecture,3,2788,2020-06-18,2020-06-27,Completed,Paris
+100076,R&D,Machine Learning,5,3506,2021-07-09,,Cancelled,Paris
+100076,R&D,DevOps CI/CD,5,1835,2020-11-16,2020-11-25,Completed,Paris
+100077,R&D,Cloud Architecture,2,2854,2018-12-24,2018-12-27,Completed,Paris
+100078,R&D,SQL Optimization,1,1503,2021-02-28,2021-03-12,Completed,Paris
+100078,R&D,Cloud Architecture,1,2820,2019-06-24,2019-07-09,Completed,Paris
+100079,R&D,SQL Optimization,4,1724,2022-09-17,,Cancelled,Paris
+100079,R&D,SQL Optimization,5,1351,2020-08-21,,Cancelled,Paris
+100079,R&D,SQL Optimization,3,1721,2021-11-11,2021-11-22,Completed,Paris
+100080,R&D,Machine Learning,2,3794,2024-04-24,,Cancelled,Paris
+100080,R&D,SQL Optimization,3,1285,2024-05-30,,Cancelled,Paris
+100080,R&D,Python Advanced,2,2275,2022-11-01,,Cancelled,Paris
+100081,R&D,Cloud Architecture,1,3059,2018-03-13,,InProgress,Paris
+100081,R&D,Python Advanced,5,2278,2016-12-21,,InProgress,Paris
+100081,R&D,Agile Scrum,1,879,2023-06-11,2023-06-23,Completed,Paris
+100082,R&D,SQL Optimization,4,1628,2023-10-09,,InProgress,Paris
+100082,R&D,DevOps CI/CD,3,1847,2024-09-13,2024-09-29,Completed,Paris
+100082,R&D,Python Advanced,3,2678,2024-08-03,2024-08-13,Completed,Paris
+100083,R&D,Python Advanced,4,2703,2018-12-13,2018-12-17,Completed,Paris
+100083,R&D,SQL Optimization,3,1575,2018-01-13,,Cancelled,Paris
+100084,R&D,SQL Optimization,2,1661,2021-07-22,2021-08-07,Completed,Paris
+100084,R&D,Agile Scrum,1,813,2024-06-03,,Cancelled,Paris
+100084,R&D,DevOps CI/CD,1,2022,2024-05-20,2024-05-27,Completed,Paris
+100085,R&D,Machine Learning,3,3520,2020-06-13,2020-06-20,Completed,Paris
+100086,R&D,SQL Optimization,2,1599,2018-02-02,2018-02-16,Completed,Paris
+100086,R&D,Agile Scrum,5,898,2020-04-25,,InProgress,Paris
+100086,R&D,Agile Scrum,3,780,2017-04-08,2017-04-15,Completed,Paris
+100087,R&D,SQL Optimization,3,1317,2023-10-17,,Cancelled,Paris
+100088,R&D,Machine Learning,4,3886,2023-11-26,,InProgress,Paris
+100088,R&D,DevOps CI/CD,4,1768,2024-09-11,,InProgress,Paris
+100089,R&D,Machine Learning,2,3710,2023-04-11,,Cancelled,Paris
+100090,R&D,Cloud Architecture,2,2990,2021-05-08,2021-05-20,Completed,Paris
+100090,R&D,Agile Scrum,4,918,2023-02-02,2023-02-15,Completed,Paris
+100090,R&D,Machine Learning,4,3824,2023-08-21,2023-08-31,Completed,Paris
+100091,R&D,Python Advanced,2,2570,2022-09-14,,Cancelled,Paris
+100091,R&D,DevOps CI/CD,5,1857,2022-08-21,2022-09-03,Completed,Paris
+100091,R&D,SQL Optimization,2,1698,2022-08-19,,InProgress,Paris
+100092,R&D,SQL Optimization,3,1608,2022-10-11,2022-10-19,Completed,Paris
+100092,R&D,Python Advanced,2,2576,2015-06-19,2015-07-03,Completed,Paris
+100093,R&D,Machine Learning,1,3231,2022-06-01,2022-06-15,Completed,Paris
+100093,R&D,Agile Scrum,3,749,2023-12-02,,Cancelled,Paris
+100093,R&D,Cloud Architecture,1,3336,2024-05-13,2024-05-27,Completed,Paris
+100094,R&D,Cloud Architecture,4,3216,2022-05-08,2022-05-14,Completed,Paris
+100094,R&D,Agile Scrum,4,760,2022-08-18,2022-08-24,Completed,Paris
+100095,R&D,SQL Optimization,5,1467,2021-07-01,,Cancelled,Paris
+100096,R&D,DevOps CI/CD,5,1833,2021-12-20,2022-01-06,Completed,Paris
+100096,R&D,DevOps CI/CD,2,1752,2019-12-04,2019-12-15,Completed,Paris
+100096,R&D,Machine Learning,1,3415,2021-03-26,2021-04-03,Completed,Paris
+100097,R&D,Python Advanced,1,2197,2023-07-01,2023-07-10,Completed,Paris
+100097,R&D,Machine Learning,3,3853,2022-08-11,2022-08-24,Completed,Paris
+100098,R&D,Agile Scrum,3,846,2023-07-31,2023-08-12,Completed,Paris
+100098,R&D,Machine Learning,5,3930,2021-12-27,2022-01-07,Completed,Paris
+100099,R&D,Machine Learning,3,3544,2022-03-02,2022-03-16,Completed,Paris
+100099,R&D,Agile Scrum,4,860,2022-07-17,2022-07-22,Completed,Paris
+100100,R&D,Agile Scrum,4,834,2022-01-07,,Cancelled,Paris
+100100,R&D,Machine Learning,3,3173,2024-02-16,,Cancelled,Paris
+100100,R&D,Cloud Architecture,5,2750,2024-08-30,,Cancelled,Paris
+100101,R&D,DevOps CI/CD,1,1735,2024-03-06,2024-03-09,Completed,Paris
+100102,R&D,Agile Scrum,5,898,2024-07-18,2024-07-24,Completed,Paris
+100102,R&D,Machine Learning,4,3434,2023-01-30,,Cancelled,Paris
+100102,R&D,Machine Learning,3,3933,2024-01-13,,InProgress,Paris
+100103,R&D,Cloud Architecture,4,3292,2023-10-06,2023-10-13,Completed,Paris
+100103,R&D,DevOps CI/CD,4,1930,2023-11-17,2023-12-01,Completed,Paris
+100103,R&D,DevOps CI/CD,3,2272,2023-07-15,2023-07-21,Completed,Paris
+100104,R&D,DevOps CI/CD,5,2255,2024-05-14,2024-05-28,Completed,Paris
+100104,R&D,Python Advanced,1,2480,2024-05-18,2024-05-21,Completed,Paris
+100105,R&D,Agile Scrum,5,899,2020-07-03,,Cancelled,Paris
+100105,R&D,Python Advanced,5,2796,2020-10-27,,InProgress,Paris
+100106,R&D,Agile Scrum,2,795,2024-01-26,,Cancelled,Paris
+100106,R&D,Machine Learning,1,3056,2023-06-08,2023-06-10,Completed,Paris
+100106,R&D,Python Advanced,1,2702,2023-04-22,2023-04-28,Completed,Paris
+100107,R&D,Agile Scrum,2,717,2020-02-05,,InProgress,Paris
+100107,R&D,Python Advanced,5,2247,2021-08-12,,Cancelled,Paris
+100108,R&D,Cloud Architecture,3,2552,2022-10-11,,Cancelled,Paris
+100109,R&D,Cloud Architecture,2,2948,2022-02-22,2022-03-01,Completed,Paris
+100109,R&D,Agile Scrum,4,880,2020-04-12,2020-04-18,Completed,Paris
+100109,R&D,Cloud Architecture,3,2631,2021-02-17,2021-02-26,Completed,Paris
+100110,R&D,Python Advanced,4,2592,2023-05-20,,Cancelled,Paris
+100111,R&D,Python Advanced,5,2308,2021-06-08,,InProgress,Paris
+100111,R&D,Cloud Architecture,3,2589,2024-10-27,2024-11-02,Completed,Paris
+100112,R&D,SQL Optimization,5,1604,2022-06-08,2022-06-24,Completed,Paris
+100113,R&D,Python Advanced,3,2344,2018-12-01,2018-12-06,Completed,Paris
+100114,R&D,DevOps CI/CD,5,2027,2017-08-13,2017-08-23,Completed,Paris
+100114,R&D,Machine Learning,3,3760,2017-12-29,,InProgress,Paris
+100114,R&D,Cloud Architecture,5,2570,2019-06-01,,InProgress,Paris
+100115,R&D,Cloud Architecture,1,3272,2018-05-20,,InProgress,Paris
+100116,R&D,Machine Learning,3,3828,2020-07-31,,InProgress,Paris
+100117,R&D,Python Advanced,4,2854,2024-09-24,2024-09-30,Completed,Paris
+100117,R&D,Cloud Architecture,1,3380,2024-08-17,2024-08-22,Completed,Paris
+100118,R&D,DevOps CI/CD,1,1768,2024-08-03,2024-08-04,Completed,Paris
+100118,R&D,Cloud Architecture,2,3286,2024-04-10,2024-04-17,Completed,Paris
+100118,R&D,SQL Optimization,2,1571,2023-09-24,,InProgress,Paris
+100119,R&D,SQL Optimization,5,1592,2016-06-22,2016-07-02,Completed,Paris
+100119,R&D,DevOps CI/CD,5,1762,2018-12-17,2018-12-22,Completed,Paris
+100119,R&D,SQL Optimization,5,1669,2020-07-29,2020-08-04,Completed,Paris
+100120,R&D,Machine Learning,3,3439,2021-12-15,2021-12-21,Completed,Paris
+100120,R&D,DevOps CI/CD,4,2065,2021-07-09,2021-07-20,Completed,Paris
+100121,R&D,Agile Scrum,1,732,2019-12-19,2019-12-29,Completed,Paris
+100121,R&D,DevOps CI/CD,1,1895,2024-04-05,2024-04-17,Completed,Paris
+100121,R&D,Agile Scrum,1,748,2022-06-30,2022-07-01,Completed,Paris
+100122,R&D,SQL Optimization,4,1416,2022-07-01,2022-07-07,Completed,Paris
+100122,R&D,Agile Scrum,4,783,2024-03-04,2024-03-11,Completed,Paris
+100122,R&D,Python Advanced,1,2653,2024-09-29,,InProgress,Paris
+100123,R&D,DevOps CI/CD,3,1713,2024-07-07,2024-07-24,Completed,Paris
+100123,R&D,Cloud Architecture,4,2735,2024-06-26,,Cancelled,Paris
+100124,R&D,Machine Learning,4,3166,2020-04-13,2020-04-22,Completed,Paris
+100124,R&D,Python Advanced,1,2759,2019-04-08,2019-04-23,Completed,Paris
+100124,R&D,SQL Optimization,4,1285,2020-12-13,2020-12-21,Completed,Paris
+100125,R&D,DevOps CI/CD,4,1841,2024-05-08,2024-05-13,Completed,Paris
+100126,R&D,Agile Scrum,4,803,2023-03-07,2023-03-21,Completed,Paris
+100126,R&D,Python Advanced,4,2339,2021-03-21,2021-03-25,Completed,Paris
+100127,R&D,Python Advanced,5,2874,2023-04-28,2023-05-03,Completed,Paris
+100127,R&D,Python Advanced,1,2541,2024-10-08,,InProgress,Paris
+100127,R&D,Machine Learning,4,2975,2022-12-13,2022-12-27,Completed,Paris
+100128,R&D,SQL Optimization,3,1511,2023-12-08,2023-12-14,Completed,Paris
+100129,R&D,Machine Learning,3,3077,2021-12-31,,Cancelled,Paris
+100129,R&D,Cloud Architecture,2,3025,2022-01-21,2022-01-24,Completed,Paris
+100129,R&D,SQL Optimization,3,1428,2022-06-30,,Cancelled,Paris
+100130,R&D,DevOps CI/CD,4,2266,2020-10-22,,Cancelled,Paris
+100130,R&D,DevOps CI/CD,2,1737,2022-11-01,,InProgress,Paris
+100130,R&D,SQL Optimization,2,1540,2019-06-11,2019-06-25,Completed,Paris
+100131,R&D,Machine Learning,4,3604,2024-09-12,2024-09-17,Completed,Paris
+100131,R&D,Python Advanced,3,2420,2023-02-04,2023-02-13,Completed,Paris
+100132,R&D,DevOps CI/CD,3,1983,2023-12-01,2023-12-08,Completed,Paris
+100133,R&D,Python Advanced,5,2300,2020-05-16,2020-06-02,Completed,Paris
+100134,R&D,Agile Scrum,2,734,2019-06-25,2019-07-07,Completed,Paris
+100135,R&D,Python Advanced,4,2548,2022-04-22,,Cancelled,Paris
+100135,R&D,Cloud Architecture,3,3352,2020-12-07,2020-12-15,Completed,Paris
+100135,R&D,SQL Optimization,3,1701,2020-09-16,2020-10-03,Completed,Paris
+100136,R&D,DevOps CI/CD,5,2089,2022-02-03,,InProgress,Paris
+100136,R&D,Python Advanced,3,2773,2024-02-12,2024-02-28,Completed,Paris
+100137,R&D,SQL Optimization,3,1516,2022-10-27,,Cancelled,Paris
+100137,R&D,Cloud Architecture,3,2713,2017-10-12,2017-10-17,Completed,Paris
+100138,R&D,Python Advanced,5,2532,2022-03-12,,InProgress,Paris
+100138,R&D,SQL Optimization,1,1593,2020-12-10,2020-12-16,Completed,Paris
+100138,R&D,SQL Optimization,4,1307,2021-11-10,2021-11-27,Completed,Paris
+100139,R&D,Agile Scrum,3,878,2022-01-16,2022-01-23,Completed,Paris
+100139,R&D,Machine Learning,3,3311,2022-06-16,,Cancelled,Paris
+100140,R&D,Machine Learning,4,3881,2023-06-04,,Cancelled,Paris
+100140,R&D,SQL Optimization,3,1654,2020-05-18,,Cancelled,Paris
+100141,R&D,SQL Optimization,2,1659,2024-08-06,2024-08-15,Completed,Paris
+100141,R&D,SQL Optimization,5,1339,2022-11-07,2022-11-23,Completed,Paris
+100142,R&D,DevOps CI/CD,3,2044,2018-03-07,2018-03-12,Completed,Paris
+100143,R&D,Python Advanced,3,2558,2024-03-29,2024-04-04,Completed,Paris
+100143,R&D,Machine Learning,2,3447,2024-05-12,,InProgress,Paris
+100143,R&D,SQL Optimization,3,1364,2023-04-16,,Cancelled,Paris
+100144,R&D,Machine Learning,5,2994,2024-06-27,2024-07-12,Completed,Paris
+100145,R&D,DevOps CI/CD,2,2057,2023-07-15,2023-07-19,Completed,Paris
+100146,R&D,SQL Optimization,5,1296,2023-01-03,,Cancelled,Paris
+100146,R&D,Machine Learning,2,3524,2023-03-10,2023-03-21,Completed,Paris
+100146,R&D,Machine Learning,2,3576,2022-10-10,2022-10-12,Completed,Paris
+100147,R&D,DevOps CI/CD,4,1791,2023-08-16,2023-08-22,Completed,Paris
+100147,R&D,Agile Scrum,5,711,2023-03-03,2023-03-19,Completed,Paris
+100148,R&D,Agile Scrum,3,718,2019-03-11,2019-03-27,Completed,Paris
+100148,R&D,Machine Learning,2,3940,2019-06-30,2019-07-11,Completed,Paris
+100149,R&D,DevOps CI/CD,5,1722,2024-08-30,,Cancelled,Paris
+100149,R&D,Cloud Architecture,1,2861,2024-08-02,2024-08-11,Completed,Paris
+100149,R&D,Machine Learning,2,3518,2024-04-03,2024-04-07,Completed,Paris
+100150,R&D,DevOps CI/CD,3,2197,2019-09-30,2019-10-04,Completed,Paris
+100151,R&D,SQL Optimization,1,1336,2024-07-20,,InProgress,Paris
+100151,R&D,Cloud Architecture,2,2914,2024-01-19,2024-01-21,Completed,Paris
+100151,R&D,Cloud Architecture,1,2703,2023-08-27,,InProgress,Paris
+100152,R&D,Python Advanced,5,2519,2022-03-10,,Cancelled,Paris
+100152,R&D,Machine Learning,5,3657,2023-07-05,,Cancelled,Paris
+100153,R&D,Cloud Architecture,2,3104,2024-09-23,,Cancelled,Paris
+100153,R&D,Python Advanced,4,2249,2024-04-15,2024-04-21,Completed,Paris
+100153,R&D,Cloud Architecture,4,3196,2023-12-13,,InProgress,Paris
+100154,R&D,Agile Scrum,3,770,2024-05-16,2024-05-20,Completed,Paris
+100154,R&D,Machine Learning,2,3278,2022-11-23,2022-11-26,Completed,Paris
+100154,R&D,Machine Learning,5,3359,2022-10-26,,InProgress,Paris
+100155,R&D,DevOps CI/CD,4,1863,2022-03-12,,Cancelled,Paris
+100155,R&D,Cloud Architecture,2,2914,2024-03-09,2024-03-20,Completed,Paris
+100155,R&D,Python Advanced,3,2354,2021-02-19,2021-02-23,Completed,Paris
+100156,R&D,Cloud Architecture,4,3049,2020-11-09,2020-11-26,Completed,Paris
+100156,R&D,DevOps CI/CD,3,1975,2022-10-26,2022-10-29,Completed,Paris
+100157,R&D,Machine Learning,3,3303,2024-04-28,2024-05-14,Completed,Paris
+100157,R&D,Agile Scrum,2,852,2022-06-10,2022-06-18,Completed,Paris
+100158,R&D,DevOps CI/CD,1,2142,2015-09-19,,Cancelled,Paris
+100158,R&D,SQL Optimization,1,1368,2015-05-06,2015-05-12,Completed,Paris
+100158,R&D,Python Advanced,1,2187,2016-02-08,,InProgress,Paris
+100159,R&D,Cloud Architecture,5,3031,2020-02-19,2020-03-01,Completed,Paris
+100160,R&D,Machine Learning,1,3522,2023-08-07,,InProgress,Paris
+100160,R&D,Machine Learning,2,3270,2024-09-06,2024-09-16,Completed,Paris
+100160,R&D,Python Advanced,2,2468,2024-04-10,2024-04-14,Completed,Paris
+100161,R&D,Python Advanced,4,2399,2022-02-10,,Cancelled,Paris
+100162,R&D,Cloud Architecture,2,2731,2017-09-07,,Cancelled,Paris
+100162,R&D,Cloud Architecture,1,3020,2019-05-13,,Cancelled,Paris
+100163,R&D,DevOps CI/CD,5,2274,2017-01-25,2017-02-11,Completed,Paris
+100163,R&D,DevOps CI/CD,2,2168,2022-12-03,2022-12-11,Completed,Paris
+100164,R&D,SQL Optimization,1,1485,2024-01-19,2024-02-01,Completed,Paris
+100164,R&D,Machine Learning,2,3061,2023-06-23,2023-07-05,Completed,Paris
+100165,R&D,SQL Optimization,3,1568,2022-11-23,2022-12-07,Completed,Paris
+100166,R&D,DevOps CI/CD,5,1744,2022-03-22,2022-03-31,Completed,Paris
+100166,R&D,Machine Learning,2,3557,2022-03-05,2022-03-21,Completed,Paris
+100166,R&D,Python Advanced,2,2280,2021-01-25,2021-02-04,Completed,Paris
+100167,R&D,DevOps CI/CD,2,1987,2024-09-30,2024-10-08,Completed,Paris
+100168,R&D,Agile Scrum,5,811,2024-06-21,,InProgress,Paris
+100168,R&D,Machine Learning,2,3958,2024-02-07,2024-02-09,Completed,Paris
+100169,R&D,Python Advanced,4,2315,2020-11-04,2020-11-22,Completed,Paris
+100170,R&D,SQL Optimization,2,1551,2019-08-28,,InProgress,Paris
+100170,R&D,Agile Scrum,2,680,2019-11-25,2019-11-30,Completed,Paris
+100170,R&D,Agile Scrum,2,862,2019-04-23,,Cancelled,Paris
+100171,R&D,SQL Optimization,5,1554,2021-07-26,2021-08-14,Completed,Paris
+100171,R&D,DevOps CI/CD,1,1867,2022-07-11,2022-07-13,Completed,Paris
+100171,R&D,DevOps CI/CD,4,2275,2021-11-01,2021-11-12,Completed,Paris
+100172,R&D,DevOps CI/CD,3,1991,2018-05-25,2018-06-01,Completed,Paris
+100173,R&D,Agile Scrum,3,689,2020-05-19,2020-06-04,Completed,Paris
+100174,R&D,Cloud Architecture,5,2962,2020-06-14,2020-06-28,Completed,Paris
+100174,R&D,Cloud Architecture,3,3011,2022-04-18,2022-05-04,Completed,Paris
+100175,R&D,Cloud Architecture,5,3183,2023-08-10,,Cancelled,Paris
+100175,R&D,Cloud Architecture,2,3278,2023-08-06,,InProgress,Paris
+100176,R&D,SQL Optimization,3,1670,2018-02-09,2018-02-14,Completed,Paris
+100176,R&D,DevOps CI/CD,3,2159,2021-08-25,,Cancelled,Paris
+100176,R&D,DevOps CI/CD,2,1979,2019-06-28,2019-07-14,Completed,Paris
+100177,R&D,DevOps CI/CD,5,2293,2022-03-11,,InProgress,Paris
+100177,R&D,Cloud Architecture,2,2687,2024-09-28,2024-10-12,Completed,Paris
+100178,R&D,Agile Scrum,3,877,2016-12-18,2016-12-31,Completed,Paris
+100178,R&D,SQL Optimization,2,1604,2022-03-04,2022-03-19,Completed,Paris
+100178,R&D,Machine Learning,2,4024,2018-10-08,2018-10-14,Completed,Paris
+100179,R&D,Cloud Architecture,1,3139,2024-05-01,2024-05-15,Completed,Paris
+100180,R&D,Machine Learning,4,3369,2023-09-23,2023-10-06,Completed,Paris
+100180,R&D,Python Advanced,4,2550,2022-05-22,,InProgress,Paris
+100180,R&D,Agile Scrum,2,799,2024-02-24,2024-03-05,Completed,Paris
+100181,R&D,Agile Scrum,3,775,2021-08-27,,Cancelled,Paris
+100181,R&D,Cloud Architecture,2,3145,2021-02-01,2021-02-05,Completed,Paris
+100181,R&D,DevOps CI/CD,2,2201,2024-09-14,2024-09-28,Completed,Paris
+100182,R&D,Python Advanced,4,2814,2023-08-14,2023-08-31,Completed,Paris
+100182,R&D,DevOps CI/CD,3,1715,2023-03-24,,InProgress,Paris
+100182,R&D,Agile Scrum,2,714,2023-08-23,2023-09-07,Completed,Paris
+100183,R&D,Cloud Architecture,3,3117,2022-10-14,2022-10-28,Completed,Paris
+100183,R&D,SQL Optimization,5,1616,2020-03-31,2020-04-05,Completed,Paris
+100183,R&D,Agile Scrum,5,750,2023-06-26,,InProgress,Paris
+100184,R&D,Python Advanced,4,2309,2023-10-26,2023-11-04,Completed,Paris
+100184,R&D,Machine Learning,3,3981,2023-07-10,,Cancelled,Paris
+100184,R&D,Cloud Architecture,5,2747,2023-08-03,2023-08-18,Completed,Paris
+100185,R&D,SQL Optimization,1,1401,2021-07-12,2021-07-16,Completed,Paris
+100185,R&D,Python Advanced,5,2394,2017-05-24,2017-05-29,Completed,Paris
+100185,R&D,Machine Learning,5,3350,2021-05-25,2021-06-06,Completed,Paris
+100186,R&D,DevOps CI/CD,5,2171,2024-02-21,,Cancelled,Paris
+100186,R&D,Machine Learning,5,3470,2023-05-10,2023-05-16,Completed,Paris
+100186,R&D,Python Advanced,3,2170,2021-11-30,,InProgress,Paris
+100187,R&D,DevOps CI/CD,1,1965,2020-05-08,2020-05-22,Completed,Paris
+100187,R&D,Python Advanced,3,2339,2023-08-05,,InProgress,Paris
+100188,R&D,Agile Scrum,2,845,2023-11-06,,Cancelled,Paris
+100188,R&D,Machine Learning,4,3102,2024-08-02,,InProgress,Paris
+100188,R&D,DevOps CI/CD,5,2214,2023-09-16,2023-09-29,Completed,Paris
+100189,R&D,Cloud Architecture,1,3170,2018-04-28,,Cancelled,Paris
+100190,R&D,Cloud Architecture,5,2759,2022-10-19,,InProgress,Paris
+100190,R&D,Cloud Architecture,1,2847,2020-10-25,2020-11-01,Completed,Paris
+100191,R&D,SQL Optimization,2,1673,2021-03-23,2021-03-28,Completed,Paris
+100191,R&D,DevOps CI/CD,4,1969,2021-02-10,,InProgress,Paris
+100192,R&D,Python Advanced,5,2809,2024-09-19,2024-09-30,Completed,Paris
+100192,R&D,Agile Scrum,4,812,2023-08-18,2023-08-29,Completed,Paris
+100193,R&D,SQL Optimization,4,1429,2022-10-10,,InProgress,Paris
+100193,R&D,Cloud Architecture,3,3332,2023-10-26,,InProgress,Paris
+100194,R&D,SQL Optimization,2,1522,2020-07-24,,InProgress,Paris
+100195,R&D,Cloud Architecture,1,2733,2021-10-30,,InProgress,Paris
+100195,R&D,Agile Scrum,2,772,2020-05-18,,Cancelled,Paris
+100195,R&D,Machine Learning,4,3250,2021-11-16,2021-12-04,Completed,Paris
+100196,R&D,DevOps CI/CD,3,1789,2020-04-18,,InProgress,Paris
+100197,R&D,Python Advanced,5,2729,2023-04-08,2023-04-15,Completed,Paris
+100197,R&D,Agile Scrum,2,720,2019-08-18,,InProgress,Paris
+100198,R&D,Agile Scrum,4,851,2024-01-18,,Cancelled,Paris
+100198,R&D,Python Advanced,5,2339,2023-08-28,2023-09-04,Completed,Paris
+100199,R&D,DevOps CI/CD,1,1763,2024-08-15,,Cancelled,Paris
+100199,R&D,DevOps CI/CD,5,2164,2019-05-07,2019-05-23,Completed,Paris
+100200,R&D,Cloud Architecture,3,3180,2022-01-02,2022-01-06,Completed,Paris
+100201,R&D,DevOps CI/CD,2,2295,2024-08-01,2024-08-17,Completed,Paris
+100201,R&D,Agile Scrum,1,722,2022-05-01,2022-05-10,Completed,Paris
+100201,R&D,DevOps CI/CD,4,1811,2023-04-01,2023-04-06,Completed,Paris
+100202,R&D,Machine Learning,5,3099,2022-03-04,,InProgress,Paris
+100202,R&D,SQL Optimization,3,1518,2019-11-21,2019-11-28,Completed,Paris
+100202,R&D,Cloud Architecture,1,3381,2020-03-20,2020-04-02,Completed,Paris
+100203,R&D,SQL Optimization,4,1560,2022-09-04,,Cancelled,Paris
+100204,R&D,Python Advanced,2,2424,2022-09-26,,InProgress,Paris
+100204,R&D,DevOps CI/CD,4,2296,2018-04-03,,InProgress,Paris
+100204,R&D,Cloud Architecture,3,3383,2021-12-04,2021-12-13,Completed,Paris
+100205,R&D,Machine Learning,1,3111,2023-01-05,2023-01-19,Completed,Paris
+100205,R&D,Python Advanced,4,2484,2019-01-14,2019-01-30,Completed,Paris
+100205,R&D,Agile Scrum,3,786,2018-03-05,2018-03-22,Completed,Paris
+100206,R&D,Agile Scrum,4,802,2018-07-18,2018-07-29,Completed,Paris
+100207,R&D,Cloud Architecture,5,2781,2022-06-19,2022-07-02,Completed,Paris
+100208,R&D,Agile Scrum,3,707,2022-05-14,2022-05-28,Completed,Paris
+100209,R&D,Agile Scrum,4,904,2018-01-12,,InProgress,Paris
+100209,R&D,Python Advanced,5,2405,2021-11-28,2021-12-03,Completed,Paris
+100209,R&D,Cloud Architecture,4,2579,2019-08-16,2019-09-03,Completed,Paris
+100210,R&D,Python Advanced,4,2188,2021-10-23,,InProgress,Paris
+100210,R&D,DevOps CI/CD,1,1957,2021-04-06,2021-04-15,Completed,Paris
+100211,R&D,Cloud Architecture,3,3052,2022-09-30,,InProgress,Paris
+100211,R&D,Python Advanced,3,2204,2024-02-20,2024-03-03,Completed,Paris
+100211,R&D,Python Advanced,5,2603,2022-12-18,,Cancelled,Paris
+100212,R&D,DevOps CI/CD,1,1969,2019-03-09,2019-03-13,Completed,Paris
+100212,R&D,DevOps CI/CD,1,1789,2021-11-30,2021-12-06,Completed,Paris
+100213,R&D,SQL Optimization,3,1619,2024-09-25,2024-10-07,Completed,Paris
+100213,R&D,DevOps CI/CD,2,1737,2024-04-18,2024-05-03,Completed,Paris
+100213,R&D,Agile Scrum,4,715,2023-07-27,2023-08-08,Completed,Paris
+100214,R&D,Agile Scrum,2,712,2020-05-22,,InProgress,Paris
+100214,R&D,DevOps CI/CD,3,1823,2015-09-24,,Cancelled,Paris
+100215,R&D,SQL Optimization,4,1723,2017-01-05,2017-01-12,Completed,Paris
+100215,R&D,Machine Learning,2,3287,2021-03-04,,Cancelled,Paris
+100215,R&D,Python Advanced,1,2193,2023-03-10,,Cancelled,Paris
+100216,R&D,Machine Learning,1,3088,2020-02-03,,InProgress,Paris
+100216,R&D,SQL Optimization,1,1470,2019-10-25,2019-11-03,Completed,Paris
+100216,R&D,DevOps CI/CD,2,2241,2021-03-06,,InProgress,Paris
+100217,R&D,DevOps CI/CD,2,1705,2020-08-10,2020-08-20,Completed,Paris
+100217,R&D,Machine Learning,1,3923,2021-08-17,,InProgress,Paris
+100218,R&D,Cloud Architecture,2,2965,2024-10-28,,Cancelled,Paris
+100219,R&D,SQL Optimization,1,1326,2024-09-21,2024-09-26,Completed,Paris
+100219,R&D,Python Advanced,5,2324,2023-04-12,,InProgress,Paris
+100219,R&D,Python Advanced,1,2163,2024-03-20,2024-03-29,Completed,Paris
+100220,R&D,Cloud Architecture,5,2782,2021-09-30,2021-10-08,Completed,Paris
+100220,R&D,Python Advanced,2,2280,2023-02-11,2023-02-24,Completed,Paris
+100221,Sales,CRM Salesforce,2,846,2023-07-24,2023-08-06,Completed,Milan
+100221,Sales,Presentation Skills,1,648,2023-05-05,2023-05-08,Completed,Milan
+100221,Sales,Customer Success,2,914,2023-09-10,,Cancelled,Milan
+100222,Sales,B2B Sales Strategy,1,890,2022-07-03,,Cancelled,Milan
+100222,Sales,CRM Salesforce,5,933,2020-08-24,2020-09-04,Completed,Milan
+100223,Sales,CRM Salesforce,4,999,2018-08-07,2018-08-15,Completed,Milan
+100223,Sales,Customer Success,3,707,2019-03-22,2019-04-02,Completed,Milan
+100223,Sales,B2B Sales Strategy,3,1132,2019-11-02,2019-11-18,Completed,Milan
+100224,Sales,Negotiation Techniques,3,1262,2019-10-22,,InProgress,Milan
+100224,Sales,Presentation Skills,1,749,2022-02-24,2022-03-03,Completed,Milan
+100224,Sales,CRM Salesforce,3,782,2023-03-30,2023-04-13,Completed,Milan
+100225,Sales,Presentation Skills,1,718,2024-05-24,2024-06-04,Completed,Milan
+100225,Sales,Customer Success,3,857,2019-05-24,2019-06-05,Completed,Milan
+100225,Sales,Sales Leadership,5,1358,2023-03-06,,InProgress,Milan
+100226,Sales,Sales Leadership,1,1531,2024-03-10,2024-03-13,Completed,Milan
+100226,Sales,B2B Sales Strategy,2,932,2023-10-10,2023-10-13,Completed,Milan
+100227,Sales,Negotiation Techniques,1,1214,2021-01-20,,Cancelled,Milan
+100228,Sales,CRM Salesforce,5,809,2024-07-02,,Cancelled,Milan
+100228,Sales,Sales Leadership,5,1313,2020-06-06,2020-06-20,Completed,Milan
+100229,Sales,Negotiation Techniques,3,1130,2022-08-12,2022-08-28,Completed,Milan
+100229,Sales,Negotiation Techniques,1,1208,2023-03-05,,Cancelled,Milan
+100229,Sales,Presentation Skills,4,740,2023-05-22,2023-06-04,Completed,Milan
+100230,Sales,B2B Sales Strategy,3,1031,2023-10-10,2023-10-20,Completed,Milan
+100230,Sales,Presentation Skills,4,781,2024-07-01,2024-07-14,Completed,Milan
+100230,Sales,Presentation Skills,4,706,2024-09-13,,InProgress,Milan
+100231,Sales,Presentation Skills,2,732,2024-02-29,2024-03-08,Completed,Milan
+100231,Sales,B2B Sales Strategy,4,1027,2024-09-05,,Cancelled,Milan
+100232,Sales,Presentation Skills,2,671,2022-02-27,,InProgress,Milan
+100233,Sales,Customer Success,2,731,2023-10-09,2023-10-20,Completed,Milan
+100234,Sales,Customer Success,4,680,2024-10-03,,Cancelled,Milan
+100234,Sales,Presentation Skills,5,802,2023-07-05,2023-07-21,Completed,Milan
+100234,Sales,Negotiation Techniques,1,1279,2022-09-17,2022-09-25,Completed,Milan
+100235,Sales,CRM Salesforce,4,855,2017-12-15,,InProgress,Milan
+100236,Sales,CRM Salesforce,4,900,2024-06-01,2024-06-17,Completed,Milan
+100236,Sales,Presentation Skills,3,668,2021-08-26,,Cancelled,Milan
+100237,Sales,Sales Leadership,3,1626,2021-12-06,2021-12-18,Completed,Milan
+100237,Sales,Presentation Skills,3,796,2024-08-06,2024-08-14,Completed,Milan
+100237,Sales,Negotiation Techniques,3,1288,2022-09-09,2022-09-25,Completed,Milan
+100238,Sales,CRM Salesforce,1,793,2021-08-07,,Cancelled,Milan
+100238,Sales,B2B Sales Strategy,4,941,2024-04-16,2024-05-02,Completed,Milan
+100239,Sales,Sales Leadership,3,1644,2023-08-19,2023-08-30,Completed,Milan
+100239,Sales,CRM Salesforce,1,897,2022-04-20,2022-05-02,Completed,Milan
+100240,Sales,Sales Leadership,5,1427,2024-05-27,2024-06-12,Completed,Milan
+100240,Sales,Negotiation Techniques,4,1024,2022-12-10,2022-12-19,Completed,Milan
+100241,Sales,Negotiation Techniques,4,1245,2019-01-31,,Cancelled,Milan
+100242,Sales,CRM Salesforce,2,789,2024-10-24,2024-11-08,Completed,Milan
+100243,Sales,B2B Sales Strategy,4,985,2019-09-16,2019-10-04,Completed,Milan
+100243,Sales,Customer Success,3,890,2022-08-18,2022-08-31,Completed,Milan
+100244,Sales,Customer Success,4,761,2018-10-22,,Cancelled,Milan
+100244,Sales,Sales Leadership,4,1681,2020-01-22,2020-02-05,Completed,Milan
+100244,Sales,Customer Success,5,841,2017-06-06,2017-06-14,Completed,Milan
+100245,Sales,Presentation Skills,5,614,2021-04-07,2021-04-13,Completed,Milan
+100246,Sales,Negotiation Techniques,4,1194,2022-12-09,2022-12-16,Completed,Milan
+100246,Sales,Sales Leadership,4,1321,2022-03-17,2022-03-25,Completed,Milan
+100246,Sales,Customer Success,5,722,2018-07-02,2018-07-19,Completed,Milan
+100247,Sales,Negotiation Techniques,5,1312,2020-11-30,2020-12-17,Completed,Milan
+100248,Sales,Customer Success,4,711,2022-07-21,2022-07-28,Completed,Milan
+100249,Sales,CRM Salesforce,2,929,2024-01-29,2024-02-12,Completed,Milan
+100249,Sales,CRM Salesforce,5,984,2022-06-30,,Cancelled,Milan
+100249,Sales,Sales Leadership,1,1582,2020-03-27,2020-03-28,Completed,Milan
+100250,Sales,CRM Salesforce,4,915,2018-03-09,,Cancelled,Milan
+100250,Sales,Customer Success,4,907,2020-11-06,2020-11-21,Completed,Milan
+100251,Sales,Presentation Skills,4,767,2018-12-10,,Cancelled,Milan
+100252,Sales,Customer Success,5,773,2022-03-10,,InProgress,Milan
+100252,Sales,Negotiation Techniques,5,1190,2023-04-02,2023-04-08,Completed,Milan
+100253,Sales,CRM Salesforce,4,806,2023-03-14,,Cancelled,Milan
+100253,Sales,Presentation Skills,4,717,2023-10-27,,InProgress,Milan
+100254,Sales,Sales Leadership,5,1661,2023-11-28,2023-12-16,Completed,Milan
+100254,Sales,Sales Leadership,1,1352,2020-11-18,2020-11-22,Completed,Milan
+100254,Sales,CRM Salesforce,4,939,2024-06-03,,Cancelled,Milan
+100255,Sales,B2B Sales Strategy,4,937,2023-01-23,2023-02-04,Completed,Milan
+100255,Sales,Customer Success,3,790,2022-08-30,,Cancelled,Milan
+100255,Sales,Negotiation Techniques,3,1055,2023-11-08,,InProgress,Milan
+100256,Sales,Sales Leadership,5,1353,2023-01-13,2023-01-21,Completed,Milan
+100257,Sales,Customer Success,1,772,2024-10-03,,Cancelled,Milan
+100257,Sales,B2B Sales Strategy,1,1057,2024-03-10,2024-03-19,Completed,Milan
+100258,Sales,Customer Success,3,862,2024-03-27,2024-03-30,Completed,Milan
+100258,Sales,Customer Success,3,836,2021-10-08,,Cancelled,Milan
+100259,Sales,CRM Salesforce,3,915,2021-07-31,2021-08-10,Completed,Milan
+100260,Sales,CRM Salesforce,2,988,2022-02-01,,InProgress,Milan
+100260,Sales,Sales Leadership,3,1665,2023-06-05,2023-06-11,Completed,Milan
+100260,Sales,Sales Leadership,2,1402,2023-08-31,2023-09-12,Completed,Milan
+100261,Sales,CRM Salesforce,4,864,2024-09-02,2024-09-17,Completed,Milan
+100261,Sales,CRM Salesforce,2,974,2022-01-31,2022-02-02,Completed,Milan
+100261,Sales,B2B Sales Strategy,1,969,2022-01-07,2022-01-13,Completed,Milan
+100262,Sales,B2B Sales Strategy,1,997,2018-12-07,,InProgress,Milan
+100263,Sales,B2B Sales Strategy,1,935,2023-12-19,2023-12-25,Completed,Milan
+100263,Sales,Negotiation Techniques,1,1122,2019-04-26,,InProgress,Milan
+100264,Sales,Customer Success,4,694,2023-10-11,2023-10-25,Completed,Milan
+100264,Sales,Customer Success,1,885,2022-11-10,2022-11-25,Completed,Milan
+100264,Sales,CRM Salesforce,3,957,2020-04-09,2020-04-23,Completed,Milan
+100265,Sales,Sales Leadership,4,1397,2018-11-07,2018-11-14,Completed,Milan
+100265,Sales,Sales Leadership,5,1620,2018-04-23,2018-05-12,Completed,Milan
+100266,Sales,Presentation Skills,1,766,2021-12-02,,InProgress,Milan
+100267,Sales,Customer Success,3,725,2021-08-17,,Cancelled,Milan
+100268,Sales,Presentation Skills,5,668,2020-02-25,2020-03-11,Completed,Milan
+100268,Sales,Sales Leadership,4,1669,2021-03-23,,InProgress,Milan
+100269,Sales,B2B Sales Strategy,1,1107,2024-07-20,,Cancelled,Milan
+100270,Sales,Negotiation Techniques,4,1119,2024-08-28,,InProgress,Milan
+100271,Sales,Sales Leadership,1,1673,2024-03-15,,InProgress,Milan
+100271,Sales,Customer Success,4,847,2021-11-07,,InProgress,Milan
+100272,Sales,Negotiation Techniques,4,1353,2018-05-10,,InProgress,Milan
+100272,Sales,Customer Success,5,848,2020-04-10,,InProgress,Milan
+100272,Sales,Presentation Skills,4,736,2024-05-08,,InProgress,Milan
+100273,Sales,Negotiation Techniques,2,1246,2023-11-03,,InProgress,Milan
+100273,Sales,Presentation Skills,4,645,2020-10-02,2020-10-09,Completed,Milan
+100273,Sales,CRM Salesforce,1,1015,2022-10-27,,Cancelled,Milan
+100274,Sales,Negotiation Techniques,3,1238,2021-08-21,2021-09-03,Completed,Milan
+100275,Sales,Presentation Skills,5,673,2020-05-31,,InProgress,Milan
+100275,Sales,Negotiation Techniques,3,1203,2019-02-23,2019-02-26,Completed,Milan
+100275,Sales,CRM Salesforce,3,884,2020-03-31,2020-04-15,Completed,Milan
+100276,Sales,Customer Success,2,917,2021-01-24,2021-01-31,Completed,Milan
+100276,Sales,B2B Sales Strategy,5,1040,2024-05-21,2024-06-08,Completed,Milan
+100276,Sales,Sales Leadership,3,1466,2020-11-15,2020-11-24,Completed,Milan
+100277,Sales,Negotiation Techniques,3,1138,2024-06-26,2024-07-12,Completed,Milan
+100277,Sales,Customer Success,1,755,2024-02-13,2024-02-15,Completed,Milan
+100278,Sales,CRM Salesforce,2,765,2022-02-24,2022-02-26,Completed,Milan
+100278,Sales,Customer Success,4,694,2022-03-20,2022-03-25,Completed,Milan
+100279,Sales,Negotiation Techniques,3,1318,2024-02-18,,InProgress,Milan
+100280,Sales,Presentation Skills,4,801,2017-09-24,2017-09-29,Completed,Milan
+100281,Sales,Negotiation Techniques,2,1068,2019-04-25,2019-04-28,Completed,Milan
+100282,Sales,Sales Leadership,3,1560,2022-12-12,2022-12-24,Completed,Milan
+100282,Sales,Presentation Skills,4,803,2020-04-09,2020-04-13,Completed,Milan
+100283,Sales,Presentation Skills,2,744,2021-09-13,2021-09-17,Completed,Milan
+100283,Sales,Sales Leadership,4,1685,2022-03-23,2022-04-04,Completed,Milan
+100284,Sales,CRM Salesforce,4,852,2024-04-10,2024-04-26,Completed,Milan
+100284,Sales,B2B Sales Strategy,3,1058,2021-10-26,2021-11-06,Completed,Milan
+100285,Sales,Sales Leadership,2,1596,2022-02-05,,Cancelled,Milan
+100285,Sales,CRM Salesforce,2,904,2024-06-26,2024-07-03,Completed,Milan
+100286,Sales,B2B Sales Strategy,3,950,2017-07-23,2017-08-04,Completed,Milan
+100286,Sales,Presentation Skills,5,764,2020-11-25,,InProgress,Milan
+100287,Sales,CRM Salesforce,4,809,2022-05-26,2022-06-07,Completed,Milan
+100288,Sales,Negotiation Techniques,2,1204,2024-07-09,2024-07-18,Completed,Milan
+100288,Sales,Sales Leadership,1,1292,2020-11-16,2020-11-20,Completed,Milan
+100288,Sales,Customer Success,4,741,2024-02-13,,Cancelled,Milan
+100289,Sales,Sales Leadership,4,1531,2022-06-22,2022-07-10,Completed,Milan
+100289,Sales,CRM Salesforce,4,908,2020-05-17,2020-05-25,Completed,Milan
+100290,Sales,Customer Success,3,805,2023-08-08,2023-08-11,Completed,Milan
+100291,Sales,Negotiation Techniques,3,1064,2022-04-25,,Cancelled,Milan
+100291,Sales,Sales Leadership,3,1449,2021-12-01,2021-12-06,Completed,Milan
+100291,Sales,B2B Sales Strategy,5,1001,2022-04-26,,InProgress,Milan
+100292,Sales,Sales Leadership,1,1569,2022-04-14,2022-04-24,Completed,Milan
+100292,Sales,Sales Leadership,5,1465,2024-09-22,2024-10-04,Completed,Milan
+100293,Sales,CRM Salesforce,5,789,2023-03-05,2023-03-10,Completed,Milan
+100294,Sales,Sales Leadership,5,1673,2023-11-21,2023-11-27,Completed,Milan
+100294,Sales,B2B Sales Strategy,2,1054,2024-10-05,2024-10-21,Completed,Milan
+100294,Sales,Customer Success,2,889,2024-01-11,,Cancelled,Milan
+100295,Sales,CRM Salesforce,4,971,2019-12-17,,InProgress,Milan
+100295,Sales,B2B Sales Strategy,3,960,2019-02-26,,Cancelled,Milan
+100295,Sales,B2B Sales Strategy,3,1107,2021-09-15,2021-09-20,Completed,Milan
+100296,Sales,Sales Leadership,1,1654,2024-01-08,,InProgress,Milan
+100296,Sales,Sales Leadership,4,1507,2023-08-07,,Cancelled,Milan
+100297,Sales,CRM Salesforce,4,869,2023-01-04,,InProgress,Milan
+100298,Sales,Sales Leadership,4,1603,2019-02-15,2019-02-26,Completed,Milan
+100298,Sales,B2B Sales Strategy,5,987,2024-06-09,2024-06-28,Completed,Milan
+100299,Sales,CRM Salesforce,4,892,2018-01-16,,InProgress,Milan
+100300,Sales,B2B Sales Strategy,5,1036,2021-02-20,,Cancelled,Milan
+100301,Sales,Negotiation Techniques,2,1280,2022-04-27,,InProgress,Milan
+100302,Sales,Customer Success,3,806,2022-01-14,,Cancelled,Milan
+100302,Sales,Sales Leadership,4,1428,2021-11-29,2021-12-11,Completed,Milan
+100303,Sales,B2B Sales Strategy,5,981,2018-01-15,,InProgress,Milan
+100303,Sales,CRM Salesforce,3,982,2020-12-28,2021-01-05,Completed,Milan
+100303,Sales,CRM Salesforce,1,769,2017-07-11,2017-07-12,Completed,Milan
+100304,Sales,Sales Leadership,5,1432,2023-05-26,2023-05-31,Completed,Milan
+100304,Sales,Sales Leadership,1,1383,2017-02-21,2017-03-04,Completed,Milan
+100304,Sales,CRM Salesforce,2,807,2020-01-09,2020-01-15,Completed,Milan
+100305,Sales,CRM Salesforce,4,816,2016-07-16,,InProgress,Milan
+100305,Sales,Negotiation Techniques,5,1335,2022-12-24,2022-12-30,Completed,Milan
+100306,Sales,Negotiation Techniques,3,1216,2022-06-14,,Cancelled,Milan
+100306,Sales,CRM Salesforce,1,838,2023-06-18,2023-06-24,Completed,Milan
+100307,Sales,B2B Sales Strategy,3,1046,2022-06-17,,InProgress,Milan
+100307,Sales,Sales Leadership,5,1592,2022-06-26,2022-07-15,Completed,Milan
+100307,Sales,Sales Leadership,1,1492,2021-12-20,,InProgress,Milan
+100308,Sales,Negotiation Techniques,5,1082,2023-12-19,,InProgress,Milan
+100308,Sales,Sales Leadership,5,1525,2020-06-25,,Cancelled,Milan
+100309,Sales,CRM Salesforce,3,910,2022-05-04,2022-05-18,Completed,Milan
+100310,Sales,Sales Leadership,5,1554,2020-08-08,2020-08-24,Completed,Milan
+100310,Sales,Presentation Skills,3,720,2020-04-01,2020-04-13,Completed,Milan
+100310,Sales,B2B Sales Strategy,4,1061,2017-05-13,,Cancelled,Milan
+100311,Sales,Negotiation Techniques,4,1115,2022-01-07,2022-01-18,Completed,Milan
+100312,Sales,Negotiation Techniques,1,1236,2022-10-28,,Cancelled,Milan
+100312,Sales,CRM Salesforce,1,900,2022-12-02,,Cancelled,Milan
+100313,Sales,Customer Success,5,807,2023-03-08,,InProgress,Milan
+100313,Sales,CRM Salesforce,5,1029,2023-11-30,,Cancelled,Milan
+100314,Sales,B2B Sales Strategy,4,851,2020-05-03,,Cancelled,Milan
+100315,Sales,Customer Success,2,757,2024-05-26,,Cancelled,Milan
+100315,Sales,B2B Sales Strategy,3,1133,2016-05-10,2016-05-13,Completed,Milan
+100315,Sales,B2B Sales Strategy,4,1103,2017-01-03,,InProgress,Milan
+100316,Sales,CRM Salesforce,4,803,2023-07-13,2023-07-30,Completed,Milan
+100316,Sales,Sales Leadership,2,1495,2023-07-12,2023-07-23,Completed,Milan
+100317,Sales,CRM Salesforce,3,1034,2024-03-25,,InProgress,Milan
+100317,Sales,B2B Sales Strategy,2,941,2023-12-01,2023-12-16,Completed,Milan
+100317,Sales,CRM Salesforce,1,861,2023-12-11,2023-12-21,Completed,Milan
+100318,Sales,Presentation Skills,2,680,2021-10-06,2021-10-16,Completed,Milan
+100318,Sales,Presentation Skills,2,758,2022-03-29,2022-04-14,Completed,Milan
+100318,Sales,Negotiation Techniques,5,1107,2022-08-15,,InProgress,Milan
+100319,Sales,B2B Sales Strategy,1,865,2024-04-21,2024-05-03,Completed,Milan
+100319,Sales,Negotiation Techniques,1,1370,2020-11-15,2020-11-25,Completed,Milan
+100319,Sales,B2B Sales Strategy,5,1087,2023-02-16,,InProgress,Milan
+100320,Sales,B2B Sales Strategy,1,940,2023-06-11,2023-06-26,Completed,Milan
+100321,Sales,Customer Success,5,911,2023-02-15,2023-03-02,Completed,Milan
+100321,Sales,CRM Salesforce,2,982,2017-09-26,2017-10-02,Completed,Milan
+100321,Sales,Negotiation Techniques,3,1365,2018-05-31,,Cancelled,Milan
+100322,Sales,CRM Salesforce,3,976,2024-01-03,,Cancelled,Milan
+100323,Sales,Customer Success,2,795,2021-04-27,2021-05-05,Completed,Milan
+100323,Sales,Negotiation Techniques,5,1360,2022-08-01,,InProgress,Milan
+100323,Sales,CRM Salesforce,1,908,2023-06-24,,InProgress,Milan
+100324,Sales,Customer Success,1,884,2019-06-30,2019-07-11,Completed,Milan
+100324,Sales,Customer Success,4,817,2023-11-05,,Cancelled,Milan
+100325,Sales,Sales Leadership,5,1475,2023-06-01,2023-06-18,Completed,Milan
+100326,Sales,CRM Salesforce,1,773,2018-07-23,,InProgress,Milan
+100327,Sales,Presentation Skills,5,730,2023-05-03,2023-05-22,Completed,Milan
+100328,Sales,Sales Leadership,2,1350,2022-09-02,2022-09-18,Completed,Milan
+100328,Sales,CRM Salesforce,3,1004,2021-04-06,2021-04-17,Completed,Milan
+100329,Sales,Negotiation Techniques,5,1300,2023-09-14,2023-09-26,Completed,Milan
+100330,Sales,Sales Leadership,1,1302,2020-12-18,2020-12-30,Completed,Milan
+100331,Sales,B2B Sales Strategy,5,1050,2022-11-16,2022-11-22,Completed,Milan
+100331,Sales,CRM Salesforce,5,954,2022-08-26,,Cancelled,Milan
+100332,Sales,B2B Sales Strategy,5,890,2023-01-13,2023-01-21,Completed,Milan
+100332,Sales,Sales Leadership,3,1374,2022-04-14,2022-04-20,Completed,Milan
+100333,Sales,B2B Sales Strategy,4,1032,2019-12-16,,InProgress,Milan
+100334,Sales,Customer Success,4,796,2018-02-20,,InProgress,Milan
+100334,Sales,B2B Sales Strategy,4,1142,2020-01-09,2020-01-09,Completed,Milan
+100334,Sales,CRM Salesforce,5,792,2017-06-24,2017-07-03,Completed,Milan
+100335,Sales,Customer Success,2,851,2021-05-21,,InProgress,Milan
+100335,Sales,Customer Success,5,739,2017-02-04,2017-02-21,Completed,Milan
+100336,Sales,Negotiation Techniques,3,1081,2024-06-21,2024-06-28,Completed,Milan
+100336,Sales,Negotiation Techniques,1,1314,2024-07-08,,InProgress,Milan
+100337,Sales,Sales Leadership,3,1637,2024-09-22,2024-09-29,Completed,Milan
+100337,Sales,CRM Salesforce,4,953,2019-05-14,2019-05-29,Completed,Milan
+100337,Sales,Sales Leadership,3,1583,2021-04-19,,InProgress,Milan
+100338,Sales,Negotiation Techniques,2,1329,2016-03-09,2016-03-19,Completed,Milan
+100338,Sales,Presentation Skills,2,774,2016-04-04,2016-04-18,Completed,Milan
+100339,Sales,Presentation Skills,2,608,2022-07-22,2022-07-28,Completed,Milan
+100340,Sales,Presentation Skills,5,793,2024-10-05,,Cancelled,Milan
+100340,Sales,Customer Success,2,686,2024-02-26,,InProgress,Milan
+100340,Sales,Presentation Skills,2,716,2024-02-03,2024-02-18,Completed,Milan
+100341,Sales,CRM Salesforce,2,954,2023-09-23,2023-10-03,Completed,Milan
+100341,Sales,Presentation Skills,5,633,2020-11-26,,InProgress,Milan
+100342,Sales,Sales Leadership,3,1399,2024-10-16,,Cancelled,Milan
+100343,Sales,Customer Success,1,916,2019-04-10,,InProgress,Milan
+100344,Sales,Negotiation Techniques,5,1316,2024-01-04,2024-01-11,Completed,Milan
+100344,Sales,Negotiation Techniques,2,1139,2022-11-07,2022-11-15,Completed,Milan
+100345,Sales,Sales Leadership,4,1477,2021-07-27,2021-08-09,Completed,Milan
+100345,Sales,Sales Leadership,3,1695,2021-03-27,,Cancelled,Milan
+100346,Sales,CRM Salesforce,2,846,2017-11-12,,Cancelled,Milan
+100347,Sales,CRM Salesforce,5,1014,2020-11-28,2020-12-12,Completed,Milan
+100347,Sales,Customer Success,5,744,2023-04-03,,Cancelled,Milan
+100347,Sales,Negotiation Techniques,4,1076,2022-09-21,,Cancelled,Milan
+100348,Sales,Sales Leadership,4,1429,2024-04-23,2024-05-10,Completed,Milan
+100348,Sales,Negotiation Techniques,1,1193,2022-12-29,,Cancelled,Milan
+100348,Sales,Negotiation Techniques,1,1124,2022-11-22,2022-11-23,Completed,Milan
+100349,Sales,Customer Success,3,788,2017-07-31,,InProgress,Milan
+100350,Sales,Customer Success,2,803,2022-11-04,2022-11-07,Completed,Milan
+100350,Sales,CRM Salesforce,3,988,2021-07-09,2021-07-16,Completed,Milan
+100351,Sales,Presentation Skills,4,660,2022-03-12,2022-03-30,Completed,Milan
+100352,Sales,B2B Sales Strategy,4,960,2023-09-09,2023-09-16,Completed,Milan
+100352,Sales,Presentation Skills,1,772,2022-02-16,,InProgress,Milan
+100352,Sales,Presentation Skills,4,745,2024-04-01,,Cancelled,Milan
+100353,Sales,Negotiation Techniques,4,1167,2024-08-01,2024-08-05,Completed,Milan
+100353,Sales,CRM Salesforce,5,977,2019-08-28,2019-09-08,Completed,Milan
+100354,Sales,Presentation Skills,4,627,2024-08-18,2024-08-29,Completed,Milan
+100354,Sales,Presentation Skills,4,704,2023-02-08,2023-02-22,Completed,Milan
+100354,Sales,Negotiation Techniques,1,1333,2022-12-15,2022-12-24,Completed,Milan
+100355,Sales,Negotiation Techniques,5,1093,2018-09-12,2018-09-20,Completed,Milan
+100355,Sales,Customer Success,5,757,2020-07-18,2020-07-23,Completed,Milan
+100356,Sales,Negotiation Techniques,2,1088,2022-12-28,,InProgress,Milan
+100357,Sales,Presentation Skills,3,712,2023-01-28,2023-01-31,Completed,Milan
+100357,Sales,CRM Salesforce,2,870,2023-05-30,,Cancelled,Milan
+100358,Sales,Negotiation Techniques,1,1063,2023-09-22,2023-09-23,Completed,Milan
+100359,Sales,Negotiation Techniques,5,1196,2019-02-03,,Cancelled,Milan
+100359,Sales,Customer Success,1,835,2019-07-29,2019-08-03,Completed,Milan
+100359,Sales,CRM Salesforce,2,839,2023-01-07,2023-01-12,Completed,Milan
+100360,Sales,Negotiation Techniques,1,1221,2024-05-15,,Cancelled,Milan
+100360,Sales,Presentation Skills,5,650,2023-07-06,2023-07-16,Completed,Milan
+100361,Sales,Sales Leadership,3,1400,2023-02-19,,Cancelled,Milan
+100361,Sales,Negotiation Techniques,3,1110,2023-07-08,,Cancelled,Milan
+100362,Sales,CRM Salesforce,1,819,2017-03-08,2017-03-20,Completed,Milan
+100363,Sales,CRM Salesforce,1,1032,2015-10-28,2015-11-08,Completed,Milan
+100363,Sales,Sales Leadership,1,1555,2017-04-06,2017-04-09,Completed,Milan
+100364,Sales,Presentation Skills,1,787,2022-07-06,,InProgress,Milan
+100365,Sales,B2B Sales Strategy,3,1085,2024-05-19,2024-05-25,Completed,Milan
+100365,Sales,Presentation Skills,5,734,2023-11-08,2023-11-14,Completed,Milan
+100366,Sales,B2B Sales Strategy,2,1117,2023-12-19,2023-12-31,Completed,Milan
+100367,Sales,Presentation Skills,5,791,2017-02-18,2017-02-27,Completed,Milan
+100368,Sales,CRM Salesforce,1,961,2023-07-25,,Cancelled,Milan
+100368,Sales,Presentation Skills,3,703,2024-09-28,2024-10-05,Completed,Milan
+100369,Sales,CRM Salesforce,5,854,2021-08-18,2021-09-05,Completed,Milan
+100369,Sales,Presentation Skills,5,798,2022-04-23,2022-05-07,Completed,Milan
+100370,Sales,Negotiation Techniques,1,1192,2024-10-20,2024-10-31,Completed,Milan
+100371,Sales,CRM Salesforce,5,906,2023-06-01,,InProgress,Milan
+100371,Sales,Presentation Skills,2,775,2024-01-09,,InProgress,Milan
+100371,Sales,CRM Salesforce,5,978,2023-03-13,2023-04-01,Completed,Milan
+100372,Sales,B2B Sales Strategy,2,862,2021-06-25,2021-07-04,Completed,Milan
+100372,Sales,Sales Leadership,4,1383,2018-12-16,2018-12-20,Completed,Milan
+100372,Sales,Sales Leadership,4,1333,2020-11-02,2020-11-18,Completed,Milan
+100373,Sales,Customer Success,4,719,2019-12-26,2020-01-02,Completed,Milan
+100373,Sales,CRM Salesforce,3,982,2018-10-18,2018-10-23,Completed,Milan
+100373,Sales,Sales Leadership,3,1627,2016-07-13,,Cancelled,Milan
+100374,Sales,Negotiation Techniques,2,1125,2023-01-10,2023-01-14,Completed,Milan
+100374,Sales,Customer Success,5,904,2024-04-15,,InProgress,Milan
+100374,Sales,B2B Sales Strategy,1,903,2022-12-25,,Cancelled,Milan
+100375,Sales,CRM Salesforce,2,766,2019-11-09,2019-11-16,Completed,Milan
+100375,Sales,Presentation Skills,1,688,2018-03-16,2018-03-21,Completed,Milan
+100376,Sales,CRM Salesforce,5,981,2022-10-04,2022-10-20,Completed,Milan
+100376,Sales,Sales Leadership,4,1354,2023-11-10,,Cancelled,Milan
+100376,Sales,B2B Sales Strategy,2,1149,2021-03-27,2021-04-01,Completed,Milan
+100377,Sales,Negotiation Techniques,4,1024,2019-11-14,2019-11-28,Completed,Milan
+100377,Sales,CRM Salesforce,4,902,2024-05-23,2024-05-28,Completed,Milan
+100377,Sales,Presentation Skills,2,792,2019-07-24,2019-08-09,Completed,Milan
+100378,Sales,Customer Success,4,883,2020-02-27,2020-03-09,Completed,Milan
+100379,Sales,B2B Sales Strategy,3,1061,2024-10-28,2024-11-11,Completed,Milan
+100380,Sales,B2B Sales Strategy,3,856,2017-04-24,,InProgress,Milan
+100380,Sales,Presentation Skills,4,598,2015-12-19,2016-01-05,Completed,Milan
+100380,Sales,Presentation Skills,2,778,2023-11-23,,Cancelled,Milan
+100381,Sales,Presentation Skills,4,602,2022-07-16,2022-07-31,Completed,Milan
+100381,Sales,CRM Salesforce,4,1007,2018-11-29,2018-12-16,Completed,Milan
+100382,Sales,Negotiation Techniques,4,1224,2023-02-05,2023-02-16,Completed,Milan
+100383,Sales,Sales Leadership,4,1720,2017-06-13,2017-06-19,Completed,Milan
+100383,Sales,B2B Sales Strategy,2,900,2018-04-09,2018-04-15,Completed,Milan
+100383,Sales,Customer Success,5,773,2021-12-15,,InProgress,Milan
+100384,Sales,Negotiation Techniques,3,1219,2022-11-13,2022-11-17,Completed,Milan
+100385,Sales,Presentation Skills,5,694,2023-06-26,2023-07-15,Completed,Milan
+100385,Sales,CRM Salesforce,3,817,2023-10-25,2023-11-06,Completed,Milan
+100385,Sales,Sales Leadership,2,1705,2023-09-05,2023-09-08,Completed,Milan
+100386,Sales,Customer Success,5,855,2022-08-19,,Cancelled,Milan
+100387,Sales,Negotiation Techniques,5,1303,2022-04-03,2022-04-13,Completed,Milan
+100387,Sales,B2B Sales Strategy,1,871,2021-09-20,,InProgress,Milan
+100387,Sales,Presentation Skills,4,757,2024-03-04,2024-03-09,Completed,Milan
+100388,Sales,CRM Salesforce,2,828,2023-02-16,,InProgress,Milan
+100388,Sales,B2B Sales Strategy,3,883,2022-02-18,2022-02-25,Completed,Milan
+100389,Sales,Sales Leadership,1,1338,2023-06-12,2023-06-22,Completed,Milan
+100389,Sales,Sales Leadership,1,1644,2022-11-07,2022-11-08,Completed,Milan
+100389,Sales,B2B Sales Strategy,4,1117,2024-08-08,,InProgress,Milan
+100390,Sales,CRM Salesforce,5,907,2021-02-16,2021-03-02,Completed,Milan
+100390,Sales,Negotiation Techniques,2,1228,2020-11-13,2020-11-17,Completed,Milan
+100390,Sales,Presentation Skills,3,610,2024-01-27,2024-01-30,Completed,Milan
+100391,Sales,Customer Success,4,785,2021-03-27,2021-04-10,Completed,Milan
+100391,Sales,B2B Sales Strategy,2,974,2021-12-17,,InProgress,Milan
+100391,Sales,B2B Sales Strategy,2,898,2024-04-27,2024-05-11,Completed,Milan
+100392,Sales,CRM Salesforce,3,803,2023-02-15,2023-02-21,Completed,Milan
+100392,Sales,Sales Leadership,3,1652,2022-08-08,2022-08-21,Completed,Milan
+100393,Sales,CRM Salesforce,4,900,2023-12-26,2024-01-04,Completed,Milan
+100394,Sales,Negotiation Techniques,2,1083,2017-06-13,2017-06-21,Completed,Milan
+100394,Sales,Presentation Skills,5,689,2023-05-04,2023-05-22,Completed,Milan
+100394,Sales,B2B Sales Strategy,5,928,2024-03-10,2024-03-16,Completed,Milan
+100395,Sales,B2B Sales Strategy,4,1077,2018-11-17,2018-11-21,Completed,Milan
+100395,Sales,Sales Leadership,3,1539,2023-01-25,2023-02-06,Completed,Milan
+100395,Sales,Presentation Skills,2,673,2024-10-16,,InProgress,Milan
+100396,Sales,Presentation Skills,3,644,2018-11-02,,InProgress,Milan
+100396,Sales,CRM Salesforce,5,935,2018-05-28,,Cancelled,Milan
+100396,Sales,Customer Success,3,736,2019-04-14,2019-04-22,Completed,Milan
+100397,Sales,Presentation Skills,2,619,2022-11-08,2022-11-17,Completed,Milan
+100397,Sales,Customer Success,2,885,2024-01-27,2024-01-29,Completed,Milan
+100398,Sales,CRM Salesforce,2,840,2023-08-20,,Cancelled,Milan
+100399,Sales,Presentation Skills,5,612,2023-11-25,2023-12-01,Completed,Milan
+100399,Sales,Sales Leadership,4,1690,2021-07-26,2021-08-08,Completed,Milan
+100399,Sales,Customer Success,5,818,2021-02-12,,InProgress,Milan
+100400,Sales,Sales Leadership,3,1500,2018-01-27,2018-02-07,Completed,Milan
+100400,Sales,Customer Success,2,786,2024-08-16,2024-08-25,Completed,Milan
+100400,Sales,CRM Salesforce,4,878,2017-09-03,2017-09-18,Completed,Milan
+100401,IT,ITIL Foundation,5,1344,2020-04-03,2020-04-17,Completed,Milan
+100401,IT,Kubernetes,2,2418,2024-07-12,2024-07-18,Completed,Milan
+100401,IT,Network Security,3,2577,2015-12-01,2015-12-07,Completed,Milan
+100402,IT,Database Admin,5,1991,2018-12-31,2019-01-14,Completed,Milan
+100402,IT,AWS Solutions Architect,2,2758,2021-10-08,,Cancelled,Milan
+100403,IT,Database Admin,5,1874,2023-06-25,2023-07-05,Completed,Milan
+100403,IT,Database Admin,1,1610,2023-07-29,2023-08-06,Completed,Milan
+100404,IT,Kubernetes,3,3112,2023-03-20,,Cancelled,Milan
+100404,IT,Network Security,2,2615,2023-06-28,,InProgress,Milan
+100405,IT,ITIL Foundation,5,1094,2024-03-04,2024-03-11,Completed,Milan
+100405,IT,Database Admin,2,2008,2024-04-06,2024-04-12,Completed,Milan
+100406,IT,Cybersecurity,1,3041,2022-09-25,2022-10-04,Completed,Milan
+100407,IT,Cybersecurity,1,3553,2024-05-20,2024-06-01,Completed,Milan
+100407,IT,Network Security,2,2254,2022-11-08,,Cancelled,Milan
+100407,IT,Network Security,2,2537,2022-02-06,,InProgress,Milan
+100408,IT,Network Security,2,2490,2024-08-07,,InProgress,Milan
+100409,IT,Database Admin,2,1982,2021-05-07,,Cancelled,Milan
+100410,IT,Cybersecurity,5,3322,2024-06-27,2024-07-07,Completed,Milan
+100411,IT,AWS Solutions Architect,2,3018,2023-12-02,,Cancelled,Milan
+100411,IT,Kubernetes,3,2554,2024-09-08,2024-09-25,Completed,Milan
+100411,IT,AWS Solutions Architect,4,3048,2024-08-25,,Cancelled,Milan
+100412,IT,Kubernetes,5,2700,2024-07-19,2024-08-07,Completed,Milan
+100413,IT,AWS Solutions Architect,5,2808,2018-05-20,2018-05-25,Completed,Milan
+100414,IT,Kubernetes,4,2541,2023-03-14,2023-03-25,Completed,Milan
+100414,IT,Network Security,2,2389,2020-04-15,,InProgress,Milan
+100415,IT,AWS Solutions Architect,2,2695,2024-04-11,2024-04-22,Completed,Milan
+100416,IT,ITIL Foundation,1,1221,2022-01-03,,Cancelled,Milan
+100416,IT,Cybersecurity,2,3060,2021-08-31,2021-09-11,Completed,Milan
+100417,IT,Kubernetes,5,3162,2024-10-09,2024-10-18,Completed,Milan
+100417,IT,Kubernetes,3,2845,2021-03-29,,Cancelled,Milan
+100418,IT,Kubernetes,5,2849,2022-05-26,2022-06-06,Completed,Milan
+100418,IT,AWS Solutions Architect,4,3294,2024-08-07,2024-08-11,Completed,Milan
+100418,IT,Kubernetes,5,2722,2023-11-19,2023-12-07,Completed,Milan
+100419,IT,Database Admin,2,1613,2020-09-30,,Cancelled,Milan
+100419,IT,AWS Solutions Architect,4,3299,2024-10-06,2024-10-19,Completed,Milan
+100420,IT,ITIL Foundation,3,1208,2022-02-24,2022-03-10,Completed,Milan
+100420,IT,ITIL Foundation,3,1332,2019-05-09,,Cancelled,Milan
+100420,IT,Network Security,5,2426,2022-12-20,,InProgress,Milan
+100421,IT,Database Admin,3,1643,2023-06-08,2023-06-21,Completed,Milan
+100421,IT,Cybersecurity,3,3058,2023-04-08,,Cancelled,Milan
+100421,IT,Network Security,2,2548,2023-02-02,,Cancelled,Milan
+100422,IT,AWS Solutions Architect,2,2577,2019-03-30,,Cancelled,Milan
+100422,IT,ITIL Foundation,3,1197,2018-10-31,,Cancelled,Milan
+100423,IT,Database Admin,3,2061,2024-06-28,2024-07-02,Completed,Milan
+100424,IT,Kubernetes,2,2672,2021-09-22,2021-10-08,Completed,Milan
+100424,IT,Database Admin,5,1940,2017-11-08,,Cancelled,Milan
+100424,IT,Network Security,5,2137,2018-10-28,2018-11-12,Completed,Milan
+100425,IT,Database Admin,4,1783,2017-01-07,2017-01-18,Completed,Milan
+100425,IT,Network Security,4,2655,2021-04-29,2021-05-16,Completed,Milan
+100425,IT,Database Admin,5,1617,2017-12-26,2018-01-12,Completed,Milan
+100426,IT,AWS Solutions Architect,4,2625,2024-02-06,2024-02-10,Completed,Milan
+100426,IT,AWS Solutions Architect,1,3181,2019-11-07,2019-11-22,Completed,Milan
+100426,IT,Cybersecurity,3,3496,2019-01-28,2019-02-08,Completed,Milan
+100427,IT,ITIL Foundation,3,1288,2020-02-25,2020-03-02,Completed,Milan
+100427,IT,Database Admin,2,1603,2020-03-29,,InProgress,Milan
+100427,IT,AWS Solutions Architect,1,2797,2019-10-20,2019-10-25,Completed,Milan
+100428,IT,ITIL Foundation,4,1377,2023-07-06,,InProgress,Milan
+100428,IT,Database Admin,3,1976,2024-05-30,2024-06-05,Completed,Milan
+100429,IT,Network Security,3,2422,2023-11-02,2023-11-18,Completed,Milan
+100429,IT,Cybersecurity,5,3405,2022-03-25,,InProgress,Milan
+100430,IT,ITIL Foundation,3,1306,2023-08-29,,Cancelled,Milan
+100431,IT,ITIL Foundation,4,1024,2018-05-31,2018-06-15,Completed,Milan
+100431,IT,Network Security,2,2791,2024-01-09,2024-01-16,Completed,Milan
+100431,IT,Kubernetes,3,3114,2018-01-13,,InProgress,Milan
+100432,IT,AWS Solutions Architect,4,3044,2022-09-02,2022-09-17,Completed,Milan
+100433,IT,Database Admin,3,2029,2023-06-12,2023-06-26,Completed,Milan
+100433,IT,Kubernetes,5,2940,2021-07-31,2021-08-14,Completed,Milan
+100434,IT,ITIL Foundation,3,1257,2024-02-11,,Cancelled,Milan
+100434,IT,Network Security,3,2757,2024-01-01,2024-01-04,Completed,Milan
+100434,IT,Kubernetes,3,2755,2019-02-18,2019-02-24,Completed,Milan
+100435,IT,AWS Solutions Architect,2,2843,2024-06-18,,InProgress,Milan
+100436,IT,Cybersecurity,3,2942,2019-08-10,,Cancelled,Milan
+100437,IT,Cybersecurity,3,3295,2024-10-15,2024-10-25,Completed,Milan
+100437,IT,AWS Solutions Architect,3,2984,2024-09-20,,InProgress,Milan
+100437,IT,Database Admin,5,2025,2024-04-17,2024-05-02,Completed,Milan
+100438,IT,Network Security,1,2808,2023-01-27,2023-02-03,Completed,Milan
+100439,IT,AWS Solutions Architect,1,2904,2023-12-29,,InProgress,Milan
+100439,IT,ITIL Foundation,2,1238,2024-09-21,2024-09-30,Completed,Milan
+100439,IT,Database Admin,3,1799,2024-06-19,,InProgress,Milan
+100440,IT,AWS Solutions Architect,1,2897,2024-04-23,2024-05-01,Completed,Milan
+100440,IT,AWS Solutions Architect,5,3171,2023-04-13,2023-04-27,Completed,Milan
+100440,IT,Kubernetes,3,2466,2024-10-05,,InProgress,Milan
+100441,IT,Database Admin,3,1863,2023-09-13,2023-09-27,Completed,Milan
+100441,IT,Network Security,2,2424,2020-08-01,2020-08-10,Completed,Milan
+100441,IT,Cybersecurity,2,3069,2022-11-16,,Cancelled,Milan
+100442,IT,ITIL Foundation,5,1287,2020-11-10,,Cancelled,Milan
+100442,IT,AWS Solutions Architect,1,2937,2021-01-10,2021-01-16,Completed,Milan
+100443,IT,Cybersecurity,3,3360,2024-09-09,,InProgress,Milan
+100443,IT,ITIL Foundation,2,1074,2020-09-30,,InProgress,Milan
+100444,IT,ITIL Foundation,5,1312,2023-07-17,,InProgress,Milan
+100444,IT,Cybersecurity,4,3625,2024-01-02,2024-01-07,Completed,Milan
+100444,IT,ITIL Foundation,3,1187,2023-12-18,2023-12-25,Completed,Milan
+100445,IT,Network Security,2,2857,2018-04-25,2018-04-29,Completed,Milan
+100446,IT,ITIL Foundation,1,1366,2021-05-11,,InProgress,Milan
+100447,IT,AWS Solutions Architect,2,2882,2019-08-21,2019-09-04,Completed,Milan
+100448,IT,Network Security,1,2806,2019-04-20,,Cancelled,Milan
+100448,IT,AWS Solutions Architect,5,2571,2022-11-09,2022-11-26,Completed,Milan
+100448,IT,Kubernetes,3,2800,2021-11-29,2021-12-16,Completed,Milan
+100449,IT,Database Admin,5,1883,2021-09-24,,InProgress,Milan
+100449,IT,Kubernetes,3,3140,2019-06-10,2019-06-21,Completed,Milan
+100449,IT,ITIL Foundation,1,1357,2018-01-13,2018-01-20,Completed,Milan
+100450,IT,AWS Solutions Architect,1,3111,2021-03-06,2021-03-12,Completed,Milan
+100451,IT,Kubernetes,4,2560,2021-12-11,2021-12-15,Completed,Milan
+100451,IT,AWS Solutions Architect,4,2717,2023-01-31,2023-02-12,Completed,Milan
+100452,IT,Network Security,2,2422,2023-05-02,,Cancelled,Milan
+100452,IT,Kubernetes,2,2868,2023-09-11,2023-09-22,Completed,Milan
+100452,IT,Database Admin,5,1599,2024-08-31,2024-09-07,Completed,Milan
+100453,IT,AWS Solutions Architect,1,3106,2024-06-26,2024-07-09,Completed,Milan
+100454,IT,Database Admin,5,2045,2019-10-03,,Cancelled,Milan
+100454,IT,ITIL Foundation,2,1035,2019-03-08,2019-03-20,Completed,Milan
+100455,IT,Network Security,5,2313,2023-10-30,2023-11-17,Completed,Milan
+100455,IT,Kubernetes,2,2787,2023-11-17,,Cancelled,Milan
+100456,IT,Cybersecurity,4,3154,2018-08-23,2018-08-28,Completed,Milan
+100457,IT,AWS Solutions Architect,2,3230,2024-03-04,,Cancelled,Milan
+100458,IT,AWS Solutions Architect,1,2942,2024-09-10,2024-09-21,Completed,Milan
+100458,IT,ITIL Foundation,3,1152,2023-08-04,2023-08-14,Completed,Milan
+100459,IT,Database Admin,5,1548,2023-07-07,2023-07-20,Completed,Milan
+100460,IT,ITIL Foundation,2,1032,2021-12-18,2021-12-31,Completed,Milan
+100460,IT,Database Admin,4,1641,2020-09-05,,InProgress,Milan
+100461,IT,AWS Solutions Architect,3,3369,2022-04-16,,InProgress,Milan
+100461,IT,ITIL Foundation,3,1077,2024-10-30,2024-11-10,Completed,Milan
+100461,IT,Kubernetes,2,3134,2022-05-01,2022-05-06,Completed,Milan
+100462,IT,ITIL Foundation,5,1102,2019-11-07,2019-11-12,Completed,Milan
+100463,IT,Cybersecurity,2,3269,2023-03-25,,InProgress,Milan
+100464,IT,ITIL Foundation,3,1260,2024-07-29,,Cancelled,Milan
+100465,IT,AWS Solutions Architect,5,2839,2019-11-02,2019-11-21,Completed,Milan
+100465,IT,Database Admin,5,1640,2019-10-19,2019-11-03,Completed,Milan
+100465,IT,AWS Solutions Architect,4,2861,2019-07-08,2019-07-15,Completed,Milan
+100466,IT,ITIL Foundation,2,1061,2024-06-21,2024-07-05,Completed,Milan
+100466,IT,Cybersecurity,2,3284,2024-05-04,2024-05-15,Completed,Milan
+100466,IT,Kubernetes,4,2486,2024-09-13,,InProgress,Milan
+100467,IT,AWS Solutions Architect,4,3140,2024-04-10,,InProgress,Milan
+100468,IT,AWS Solutions Architect,2,3403,2018-06-07,2018-06-10,Completed,Milan
+100468,IT,Kubernetes,5,3006,2021-09-21,,InProgress,Milan
+100468,IT,Kubernetes,1,2893,2017-03-21,2017-04-01,Completed,Milan
+100469,IT,Kubernetes,3,2605,2023-09-05,2023-09-12,Completed,Milan
+100470,IT,Cybersecurity,1,3076,2021-04-12,,InProgress,Milan
+100471,IT,AWS Solutions Architect,2,3170,2021-10-18,,Cancelled,Milan
+100471,IT,Cybersecurity,2,3355,2022-02-11,2022-02-19,Completed,Milan
+100472,IT,Cybersecurity,2,3461,2018-06-26,,InProgress,Milan
+100472,IT,Database Admin,1,1930,2022-02-16,2022-02-23,Completed,Milan
+100473,IT,Cybersecurity,4,2955,2017-09-21,2017-10-03,Completed,Milan
+100474,IT,Kubernetes,5,3005,2024-05-22,2024-06-06,Completed,Milan
+100474,IT,Network Security,5,2440,2022-11-04,2022-11-11,Completed,Milan
+100475,IT,AWS Solutions Architect,2,3161,2019-11-13,2019-11-23,Completed,Milan
+100475,IT,AWS Solutions Architect,1,3412,2019-02-18,2019-03-03,Completed,Milan
+100475,IT,Cybersecurity,2,3515,2018-04-09,2018-04-24,Completed,Milan
+100476,IT,ITIL Foundation,2,1304,2021-12-31,,Cancelled,Milan
+100476,IT,Cybersecurity,1,2931,2023-10-28,2023-11-02,Completed,Milan
+100477,IT,Kubernetes,5,2659,2020-10-19,2020-11-04,Completed,Milan
+100478,IT,ITIL Foundation,4,1300,2020-04-19,,InProgress,Milan
+100478,IT,Network Security,3,2626,2024-05-06,,Cancelled,Milan
+100479,IT,Cybersecurity,4,2721,2018-12-11,2018-12-29,Completed,Milan
+100479,IT,AWS Solutions Architect,5,3035,2016-07-02,,InProgress,Milan
+100480,IT,Cybersecurity,5,3353,2022-07-19,,Cancelled,Milan
+100480,IT,Database Admin,5,1875,2021-08-19,2021-09-06,Completed,Milan
+100481,IT,ITIL Foundation,5,1092,2016-09-03,,Cancelled,Milan
+100482,IT,Cybersecurity,3,2953,2024-05-13,,Cancelled,Milan
+100482,IT,ITIL Foundation,2,1149,2024-07-20,,InProgress,Milan
+100482,IT,AWS Solutions Architect,1,3261,2023-09-17,,Cancelled,Milan
+100483,IT,Database Admin,2,1681,2024-06-06,,Cancelled,Milan
+100484,IT,AWS Solutions Architect,2,2988,2017-08-21,2017-08-23,Completed,Milan
+100485,IT,Database Admin,1,1959,2024-07-26,2024-08-09,Completed,Milan
+100486,IT,ITIL Foundation,4,1150,2023-12-13,2023-12-19,Completed,Milan
+100486,IT,ITIL Foundation,1,1372,2022-01-26,,Cancelled,Milan
+100486,IT,Database Admin,2,1608,2023-10-01,,Cancelled,Milan
+100487,IT,ITIL Foundation,5,1044,2023-01-22,,InProgress,Milan
+100487,IT,Network Security,1,2732,2022-08-31,2022-09-10,Completed,Milan
+100487,IT,AWS Solutions Architect,3,2706,2023-11-22,,InProgress,Milan
+100488,IT,ITIL Foundation,2,1349,2023-12-05,2023-12-21,Completed,Milan
+100488,IT,Cybersecurity,2,3154,2023-10-22,,Cancelled,Milan
+100489,IT,ITIL Foundation,4,1020,2023-11-10,2023-11-26,Completed,Milan
+100489,IT,Kubernetes,4,2752,2023-08-25,,Cancelled,Milan
+100490,IT,Network Security,5,2769,2024-10-05,2024-10-13,Completed,Milan
+100491,IT,Network Security,5,2637,2023-12-29,2024-01-16,Completed,Milan
+100491,IT,AWS Solutions Architect,3,2558,2024-10-30,,Cancelled,Milan
+100491,IT,AWS Solutions Architect,1,2684,2024-03-23,2024-03-27,Completed,Milan
+100492,IT,ITIL Foundation,5,1050,2020-08-13,,Cancelled,Milan
+100492,IT,AWS Solutions Architect,5,3363,2018-09-06,,Cancelled,Milan
+100492,IT,Network Security,1,2659,2019-05-09,2019-05-10,Completed,Milan
+100493,IT,Cybersecurity,4,3677,2023-01-10,,Cancelled,Milan
+100493,IT,ITIL Foundation,2,1310,2023-05-18,,InProgress,Milan
+100494,IT,AWS Solutions Architect,4,2864,2023-08-15,,InProgress,Milan
+100494,IT,AWS Solutions Architect,2,3165,2023-01-19,2023-01-21,Completed,Milan
+100495,IT,ITIL Foundation,2,1039,2020-05-22,2020-06-06,Completed,Milan
+100495,IT,Database Admin,3,1962,2021-11-19,2021-11-30,Completed,Milan
+100496,IT,AWS Solutions Architect,3,3283,2024-10-12,,InProgress,Milan
+100497,IT,Database Admin,4,1692,2024-07-24,,Cancelled,Milan
+100497,IT,Database Admin,3,1906,2022-02-10,2022-02-21,Completed,Milan
+100498,IT,Cybersecurity,4,2965,2015-09-12,2015-09-18,Completed,Milan
+100499,IT,Cybersecurity,4,2852,2024-09-03,2024-09-10,Completed,Milan
+100499,IT,Network Security,2,2271,2024-03-23,2024-04-05,Completed,Milan
+100500,IT,Database Admin,4,1603,2022-02-24,2022-03-02,Completed,Milan
+100500,IT,AWS Solutions Architect,2,3368,2019-06-07,,InProgress,Milan
+100500,IT,Cybersecurity,5,2925,2021-07-25,2021-08-11,Completed,Milan
+100501,IT,ITIL Foundation,5,1250,2023-07-20,2023-07-28,Completed,Milan
+100501,IT,ITIL Foundation,3,1107,2024-10-04,,InProgress,Milan
+100502,IT,Network Security,2,2597,2023-07-16,2023-07-29,Completed,Milan
+100502,IT,ITIL Foundation,3,1044,2022-01-22,2022-02-05,Completed,Milan
+100503,IT,Database Admin,5,1544,2019-01-14,2019-01-31,Completed,Milan
+100503,IT,Kubernetes,3,2444,2017-09-16,2017-09-28,Completed,Milan
+100504,IT,Kubernetes,1,2712,2024-10-29,2024-11-12,Completed,Milan
+100504,IT,ITIL Foundation,2,1349,2021-03-14,,InProgress,Milan
+100504,IT,AWS Solutions Architect,3,2648,2019-06-16,,InProgress,Milan
+100505,IT,AWS Solutions Architect,5,2662,2024-02-11,,Cancelled,Milan
+100505,IT,AWS Solutions Architect,4,2762,2024-01-20,2024-02-07,Completed,Milan
+100506,IT,Database Admin,2,1917,2024-04-07,2024-04-20,Completed,Milan
+100506,IT,Network Security,4,2299,2022-04-18,,InProgress,Milan
+100507,IT,AWS Solutions Architect,1,3389,2024-08-10,2024-08-17,Completed,Milan
+100507,IT,Database Admin,5,1579,2024-10-03,2024-10-15,Completed,Milan
+100507,IT,AWS Solutions Architect,1,3332,2024-10-04,2024-10-17,Completed,Milan
+100508,IT,Cybersecurity,2,3560,2023-06-24,2023-06-29,Completed,Milan
+100509,IT,Database Admin,2,1569,2022-05-14,2022-05-30,Completed,Milan
+100510,IT,Cybersecurity,4,3020,2020-03-16,,Cancelled,Milan
+100510,IT,Kubernetes,3,3085,2021-01-29,2021-02-12,Completed,Milan
+100510,IT,Database Admin,4,1654,2018-02-25,,InProgress,Milan
+100511,IT,AWS Solutions Architect,1,3374,2024-10-02,,InProgress,Milan
+100511,IT,ITIL Foundation,4,1033,2022-04-17,2022-05-01,Completed,Milan
+100511,IT,Cybersecurity,2,3556,2020-08-20,,InProgress,Milan
+100512,IT,Database Admin,5,1607,2020-12-16,2020-12-22,Completed,Milan
+100513,IT,AWS Solutions Architect,3,2904,2020-06-17,2020-06-27,Completed,Milan
+100514,IT,Network Security,1,2620,2019-09-15,2019-09-22,Completed,Milan
+100514,IT,AWS Solutions Architect,2,2834,2019-06-22,,Cancelled,Milan
+100515,IT,ITIL Foundation,1,1183,2018-05-14,2018-05-28,Completed,Milan
+100516,IT,Kubernetes,2,2875,2024-08-19,2024-08-26,Completed,Milan
+100516,IT,Cybersecurity,4,3288,2020-03-06,,InProgress,Milan
+100516,IT,Cybersecurity,5,3499,2024-04-21,,Cancelled,Milan
+100517,IT,Kubernetes,4,3000,2022-08-29,2022-09-04,Completed,Milan
+100517,IT,Kubernetes,1,2497,2018-07-22,2018-07-24,Completed,Milan
+100518,IT,ITIL Foundation,1,1326,2019-02-05,2019-02-12,Completed,Milan
+100518,IT,AWS Solutions Architect,5,2797,2020-08-10,2020-08-17,Completed,Milan
+100519,IT,Network Security,3,2758,2023-04-22,,Cancelled,Milan
+100520,IT,Cybersecurity,4,2985,2024-08-30,2024-09-12,Completed,Milan
+100521,IT,AWS Solutions Architect,5,3029,2018-12-27,,Cancelled,Milan
+100522,IT,Database Admin,4,1975,2024-09-17,2024-10-01,Completed,Milan
+100522,IT,Cybersecurity,1,2792,2020-12-22,2021-01-04,Completed,Milan
+100522,IT,AWS Solutions Architect,5,2744,2024-10-17,2024-10-24,Completed,Milan
+100523,IT,Kubernetes,5,2418,2023-09-19,,InProgress,Milan
+100524,IT,AWS Solutions Architect,3,2754,2024-07-22,2024-07-27,Completed,Milan
+100525,IT,Network Security,5,2182,2024-06-06,2024-06-15,Completed,Milan
+100525,IT,Kubernetes,4,2933,2023-01-20,2023-02-01,Completed,Milan
+100525,IT,Network Security,4,2675,2023-11-06,2023-11-24,Completed,Milan
+100526,IT,AWS Solutions Architect,1,3018,2021-12-10,,InProgress,Milan
+100526,IT,Cybersecurity,4,3645,2022-10-22,2022-11-09,Completed,Milan
+100526,IT,Network Security,2,2192,2022-12-02,2022-12-05,Completed,Milan
+100527,IT,ITIL Foundation,3,1154,2024-04-09,,Cancelled,Milan
+100528,IT,AWS Solutions Architect,2,2751,2016-04-21,,Cancelled,Milan
+100528,IT,ITIL Foundation,3,1347,2020-03-28,,InProgress,Milan
+100528,IT,AWS Solutions Architect,5,2653,2021-07-06,,Cancelled,Milan
+100529,IT,Cybersecurity,2,2977,2024-05-12,2024-05-21,Completed,Milan
+100530,IT,AWS Solutions Architect,1,3105,2021-09-03,,InProgress,Milan
+100530,IT,Cybersecurity,1,3196,2022-04-09,2022-04-11,Completed,Milan
+100531,IT,Cybersecurity,5,3236,2024-07-26,2024-08-03,Completed,Milan
+100531,IT,Network Security,1,2685,2022-05-31,,Cancelled,Milan
+100532,IT,Database Admin,4,1959,2022-01-02,2022-01-11,Completed,Milan
+100532,IT,ITIL Foundation,3,1220,2022-09-28,2022-10-03,Completed,Milan
+100533,IT,Kubernetes,2,2729,2020-02-20,,Cancelled,Milan
+100533,IT,Cybersecurity,4,3595,2019-06-10,2019-06-25,Completed,Milan
+100534,IT,ITIL Foundation,2,1371,2022-09-30,,Cancelled,Milan
+100535,IT,Database Admin,2,1997,2022-08-07,,Cancelled,Milan
+100535,IT,AWS Solutions Architect,3,3244,2021-11-01,2021-11-06,Completed,Milan
+100536,IT,AWS Solutions Architect,3,2875,2020-01-21,,InProgress,Milan
+100536,IT,ITIL Foundation,2,1130,2018-08-11,2018-08-13,Completed,Milan
+100536,IT,Database Admin,5,1533,2021-08-29,2021-09-13,Completed,Milan
+100537,IT,Network Security,1,2369,2019-02-23,2019-03-07,Completed,Milan
+100537,IT,Database Admin,1,1802,2020-08-01,2020-08-13,Completed,Milan
+100537,IT,Network Security,4,2429,2023-06-19,2023-07-04,Completed,Milan
+100538,IT,ITIL Foundation,3,1320,2024-01-09,2024-01-12,Completed,Milan
+100539,IT,Database Admin,5,1836,2018-03-03,,Cancelled,Milan
+100539,IT,AWS Solutions Architect,2,2619,2018-10-20,2018-11-04,Completed,Milan
+100540,IT,ITIL Foundation,5,1047,2019-09-26,,InProgress,Milan
+100541,IT,ITIL Foundation,2,1126,2020-12-29,,InProgress,Milan
+100541,IT,Kubernetes,3,3180,2021-10-10,,Cancelled,Milan
+100541,IT,AWS Solutions Architect,1,3351,2020-11-09,,Cancelled,Milan
+100542,IT,Kubernetes,1,3172,2024-02-22,2024-02-24,Completed,Milan
+100543,IT,Cybersecurity,4,3650,2021-02-13,,Cancelled,Milan
+100544,IT,Kubernetes,2,2765,2024-05-29,2024-06-09,Completed,Milan
+100544,IT,Network Security,4,2633,2024-08-26,,Cancelled,Milan
+100544,IT,AWS Solutions Architect,1,3289,2024-08-17,,InProgress,Milan
+100545,IT,AWS Solutions Architect,5,2940,2023-02-11,2023-03-01,Completed,Milan
+100546,IT,Kubernetes,5,2968,2019-03-12,2019-03-28,Completed,Milan
+100546,IT,Kubernetes,1,2509,2019-03-10,,Cancelled,Milan
+100546,IT,AWS Solutions Architect,5,2579,2017-04-27,,Cancelled,Milan
+100547,IT,Kubernetes,4,2861,2022-11-12,,Cancelled,Milan
+100547,IT,Database Admin,4,1834,2019-04-25,2019-05-04,Completed,Milan
+100548,IT,Kubernetes,2,2536,2023-03-01,,Cancelled,Milan
+100548,IT,ITIL Foundation,5,1291,2024-03-02,,InProgress,Milan
+100549,IT,Cybersecurity,2,3656,2023-08-27,2023-08-29,Completed,Milan
+100549,IT,Network Security,1,2216,2019-04-14,2019-04-27,Completed,Milan
+100549,IT,Cybersecurity,1,3640,2020-03-20,2020-03-27,Completed,Milan
+100550,IT,Database Admin,3,1587,2020-10-26,2020-11-05,Completed,Milan
+100550,IT,Kubernetes,1,3093,2021-08-12,2021-08-23,Completed,Milan
+100551,IT,AWS Solutions Architect,5,2817,2019-12-20,,InProgress,Milan
+100552,IT,Cybersecurity,3,2926,2018-06-08,,Cancelled,Milan
+100553,IT,Kubernetes,4,2912,2021-11-24,2021-11-30,Completed,Milan
+100553,IT,Database Admin,1,1856,2024-01-07,2024-01-21,Completed,Milan
+100553,IT,AWS Solutions Architect,3,2701,2023-11-18,2023-11-25,Completed,Milan
+100554,IT,Database Admin,3,2043,2023-01-28,2023-02-06,Completed,Milan
+100554,IT,Database Admin,3,1860,2024-04-30,2024-05-14,Completed,Milan
+100554,IT,Database Admin,1,1600,2022-10-01,,InProgress,Milan
+100555,IT,AWS Solutions Architect,2,3158,2022-12-08,2022-12-18,Completed,Milan
+100555,IT,Kubernetes,3,2538,2023-10-05,2023-10-16,Completed,Milan
+100555,IT,Database Admin,1,1948,2022-05-17,2022-05-28,Completed,Milan
+100556,IT,Network Security,3,2468,2019-12-22,2020-01-01,Completed,Milan
+100556,IT,ITIL Foundation,1,1153,2020-04-30,2020-05-12,Completed,Milan
+100556,IT,Database Admin,1,1870,2020-02-03,,Cancelled,Milan
+100557,IT,ITIL Foundation,2,1201,2023-02-17,,Cancelled,Milan
+100557,IT,Database Admin,3,1790,2022-09-04,2022-09-08,Completed,Milan
+100557,IT,Kubernetes,5,2404,2022-07-16,2022-07-29,Completed,Milan
+100558,IT,ITIL Foundation,1,1033,2024-08-01,2024-08-05,Completed,Milan
+100558,IT,Network Security,1,2815,2024-06-01,2024-06-13,Completed,Milan
+100559,IT,Network Security,3,2200,2022-09-04,2022-09-20,Completed,Milan
+100560,IT,Database Admin,3,1951,2023-08-06,2023-08-11,Completed,Milan
+100561,IT,Database Admin,3,2026,2024-04-12,2024-04-18,Completed,Milan
+100561,IT,Cybersecurity,3,3563,2023-07-13,,InProgress,Milan
+100562,IT,Kubernetes,4,2672,2020-03-16,,InProgress,Milan
+100563,IT,Kubernetes,1,2400,2024-09-22,2024-09-27,Completed,Milan
+100563,IT,Kubernetes,5,2818,2024-01-06,2024-01-19,Completed,Milan
+100564,IT,Kubernetes,3,2821,2023-07-24,,InProgress,Milan
+100564,IT,Kubernetes,3,3002,2024-07-02,2024-07-11,Completed,Milan
+100565,IT,Kubernetes,4,2782,2022-10-22,2022-11-02,Completed,Milan
+100566,IT,ITIL Foundation,1,1330,2019-11-17,2019-11-18,Completed,Milan
+100566,IT,ITIL Foundation,2,1359,2023-11-09,2023-11-18,Completed,Milan
+100566,IT,Database Admin,1,1770,2024-07-29,2024-07-31,Completed,Milan
+100567,IT,Network Security,5,2830,2016-02-15,,InProgress,Milan
+100567,IT,Kubernetes,2,2916,2015-08-27,2015-08-31,Completed,Milan
+100567,IT,Network Security,5,2155,2019-01-13,2019-01-26,Completed,Milan
+100568,IT,ITIL Foundation,5,1261,2023-07-03,,Cancelled,Milan
+100568,IT,AWS Solutions Architect,1,2631,2022-07-23,2022-08-03,Completed,Milan
+100568,IT,Kubernetes,3,3053,2021-01-09,2021-01-23,Completed,Milan
+100569,IT,Network Security,1,2390,2019-08-29,2019-09-01,Completed,Milan
+100570,IT,Kubernetes,3,3152,2018-11-06,,Cancelled,Milan
+100571,IT,Kubernetes,5,2697,2018-04-28,2018-05-11,Completed,Milan
+100572,IT,AWS Solutions Architect,1,2688,2022-07-04,2022-07-18,Completed,Milan
+100572,IT,AWS Solutions Architect,1,2933,2019-02-05,2019-02-16,Completed,Milan
+100573,IT,Database Admin,1,1725,2024-02-28,2024-03-12,Completed,Milan
+100573,IT,AWS Solutions Architect,3,3427,2022-03-03,,Cancelled,Milan
+100574,IT,ITIL Foundation,3,1262,2023-06-17,2023-06-25,Completed,Milan
+100574,IT,AWS Solutions Architect,2,2776,2024-08-07,,Cancelled,Milan
+100574,IT,Cybersecurity,4,3419,2021-02-09,,Cancelled,Milan
+100575,IT,AWS Solutions Architect,2,2595,2018-01-20,,InProgress,Milan
+100575,IT,AWS Solutions Architect,2,3093,2017-08-31,2017-09-06,Completed,Milan
+100575,IT,ITIL Foundation,3,1144,2020-04-06,2020-04-20,Completed,Milan
+100576,IT,AWS Solutions Architect,2,3090,2020-01-14,,Cancelled,Milan
+100577,IT,Network Security,4,2539,2022-04-20,,Cancelled,Milan
+100577,IT,Network Security,1,2657,2018-09-11,,InProgress,Milan
+100577,IT,Database Admin,5,1679,2023-02-16,,Cancelled,Milan
+100578,IT,Database Admin,4,2021,2024-07-07,,InProgress,Milan
+100578,IT,ITIL Foundation,2,1296,2024-02-12,,Cancelled,Milan
+100578,IT,Database Admin,5,1606,2024-06-17,2024-06-23,Completed,Milan
+100579,IT,Network Security,4,2517,2023-08-07,2023-08-13,Completed,Milan
+100580,IT,Cybersecurity,5,2976,2022-10-27,2022-11-01,Completed,Milan
+100580,IT,Kubernetes,3,2526,2021-09-18,2021-10-04,Completed,Milan
+100581,Operations,ERP Systems,3,2140,2016-07-11,,InProgress,Milan
+100581,Operations,Quality Management,4,1378,2023-12-23,2024-01-03,Completed,Milan
+100581,Operations,Project Management PMP,4,2791,2023-06-17,2023-07-04,Completed,Milan
+100582,Operations,Lean Six Sigma,2,1974,2021-05-15,2021-05-17,Completed,Milan
+100582,Operations,ERP Systems,1,1771,2016-12-22,2016-12-25,Completed,Milan
+100582,Operations,Lean Six Sigma,2,2180,2020-01-06,,Cancelled,Milan
+100583,Operations,Project Management PMP,1,2333,2021-07-05,2021-07-11,Completed,Milan
+100583,Operations,Lean Six Sigma,5,1708,2023-07-28,,InProgress,Milan
+100583,Operations,ERP Systems,5,1779,2024-03-18,2024-03-26,Completed,Milan
+100584,Operations,Project Management PMP,1,2292,2021-04-16,,Cancelled,Milan
+100584,Operations,ERP Systems,2,1967,2021-05-01,,InProgress,Milan
+100585,Operations,Quality Management,2,1316,2022-02-24,2022-03-10,Completed,Milan
+100585,Operations,Process Improvement,2,1387,2022-05-05,2022-05-16,Completed,Milan
+100586,Operations,Project Management PMP,3,2406,2022-08-13,2022-08-22,Completed,Milan
+100586,Operations,Process Improvement,1,1319,2024-07-13,,Cancelled,Milan
+100586,Operations,Quality Management,1,1324,2021-11-10,2021-11-11,Completed,Milan
+100587,Operations,Supply Chain Management,3,2023,2023-10-16,2023-10-26,Completed,Milan
+100587,Operations,ERP Systems,3,2240,2022-02-08,2022-02-21,Completed,Milan
+100587,Operations,Quality Management,3,1083,2024-10-16,2024-10-28,Completed,Milan
+100588,Operations,Project Management PMP,2,2736,2022-12-10,,InProgress,Milan
+100588,Operations,Project Management PMP,1,2456,2024-02-27,,InProgress,Milan
+100588,Operations,Project Management PMP,4,2409,2022-02-05,2022-02-13,Completed,Milan
+100589,Operations,ERP Systems,2,1921,2023-07-27,2023-08-10,Completed,Milan
+100589,Operations,Project Management PMP,2,2511,2023-11-01,,Cancelled,Milan
+100590,Operations,Supply Chain Management,5,1889,2019-08-27,,Cancelled,Milan
+100591,Operations,Supply Chain Management,2,1923,2020-11-19,,InProgress,Milan
+100591,Operations,Supply Chain Management,5,1835,2020-03-15,2020-03-24,Completed,Milan
+100592,Operations,Process Improvement,2,1378,2023-10-27,2023-11-05,Completed,Milan
+100593,Operations,ERP Systems,2,1910,2019-04-14,2019-04-19,Completed,Milan
+100593,Operations,Project Management PMP,3,2126,2018-08-20,2018-09-05,Completed,Milan
+100594,Operations,Lean Six Sigma,3,1738,2020-11-26,2020-12-08,Completed,Milan
+100594,Operations,Process Improvement,1,1335,2021-07-26,2021-08-07,Completed,Milan
+100594,Operations,ERP Systems,1,2060,2021-12-01,,Cancelled,Milan
+100595,Operations,Lean Six Sigma,4,2065,2022-03-05,,InProgress,Milan
+100595,Operations,Supply Chain Management,4,2015,2024-08-30,2024-09-15,Completed,Milan
+100595,Operations,Project Management PMP,2,2636,2023-10-27,2023-11-12,Completed,Milan
+100596,Operations,Quality Management,4,1367,2016-11-28,,InProgress,Milan
+100597,Operations,Quality Management,3,1020,2023-12-04,2023-12-21,Completed,Milan
+100597,Operations,Supply Chain Management,2,1773,2017-08-11,2017-08-19,Completed,Milan
+100597,Operations,Supply Chain Management,5,1891,2019-05-24,2019-05-29,Completed,Milan
+100598,Operations,Project Management PMP,3,2412,2023-10-22,2023-10-25,Completed,Milan
+100598,Operations,Lean Six Sigma,1,2046,2020-01-27,,Cancelled,Milan
+100598,Operations,Process Improvement,3,1695,2021-08-08,,InProgress,Milan
+100599,Operations,Project Management PMP,5,2497,2021-04-26,,InProgress,Milan
+100599,Operations,Quality Management,3,1224,2020-06-06,,InProgress,Milan
+100600,Operations,Process Improvement,5,1522,2024-01-26,2024-02-03,Completed,Milan
+100600,Operations,Project Management PMP,2,2747,2024-06-10,,Cancelled,Milan
+100601,Operations,Lean Six Sigma,3,1870,2019-11-06,,InProgress,Milan
+100602,Operations,Supply Chain Management,5,1614,2020-10-24,,InProgress,Milan
+100602,Operations,Lean Six Sigma,1,1797,2024-01-04,,Cancelled,Milan
+100602,Operations,Supply Chain Management,4,1532,2020-02-21,2020-03-09,Completed,Milan
+100603,Operations,Quality Management,3,1134,2024-06-17,2024-06-23,Completed,Milan
+100603,Operations,Supply Chain Management,2,1814,2023-10-24,2023-10-28,Completed,Milan
+100603,Operations,Lean Six Sigma,2,1952,2020-10-02,,Cancelled,Milan
+100604,Operations,Lean Six Sigma,1,1884,2022-02-27,2022-03-13,Completed,Milan
+100604,Operations,Quality Management,2,1281,2023-04-13,2023-04-26,Completed,Milan
+100604,Operations,ERP Systems,5,2126,2022-03-29,,InProgress,Milan
+100605,Operations,Quality Management,1,1246,2020-11-18,2020-11-27,Completed,Milan
+100605,Operations,Quality Management,5,1070,2021-04-20,2021-04-27,Completed,Milan
+100605,Operations,Project Management PMP,3,2590,2020-06-09,,InProgress,Milan
+100606,Operations,Project Management PMP,4,2828,2021-05-03,2021-05-18,Completed,Milan
+100606,Operations,Supply Chain Management,5,1765,2021-10-28,2021-11-13,Completed,Milan
+100606,Operations,ERP Systems,5,2025,2020-06-26,2020-07-11,Completed,Milan
+100607,Operations,Lean Six Sigma,3,2140,2023-02-19,2023-03-08,Completed,Milan
+100607,Operations,Lean Six Sigma,1,2119,2023-09-26,,Cancelled,Milan
+100607,Operations,Supply Chain Management,5,1727,2024-06-03,2024-06-15,Completed,Milan
+100608,Operations,Lean Six Sigma,2,1902,2024-02-05,2024-02-21,Completed,Milan
+100609,Operations,ERP Systems,4,1777,2024-03-07,,InProgress,Milan
+100610,Operations,Project Management PMP,1,2220,2023-10-07,2023-10-11,Completed,Milan
+100610,Operations,Quality Management,5,1274,2024-10-18,2024-11-01,Completed,Milan
+100610,Operations,Lean Six Sigma,4,2100,2024-09-21,2024-09-30,Completed,Milan
+100611,Operations,Process Improvement,5,1501,2020-07-31,2020-08-14,Completed,Milan
+100611,Operations,Project Management PMP,3,2798,2019-06-26,2019-07-04,Completed,Milan
+100612,Operations,Lean Six Sigma,2,1743,2017-03-17,,InProgress,Milan
+100612,Operations,Quality Management,4,1205,2018-05-24,2018-06-06,Completed,Milan
+100613,Operations,Quality Management,1,1246,2019-09-27,,Cancelled,Milan
+100613,Operations,Lean Six Sigma,4,1840,2020-10-02,2020-10-20,Completed,Milan
+100613,Operations,ERP Systems,1,1702,2017-01-18,,InProgress,Milan
+100614,Operations,Lean Six Sigma,2,1702,2020-12-17,,Cancelled,Milan
+100614,Operations,Process Improvement,1,1483,2023-10-21,2023-11-01,Completed,Milan
+100615,Operations,Lean Six Sigma,5,2211,2023-07-12,2023-07-21,Completed,Milan
+100615,Operations,Project Management PMP,2,2188,2024-02-06,2024-02-15,Completed,Milan
+100616,Operations,Supply Chain Management,2,1697,2024-02-18,2024-02-27,Completed,Milan
+100616,Operations,Lean Six Sigma,4,1784,2024-04-03,2024-04-09,Completed,Milan
+100617,Operations,Lean Six Sigma,2,2218,2022-04-19,,Cancelled,Milan
+100618,Operations,ERP Systems,4,1834,2023-11-06,,Cancelled,Milan
+100619,Operations,Project Management PMP,3,2769,2020-07-19,2020-07-26,Completed,Milan
+100620,Operations,Supply Chain Management,3,1914,2023-12-16,,InProgress,Milan
+100620,Operations,ERP Systems,1,1850,2024-02-29,2024-03-08,Completed,Milan
+100621,Operations,ERP Systems,2,1874,2024-04-10,,InProgress,Milan
+100622,Operations,Supply Chain Management,2,1624,2020-09-18,2020-09-23,Completed,Milan
+100623,Operations,Supply Chain Management,3,1894,2024-04-09,,Cancelled,Milan
+100623,Operations,Lean Six Sigma,5,1863,2024-07-11,2024-07-25,Completed,Milan
+100624,Operations,Project Management PMP,2,2643,2021-07-26,,InProgress,Milan
+100625,Operations,ERP Systems,5,2277,2022-07-01,2022-07-14,Completed,Milan
+100626,Operations,Supply Chain Management,2,1561,2021-12-15,,Cancelled,Milan
+100626,Operations,Process Improvement,2,1362,2024-01-26,2024-01-29,Completed,Milan
+100626,Operations,Project Management PMP,2,2370,2024-08-04,,Cancelled,Milan
+100627,Operations,ERP Systems,4,2157,2023-04-13,2023-04-26,Completed,Milan
+100627,Operations,ERP Systems,2,1935,2023-04-25,2023-05-11,Completed,Milan
+100628,Operations,Lean Six Sigma,1,1723,2019-12-28,2020-01-12,Completed,Milan
+100628,Operations,ERP Systems,5,2073,2020-10-02,,Cancelled,Milan
+100629,Operations,Project Management PMP,5,2132,2021-08-15,2021-08-20,Completed,Milan
+100629,Operations,Supply Chain Management,5,1767,2017-07-29,2017-08-14,Completed,Milan
+100630,Operations,Lean Six Sigma,4,2171,2016-04-01,2016-04-18,Completed,Milan
+100630,Operations,Project Management PMP,1,2697,2019-04-21,,InProgress,Milan
+100631,Operations,Project Management PMP,2,2646,2023-03-29,2023-04-03,Completed,Milan
+100632,Operations,Supply Chain Management,2,1600,2019-05-28,,InProgress,Milan
+100632,Operations,Supply Chain Management,4,1920,2020-05-22,2020-06-08,Completed,Milan
+100633,Operations,ERP Systems,4,2284,2024-10-21,,InProgress,Milan
+100634,Operations,Quality Management,5,1200,2023-05-17,2023-05-25,Completed,Milan
+100634,Operations,Lean Six Sigma,1,2251,2024-05-13,2024-05-15,Completed,Milan
+100635,Operations,Project Management PMP,1,2507,2023-10-14,2023-10-24,Completed,Milan
+100635,Operations,Project Management PMP,2,2548,2021-12-21,2021-12-30,Completed,Milan
+100635,Operations,Supply Chain Management,3,1898,2023-04-02,2023-04-12,Completed,Milan
+100636,Operations,Process Improvement,3,1380,2024-02-11,2024-02-20,Completed,Milan
+100636,Operations,Quality Management,1,1112,2019-11-08,2019-11-15,Completed,Milan
+100637,Operations,Lean Six Sigma,2,2021,2023-04-16,2023-04-29,Completed,Milan
+100638,Operations,Quality Management,3,1104,2020-07-13,2020-07-17,Completed,Milan
+100639,Operations,Lean Six Sigma,1,2132,2023-11-05,,Cancelled,Milan
+100639,Operations,ERP Systems,3,2223,2023-11-07,,Cancelled,Milan
+100640,Operations,Project Management PMP,2,2128,2023-07-26,,InProgress,Milan
+100641,Operations,Process Improvement,2,1692,2021-04-16,,Cancelled,Milan
+100641,Operations,Quality Management,2,1143,2017-06-08,,InProgress,Milan
+100642,Operations,Quality Management,1,1256,2018-10-18,2018-11-02,Completed,Milan
+100643,Operations,ERP Systems,1,2063,2021-08-31,2021-09-10,Completed,Milan
+100643,Operations,Project Management PMP,4,2854,2024-07-03,2024-07-16,Completed,Milan
+100643,Operations,ERP Systems,2,2205,2022-07-08,2022-07-10,Completed,Milan
+100644,Operations,Lean Six Sigma,2,2013,2024-02-04,2024-02-15,Completed,Milan
+100644,Operations,Project Management PMP,4,2319,2024-01-01,2024-01-13,Completed,Milan
+100644,Operations,Process Improvement,4,1477,2024-02-27,,Cancelled,Milan
+100645,Operations,Supply Chain Management,3,1963,2020-08-21,,Cancelled,Milan
+100645,Operations,Lean Six Sigma,3,2197,2019-09-07,,InProgress,Milan
+100645,Operations,Process Improvement,3,1339,2019-09-29,,InProgress,Milan
+100646,Operations,Lean Six Sigma,2,1800,2023-03-18,2023-03-31,Completed,Milan
+100646,Operations,Supply Chain Management,1,1533,2022-11-13,,InProgress,Milan
+100647,Operations,Project Management PMP,3,2739,2023-12-01,2023-12-08,Completed,Milan
+100647,Operations,Process Improvement,3,1720,2017-05-05,,InProgress,Milan
+100647,Operations,ERP Systems,1,1898,2018-03-18,,InProgress,Milan
+100648,Operations,Project Management PMP,1,2780,2023-05-09,2023-05-15,Completed,Milan
+100649,Operations,Supply Chain Management,2,1816,2020-06-03,2020-06-14,Completed,Milan
+100649,Operations,Supply Chain Management,2,1826,2023-09-04,,InProgress,Milan
+100649,Operations,Lean Six Sigma,3,1860,2018-08-09,,Cancelled,Milan
+100650,Operations,Project Management PMP,5,2777,2022-12-16,,Cancelled,Milan
+100650,Operations,Lean Six Sigma,5,1723,2024-03-13,2024-03-23,Completed,Milan
+100650,Operations,ERP Systems,2,1993,2023-12-06,,InProgress,Milan
+100651,Operations,Quality Management,4,1122,2024-05-04,,InProgress,Milan
+100652,Operations,Supply Chain Management,4,2056,2023-05-17,,InProgress,Milan
+100653,Operations,Process Improvement,3,1412,2024-05-19,2024-05-23,Completed,Milan
+100653,Operations,Lean Six Sigma,2,2099,2023-07-27,2023-08-05,Completed,Milan
+100654,Operations,Lean Six Sigma,3,2080,2023-11-28,2023-12-02,Completed,Milan
+100654,Operations,Lean Six Sigma,5,1899,2023-04-06,2023-04-18,Completed,Milan
+100654,Operations,Process Improvement,1,1719,2017-11-30,,InProgress,Milan
+100655,Operations,Supply Chain Management,4,1692,2023-04-12,2023-04-17,Completed,Milan
+100655,Operations,Project Management PMP,2,2196,2023-10-21,,InProgress,Milan
+100655,Operations,Lean Six Sigma,2,1803,2023-03-05,2023-03-21,Completed,Milan
+100656,Operations,Quality Management,3,1119,2024-02-07,,InProgress,Milan
+100656,Operations,Quality Management,3,1175,2023-11-01,2023-11-07,Completed,Milan
+100656,Operations,Quality Management,3,1202,2024-04-15,,Cancelled,Milan
+100657,Operations,Process Improvement,5,1365,2018-09-13,2018-09-18,Completed,Milan
+100657,Operations,Quality Management,2,1328,2021-03-21,2021-04-02,Completed,Milan
+100657,Operations,Process Improvement,5,1320,2021-11-25,,InProgress,Milan
+100658,Operations,Quality Management,3,1349,2020-12-19,2021-01-04,Completed,Milan
+100658,Operations,Process Improvement,4,1582,2021-11-23,2021-11-30,Completed,Milan
+100659,Operations,Project Management PMP,2,2356,2015-07-03,2015-07-12,Completed,Milan
+100660,Operations,Process Improvement,2,1502,2021-09-11,,InProgress,Milan
+100660,Operations,Quality Management,5,1248,2023-09-23,2023-10-06,Completed,Milan
+100661,Operations,ERP Systems,2,1956,2019-05-01,2019-05-15,Completed,Milan
+100661,Operations,Quality Management,4,1150,2022-07-02,2022-07-20,Completed,Milan
+100661,Operations,Process Improvement,4,1318,2019-08-18,,Cancelled,Milan
+100662,Operations,Quality Management,1,1281,2024-08-04,2024-08-05,Completed,Milan
+100662,Operations,Quality Management,4,1031,2023-10-01,,InProgress,Milan
+100663,Operations,Lean Six Sigma,1,1802,2019-07-02,,Cancelled,Milan
+100663,Operations,Process Improvement,1,1431,2019-04-28,,Cancelled,Milan
+100663,Operations,Supply Chain Management,3,1607,2018-12-19,2019-01-03,Completed,Milan
+100664,Operations,Quality Management,3,1125,2020-03-14,,InProgress,Milan
+100665,Operations,Process Improvement,3,1491,2021-03-20,2021-03-30,Completed,Milan
+100666,Operations,Quality Management,4,1048,2017-02-06,,InProgress,Milan
+100667,Operations,Lean Six Sigma,4,2295,2022-05-10,2022-05-14,Completed,Milan
+100668,Operations,Lean Six Sigma,5,2015,2023-03-05,,Cancelled,Milan
+100668,Operations,Process Improvement,3,1347,2022-03-09,,Cancelled,Milan
+100668,Operations,Lean Six Sigma,3,2251,2023-08-05,2023-08-19,Completed,Milan
+100669,Operations,ERP Systems,4,2281,2022-02-01,2022-02-06,Completed,Milan
+100669,Operations,Lean Six Sigma,2,1931,2020-05-22,2020-05-28,Completed,Milan
+100670,Operations,Lean Six Sigma,3,1974,2019-05-25,2019-06-01,Completed,Milan
+100670,Operations,Supply Chain Management,5,1856,2021-10-03,2021-10-22,Completed,Milan
+100670,Operations,Supply Chain Management,1,2034,2024-02-14,,InProgress,Milan
+100671,Operations,Supply Chain Management,3,1603,2020-10-16,2020-10-27,Completed,Milan
+100671,Operations,Quality Management,1,1141,2021-09-18,,Cancelled,Milan
+100671,Operations,ERP Systems,1,1930,2024-08-15,,InProgress,Milan
+100672,Operations,Quality Management,3,1029,2022-01-05,,InProgress,Milan
+100672,Operations,Lean Six Sigma,3,1798,2021-12-05,2021-12-19,Completed,Milan
+100672,Operations,Lean Six Sigma,4,1708,2021-10-28,2021-11-03,Completed,Milan
+100673,Operations,Supply Chain Management,4,2020,2024-07-17,,Cancelled,Milan
+100673,Operations,Process Improvement,2,1323,2024-01-03,2024-01-13,Completed,Milan
+100674,Operations,Project Management PMP,2,2767,2018-11-10,,InProgress,Milan
+100674,Operations,Quality Management,5,1147,2023-12-19,2023-12-27,Completed,Milan
+100675,Operations,Supply Chain Management,4,1623,2023-07-23,2023-07-29,Completed,Milan
+100676,Operations,Lean Six Sigma,1,2187,2022-09-29,2022-10-12,Completed,Milan
+100677,Operations,ERP Systems,1,1998,2019-01-19,,InProgress,Milan
+100678,Operations,ERP Systems,5,1929,2017-12-10,2017-12-16,Completed,Milan
+100678,Operations,ERP Systems,2,2231,2016-09-04,2016-09-16,Completed,Milan
+100678,Operations,Project Management PMP,5,2557,2020-12-22,,InProgress,Milan
+100679,Operations,Lean Six Sigma,2,1797,2024-08-07,2024-08-19,Completed,Milan
+100679,Operations,Quality Management,4,1317,2023-12-13,2023-12-27,Completed,Milan
+100679,Operations,Project Management PMP,1,2551,2020-10-30,2020-11-09,Completed,Milan
+100680,Operations,ERP Systems,4,2123,2021-03-23,2021-04-03,Completed,Milan
+100680,Operations,Quality Management,2,1226,2024-07-25,2024-08-07,Completed,Milan
+100681,Operations,Process Improvement,4,1714,2021-03-25,2021-04-05,Completed,Milan
+100681,Operations,Lean Six Sigma,3,1987,2022-04-15,,InProgress,Milan
+100681,Operations,Quality Management,5,1179,2024-05-15,2024-05-26,Completed,Milan
+100682,Operations,Project Management PMP,3,2298,2024-07-09,,InProgress,Milan
+100682,Operations,Quality Management,5,1368,2023-06-17,2023-07-01,Completed,Milan
+100683,Operations,Quality Management,5,1331,2018-09-02,2018-09-11,Completed,Milan
+100684,Operations,Supply Chain Management,4,1760,2023-11-18,2023-11-26,Completed,Milan
+100684,Operations,Lean Six Sigma,4,1707,2023-06-08,,InProgress,Milan
+100684,Operations,Lean Six Sigma,5,2167,2024-03-25,,InProgress,Milan
+100685,Operations,Project Management PMP,3,2677,2021-10-07,,Cancelled,Milan
+100685,Operations,Process Improvement,3,1358,2021-08-02,,InProgress,Milan
+100686,Operations,Supply Chain Management,1,1866,2021-05-22,,Cancelled,Milan
+100687,Operations,Quality Management,5,1359,2024-09-08,2024-09-18,Completed,Milan
+100687,Operations,Quality Management,5,1225,2024-08-30,,InProgress,Milan
+100688,Operations,Supply Chain Management,3,1908,2024-01-06,2024-01-11,Completed,Milan
+100688,Operations,Lean Six Sigma,5,2216,2022-12-26,2023-01-12,Completed,Milan
+100689,Operations,Project Management PMP,1,2768,2022-10-11,,InProgress,Milan
+100690,Operations,Project Management PMP,3,2569,2022-05-09,,InProgress,Milan
+100691,Operations,Process Improvement,1,1426,2024-05-16,2024-05-25,Completed,Milan
+100692,Operations,Lean Six Sigma,2,1803,2019-05-07,2019-05-12,Completed,Milan
+100693,Operations,ERP Systems,2,2164,2023-07-21,,Cancelled,Milan
+100693,Operations,Process Improvement,3,1560,2021-04-08,2021-04-25,Completed,Milan
+100694,Operations,Quality Management,3,1121,2022-09-26,2022-10-12,Completed,Milan
+100694,Operations,Project Management PMP,5,2629,2022-06-29,,InProgress,Milan
+100694,Operations,Quality Management,1,1307,2024-09-06,,InProgress,Milan
+100695,Operations,Lean Six Sigma,4,2195,2023-11-11,,InProgress,Milan
+100695,Operations,Lean Six Sigma,4,1736,2023-04-01,2023-04-08,Completed,Milan
+100695,Operations,Lean Six Sigma,3,2189,2023-12-15,,Cancelled,Milan
+100696,Operations,Process Improvement,5,1417,2022-11-14,2022-11-27,Completed,Milan
+100697,Operations,Process Improvement,3,1613,2021-04-16,2021-04-26,Completed,Milan
+100697,Operations,Project Management PMP,5,2859,2022-03-05,,Cancelled,Milan
+100697,Operations,ERP Systems,1,1908,2023-05-12,,Cancelled,Milan
+100698,Operations,Project Management PMP,5,2375,2023-03-13,2023-03-30,Completed,Milan
+100699,Operations,Supply Chain Management,3,1533,2023-10-21,2023-10-24,Completed,Milan
+100700,Operations,Project Management PMP,1,2407,2023-07-24,,Cancelled,Milan
+100700,Operations,Process Improvement,5,1702,2024-03-25,2024-04-13,Completed,Milan
+100700,Operations,Project Management PMP,4,2667,2024-02-01,,InProgress,Milan
+100701,Operations,Supply Chain Management,2,2052,2022-11-28,2022-12-08,Completed,Milan
+100701,Operations,ERP Systems,2,2142,2021-11-02,,Cancelled,Milan
+100701,Operations,Process Improvement,3,1413,2021-09-08,2021-09-16,Completed,Milan
+100702,Operations,Process Improvement,3,1397,2023-06-26,,Cancelled,Milan
+100702,Operations,Quality Management,5,1210,2022-07-09,,Cancelled,Milan
+100703,Operations,Quality Management,4,1155,2022-02-23,2022-03-01,Completed,Milan
+100704,Operations,Project Management PMP,4,2842,2024-05-31,,InProgress,Milan
+100704,Operations,ERP Systems,3,2052,2024-01-31,2024-02-12,Completed,Milan
+100704,Operations,Supply Chain Management,4,1722,2024-04-09,2024-04-14,Completed,Milan
+100705,Operations,ERP Systems,3,1863,2020-02-20,2020-02-25,Completed,Milan
+100706,Operations,Project Management PMP,1,2294,2021-04-11,2021-04-22,Completed,Milan
+100706,Operations,Project Management PMP,4,2333,2021-11-26,,InProgress,Milan
+100707,Operations,Process Improvement,5,1459,2022-01-28,2022-02-10,Completed,Milan
+100707,Operations,Lean Six Sigma,5,1827,2022-03-08,,Cancelled,Milan
+100707,Operations,ERP Systems,3,1989,2021-07-22,2021-08-07,Completed,Milan
+100708,Operations,Quality Management,1,1334,2017-06-15,2017-06-22,Completed,Milan
+100709,Operations,Quality Management,1,1043,2021-03-16,2021-03-21,Completed,Milan
+100709,Operations,Process Improvement,5,1390,2017-12-15,,Cancelled,Milan
+100710,Operations,ERP Systems,4,2048,2023-03-13,,Cancelled,Milan
+100711,Operations,Quality Management,5,1073,2023-11-13,2023-11-22,Completed,Milan
+100712,Operations,Quality Management,4,1141,2018-08-11,,InProgress,Milan
+100712,Operations,Project Management PMP,4,2212,2019-02-28,,Cancelled,Milan
+100713,Operations,Project Management PMP,1,2146,2019-06-29,2019-07-08,Completed,Milan
+100714,Operations,Supply Chain Management,2,1642,2024-06-18,2024-06-27,Completed,Milan
+100715,Operations,Project Management PMP,4,2450,2024-01-13,2024-01-28,Completed,Milan
+100716,Operations,Project Management PMP,1,2479,2024-06-07,2024-06-22,Completed,Milan
+100716,Operations,Supply Chain Management,2,1771,2023-11-22,2023-12-04,Completed,Milan
+100717,Operations,Process Improvement,3,1350,2021-03-12,2021-03-18,Completed,Milan
+100718,Operations,Quality Management,3,1267,2019-12-09,2019-12-17,Completed,Milan
+100718,Operations,Project Management PMP,4,2722,2021-04-20,2021-04-27,Completed,Milan
+100718,Operations,ERP Systems,1,2097,2024-01-12,,Cancelled,Milan
+100719,Operations,Lean Six Sigma,1,1828,2023-08-28,2023-09-11,Completed,Milan
+100719,Operations,Process Improvement,4,1388,2023-12-21,2023-12-30,Completed,Milan
+100719,Operations,Lean Six Sigma,2,1826,2022-06-18,2022-06-28,Completed,Milan
+100720,Operations,Lean Six Sigma,2,2110,2022-09-21,,Cancelled,Milan
+100721,Operations,Process Improvement,1,1664,2022-12-29,2023-01-03,Completed,Milan
+100722,Operations,Process Improvement,2,1677,2023-11-14,,InProgress,Milan
+100723,Operations,Supply Chain Management,5,1850,2021-03-22,,InProgress,Milan
+100723,Operations,Lean Six Sigma,3,1837,2022-08-30,2022-09-07,Completed,Milan
+100723,Operations,Quality Management,4,1364,2017-05-22,2017-06-04,Completed,Milan
+100724,Operations,Lean Six Sigma,5,2160,2023-07-31,2023-08-12,Completed,Milan
+100724,Operations,ERP Systems,2,1887,2021-08-09,2021-08-16,Completed,Milan
+100724,Operations,ERP Systems,2,1862,2021-02-20,2021-02-22,Completed,Milan
+100725,Operations,Lean Six Sigma,2,2149,2020-08-19,,Cancelled,Milan
+100725,Operations,ERP Systems,1,1963,2021-04-25,2021-04-27,Completed,Milan
+100725,Operations,ERP Systems,1,1959,2018-04-16,2018-04-30,Completed,Milan
+100726,Operations,Quality Management,3,1097,2016-12-09,2016-12-17,Completed,Milan
+100726,Operations,Process Improvement,3,1326,2018-01-16,,Cancelled,Milan
+100727,Operations,Process Improvement,4,1514,2020-12-24,,Cancelled,Milan
+100727,Operations,Lean Six Sigma,4,2272,2021-10-16,,Cancelled,Milan
+100727,Operations,Supply Chain Management,1,1867,2023-02-04,2023-02-19,Completed,Milan
+100728,Operations,ERP Systems,2,2181,2022-09-16,,Cancelled,Milan
+100728,Operations,Project Management PMP,5,2577,2023-03-19,2023-03-24,Completed,Milan
+100728,Operations,ERP Systems,3,2151,2020-10-15,2020-10-20,Completed,Milan
+100729,Operations,Lean Six Sigma,2,2280,2023-05-01,2023-05-04,Completed,Milan
+100729,Operations,Supply Chain Management,3,2064,2022-01-05,2022-01-08,Completed,Milan
+100729,Operations,Quality Management,3,1243,2022-08-31,2022-09-03,Completed,Milan
+100730,Operations,Quality Management,1,1046,2021-06-07,2021-06-08,Completed,Milan
+100730,Operations,ERP Systems,2,1763,2023-02-14,2023-02-18,Completed,Milan
+100731,Operations,Quality Management,1,1349,2016-08-22,2016-08-26,Completed,Milan
+100731,Operations,Process Improvement,5,1549,2017-07-07,2017-07-21,Completed,Milan
+100732,Operations,Quality Management,5,1070,2020-05-20,2020-05-31,Completed,Milan
+100733,Operations,ERP Systems,5,1993,2024-02-01,,Cancelled,Milan
+100734,Operations,ERP Systems,5,2269,2024-01-20,2024-02-08,Completed,Milan
+100734,Operations,Quality Management,3,1077,2024-07-11,2024-07-23,Completed,Milan
+100734,Operations,ERP Systems,2,2015,2024-06-17,2024-06-28,Completed,Milan
+100735,Operations,Quality Management,4,1086,2023-02-21,,InProgress,Milan
+100735,Operations,Supply Chain Management,4,1990,2022-10-31,2022-11-17,Completed,Milan
+100736,Operations,Process Improvement,2,1444,2019-07-21,2019-07-26,Completed,Milan
+100737,Operations,Quality Management,2,1290,2018-12-17,,InProgress,Milan
+100737,Operations,Lean Six Sigma,5,1918,2024-06-24,,Cancelled,Milan
+100738,Operations,Quality Management,1,1248,2019-06-30,,Cancelled,Milan
+100738,Operations,Process Improvement,2,1420,2022-12-27,,InProgress,Milan
+100739,Operations,Project Management PMP,1,2467,2021-10-10,,Cancelled,Milan
+100739,Operations,Project Management PMP,3,2834,2020-12-30,,InProgress,Milan
+100740,Operations,Project Management PMP,3,2417,2022-01-19,,InProgress,Milan
+100741,HR_Dept,Compensation Strategy,3,1254,2023-11-11,2023-11-18,Completed,Paris
+100742,HR_Dept,Compensation Strategy,5,1251,2022-08-11,2022-08-30,Completed,Paris
+100743,HR_Dept,HR Analytics,1,1563,2022-08-23,,InProgress,Paris
+100744,HR_Dept,People Management,4,868,2022-01-10,,InProgress,Paris
+100745,HR_Dept,Labor Law,1,739,2024-02-19,2024-03-05,Completed,Paris
+100745,HR_Dept,Talent Acquisition,1,922,2021-09-05,2021-09-07,Completed,Paris
+100745,HR_Dept,People Management,5,1011,2023-01-06,2023-01-14,Completed,Paris
+100746,HR_Dept,HR Analytics,2,1381,2023-12-11,,Cancelled,Paris
+100747,HR_Dept,Compensation Strategy,5,1317,2021-11-13,2021-11-23,Completed,Paris
+100747,HR_Dept,Diversity & Inclusion,4,615,2023-10-19,2023-11-05,Completed,Paris
+100747,HR_Dept,HR Analytics,2,1674,2022-02-19,,Cancelled,Paris
+100748,HR_Dept,People Management,4,984,2024-01-16,2024-02-02,Completed,Paris
+100748,HR_Dept,Labor Law,4,819,2023-05-24,,InProgress,Paris
+100749,HR_Dept,Compensation Strategy,2,1139,2023-04-17,2023-04-23,Completed,Paris
+100749,HR_Dept,Talent Acquisition,2,1018,2019-08-03,,Cancelled,Paris
+100750,HR_Dept,HR Analytics,1,1523,2020-02-16,,Cancelled,Paris
+100750,HR_Dept,Talent Acquisition,1,840,2021-10-29,,Cancelled,Paris
+100750,HR_Dept,Compensation Strategy,2,1238,2022-03-29,2022-04-08,Completed,Paris
+100751,HR_Dept,Talent Acquisition,1,868,2021-05-30,2021-05-31,Completed,Paris
+100751,HR_Dept,Talent Acquisition,2,827,2021-04-02,2021-04-12,Completed,Paris
+100752,HR_Dept,Compensation Strategy,2,1098,2021-04-02,,Cancelled,Paris
+100752,HR_Dept,Compensation Strategy,2,1279,2020-02-10,2020-02-22,Completed,Paris
+100753,HR_Dept,Diversity & Inclusion,3,792,2015-12-11,2015-12-24,Completed,Paris
+100753,HR_Dept,People Management,2,911,2016-03-11,2016-03-23,Completed,Paris
+100754,HR_Dept,HR Analytics,5,1373,2020-09-10,2020-09-21,Completed,Paris
+100755,HR_Dept,Talent Acquisition,4,852,2018-08-28,2018-09-12,Completed,Paris
+100755,HR_Dept,HR Analytics,2,1610,2018-08-02,2018-08-15,Completed,Paris
+100755,HR_Dept,Talent Acquisition,2,772,2019-03-08,2019-03-11,Completed,Paris
+100756,HR_Dept,Labor Law,5,897,2021-11-17,2021-11-23,Completed,Paris
+100756,HR_Dept,Compensation Strategy,5,1151,2020-08-04,,InProgress,Paris
+100757,HR_Dept,Talent Acquisition,4,804,2019-02-24,2019-03-13,Completed,Paris
+100757,HR_Dept,Diversity & Inclusion,1,772,2021-09-09,2021-09-21,Completed,Paris
+100758,HR_Dept,People Management,1,994,2024-04-23,2024-04-28,Completed,Paris
+100759,HR_Dept,HR Analytics,2,1470,2024-09-10,,InProgress,Paris
+100759,HR_Dept,Talent Acquisition,4,935,2024-04-01,,InProgress,Paris
+100759,HR_Dept,Compensation Strategy,3,1265,2024-06-02,,InProgress,Paris
+100760,HR_Dept,HR Analytics,4,1497,2022-02-21,,Cancelled,Paris
+100760,HR_Dept,Compensation Strategy,1,1316,2020-04-13,2020-04-17,Completed,Paris
+100761,HR_Dept,Diversity & Inclusion,3,696,2024-07-09,,Cancelled,Paris
+100762,HR_Dept,Labor Law,1,792,2018-11-28,2018-12-02,Completed,Paris
+100762,HR_Dept,Diversity & Inclusion,5,798,2020-06-23,2020-06-29,Completed,Paris
+100763,HR_Dept,Compensation Strategy,4,1247,2022-07-12,,InProgress,Paris
+100763,HR_Dept,Talent Acquisition,4,841,2024-03-26,2024-04-12,Completed,Paris
+100763,HR_Dept,HR Analytics,5,1668,2018-12-24,2019-01-05,Completed,Paris
+100764,HR_Dept,HR Analytics,4,1441,2024-06-21,2024-07-01,Completed,Paris
+100765,HR_Dept,Talent Acquisition,1,1024,2020-03-02,2020-03-13,Completed,Paris
+100766,HR_Dept,People Management,3,1112,2022-04-17,2022-04-21,Completed,Paris
+100766,HR_Dept,Talent Acquisition,1,1028,2021-06-05,2021-06-15,Completed,Paris
+100767,HR_Dept,People Management,4,868,2024-06-14,,Cancelled,Paris
+100767,HR_Dept,HR Analytics,5,1587,2024-04-29,2024-05-12,Completed,Paris
+100768,HR_Dept,Diversity & Inclusion,3,742,2021-12-29,2022-01-13,Completed,Paris
+100768,HR_Dept,Diversity & Inclusion,2,728,2023-03-22,,Cancelled,Paris
+100768,HR_Dept,People Management,1,919,2022-09-16,2022-09-20,Completed,Paris
+100769,HR_Dept,Labor Law,3,884,2023-12-20,,InProgress,Paris
+100769,HR_Dept,Compensation Strategy,1,1089,2024-10-17,,InProgress,Paris
+100770,HR_Dept,HR Analytics,4,1294,2022-05-30,2022-06-16,Completed,Paris
+100771,HR_Dept,Labor Law,5,851,2020-09-27,2020-10-07,Completed,Paris
+100771,HR_Dept,Talent Acquisition,1,813,2023-06-30,,InProgress,Paris
+100771,HR_Dept,Compensation Strategy,1,1313,2022-12-03,2022-12-10,Completed,Paris
+100772,HR_Dept,HR Analytics,3,1418,2018-08-09,2018-08-17,Completed,Paris
+100772,HR_Dept,Labor Law,5,714,2019-05-27,,Cancelled,Paris
+100772,HR_Dept,Talent Acquisition,3,883,2020-11-11,2020-11-15,Completed,Paris
+100773,HR_Dept,Compensation Strategy,1,1036,2018-09-21,2018-09-25,Completed,Paris
+100774,HR_Dept,Talent Acquisition,2,996,2019-01-20,,Cancelled,Paris
+100774,HR_Dept,Labor Law,3,844,2017-01-09,,InProgress,Paris
+100775,HR_Dept,Labor Law,4,868,2016-04-10,2016-04-15,Completed,Paris
+100775,HR_Dept,HR Analytics,2,1722,2024-10-18,2024-10-29,Completed,Paris
+100776,HR_Dept,Compensation Strategy,5,1258,2020-02-22,,InProgress,Paris
+100776,HR_Dept,Talent Acquisition,4,766,2022-11-02,2022-11-15,Completed,Paris
+100777,HR_Dept,Diversity & Inclusion,1,799,2020-03-26,2020-04-08,Completed,Paris
+100777,HR_Dept,Labor Law,3,848,2020-11-04,,Cancelled,Paris
+100778,HR_Dept,People Management,2,1046,2023-05-28,2023-06-07,Completed,Paris
+100779,HR_Dept,Labor Law,3,759,2023-07-03,2023-07-08,Completed,Paris
+100779,HR_Dept,HR Analytics,1,1358,2019-11-13,,InProgress,Paris
+100780,HR_Dept,HR Analytics,3,1505,2024-02-23,,Cancelled,Paris
+100780,HR_Dept,Diversity & Inclusion,5,730,2024-01-25,2024-02-06,Completed,Paris
+100780,HR_Dept,HR Analytics,4,1467,2023-10-05,2023-10-22,Completed,Paris
+100781,HR_Dept,HR Analytics,1,1715,2024-08-26,,InProgress,Paris
+100782,HR_Dept,Compensation Strategy,2,1378,2022-01-21,,Cancelled,Paris
+100783,HR_Dept,Talent Acquisition,2,1000,2019-12-03,2019-12-09,Completed,Paris
+100783,HR_Dept,Labor Law,4,891,2016-12-19,2016-12-23,Completed,Paris
+100784,HR_Dept,Labor Law,2,803,2021-06-08,,Cancelled,Paris
+100784,HR_Dept,Compensation Strategy,2,1056,2022-12-27,2023-01-03,Completed,Paris
+100784,HR_Dept,People Management,1,1040,2019-12-14,,InProgress,Paris
+100785,HR_Dept,People Management,5,1119,2021-02-09,,InProgress,Paris
+100785,HR_Dept,People Management,4,1070,2021-07-11,2021-07-23,Completed,Paris
+100785,HR_Dept,Compensation Strategy,4,1068,2020-08-08,,InProgress,Paris
+100786,HR_Dept,Compensation Strategy,1,1028,2021-09-18,2021-09-22,Completed,Paris
+100786,HR_Dept,HR Analytics,5,1366,2023-04-19,2023-05-02,Completed,Paris
+100786,HR_Dept,Diversity & Inclusion,2,597,2020-12-18,,Cancelled,Paris
+100787,HR_Dept,Labor Law,5,894,2018-06-11,,Cancelled,Paris
+100788,HR_Dept,Talent Acquisition,2,868,2024-08-30,,Cancelled,Paris
+100789,HR_Dept,Compensation Strategy,5,1213,2020-03-21,,InProgress,Paris
+100789,HR_Dept,HR Analytics,2,1647,2023-06-10,2023-06-20,Completed,Paris
+100789,HR_Dept,People Management,1,1134,2019-02-11,,InProgress,Paris
+100790,HR_Dept,People Management,1,973,2017-12-28,2018-01-03,Completed,Paris
+100790,HR_Dept,Diversity & Inclusion,3,684,2017-03-07,2017-03-15,Completed,Paris
+100790,HR_Dept,Talent Acquisition,5,902,2017-09-11,2017-09-29,Completed,Paris
+100791,HR_Dept,HR Analytics,3,1373,2020-12-09,2020-12-26,Completed,Paris
+100791,HR_Dept,Compensation Strategy,4,1044,2024-08-08,,InProgress,Paris
+100792,HR_Dept,People Management,3,1091,2023-12-31,2024-01-16,Completed,Paris
+100792,HR_Dept,HR Analytics,4,1410,2024-01-17,2024-01-28,Completed,Paris
+100793,HR_Dept,Labor Law,4,776,2020-09-08,,Cancelled,Paris
+100794,HR_Dept,Labor Law,3,696,2022-11-27,,Cancelled,Paris
+100795,HR_Dept,Diversity & Inclusion,5,774,2020-12-29,,InProgress,Paris
+100795,HR_Dept,HR Analytics,1,1485,2020-03-25,2020-04-08,Completed,Paris
+100795,HR_Dept,Labor Law,5,718,2021-05-28,2021-06-12,Completed,Paris
+100796,HR_Dept,Labor Law,1,912,2023-09-22,2023-10-02,Completed,Paris
+100796,HR_Dept,Labor Law,5,696,2024-10-22,2024-10-27,Completed,Paris
+100796,HR_Dept,Talent Acquisition,5,1002,2024-10-14,,InProgress,Paris
+100797,HR_Dept,Compensation Strategy,2,1067,2024-04-20,2024-04-25,Completed,Paris
+100797,HR_Dept,Labor Law,1,770,2024-01-07,,Cancelled,Paris
+100798,HR_Dept,Diversity & Inclusion,2,778,2018-08-09,2018-08-14,Completed,Paris
+100798,HR_Dept,Talent Acquisition,3,785,2019-02-13,,InProgress,Paris
+100799,HR_Dept,Talent Acquisition,3,898,2020-03-11,,Cancelled,Paris
+100799,HR_Dept,HR Analytics,5,1617,2017-10-02,,InProgress,Paris
+100800,HR_Dept,Talent Acquisition,2,773,2022-03-31,2022-04-15,Completed,Paris
+100800,HR_Dept,Talent Acquisition,5,883,2022-09-22,2022-10-05,Completed,Paris
+100800,HR_Dept,Diversity & Inclusion,3,647,2022-03-14,2022-03-25,Completed,Paris
+100801,HR_Dept,Labor Law,3,796,2024-04-24,2024-05-04,Completed,Paris
+100801,HR_Dept,HR Analytics,4,1487,2024-04-05,2024-04-10,Completed,Paris
+100801,HR_Dept,HR Analytics,5,1343,2024-05-16,,Cancelled,Paris
+100802,HR_Dept,HR Analytics,1,1631,2024-03-03,2024-03-08,Completed,Paris
+100802,HR_Dept,HR Analytics,2,1327,2024-06-13,2024-06-23,Completed,Paris
+100802,HR_Dept,Labor Law,3,744,2023-09-18,2023-09-22,Completed,Paris
+100803,HR_Dept,Compensation Strategy,3,1144,2023-04-14,,InProgress,Paris
+100804,HR_Dept,Labor Law,1,698,2024-01-31,,InProgress,Paris
+100805,HR_Dept,Labor Law,3,683,2022-12-26,,Cancelled,Paris
+100806,HR_Dept,Talent Acquisition,3,799,2023-07-21,2023-08-06,Completed,Paris
+100806,HR_Dept,Talent Acquisition,3,825,2023-07-11,2023-07-28,Completed,Paris
+100807,HR_Dept,Compensation Strategy,4,1360,2021-11-20,2021-11-29,Completed,Paris
+100807,HR_Dept,Talent Acquisition,1,869,2022-11-20,2022-11-28,Completed,Paris
+100807,HR_Dept,Compensation Strategy,2,1185,2023-06-01,,Cancelled,Paris
+100808,HR_Dept,HR Analytics,3,1698,2022-09-04,,Cancelled,Paris
+100808,HR_Dept,Talent Acquisition,3,1007,2023-07-12,2023-07-21,Completed,Paris
+100809,HR_Dept,Compensation Strategy,2,1101,2023-06-14,,Cancelled,Paris
+100810,HR_Dept,Talent Acquisition,1,920,2022-11-20,2022-12-03,Completed,Paris
+100810,HR_Dept,Talent Acquisition,3,848,2023-10-25,,Cancelled,Paris
+100811,HR_Dept,Diversity & Inclusion,2,606,2023-05-16,2023-05-28,Completed,Paris
+100811,HR_Dept,Diversity & Inclusion,5,634,2020-02-11,,Cancelled,Paris
+100811,HR_Dept,Compensation Strategy,2,1347,2018-12-07,,Cancelled,Paris
+100812,HR_Dept,People Management,2,960,2017-01-02,,Cancelled,Paris
+100812,HR_Dept,HR Analytics,2,1641,2019-01-30,2019-02-13,Completed,Paris
+100812,HR_Dept,Labor Law,1,776,2020-01-17,2020-01-18,Completed,Paris
+100813,HR_Dept,Diversity & Inclusion,4,714,2023-05-22,,Cancelled,Paris
+100813,HR_Dept,Compensation Strategy,5,1144,2023-07-22,,InProgress,Paris
+100814,HR_Dept,Talent Acquisition,1,905,2020-08-19,,InProgress,Paris
+100814,HR_Dept,HR Analytics,4,1429,2023-12-14,,InProgress,Paris
+100815,HR_Dept,People Management,5,1053,2021-12-01,2021-12-10,Completed,Paris
+100815,HR_Dept,Talent Acquisition,4,871,2022-10-30,2022-11-06,Completed,Paris
+100815,HR_Dept,People Management,5,877,2022-08-01,2022-08-15,Completed,Paris
+100816,HR_Dept,Compensation Strategy,2,1153,2017-11-20,2017-11-30,Completed,Paris
+100817,HR_Dept,Labor Law,1,701,2021-08-26,2021-09-05,Completed,Paris
+100818,HR_Dept,Talent Acquisition,5,792,2022-09-20,,Cancelled,Paris
+100818,HR_Dept,Compensation Strategy,3,1021,2016-07-28,2016-08-02,Completed,Paris
+100819,HR_Dept,People Management,3,886,2022-07-15,2022-07-25,Completed,Paris
+100820,HR_Dept,People Management,3,1000,2024-02-11,2024-02-25,Completed,Paris
+100820,HR_Dept,People Management,5,990,2024-03-10,2024-03-24,Completed,Paris
+100820,HR_Dept,HR Analytics,4,1712,2023-04-30,,Cancelled,Paris
+100821,HR_Dept,Labor Law,1,698,2023-10-30,2023-11-10,Completed,Paris
+100822,HR_Dept,Labor Law,1,860,2020-10-26,2020-11-08,Completed,Paris
+100822,HR_Dept,Diversity & Inclusion,3,642,2022-01-04,2022-01-21,Completed,Paris
+100823,HR_Dept,HR Analytics,3,1424,2024-09-26,2024-10-05,Completed,Paris
+100823,HR_Dept,Labor Law,2,833,2022-09-18,2022-10-02,Completed,Paris
+100824,HR_Dept,HR Analytics,5,1688,2023-11-01,2023-11-12,Completed,Paris
+100824,HR_Dept,Labor Law,4,772,2023-06-16,2023-06-21,Completed,Paris
+100824,HR_Dept,Compensation Strategy,3,1069,2023-08-10,,InProgress,Paris
+100825,HR_Dept,Labor Law,5,722,2018-11-18,2018-12-02,Completed,Paris
+100825,HR_Dept,Diversity & Inclusion,5,756,2021-10-31,,InProgress,Paris
+100825,HR_Dept,Labor Law,1,905,2022-10-23,,Cancelled,Paris
+100826,HR_Dept,People Management,4,965,2022-10-22,2022-11-04,Completed,Paris
+100827,HR_Dept,Labor Law,2,738,2024-02-02,,Cancelled,Paris
+100827,HR_Dept,HR Analytics,5,1506,2024-06-10,2024-06-29,Completed,Paris
+100827,HR_Dept,Talent Acquisition,4,957,2024-01-19,,Cancelled,Paris
+100828,HR_Dept,People Management,2,863,2022-08-26,,Cancelled,Paris
+100829,HR_Dept,People Management,2,915,2017-08-18,2017-08-27,Completed,Paris
+100830,HR_Dept,Talent Acquisition,5,1007,2015-06-27,2015-07-15,Completed,Paris
+100831,HR_Dept,HR Analytics,1,1519,2023-08-14,,Cancelled,Paris
+100832,HR_Dept,Diversity & Inclusion,5,644,2022-11-23,,InProgress,Paris
+100832,HR_Dept,HR Analytics,4,1440,2018-11-23,,InProgress,Paris
+100832,HR_Dept,Labor Law,1,911,2021-08-10,2021-08-24,Completed,Paris
+100833,HR_Dept,Talent Acquisition,3,873,2023-07-01,,Cancelled,Paris
+100833,HR_Dept,HR Analytics,4,1284,2021-01-15,2021-01-22,Completed,Paris
+100834,HR_Dept,Diversity & Inclusion,4,722,2022-10-13,2022-10-29,Completed,Paris
+100835,HR_Dept,People Management,1,1063,2017-01-25,2017-02-09,Completed,Paris
+100835,HR_Dept,Diversity & Inclusion,3,688,2019-05-17,,Cancelled,Paris
+100836,HR_Dept,Diversity & Inclusion,5,784,2024-05-24,2024-06-02,Completed,Paris
+100836,HR_Dept,Diversity & Inclusion,1,755,2021-06-21,2021-06-24,Completed,Paris
+100836,HR_Dept,Diversity & Inclusion,2,639,2022-09-21,2022-10-04,Completed,Paris
+100837,HR_Dept,Talent Acquisition,3,782,2024-03-25,2024-03-28,Completed,Paris
+100838,HR_Dept,Labor Law,3,821,2020-02-15,,Cancelled,Paris
+100839,HR_Dept,Talent Acquisition,4,906,2020-01-01,2020-01-05,Completed,Paris
+100839,HR_Dept,People Management,1,937,2024-04-02,,Cancelled,Paris
+100840,HR_Dept,Diversity & Inclusion,5,663,2019-12-01,,InProgress,Paris
+100840,HR_Dept,Talent Acquisition,5,883,2024-09-30,2024-10-18,Completed,Paris
+100840,HR_Dept,People Management,5,915,2022-07-06,,Cancelled,Paris
+100841,Admin,Office Management,2,606,2024-08-07,,InProgress,Paris
+100842,Admin,Excel Advanced,2,456,2024-08-27,2024-09-01,Completed,Paris
+100843,Admin,Business Communication,2,589,2022-06-10,2022-06-24,Completed,Paris
+100843,Admin,Administrative Law,5,746,2023-03-26,2023-04-05,Completed,Paris
+100843,Admin,Excel Advanced,5,429,2018-05-04,2018-05-13,Completed,Paris
+100844,Admin,Business Communication,4,582,2017-08-27,2017-08-31,Completed,Paris
+100845,Admin,Office Management,4,643,2024-10-22,2024-11-04,Completed,Paris
+100845,Admin,Excel Advanced,3,573,2024-05-11,2024-05-19,Completed,Paris
+100845,Admin,Excel Advanced,4,498,2023-09-06,2023-09-14,Completed,Paris
+100846,Admin,Administrative Law,5,618,2024-05-06,,Cancelled,Paris
+100847,Admin,Document Management,2,499,2022-01-25,,InProgress,Paris
+100847,Admin,Document Management,1,434,2016-08-22,2016-08-23,Completed,Paris
+100848,Admin,Document Management,5,477,2022-11-05,2022-11-17,Completed,Paris
+100848,Admin,Excel Advanced,3,471,2020-08-25,,InProgress,Paris
+100848,Admin,Administrative Law,4,657,2022-03-05,,Cancelled,Paris
+100849,Admin,Business Communication,4,641,2021-10-20,2021-10-30,Completed,Paris
+100849,Admin,Document Management,5,521,2021-06-27,2021-07-08,Completed,Paris
+100849,Admin,Office Management,1,649,2022-11-25,2022-12-08,Completed,Paris
+100850,Admin,Business Communication,3,548,2020-01-08,2020-01-22,Completed,Paris
+100850,Admin,Business Communication,5,604,2023-09-10,2023-09-17,Completed,Paris
+100851,Admin,Business Communication,1,671,2018-12-30,2019-01-10,Completed,Paris
+100851,Admin,Business Communication,3,607,2018-04-25,2018-05-08,Completed,Paris
+100852,Admin,Administrative Law,4,695,2021-03-06,2021-03-13,Completed,Paris
+100852,Admin,Excel Advanced,4,546,2023-06-15,2023-06-28,Completed,Paris
+100853,Admin,Office Management,2,525,2023-03-15,2023-03-30,Completed,Paris
+100853,Admin,Office Management,4,653,2024-04-26,2024-05-12,Completed,Paris
+100854,Admin,Office Management,5,528,2017-05-08,,Cancelled,Paris
+100855,Admin,Business Communication,1,675,2020-10-21,,Cancelled,Paris
+100856,Admin,Excel Advanced,5,511,2018-12-04,2018-12-14,Completed,Paris
+100856,Admin,Business Communication,1,631,2019-03-12,,InProgress,Paris
+100857,Admin,Administrative Law,4,646,2018-01-23,,InProgress,Paris
+100857,Admin,Office Management,3,610,2016-02-17,2016-03-01,Completed,Paris
+100857,Admin,Document Management,5,561,2018-07-16,2018-08-04,Completed,Paris
+100858,Admin,Office Management,3,559,2018-09-29,,Cancelled,Paris
+100859,Admin,Business Communication,4,516,2020-09-04,2020-09-13,Completed,Paris
+100859,Admin,Document Management,5,538,2022-10-19,2022-11-02,Completed,Paris
+100860,Admin,Office Management,1,636,2023-06-17,2023-06-24,Completed,Paris
+100860,Admin,Excel Advanced,1,485,2024-09-22,2024-09-30,Completed,Paris
+100861,Admin,Document Management,4,456,2024-04-19,2024-05-03,Completed,Paris
+100861,Admin,Document Management,5,467,2021-08-24,2021-09-04,Completed,Paris
+100861,Admin,Document Management,5,537,2023-12-18,2023-12-29,Completed,Paris
+100862,Admin,Administrative Law,1,704,2024-04-20,,Cancelled,Paris
+100862,Admin,Office Management,3,607,2023-09-08,2023-09-16,Completed,Paris
+100863,Admin,Excel Advanced,3,491,2022-02-28,2022-03-16,Completed,Paris
+100863,Admin,Document Management,3,484,2024-06-05,,Cancelled,Paris
+100864,Admin,Business Communication,4,530,2022-12-04,2022-12-12,Completed,Paris
+100865,Admin,Administrative Law,1,758,2019-07-25,2019-08-04,Completed,Paris
+100865,Admin,Administrative Law,4,791,2023-01-15,,Cancelled,Paris
+100865,Admin,Business Communication,5,659,2021-02-03,2021-02-18,Completed,Paris
+100866,Admin,Office Management,3,572,2022-12-31,,InProgress,Paris
+100866,Admin,Office Management,1,620,2021-02-14,2021-02-28,Completed,Paris
+100867,Admin,Excel Advanced,3,565,2023-06-22,2023-06-30,Completed,Paris
+100867,Admin,Administrative Law,5,753,2023-10-29,,InProgress,Paris
+100868,Admin,Excel Advanced,2,457,2024-01-12,,InProgress,Paris
+100868,Admin,Excel Advanced,5,448,2022-04-19,2022-04-27,Completed,Paris
+100869,Admin,Excel Advanced,4,538,2019-01-09,2019-01-15,Completed,Paris
+100870,Admin,Document Management,3,541,2023-12-20,,Cancelled,Paris
+100870,Admin,Administrative Law,1,802,2020-06-16,,InProgress,Paris
+100870,Admin,Office Management,2,615,2023-01-05,,InProgress,Paris
+100871,Admin,Administrative Law,3,716,2024-02-28,2024-03-10,Completed,Paris
+100872,Admin,Business Communication,1,558,2024-06-08,2024-06-10,Completed,Paris
+100872,Admin,Office Management,1,527,2022-10-20,,InProgress,Paris
+100872,Admin,Document Management,3,534,2022-05-10,2022-05-26,Completed,Paris
+100873,Admin,Administrative Law,3,610,2021-01-08,,Cancelled,Paris
+100874,Admin,Document Management,5,508,2024-08-17,,Cancelled,Paris
+100874,Admin,Administrative Law,4,789,2024-01-31,,Cancelled,Paris
+100875,Admin,Business Communication,2,681,2019-09-21,,Cancelled,Paris
+100875,Admin,Office Management,4,600,2020-11-02,2020-11-20,Completed,Paris
+100875,Admin,Excel Advanced,3,448,2019-11-27,,Cancelled,Paris
+100876,Admin,Document Management,5,500,2021-10-24,2021-11-02,Completed,Paris
+100876,Admin,Excel Advanced,1,478,2020-04-16,2020-04-18,Completed,Paris
+100876,Admin,Office Management,2,653,2022-08-17,2022-08-29,Completed,Paris
+100877,Admin,Excel Advanced,3,505,2018-02-19,2018-02-27,Completed,Paris
+100877,Admin,Office Management,5,597,2024-05-08,2024-05-16,Completed,Paris
+100877,Admin,Business Communication,3,599,2019-06-19,2019-06-30,Completed,Paris
+100878,Admin,Office Management,1,573,2020-04-18,,InProgress,Paris
+100878,Admin,Document Management,5,436,2024-03-30,2024-04-04,Completed,Paris
+100879,Admin,Excel Advanced,1,457,2024-03-03,2024-03-07,Completed,Paris
+100879,Admin,Document Management,3,447,2023-09-04,2023-09-19,Completed,Paris
+100880,Admin,Excel Advanced,5,459,2021-02-13,2021-02-24,Completed,Paris
+100880,Admin,Business Communication,1,622,2023-04-23,2023-05-02,Completed,Paris
+100880,Admin,Business Communication,5,566,2022-10-29,,InProgress,Paris
+100881,Admin,Administrative Law,2,670,2024-08-01,2024-08-08,Completed,Paris
+100881,Admin,Document Management,5,438,2023-10-24,2023-11-11,Completed,Paris
+100881,Admin,Document Management,2,512,2021-07-19,2021-07-31,Completed,Paris
+100882,Admin,Administrative Law,1,704,2019-05-16,2019-05-21,Completed,Paris
+100882,Admin,Document Management,5,452,2019-08-12,2019-08-30,Completed,Paris
+100882,Admin,Excel Advanced,2,558,2017-03-19,2017-03-24,Completed,Paris
+100883,Admin,Office Management,5,539,2024-08-16,,InProgress,Paris
+100883,Admin,Administrative Law,3,797,2024-02-26,,InProgress,Paris
+100884,Admin,Excel Advanced,4,489,2016-04-20,2016-04-28,Completed,Paris
+100885,Admin,Excel Advanced,4,444,2023-10-15,,Cancelled,Paris
+100885,Admin,Office Management,2,638,2022-09-02,2022-09-11,Completed,Paris
+100885,Admin,Administrative Law,5,617,2018-03-29,2018-04-06,Completed,Paris
+100886,Admin,Business Communication,5,582,2023-06-18,,InProgress,Paris
+100886,Admin,Business Communication,2,546,2018-07-26,2018-08-05,Completed,Paris
+100886,Admin,Administrative Law,3,691,2019-05-03,,InProgress,Paris
+100887,Admin,Office Management,5,627,2023-11-27,2023-12-05,Completed,Paris
+100887,Admin,Business Communication,4,629,2023-07-26,2023-08-13,Completed,Paris
+100888,Admin,Business Communication,3,634,2020-02-05,,Cancelled,Paris
+100888,Admin,Excel Advanced,5,552,2018-02-14,,Cancelled,Paris
+100888,Admin,Office Management,4,569,2018-04-27,,Cancelled,Paris
+100889,Admin,Business Communication,4,631,2021-12-03,,InProgress,Paris
+100890,Admin,Administrative Law,5,753,2016-02-29,,InProgress,Paris
+100891,Admin,Office Management,4,610,2024-03-04,2024-03-19,Completed,Paris
+100891,Admin,Document Management,4,526,2021-08-25,2021-09-06,Completed,Paris
+100892,Admin,Document Management,2,467,2019-07-12,2019-07-28,Completed,Paris
+100892,Admin,Business Communication,2,557,2020-08-13,2020-08-18,Completed,Paris
+100892,Admin,Document Management,3,572,2021-12-23,2022-01-04,Completed,Paris
+100893,Admin,Office Management,2,571,2023-11-14,,InProgress,Paris
+100893,Admin,Excel Advanced,5,552,2024-10-04,2024-10-22,Completed,Paris
+100894,Admin,Document Management,3,455,2021-12-27,2021-12-31,Completed,Paris
+100894,Admin,Document Management,5,541,2022-06-26,,Cancelled,Paris
+100895,Admin,Excel Advanced,4,544,2022-06-19,,Cancelled,Paris
+100895,Admin,Business Communication,3,579,2022-07-07,2022-07-16,Completed,Paris
+100895,Admin,Document Management,3,464,2019-02-08,2019-02-13,Completed,Paris
+100896,Admin,Document Management,2,564,2024-06-11,2024-06-25,Completed,Paris
+100897,Admin,Document Management,3,466,2016-10-03,,Cancelled,Paris
+100897,Admin,Office Management,4,534,2018-07-30,2018-08-07,Completed,Paris
+100898,Admin,Administrative Law,1,615,2024-02-15,,Cancelled,Paris
+100898,Admin,Office Management,4,551,2022-09-27,2022-10-11,Completed,Paris
+100898,Admin,Excel Advanced,4,560,2023-05-27,2023-06-11,Completed,Paris
+100899,Admin,Office Management,4,630,2021-07-19,2021-08-02,Completed,Paris
+100900,Admin,Administrative Law,5,634,2022-07-06,,InProgress,Paris
+100901,Admin,Document Management,5,574,2019-11-24,2019-12-01,Completed,Paris
+100901,Admin,Document Management,5,445,2024-05-08,,Cancelled,Paris
+100902,Admin,Excel Advanced,1,572,2022-09-08,2022-09-16,Completed,Paris
+100903,Admin,Administrative Law,4,691,2023-11-09,,Cancelled,Paris
+100904,Admin,Business Communication,1,648,2022-07-06,,Cancelled,Paris
+100905,Admin,Excel Advanced,1,472,2023-06-07,2023-06-10,Completed,Paris
+100905,Admin,Administrative Law,3,669,2019-03-21,2019-03-25,Completed,Paris
+100905,Admin,Document Management,5,513,2024-10-17,2024-11-03,Completed,Paris
+100906,Admin,Document Management,1,461,2021-12-07,,Cancelled,Paris
+100906,Admin,Business Communication,4,560,2022-03-20,,Cancelled,Paris
+100907,Admin,Document Management,2,429,2019-12-13,,Cancelled,Paris
+100907,Admin,Office Management,1,639,2019-03-07,,InProgress,Paris
+100908,Admin,Excel Advanced,3,476,2024-08-20,2024-09-01,Completed,Paris
+100908,Admin,Administrative Law,4,763,2024-07-11,,Cancelled,Paris
+100908,Admin,Administrative Law,4,742,2024-07-27,2024-08-02,Completed,Paris
+100909,Admin,Document Management,4,426,2016-08-06,2016-08-22,Completed,Paris
+100909,Admin,Office Management,4,516,2018-12-10,,InProgress,Paris
+100910,Admin,Administrative Law,1,771,2023-01-12,,InProgress,Paris
+100910,Admin,Office Management,3,570,2023-05-19,2023-06-05,Completed,Paris
+100911,Admin,Document Management,3,557,2019-03-01,2019-03-07,Completed,Paris
+100912,Admin,Document Management,5,569,2022-09-11,2022-09-20,Completed,Paris
+100913,Admin,Office Management,4,561,2023-12-26,2024-01-01,Completed,Paris
+100914,Admin,Office Management,3,538,2023-05-22,2023-06-01,Completed,Paris
+100915,Admin,Administrative Law,1,804,2021-07-15,2021-07-23,Completed,Paris
+100915,Admin,Administrative Law,3,717,2023-01-26,,Cancelled,Paris
+100916,Admin,Document Management,2,534,2021-10-18,2021-10-20,Completed,Paris
+100916,Admin,Business Communication,4,624,2023-07-23,2023-08-09,Completed,Paris
+100916,Admin,Administrative Law,1,796,2021-04-16,,Cancelled,Paris
+100917,Admin,Administrative Law,5,683,2022-03-13,2022-03-28,Completed,Paris
+100917,Admin,Administrative Law,1,641,2021-08-22,2021-08-28,Completed,Paris
+100918,Admin,Excel Advanced,2,502,2018-02-08,,InProgress,Paris
+100918,Admin,Document Management,5,469,2016-01-25,,Cancelled,Paris
+100918,Admin,Document Management,4,569,2018-10-29,,InProgress,Paris
+100919,Admin,Excel Advanced,2,558,2024-02-06,2024-02-17,Completed,Paris
+100919,Admin,Administrative Law,1,640,2023-04-13,2023-04-24,Completed,Paris
+100920,Admin,Business Communication,2,510,2024-06-08,,Cancelled,Paris
+100920,Admin,Excel Advanced,5,491,2019-06-30,,Cancelled,Paris
+100921,Admin,Administrative Law,4,630,2018-12-20,,InProgress,Paris
+100922,Admin,Business Communication,4,564,2024-02-06,2024-02-15,Completed,Paris
+100922,Admin,Office Management,3,546,2024-04-08,2024-04-18,Completed,Paris
+100923,Admin,Administrative Law,2,683,2024-01-04,,InProgress,Paris
+100923,Admin,Document Management,1,556,2024-03-21,2024-03-30,Completed,Paris
+100923,Admin,Document Management,4,556,2024-08-13,2024-08-23,Completed,Paris
+100924,Admin,Excel Advanced,3,544,2020-12-24,,InProgress,Paris
+100924,Admin,Office Management,1,559,2024-06-23,,Cancelled,Paris
+100924,Admin,Document Management,4,525,2018-07-09,,InProgress,Paris
+100925,Admin,Document Management,5,531,2019-12-01,,InProgress,Paris
+100925,Admin,Office Management,2,610,2017-04-10,,Cancelled,Paris
+100925,Admin,Administrative Law,2,695,2017-05-28,2017-06-02,Completed,Paris
+100926,Admin,Document Management,4,430,2024-01-25,,Cancelled,Paris
+100926,Admin,Business Communication,4,546,2024-07-12,,InProgress,Paris
+100926,Admin,Excel Advanced,5,483,2024-07-13,,Cancelled,Paris
+100927,Admin,Excel Advanced,4,450,2023-03-15,2023-03-29,Completed,Paris
+100927,Admin,Business Communication,5,675,2024-09-14,2024-09-25,Completed,Paris
+100928,Admin,Document Management,3,482,2022-09-06,2022-09-10,Completed,Paris
+100928,Admin,Excel Advanced,1,559,2023-09-04,2023-09-09,Completed,Paris
+100928,Admin,Business Communication,3,572,2022-02-26,,InProgress,Paris
+100929,Admin,Office Management,5,645,2022-12-13,2022-12-31,Completed,Paris
+100929,Admin,Administrative Law,2,801,2021-03-17,,InProgress,Paris
+100930,Admin,Administrative Law,1,712,2019-11-06,,InProgress,Paris
+100931,Management,Change Management,1,2367,2019-09-03,2019-09-16,Completed,Paris
+100931,Management,Strategic Leadership,4,3417,2019-03-19,,InProgress,Paris
+100931,Management,Innovation Management,5,2067,2024-02-25,2024-03-09,Completed,Paris
+100932,Management,Financial Management,2,2100,2016-09-08,,Cancelled,Paris
+100933,Management,Executive Coaching,2,4568,2023-09-13,2023-09-21,Completed,Paris
+100933,Management,Change Management,5,2367,2017-04-16,2017-04-25,Completed,Paris
+100934,Management,Innovation Management,1,2415,2023-03-10,2023-03-21,Completed,Paris
+100934,Management,Executive Coaching,2,3684,2024-07-30,2024-08-11,Completed,Paris
+100934,Management,Financial Management,2,2269,2024-06-14,2024-06-27,Completed,Paris
+100935,Management,Risk Management,5,1988,2021-11-12,,Cancelled,Paris
+100935,Management,Financial Management,3,1746,2023-02-14,2023-03-02,Completed,Paris
+100935,Management,Strategic Leadership,2,3059,2022-04-27,2022-05-12,Completed,Paris
+100936,Management,Risk Management,5,1530,2024-04-30,2024-05-06,Completed,Paris
+100937,Management,Change Management,3,2374,2024-10-09,2024-10-14,Completed,Paris
+100937,Management,Executive Coaching,3,3733,2024-09-13,,InProgress,Paris
+100938,Management,Innovation Management,2,2319,2020-11-11,2020-11-22,Completed,Paris
+100938,Management,Change Management,5,2442,2016-05-24,,InProgress,Paris
+100938,Management,Strategic Leadership,3,2555,2019-08-08,2019-08-19,Completed,Paris
+100939,Management,Strategic Leadership,5,3280,2021-10-16,2021-10-25,Completed,Paris
+100940,Management,Executive Coaching,1,4195,2023-12-26,2024-01-10,Completed,Paris
+100941,Management,Executive Coaching,4,3630,2021-12-24,,InProgress,Paris
+100941,Management,Risk Management,2,1988,2022-09-13,,Cancelled,Paris
+100942,Management,Risk Management,3,1664,2024-10-06,,InProgress,Paris
+100942,Management,Financial Management,3,1769,2024-09-28,2024-10-13,Completed,Paris
+100942,Management,Strategic Leadership,2,2963,2017-06-17,2017-06-21,Completed,Paris
+100943,Management,Risk Management,1,1897,2021-08-22,2021-09-03,Completed,Paris
+100943,Management,Innovation Management,4,1902,2019-11-08,2019-11-20,Completed,Paris
+100944,Management,Strategic Leadership,1,3002,2019-03-30,2019-04-03,Completed,Paris
+100945,Management,Change Management,3,2781,2023-10-03,2023-10-07,Completed,Paris
+100945,Management,Risk Management,5,2031,2023-05-11,2023-05-18,Completed,Paris
+100945,Management,Innovation Management,3,1947,2022-12-28,2023-01-10,Completed,Paris
+100946,Management,Executive Coaching,3,3558,2024-03-30,2024-04-13,Completed,Paris
+100946,Management,Strategic Leadership,5,3423,2023-11-06,2023-11-17,Completed,Paris
+100946,Management,Change Management,4,2154,2024-04-20,2024-05-08,Completed,Paris
+100947,Management,Financial Management,1,2161,2023-12-16,,Cancelled,Paris
+100947,Management,Strategic Leadership,5,2658,2022-01-06,,Cancelled,Paris
+100948,Management,Risk Management,1,1683,2024-03-07,2024-03-21,Completed,Paris
+100948,Management,Strategic Leadership,4,2875,2022-06-23,2022-06-27,Completed,Paris
+100949,Management,Strategic Leadership,5,3368,2023-03-04,2023-03-16,Completed,Paris
+100950,Management,Innovation Management,5,2122,2018-09-05,,InProgress,Paris
+100950,Management,Strategic Leadership,1,3185,2017-06-14,2017-06-23,Completed,Paris
+100950,Management,Strategic Leadership,2,2785,2021-06-15,,InProgress,Paris
+100951,Management,Executive Coaching,3,4257,2023-08-04,2023-08-09,Completed,Paris
+100951,Management,Strategic Leadership,1,3126,2023-06-25,2023-06-28,Completed,Paris
+100951,Management,Executive Coaching,1,3657,2023-07-07,,InProgress,Paris
+100952,Management,Change Management,3,2784,2024-02-05,2024-02-20,Completed,Paris
+100952,Management,Strategic Leadership,2,3305,2024-09-04,2024-09-13,Completed,Paris
+100953,Management,Innovation Management,2,2524,2023-06-01,2023-06-06,Completed,Paris
+100953,Management,Strategic Leadership,3,3296,2023-08-07,,InProgress,Paris
+100953,Management,Strategic Leadership,5,3268,2023-07-21,,InProgress,Paris
+100954,Management,Risk Management,2,1624,2023-08-10,,InProgress,Paris
+100954,Management,Strategic Leadership,1,3319,2021-04-19,2021-05-04,Completed,Paris
+100954,Management,Innovation Management,1,2098,2023-09-16,2023-09-28,Completed,Paris
+100955,Management,Change Management,3,2589,2021-10-07,,InProgress,Paris
+100956,Management,Innovation Management,1,1903,2024-10-17,2024-10-28,Completed,Paris
+100956,Management,Financial Management,3,1856,2022-06-20,2022-07-07,Completed,Paris
+100956,Management,Financial Management,1,2045,2021-11-29,,InProgress,Paris
+100957,Management,Strategic Leadership,4,2954,2019-07-30,2019-08-07,Completed,Paris
+100957,Management,Executive Coaching,2,4119,2015-11-15,2015-11-20,Completed,Paris
+100958,Management,Change Management,1,2271,2024-04-30,,InProgress,Paris
+100958,Management,Strategic Leadership,4,3248,2024-01-23,2024-01-31,Completed,Paris
+100958,Management,Strategic Leadership,1,2963,2024-01-07,,Cancelled,Paris
+100959,Management,Financial Management,5,1705,2020-08-25,2020-09-08,Completed,Paris
+100959,Management,Strategic Leadership,3,2594,2024-04-18,,InProgress,Paris
+100960,Management,Change Management,2,2788,2017-03-19,2017-04-04,Completed,Paris
+100961,Management,Executive Coaching,3,4317,2016-05-10,,InProgress,Paris
+100961,Management,Executive Coaching,2,3737,2018-08-30,,Cancelled,Paris
+100961,Management,Change Management,1,2399,2018-01-25,,Cancelled,Paris
+100962,Management,Financial Management,4,2002,2023-09-10,,Cancelled,Paris
+100962,Management,Financial Management,2,1777,2022-06-26,,Cancelled,Paris
+100963,Management,Innovation Management,2,2487,2023-12-29,2024-01-09,Completed,Paris
+100963,Management,Executive Coaching,5,4078,2023-10-07,2023-10-16,Completed,Paris
+100963,Management,Risk Management,4,1964,2024-02-29,,InProgress,Paris
+100964,Management,Strategic Leadership,3,3370,2024-09-28,,InProgress,Paris
+100965,Management,Executive Coaching,4,4259,2023-11-10,2023-11-17,Completed,Paris
+100965,Management,Strategic Leadership,1,3227,2023-03-03,2023-03-12,Completed,Paris
+100966,Management,Strategic Leadership,4,2725,2024-04-21,2024-05-03,Completed,Paris
+100966,Management,Financial Management,5,2020,2023-12-17,,Cancelled,Paris
+100966,Management,Executive Coaching,3,3870,2023-02-13,,InProgress,Paris
+100967,Management,Financial Management,1,2191,2024-05-12,2024-05-25,Completed,Paris
+100967,Management,Strategic Leadership,1,3292,2023-01-06,2023-01-15,Completed,Paris
+100968,Management,Strategic Leadership,1,3332,2020-03-16,,Cancelled,Paris
+100968,Management,Financial Management,2,2086,2024-02-08,,InProgress,Paris
+100968,Management,Change Management,3,2686,2018-06-13,,InProgress,Paris
+100969,Management,Change Management,1,2769,2022-12-26,,InProgress,Paris
+100969,Management,Change Management,4,2485,2024-07-28,2024-08-03,Completed,Paris
+100969,Management,Executive Coaching,4,3736,2022-04-15,,Cancelled,Paris
+100970,Management,Strategic Leadership,1,3178,2020-12-25,,InProgress,Paris
+100970,Management,Executive Coaching,2,3493,2021-07-05,2021-07-14,Completed,Paris
+100971,Management,Financial Management,4,2293,2020-01-15,,InProgress,Paris
+100971,Management,Change Management,2,2378,2022-10-03,2022-10-14,Completed,Paris
+100971,Management,Innovation Management,2,2006,2023-02-13,,InProgress,Paris
+100972,Management,Change Management,2,2395,2023-03-14,2023-03-23,Completed,Paris
+100972,Management,Executive Coaching,1,4408,2022-09-17,,Cancelled,Paris
+100973,Management,Risk Management,4,1923,2022-03-23,,Cancelled,Paris
+100973,Management,Executive Coaching,5,3411,2019-04-17,2019-04-27,Completed,Paris
+100974,Management,Strategic Leadership,2,3397,2024-03-13,2024-03-18,Completed,Paris
+100974,Management,Strategic Leadership,1,2607,2023-02-12,,Cancelled,Paris
+100974,Management,Executive Coaching,4,4295,2022-11-15,2022-12-03,Completed,Paris
+100975,Management,Strategic Leadership,1,2580,2024-04-21,2024-04-22,Completed,Paris
+100976,Management,Financial Management,2,1864,2018-09-13,2018-09-26,Completed,Paris
+100976,Management,Risk Management,3,1873,2019-10-07,2019-10-10,Completed,Paris
+100977,Management,Risk Management,1,1589,2022-12-12,,InProgress,Paris
+100977,Management,Financial Management,5,1730,2018-04-19,2018-04-29,Completed,Paris
+100977,Management,Executive Coaching,3,4407,2018-07-19,,Cancelled,Paris
+100978,Management,Strategic Leadership,5,3145,2022-12-12,,InProgress,Paris
+100978,Management,Change Management,5,2290,2023-10-04,2023-10-21,Completed,Paris
+100978,Management,Financial Management,5,1943,2023-05-29,,InProgress,Paris
+100979,Management,Financial Management,1,2282,2024-07-11,2024-07-16,Completed,Paris
+100979,Management,Strategic Leadership,3,3246,2022-05-25,,InProgress,Paris
+100979,Management,Change Management,5,2482,2022-08-17,2022-09-03,Completed,Paris
+100980,Management,Change Management,5,2135,2024-07-14,2024-07-22,Completed,Paris
+100981,Management,Executive Coaching,2,4017,2022-03-09,2022-03-19,Completed,Paris
+100982,Management,Innovation Management,2,2272,2023-07-01,2023-07-15,Completed,Paris
+100982,Management,Financial Management,1,2099,2023-03-20,2023-04-02,Completed,Paris
+100982,Management,Risk Management,5,1945,2021-05-26,,Cancelled,Paris
+100983,Management,Innovation Management,3,2134,2020-03-31,2020-04-13,Completed,Paris
+100984,Management,Risk Management,5,1928,2021-07-16,,InProgress,Paris
+100985,Management,Risk Management,2,1592,2019-10-25,,InProgress,Paris
+100985,Management,Financial Management,1,1728,2019-03-01,2019-03-06,Completed,Paris
+100985,Management,Innovation Management,4,2418,2021-04-15,2021-05-03,Completed,Paris
+100986,Management,Risk Management,2,1591,2023-01-26,,InProgress,Paris
+100986,Management,Financial Management,2,1978,2023-12-16,2024-01-01,Completed,Paris
+100986,Management,Executive Coaching,5,4210,2023-11-14,2023-11-27,Completed,Paris
+100987,Management,Strategic Leadership,2,2585,2023-11-29,,Cancelled,Paris
+100988,Management,Executive Coaching,5,4326,2017-04-24,2017-05-08,Completed,Paris
+100989,Management,Risk Management,3,1546,2022-11-24,2022-12-08,Completed,Paris
+100989,Management,Executive Coaching,2,3834,2024-05-20,,Cancelled,Paris
+100989,Management,Strategic Leadership,2,3055,2020-07-18,,InProgress,Paris
+100990,Management,Executive Coaching,3,4542,2023-12-13,2023-12-21,Completed,Paris
+100991,Management,Change Management,3,2350,2019-01-12,,InProgress,Paris
+100991,Management,Strategic Leadership,2,3410,2023-06-30,,InProgress,Paris
+100991,Management,Risk Management,4,1708,2020-05-17,2020-05-29,Completed,Paris
+100992,Management,Risk Management,5,1591,2022-08-02,2022-08-15,Completed,Paris
+100992,Management,Strategic Leadership,1,3052,2022-07-04,,InProgress,Paris
+100993,Management,Change Management,4,2834,2021-09-19,2021-09-27,Completed,Paris
+100994,Management,Innovation Management,5,2461,2022-01-01,2022-01-11,Completed,Paris
+100994,Management,Strategic Leadership,5,2871,2021-11-30,,InProgress,Paris
+100994,Management,Risk Management,1,1672,2021-03-14,2021-03-16,Completed,Paris
+100995,Management,Change Management,5,2209,2024-07-03,,InProgress,Paris
+100995,Management,Executive Coaching,2,4092,2015-07-31,2015-08-04,Completed,Paris
+100996,Management,Change Management,1,2286,2024-08-26,2024-09-06,Completed,Paris
+100996,Management,Risk Management,2,1856,2020-10-08,,InProgress,Paris
+100997,Management,Risk Management,1,2031,2021-09-19,2021-09-28,Completed,Paris
+100997,Management,Innovation Management,1,2107,2022-02-26,,InProgress,Paris
+100997,Management,Financial Management,4,2248,2019-10-30,2019-11-16,Completed,Paris
+100998,Management,Risk Management,1,1595,2022-11-25,2022-12-07,Completed,Paris
+100998,Management,Change Management,1,2731,2022-06-19,2022-06-22,Completed,Paris
+100998,Management,Executive Coaching,2,3818,2022-01-17,2022-01-23,Completed,Paris
+100999,Management,Risk Management,5,1553,2021-08-28,,InProgress,Paris
+101000,Management,Executive Coaching,2,3936,2017-01-04,2017-01-15,Completed,Paris
+101000,Management,Innovation Management,5,1891,2016-10-17,2016-10-28,Completed,Paris
