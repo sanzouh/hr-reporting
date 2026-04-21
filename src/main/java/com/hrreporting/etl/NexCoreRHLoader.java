@@ -76,6 +76,7 @@ public class NexCoreRHLoader {
                     double salaireMensuel = ETLUtils.annuelVersQuotidien(ETLUtils.parseMontant(salaryRaw));
                     int attrition         = termDate != null ? 1 : 0;
                     int dureeAvantDepart  = attrition == 1 ? ETLUtils.joursEntre(hireDate, termDate) : -1;
+                    int anneeDepart       = termDate != null ? ETLUtils.annee(termDate) : -1;
                     String statut         = attrition == 1 ? "Parti" : statusRaw.equalsIgnoreCase("LOA") ? "Congé" : "Actif";
                     String motif          = (termReason == null || termReason.isBlank()) ? "N/A" : ETLUtils.capitaliser(termReason);
 
@@ -102,7 +103,8 @@ public class NexCoreRHLoader {
                             .attrition(attrition)
                             .scorePerformance(performance)
                             .satisfactionEmploye(satisfaction)
-                            .dureeAvantDepart(dureeAvantDepart);
+                            .dureeAvantDepart(dureeAvantDepart)
+                            .anneeDepart(anneeDepart);
 
                     result.put(matricule, builder);
 

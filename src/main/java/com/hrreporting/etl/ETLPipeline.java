@@ -160,6 +160,9 @@ public class ETLPipeline {
         if (e.getDureeAvantDepart() == -1 && n.getDureeAvantDepart() != -1)
             existing.dureeAvantDepart(n.getDureeAvantDepart());
 
+        if (e.getAnneeDepart() == -1 && n.getAnneeDepart() != -1)
+            existing.anneeDepart(n.getAnneeDepart());
+
         // Promotion : 1 prend le dessus sur 0 ou -1
         if (n.getPromotionRecommandee() == 1)
             existing.promotionRecommandee(1);

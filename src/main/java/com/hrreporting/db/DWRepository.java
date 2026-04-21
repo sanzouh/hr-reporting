@@ -132,8 +132,9 @@ public class DWRepository {
                 employe_id, dept_id, temps_id, poste_id, formation_id,
                 salaire_mensuel, attrition, score_performance, satisfaction_employe,
                 nb_absences, heures_sup, score_evaluation, objectifs_atteints_pct,
-                cout_formation, nb_formations, duree_avant_depart, promotion_recommandee
-            ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+                cout_formation, nb_formations, duree_avant_depart, promotion_recommandee,
+                annee_depart
+            ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
         """);
         bindFait(ps, fait);
         ps.executeUpdate();
@@ -147,8 +148,9 @@ public class DWRepository {
                 employe_id, dept_id, temps_id, poste_id, formation_id,
                 salaire_mensuel, attrition, score_performance, satisfaction_employe,
                 nb_absences, heures_sup, score_evaluation, objectifs_atteints_pct,
-                cout_formation, nb_formations, duree_avant_depart, promotion_recommandee
-            ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+                cout_formation, nb_formations, duree_avant_depart, promotion_recommandee,
+                annee_depart
+            ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
         """);
         for (FaitRH fait : faits) {
             bindFait(ps, fait);
@@ -178,6 +180,7 @@ public class DWRepository {
         setNullableInt(ps, 15, fait.getNbFormations());
         setNullableInt(ps, 16, fait.getDureeAvantDepart());
         setNullableInt(ps, 17, fait.getPromotionRecommandee());
+        setNullableInt(ps, 18, fait.getAnneeDepart());
     }
 
     // ═══════════════════════════════════════════════════════════════════
@@ -207,7 +210,7 @@ public class DWRepository {
             JOIN dim_departement d ON f.dept_id = d.dept_id
             JOIN dim_temps t ON f.temps_id = t.temps_id
             WHERE 1=1
-            """ + filtreAnnee(annee) + filtreDept(dept) + """
+            """ + filtreAnneeDepart(annee) + filtreDept(dept) + """
             GROUP BY d.nom_dept ORDER BY taux DESC
         """;
         return queryStringDouble(sql, "nom_dept", "taux");
@@ -329,7 +332,7 @@ public class DWRepository {
             JOIN dim_departement d ON f.dept_id = d.dept_id
             JOIN dim_temps t ON f.temps_id = t.temps_id
             WHERE f.attrition = 1 AND e.motif_depart IS NOT NULL
-            """ + filtreAnnee(annee) + filtreDept(dept) + """
+            """ + filtreAnneeDepart(annee) + filtreDept(dept) + """
             GROUP BY e.motif_depart ORDER BY nb DESC
         """;
         return queryStringInt(sql);
@@ -380,7 +383,7 @@ public class DWRepository {
             JOIN dim_departement d ON f.dept_id = d.dept_id
             JOIN dim_temps t ON f.temps_id = t.temps_id
             WHERE 1=1
-            """ + filtreAnnee(annee) + filtreDept(dept);
+            """ + filtreAnneeDepart(annee) + filtreDept(dept);
         ResultSet rs = DatabaseManager.getConnection().createStatement().executeQuery(sql);
         return rs.next() ? rs.getDouble(1) : 0;
     }
@@ -455,6 +458,12 @@ public class DWRepository {
     private static String filtreAnnee(String annee) {
         return (annee == null || annee.equals("Toutes")) ? ""
                 : " AND t.annee = " + annee.replaceAll("[^0-9]", "");
+    }
+
+    /** Filtre sur l'année réelle de départ — pour attrition, motifs, durée avant départ */
+    private static String filtreAnneeDepart(String annee) {
+        return (annee == null || annee.equals("Toutes")) ? ""
+                : " AND f.annee_depart = " + annee.replaceAll("[^0-9]", "");
     }
 
     private static String filtreDept(String dept) {
