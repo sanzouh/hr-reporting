@@ -136,7 +136,7 @@ public class EffectifsPanel extends JPanel implements MainDashboard.Refreshable 
         gbc.insets = new Insets(0, 0, 0, 6);
 
         try {
-            Map<String, Integer> effectifs = DWRepository.getEffectifParDept();
+            Map<String, Integer> effectifs = DWRepository.getEffectifParDept(annee, departement);
             DefaultCategoryDataset ds = new DefaultCategoryDataset();
             effectifs.forEach((dept, nb) -> ds.addValue(nb, "Employés", dept));
             JFreeChart chart = ChartFactory.createBarChart(
@@ -148,7 +148,7 @@ public class EffectifsPanel extends JPanel implements MainDashboard.Refreshable 
             row.add(MainDashboard.buildCard("Effectif par département",
                     new ChartPanel(chart)), gbc);
 
-            Map<String, Integer> genre = DWRepository.getRepartitionGenre();
+            Map<String, Integer> genre = DWRepository.getRepartitionGenre(annee, departement);
             DefaultPieDataset<String> dsPie = new DefaultPieDataset<>();
             genre.forEach(dsPie::setValue);
             JFreeChart chartPie = ChartFactory.createPieChart(null, dsPie, true, true, false);
@@ -181,13 +181,19 @@ public class EffectifsPanel extends JPanel implements MainDashboard.Refreshable 
             String[] tranches    = {"< 25", "25-34", "35-44", "45-54", "55+"};
             String[] conditions  = {"e.age < 25", "e.age BETWEEN 25 AND 34",
                     "e.age BETWEEN 35 AND 44", "e.age BETWEEN 45 AND 54", "e.age >= 55"};
+            String deptFilter = buildDeptJoin();
+            String anneeFilter = buildAnneeFilter();
             for (int i = 0; i < tranches.length; i++) {
                 ResultSet rsM = query("SELECT COUNT(*) FROM fait_rh f " +
                         "JOIN dim_employe e ON f.employe_id = e.employe_id " +
-                        "WHERE e.genre = 'M' AND " + conditions[i]);
+                        "JOIN dim_departement d ON f.dept_id = d.dept_id " +
+                        "JOIN dim_temps t ON f.temps_id = t.temps_id " +
+                        "WHERE e.genre = 'M' AND " + conditions[i] + anneeFilter + deptFilter);
                 ResultSet rsF = query("SELECT COUNT(*) FROM fait_rh f " +
                         "JOIN dim_employe e ON f.employe_id = e.employe_id " +
-                        "WHERE e.genre = 'F' AND " + conditions[i]);
+                        "JOIN dim_departement d ON f.dept_id = d.dept_id " +
+                        "JOIN dim_temps t ON f.temps_id = t.temps_id " +
+                        "WHERE e.genre = 'F' AND " + conditions[i] + anneeFilter + deptFilter);
                 dsPyramide.addValue(rsM.next() ? rsM.getInt(1) : 0, "Hommes", tranches[i]);
                 dsPyramide.addValue(rsF.next() ? rsF.getInt(1) : 0, "Femmes", tranches[i]);
             }
@@ -206,7 +212,9 @@ public class EffectifsPanel extends JPanel implements MainDashboard.Refreshable 
             FROM fait_rh f
             JOIN dim_employe e ON f.employe_id = e.employe_id
             JOIN dim_departement d ON f.dept_id = d.dept_id
+            JOIN dim_temps t ON f.temps_id = t.temps_id
             WHERE e.anciennete_ans >= 0
+            """ + buildAnneeFilter() + buildDeptJoin() + """
             GROUP BY d.nom_dept ORDER BY AVG(e.anciennete_ans) DESC
         """);
             while (rsAnc.next())
