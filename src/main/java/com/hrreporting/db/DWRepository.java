@@ -133,8 +133,8 @@ public class DWRepository {
                 salaire_mensuel, attrition, score_performance, satisfaction_employe,
                 nb_absences, heures_sup, score_evaluation, objectifs_atteints_pct,
                 cout_formation, nb_formations, duree_avant_depart, promotion_recommandee,
-                annee_depart
-            ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+                annee_depart, annee_embauche
+            ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
         """);
         bindFait(ps, fait);
         ps.executeUpdate();
@@ -149,8 +149,8 @@ public class DWRepository {
                 salaire_mensuel, attrition, score_performance, satisfaction_employe,
                 nb_absences, heures_sup, score_evaluation, objectifs_atteints_pct,
                 cout_formation, nb_formations, duree_avant_depart, promotion_recommandee,
-                annee_depart
-            ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+                annee_depart, annee_embauche
+            ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
         """);
         for (FaitRH fait : faits) {
             bindFait(ps, fait);
@@ -181,6 +181,7 @@ public class DWRepository {
         setNullableInt(ps, 16, fait.getDureeAvantDepart());
         setNullableInt(ps, 17, fait.getPromotionRecommandee());
         setNullableInt(ps, 18, fait.getAnneeDepart());
+        setNullableInt(ps, 19, fait.getAnneeEmbauche());
     }
 
     // ═══════════════════════════════════════════════════════════════════
@@ -195,7 +196,7 @@ public class DWRepository {
             JOIN dim_departement d ON f.dept_id = d.dept_id
             JOIN dim_temps t ON f.temps_id = t.temps_id
             WHERE 1=1
-            """ + filtreAnnee(annee) + filtreDept(dept) + """
+            """ + filtreActifAnnee(annee) + filtreDept(dept) + """
             GROUP BY d.nom_dept ORDER BY nb DESC
         """;
         return queryStringInt(sql);
@@ -204,15 +205,34 @@ public class DWRepository {
     /** Taux d'attrition (%) par département */
     public static Map<String, Double> getTauxAttritionParDept(String annee, String dept) throws SQLException {
         String sql = """
+        SELECT d.nom_dept,
+               ROUND(
+                 COUNT(CASE WHEN f.annee_depart = {AN} THEN 1 END) * 100.0
+                 / NULLIF(COUNT(CASE WHEN f.annee_embauche <= {AN}
+                                    AND (f.annee_depart IS NULL OR f.annee_depart >= {AN})
+                               THEN 1 END), 0)
+               , 1) AS taux
+        FROM fait_rh f
+        JOIN dim_departement d ON f.dept_id = d.dept_id
+        WHERE 1=1
+        """;
+        // Pour "Toutes" : fallback sur l'ancienne logique globale
+        if (annee == null || annee.equals("Toutes")) {
+            sql = """
             SELECT d.nom_dept,
-                   ROUND(SUM(f.attrition) * 100.0 / COUNT(*), 1) AS taux
+                   ROUND(SUM(f.attrition) * 100.0 / NULLIF(COUNT(*), 0), 1) AS taux
             FROM fait_rh f
             JOIN dim_departement d ON f.dept_id = d.dept_id
-            JOIN dim_temps t ON f.temps_id = t.temps_id
             WHERE 1=1
-            """ + filtreAnneeDepart(annee) + filtreDept(dept) + """
+            """ + filtreDept(dept) + """
             GROUP BY d.nom_dept ORDER BY taux DESC
         """;
+        } else {
+            String an = annee.replaceAll("[^0-9]", "");
+            sql = sql.replace("{AN}", an).replace("{AN}", an) + filtreDept(dept) + """
+            GROUP BY d.nom_dept ORDER BY taux DESC
+        """;
+        }
         return queryStringDouble(sql, "nom_dept", "taux");
     }
 
@@ -225,7 +245,7 @@ public class DWRepository {
             JOIN dim_departement d ON f.dept_id = d.dept_id
             JOIN dim_temps t ON f.temps_id = t.temps_id
             WHERE f.salaire_mensuel IS NOT NULL AND f.salaire_mensuel > 0
-            """ + filtreAnnee(annee) + filtreDept(dept) + """
+            """ + filtreActifAnnee(annee) + filtreDept(dept) + """
             GROUP BY d.nom_dept ORDER BY salaire_moyen DESC
         """;
         return queryStringDouble(sql, "nom_dept", "salaire_moyen");
@@ -242,7 +262,7 @@ public class DWRepository {
             JOIN dim_temps t ON f.temps_id = t.temps_id
             WHERE f.salaire_mensuel IS NOT NULL AND f.salaire_mensuel > 0
               AND e.genre IS NOT NULL
-            """ + filtreAnnee(annee) + filtreDept(dept) + """
+            """ + filtreActifAnnee(annee) + filtreDept(dept) + """
             GROUP BY e.genre
         """;
         return queryStringDouble(sql, "genre", "salaire_moyen");
@@ -257,7 +277,7 @@ public class DWRepository {
             JOIN dim_departement d ON f.dept_id = d.dept_id
             JOIN dim_temps t ON f.temps_id = t.temps_id
             WHERE f.score_performance IS NOT NULL AND f.score_performance > 0
-            """ + filtreAnnee(annee) + filtreDept(dept) + """
+            """ + filtreActifAnnee(annee) + filtreDept(dept) + """
             GROUP BY d.nom_dept ORDER BY score_moyen DESC
         """;
         return queryStringDouble(sql, "nom_dept", "score_moyen");
@@ -272,7 +292,7 @@ public class DWRepository {
             JOIN dim_departement d ON f.dept_id = d.dept_id
             JOIN dim_temps t ON f.temps_id = t.temps_id
             WHERE f.satisfaction_employe IS NOT NULL AND f.satisfaction_employe > 0
-            """ + filtreAnnee(annee) + filtreDept(dept) + """
+            """ + filtreActifAnnee(annee) + filtreDept(dept) + """
             GROUP BY d.nom_dept ORDER BY satisfaction DESC
         """;
         return queryStringDouble(sql, "nom_dept", "satisfaction");
@@ -287,7 +307,7 @@ public class DWRepository {
             JOIN dim_departement d ON f.dept_id = d.dept_id
             JOIN dim_temps t ON f.temps_id = t.temps_id
             WHERE f.nb_absences IS NOT NULL AND f.nb_absences >= 0
-            """ + filtreAnnee(annee) + filtreDept(dept) + """
+            """ + filtreActifAnnee(annee) + filtreDept(dept) + """
             GROUP BY d.nom_dept ORDER BY moy_absences DESC
         """;
         return queryStringDouble(sql, "nom_dept", "moy_absences");
@@ -317,7 +337,7 @@ public class DWRepository {
             JOIN dim_departement d ON f.dept_id = d.dept_id
             JOIN dim_temps t ON f.temps_id = t.temps_id
             WHERE e.genre IS NOT NULL
-            """ + filtreAnnee(annee) + filtreDept(dept) + """
+            """ + filtreActifAnnee(annee) + filtreDept(dept) + """
             GROUP BY e.genre
         """;
         return queryStringInt(sql);
@@ -377,26 +397,48 @@ public class DWRepository {
 
     /** Taux d'attrition global (%) */
     public static double getTauxAttritionGlobal(String annee, String dept) throws SQLException {
-        String sql = """
-            SELECT ROUND(SUM(f.attrition) * 100.0 / COUNT(*), 1)
+        String sql;
+        if (annee == null || annee.equals("Toutes")) {
+            sql = """
+            SELECT ROUND(SUM(f.attrition) * 100.0 / NULLIF(COUNT(*), 0), 1)
             FROM fait_rh f
             JOIN dim_departement d ON f.dept_id = d.dept_id
-            JOIN dim_temps t ON f.temps_id = t.temps_id
             WHERE 1=1
-            """ + filtreAnneeDepart(annee) + filtreDept(dept);
+            """ + filtreDept(dept);
+        } else {
+            String an = annee.replaceAll("[^0-9]", "");
+            sql = "SELECT ROUND(" +
+                    "  COUNT(CASE WHEN f.annee_depart = " + an + " THEN 1 END) * 100.0" +
+                    "  / NULLIF(COUNT(CASE WHEN f.annee_embauche <= " + an +
+                    "    AND (f.annee_depart IS NULL OR f.annee_depart >= " + an + ")" +
+                    "    THEN 1 END), 0), 1)" +
+                    " FROM fait_rh f" +
+                    " JOIN dim_departement d ON f.dept_id = d.dept_id" +
+                    " WHERE 1=1" + filtreDept(dept);
+        }
         ResultSet rs = DatabaseManager.getConnection().createStatement().executeQuery(sql);
         return rs.next() ? rs.getDouble(1) : 0;
     }
 
     /** Effectif total */
     public static int getEffectifTotal(String annee, String dept) throws SQLException {
-        String sql = """
+        String sql;
+        if (annee == null || annee.equals("Toutes")) {
+            sql = """
             SELECT COUNT(DISTINCT f.employe_id)
             FROM fait_rh f
             JOIN dim_departement d ON f.dept_id = d.dept_id
-            JOIN dim_temps t ON f.temps_id = t.temps_id
             WHERE 1=1
-            """ + filtreAnnee(annee) + filtreDept(dept);
+            """ + filtreDept(dept);
+        } else {
+            String an = annee.replaceAll("[^0-9]", "");
+            sql = "SELECT COUNT(DISTINCT f.employe_id)" +
+                    " FROM fait_rh f" +
+                    " JOIN dim_departement d ON f.dept_id = d.dept_id" +
+                    " WHERE f.annee_embauche <= " + an +
+                    " AND (f.annee_depart IS NULL OR f.annee_depart >= " + an + ")" +
+                    filtreDept(dept);
+        }
         ResultSet rs = DatabaseManager.getConnection().createStatement().executeQuery(sql);
         return rs.next() ? rs.getInt(1) : 0;
     }
@@ -409,7 +451,7 @@ public class DWRepository {
             JOIN dim_departement d ON f.dept_id = d.dept_id
             JOIN dim_temps t ON f.temps_id = t.temps_id
             WHERE f.salaire_mensuel IS NOT NULL AND f.salaire_mensuel > 0
-            """ + filtreAnnee(annee) + filtreDept(dept);
+            """ + filtreActifAnnee(annee) + filtreDept(dept);
         ResultSet rs = DatabaseManager.getConnection().createStatement().executeQuery(sql);
         return rs.next() ? rs.getDouble(1) : 0;
     }
@@ -422,7 +464,7 @@ public class DWRepository {
             JOIN dim_departement d ON f.dept_id = d.dept_id
             JOIN dim_temps t ON f.temps_id = t.temps_id
             WHERE f.satisfaction_employe IS NOT NULL AND f.satisfaction_employe > 0
-            """ + filtreAnnee(annee) + filtreDept(dept);
+            """ + filtreActifAnnee(annee) + filtreDept(dept);
         ResultSet rs = DatabaseManager.getConnection().createStatement().executeQuery(sql);
         return rs.next() ? rs.getDouble(1) : 0;
     }
@@ -469,6 +511,14 @@ public class DWRepository {
     private static String filtreDept(String dept) {
         return (dept == null || dept.equals("Tous")) ? ""
                 : " AND d.nom_dept = '" + dept.replace("'", "''") + "'";
+    }
+
+    /** Filtre employés actifs pendant l'année X : embauchés avant X et pas encore partis */
+    private static String filtreActifAnnee(String annee) {
+        if (annee == null || annee.equals("Toutes")) return "";
+        String an = annee.replaceAll("[^0-9]", "");
+        return " AND f.annee_embauche <= " + an +
+                " AND (f.annee_depart IS NULL OR f.annee_depart >= " + an + ")";
     }
 
     // ═══════════════════════════════════════════════════════════════════
