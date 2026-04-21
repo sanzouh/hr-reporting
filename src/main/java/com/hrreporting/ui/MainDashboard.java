@@ -316,6 +316,9 @@ public class MainDashboard extends JFrame {
                 if (isActive) activeButton = btn;
             }
         }
+        
+        // Rafraîchir le panel avec les filtres courants
+        refreshCurrentPanel();
     }
 
     public void refreshCurrentPanel() {
