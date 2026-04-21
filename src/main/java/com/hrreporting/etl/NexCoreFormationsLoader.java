@@ -47,11 +47,11 @@ public class NexCoreFormationsLoader {
                 lignesLues++;
                 try {
                     String raw         = ETLUtils.clean(ETLUtils.get(row, idx, "employee_id"));
-                    String matricule   = raw.replace("_", "");
+                    String matricule   = raw.replace("_", "").replaceAll("^EMP", "");
                     String deptRaw     = ETLUtils.get(row, idx, "employee_department");
                     String formName    = ETLUtils.clean(ETLUtils.get(row, idx, "training_name"));
                     String durationRaw = ETLUtils.get(row, idx, "training_duration_days");
-                    String costRaw     = ETLUtils.get(row, idx, "training_cost_usd");
+                    String costRaw     = ETLUtils.get(row, idx, "training_cost_eur");
                     String startRaw    = ETLUtils.get(row, idx, "start_date");
                     String statusRaw   = ETLUtils.get(row, idx, "completion_status");
                     String site        = ETLUtils.get(row, idx, "site");
