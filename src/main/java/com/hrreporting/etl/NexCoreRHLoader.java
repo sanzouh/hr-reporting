@@ -70,14 +70,15 @@ public class NexCoreRHLoader {
                     LocalDate hireDate  = ETLUtils.parseDate(hireRaw);
                     LocalDate termDate  = ETLUtils.parseDate(termRaw);
 
-                    int age        = dob      != null ? (int) java.time.temporal.ChronoUnit.YEARS.between(dob, LocalDate.now())      : -1;
-                    int anciennete = hireDate != null ? (int) java.time.temporal.ChronoUnit.YEARS.between(hireDate, LocalDate.now()) : -1;
-
-                    double salaireMensuel = ETLUtils.annuelVersQuotidien(ETLUtils.parseMontant(salaryRaw));
                     int attrition         = termDate != null ? 1 : 0;
                     int dureeAvantDepart  = attrition == 1 ? ETLUtils.joursEntre(hireDate, termDate) : -1;
-                    int anneeDepart       = termDate != null ? ETLUtils.annee(termDate) : -1;
-                    int anneeEmbauche     = hireDate != null ? ETLUtils.annee(hireDate) : -1;
+                    int anneeDepart       = termDate  != null ? ETLUtils.annee(termDate)  : -1;
+                    int anneeEmbauche     = hireDate  != null ? ETLUtils.annee(hireDate)  : -1;
+                    int anneeNaissance    = dob       != null ? dob.getYear()             : -1;
+                    double salaireMensuel = ETLUtils.annuelVersQuotidien(ETLUtils.parseMontant(salaryRaw));
+                    // age/anciennete stockés dans dim_employe pour compatibilité (valeur courante)
+                    int age        = dob      != null ? (int) java.time.temporal.ChronoUnit.YEARS.between(dob, LocalDate.now())      : -1;
+                    int anciennete = hireDate != null ? (int) java.time.temporal.ChronoUnit.YEARS.between(hireDate, LocalDate.now()) : -1;
                     String statut         = attrition == 1 ? "Parti" : statusRaw.equalsIgnoreCase("LOA") ? "Congé" : "Actif";
                     String motif          = (termReason == null || termReason.isBlank()) ? "N/A" : ETLUtils.capitaliser(termReason);
 
@@ -106,7 +107,8 @@ public class NexCoreRHLoader {
                             .satisfactionEmploye(satisfaction)
                             .dureeAvantDepart(dureeAvantDepart)
                             .anneeDepart(anneeDepart)
-                            .anneeEmbauche(anneeEmbauche);
+                            .anneeEmbauche(anneeEmbauche)
+                            .anneeNaissance(anneeNaissance);
 
                     result.put(matricule, builder);
 

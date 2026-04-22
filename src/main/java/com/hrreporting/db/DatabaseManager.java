@@ -107,6 +107,7 @@ public class DatabaseManager {
                 annee_depart            INT,
                 annee_embauche          INT,
                 annee_formation         INT,
+                annee_naissance         INT,
 
                 FOREIGN KEY (employe_id) REFERENCES dim_employe(employe_id),
                 FOREIGN KEY (dept_id)    REFERENCES dim_departement(dept_id),

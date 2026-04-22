@@ -69,6 +69,7 @@ public class EffectifsPanel extends JPanel implements MainDashboard.Refreshable 
             // Total employés
             ResultSet rs1 = query("SELECT COUNT(DISTINCT f.employe_id) FROM fait_rh f" +
                     " JOIN dim_departement d ON f.dept_id = d.dept_id" +
+                    " JOIN dim_temps t ON f.temps_id = t.temps_id" +
                     " WHERE 1=1" + anneeFilter + deptFilter);
             int total = rs1.next() ? rs1.getInt(1) : 0;
             row.add(MainDashboard.buildKpiCard("Total employés",
@@ -80,6 +81,7 @@ public class EffectifsPanel extends JPanel implements MainDashboard.Refreshable 
                 FROM fait_rh f
                 JOIN dim_employe e ON f.employe_id = e.employe_id
                 JOIN dim_departement d ON f.dept_id = d.dept_id
+                JOIN dim_temps t ON f.temps_id = t.temps_id
                 WHERE 1=1
                 """ + anneeFilter + deptFilter);
             double pctActifs = rs2.next() ? rs2.getDouble(1) : 0;
@@ -88,27 +90,13 @@ public class EffectifsPanel extends JPanel implements MainDashboard.Refreshable 
                     pctActifs > 85 ? "Stable" : "Attention",
                     pctActifs > 85 ? MainDashboard.C_SUCCESS : MainDashboard.C_WARNING));
 
-            // Âge moyen
-            ResultSet rs3 = query("""
-                SELECT ROUND(AVG(e.age), 1)
-                FROM fait_rh f
-                JOIN dim_employe e ON f.employe_id = e.employe_id
-                JOIN dim_departement d ON f.dept_id = d.dept_id
-                WHERE e.age > 0
-                """ + anneeFilter + deptFilter);
-            double ageMoyen = rs3.next() ? rs3.getDouble(1) : 0;
+            // Âge moyen — calculé dynamiquement selon l'année filtrée
+            double ageMoyen = DWRepository.getAgeMoyenGlobal(annee, departement);
             row.add(MainDashboard.buildKpiCard("Âge moyen",
                     String.format("%.0f ans", ageMoyen), null, null));
 
-            // Ancienneté moyenne
-            ResultSet rs4 = query("""
-                SELECT ROUND(AVG(e.anciennete_ans), 1)
-                FROM fait_rh f
-                JOIN dim_employe e ON f.employe_id = e.employe_id
-                JOIN dim_departement d ON f.dept_id = d.dept_id
-                WHERE e.anciennete_ans >= 0
-                """ + anneeFilter + deptFilter);
-            double ancMoyenne = rs4.next() ? rs4.getDouble(1) : 0;
+            // Ancienneté moyenne — calculée dynamiquement selon l'année filtrée
+            double ancMoyenne = DWRepository.getAncienneteMoyenneGlobale(annee, departement);
             row.add(MainDashboard.buildKpiCard("Ancienneté moy.",
                     String.format("%.1f ans", ancMoyenne), null, null));
 
@@ -173,21 +161,32 @@ public class EffectifsPanel extends JPanel implements MainDashboard.Refreshable 
         gbc.insets = new Insets(0, 0, 0, 6);
 
         try {
+            int an = (annee == null || annee.equals("Toutes"))
+                    ? java.time.LocalDate.now().getYear()
+                    : Integer.parseInt(annee.replaceAll("[^0-9]", ""));
+
             DefaultCategoryDataset dsPyramide = new DefaultCategoryDataset();
-            String[] tranches    = {"< 25", "25-34", "35-44", "45-54", "55+"};
-            String[] conditions  = {"e.age < 25", "e.age BETWEEN 25 AND 34",
-                    "e.age BETWEEN 35 AND 44", "e.age BETWEEN 45 AND 54", "e.age >= 55"};
-            String deptFilter = buildDeptJoin();
+            String[] tranches   = {"< 25", "25-34", "35-44", "45-54", "55+"};
+            String[] conditions = {
+                    "(" + an + " - f.annee_naissance) < 25",
+                    "(" + an + " - f.annee_naissance) BETWEEN 25 AND 34",
+                    "(" + an + " - f.annee_naissance) BETWEEN 35 AND 44",
+                    "(" + an + " - f.annee_naissance) BETWEEN 45 AND 54",
+                    "(" + an + " - f.annee_naissance) >= 55"
+            };
+            String deptFilter  = buildDeptJoin();
             String anneeFilter = buildAnneeFilter();
             for (int i = 0; i < tranches.length; i++) {
                 ResultSet rsM = query("SELECT COUNT(*) FROM fait_rh f " +
                         "JOIN dim_employe e ON f.employe_id = e.employe_id " +
                         "JOIN dim_departement d ON f.dept_id = d.dept_id " +
-                        "WHERE e.genre = 'M' AND " + conditions[i] + anneeFilter + deptFilter);
+                        "WHERE e.genre = 'M' AND f.annee_naissance IS NOT NULL " +
+                        "AND " + conditions[i] + anneeFilter + deptFilter);
                 ResultSet rsF = query("SELECT COUNT(*) FROM fait_rh f " +
                         "JOIN dim_employe e ON f.employe_id = e.employe_id " +
                         "JOIN dim_departement d ON f.dept_id = d.dept_id " +
-                        "WHERE e.genre = 'F' AND " + conditions[i] + anneeFilter + deptFilter);
+                        "WHERE e.genre = 'F' AND f.annee_naissance IS NOT NULL " +
+                        "AND " + conditions[i] + anneeFilter + deptFilter);
                 dsPyramide.addValue(rsM.next() ? rsM.getInt(1) : 0, "Hommes", tranches[i]);
                 dsPyramide.addValue(rsF.next() ? rsF.getInt(1) : 0, "Femmes", tranches[i]);
             }
@@ -201,15 +200,13 @@ public class EffectifsPanel extends JPanel implements MainDashboard.Refreshable 
                     new ChartPanel(chartPyramide)), gbc);
 
             DefaultCategoryDataset dsAnc = new DefaultCategoryDataset();
-            ResultSet rsAnc = query("""
-            SELECT d.nom_dept, ROUND(AVG(e.anciennete_ans), 1)
-            FROM fait_rh f
-            JOIN dim_employe e ON f.employe_id = e.employe_id
-            JOIN dim_departement d ON f.dept_id = d.dept_id
-            WHERE e.anciennete_ans >= 0
-            """ + buildAnneeFilter() + buildDeptJoin() + """
-            GROUP BY d.nom_dept ORDER BY AVG(e.anciennete_ans) DESC
-        """);
+            ResultSet rsAnc = query(
+                    "SELECT d.nom_dept, ROUND(AVG(" + an + " - f.annee_embauche), 1)" +
+                            " FROM fait_rh f" +
+                            " JOIN dim_departement d ON f.dept_id = d.dept_id" +
+                            " WHERE f.annee_embauche IS NOT NULL AND f.annee_embauche > 0" +
+                            buildAnneeFilter() + buildDeptJoin() +
+                            " GROUP BY d.nom_dept ORDER BY AVG(" + an + " - f.annee_embauche) DESC");
             while (rsAnc.next())
                 dsAnc.addValue(rsAnc.getDouble(2), "Ancienneté (ans)", rsAnc.getString(1));
 
