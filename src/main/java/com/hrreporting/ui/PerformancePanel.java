@@ -168,15 +168,13 @@ public class PerformancePanel extends JPanel implements MainDashboard.Refreshabl
             String df = buildDeptFilter();
 
             DefaultCategoryDataset dsCorrel = new DefaultCategoryDataset();
-            ResultSet rs = query("""
-                SELECT d.nom_dept,
-                       ROUND(AVG(f.satisfaction_employe), 2) AS satisf,
-                       ROUND(SUM(f.attrition) * 100.0 / COUNT(*), 1) AS taux_attr
-                FROM fait_rh f
-                JOIN dim_departement d ON f.dept_id = d.dept_id
-                JOIN dim_temps t ON f.temps_id = t.temps_id
-                WHERE f.satisfaction_employe > 0
-                """ + af + df + " GROUP BY d.nom_dept");
+            ResultSet rs = query(
+                    "SELECT d.nom_dept," +
+                            " ROUND(AVG(f.satisfaction_employe), 2) AS satisf," +
+                            " ROUND(SUM(f.attrition) * 100.0 / COUNT(*), 1) AS taux_attr" +
+                            " FROM fait_rh f" +
+                            " JOIN dim_departement d ON f.dept_id = d.dept_id" +
+                            " WHERE f.satisfaction_employe > 0" + af + df + " GROUP BY d.nom_dept");
             while (rs.next()) {
                 dsCorrel.addValue(rs.getDouble("satisf"),    "Satisfaction (1-4)", rs.getString(1));
                 dsCorrel.addValue(rs.getDouble("taux_attr"), "Attrition (%)",      rs.getString(1));
@@ -198,7 +196,7 @@ public class PerformancePanel extends JPanel implements MainDashboard.Refreshabl
                 JOIN dim_departement d ON f.dept_id = d.dept_id
                 JOIN dim_temps t ON f.temps_id = t.temps_id
                 WHERE f.score_evaluation > 0
-                """ + af + df + " GROUP BY t.annee, t.semestre ORDER BY t.annee, t.semestre");
+                """ + df + " GROUP BY t.annee, t.semestre ORDER BY t.annee, t.semestre");
             while (rsEval.next())
                 dsEval.addValue(rsEval.getDouble(2), "Score éval.", rsEval.getString(1));
 

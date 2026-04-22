@@ -177,16 +177,14 @@ public class TurnoverPanel extends JPanel implements MainDashboard.Refreshable {
                     new ChartPanel(chartDepart)), gbc);
 
             DefaultCategoryDataset dsHs = new DefaultCategoryDataset();
-            ResultSet rsHs = query("""
-                SELECT d.nom_dept,
-                       ROUND(SUM(CASE WHEN f.heures_sup = 1 AND f.attrition = 1 THEN 1 ELSE 0 END) * 100.0
-                             / NULLIF(SUM(CASE WHEN f.heures_sup = 1 THEN 1 ELSE 0 END), 0), 1) AS attr_hs,
-                       ROUND(SUM(CASE WHEN f.heures_sup = 0 AND f.attrition = 1 THEN 1 ELSE 0 END) * 100.0
-                             / NULLIF(SUM(CASE WHEN f.heures_sup = 0 THEN 1 ELSE 0 END), 0), 1) AS attr_no_hs
-                FROM fait_rh f JOIN dim_departement d ON f.dept_id = d.dept_id
-                JOIN dim_temps t ON f.temps_id = t.temps_id
-                WHERE 1=1
-                """ + af + df + " GROUP BY d.nom_dept");
+            ResultSet rsHs = query(
+                    "SELECT d.nom_dept," +
+                            " ROUND(SUM(CASE WHEN f.heures_sup = 1 AND f.attrition = 1 THEN 1 ELSE 0 END) * 100.0" +
+                            " / NULLIF(SUM(CASE WHEN f.heures_sup = 1 THEN 1 ELSE 0 END), 0), 1) AS attr_hs," +
+                            " ROUND(SUM(CASE WHEN f.heures_sup = 0 AND f.attrition = 1 THEN 1 ELSE 0 END) * 100.0" +
+                            " / NULLIF(SUM(CASE WHEN f.heures_sup = 0 THEN 1 ELSE 0 END), 0), 1) AS attr_no_hs" +
+                            " FROM fait_rh f JOIN dim_departement d ON f.dept_id = d.dept_id" +
+                            " WHERE 1=1" + buildAnneeFilter() + df + " GROUP BY d.nom_dept");
             while (rsHs.next()) {
                 dsHs.addValue(rsHs.getDouble("attr_hs"),    "Avec heures sup", rsHs.getString(1));
                 dsHs.addValue(rsHs.getDouble("attr_no_hs"), "Sans heures sup", rsHs.getString(1));

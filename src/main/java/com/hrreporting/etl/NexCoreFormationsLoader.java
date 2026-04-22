@@ -104,7 +104,7 @@ public class NexCoreFormationsLoader {
                         .formationId(agg.formationId)
                         .coutFormation(agg.coutTotal)
                         .nbFormations(agg.nbFormations)
-                        .anneeFormation(annee);  // annee = ETLUtils.annee(start)
+                        .anneeFormation(agg.annee);
 
                 result.put(agg.matricule, builder);
             } catch (Exception e) {

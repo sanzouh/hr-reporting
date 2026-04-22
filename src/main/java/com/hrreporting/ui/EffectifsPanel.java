@@ -69,7 +69,6 @@ public class EffectifsPanel extends JPanel implements MainDashboard.Refreshable 
             // Total employés
             ResultSet rs1 = query("SELECT COUNT(DISTINCT f.employe_id) FROM fait_rh f" +
                     " JOIN dim_departement d ON f.dept_id = d.dept_id" +
-                    " JOIN dim_temps t ON f.temps_id = t.temps_id" +
                     " WHERE 1=1" + anneeFilter + deptFilter);
             int total = rs1.next() ? rs1.getInt(1) : 0;
             row.add(MainDashboard.buildKpiCard("Total employés",
@@ -81,7 +80,6 @@ public class EffectifsPanel extends JPanel implements MainDashboard.Refreshable 
                 FROM fait_rh f
                 JOIN dim_employe e ON f.employe_id = e.employe_id
                 JOIN dim_departement d ON f.dept_id = d.dept_id
-                JOIN dim_temps t ON f.temps_id = t.temps_id
                 WHERE 1=1
                 """ + anneeFilter + deptFilter);
             double pctActifs = rs2.next() ? rs2.getDouble(1) : 0;
@@ -96,7 +94,6 @@ public class EffectifsPanel extends JPanel implements MainDashboard.Refreshable 
                 FROM fait_rh f
                 JOIN dim_employe e ON f.employe_id = e.employe_id
                 JOIN dim_departement d ON f.dept_id = d.dept_id
-                JOIN dim_temps t ON f.temps_id = t.temps_id
                 WHERE e.age > 0
                 """ + anneeFilter + deptFilter);
             double ageMoyen = rs3.next() ? rs3.getDouble(1) : 0;
@@ -109,7 +106,6 @@ public class EffectifsPanel extends JPanel implements MainDashboard.Refreshable 
                 FROM fait_rh f
                 JOIN dim_employe e ON f.employe_id = e.employe_id
                 JOIN dim_departement d ON f.dept_id = d.dept_id
-                JOIN dim_temps t ON f.temps_id = t.temps_id
                 WHERE e.anciennete_ans >= 0
                 """ + anneeFilter + deptFilter);
             double ancMoyenne = rs4.next() ? rs4.getDouble(1) : 0;
@@ -187,12 +183,10 @@ public class EffectifsPanel extends JPanel implements MainDashboard.Refreshable 
                 ResultSet rsM = query("SELECT COUNT(*) FROM fait_rh f " +
                         "JOIN dim_employe e ON f.employe_id = e.employe_id " +
                         "JOIN dim_departement d ON f.dept_id = d.dept_id " +
-                        "JOIN dim_temps t ON f.temps_id = t.temps_id " +
                         "WHERE e.genre = 'M' AND " + conditions[i] + anneeFilter + deptFilter);
                 ResultSet rsF = query("SELECT COUNT(*) FROM fait_rh f " +
                         "JOIN dim_employe e ON f.employe_id = e.employe_id " +
                         "JOIN dim_departement d ON f.dept_id = d.dept_id " +
-                        "JOIN dim_temps t ON f.temps_id = t.temps_id " +
                         "WHERE e.genre = 'F' AND " + conditions[i] + anneeFilter + deptFilter);
                 dsPyramide.addValue(rsM.next() ? rsM.getInt(1) : 0, "Hommes", tranches[i]);
                 dsPyramide.addValue(rsF.next() ? rsF.getInt(1) : 0, "Femmes", tranches[i]);
@@ -212,7 +206,6 @@ public class EffectifsPanel extends JPanel implements MainDashboard.Refreshable 
             FROM fait_rh f
             JOIN dim_employe e ON f.employe_id = e.employe_id
             JOIN dim_departement d ON f.dept_id = d.dept_id
-            JOIN dim_temps t ON f.temps_id = t.temps_id
             WHERE e.anciennete_ans >= 0
             """ + buildAnneeFilter() + buildDeptJoin() + """
             GROUP BY d.nom_dept ORDER BY AVG(e.anciennete_ans) DESC
@@ -250,7 +243,9 @@ public class EffectifsPanel extends JPanel implements MainDashboard.Refreshable 
 
     private String buildAnneeFilter() {
         if (annee == null || annee.equals("Toutes")) return "";
-        return " AND t.annee = " + annee.replaceAll("[^0-9]", "");
+        String an = annee.replaceAll("[^0-9]", "");
+        return " AND f.annee_embauche <= " + an +
+                " AND (f.annee_depart IS NULL OR f.annee_depart >= " + an + ")";
     }
 
     // ═══════════════════════════════════════════════════════════════════

@@ -195,7 +195,6 @@ public class DWRepository {
             SELECT d.nom_dept, COUNT(DISTINCT f.employe_id) AS nb
             FROM fait_rh f
             JOIN dim_departement d ON f.dept_id = d.dept_id
-            JOIN dim_temps t ON f.temps_id = t.temps_id
             WHERE 1=1
             """ + filtreActifAnnee(annee) + filtreDept(dept) + """
             GROUP BY d.nom_dept ORDER BY nb DESC
@@ -205,34 +204,27 @@ public class DWRepository {
 
     /** Taux d'attrition (%) par département */
     public static Map<String, Double> getTauxAttritionParDept(String annee, String dept) throws SQLException {
-        String sql = """
-        SELECT d.nom_dept,
-               ROUND(
-                 COUNT(CASE WHEN f.annee_depart = {AN} THEN 1 END) * 100.0
-                 / NULLIF(COUNT(CASE WHEN f.annee_embauche <= {AN}
-                                    AND (f.annee_depart IS NULL OR f.annee_depart >= {AN})
-                               THEN 1 END), 0)
-               , 1) AS taux
-        FROM fait_rh f
-        JOIN dim_departement d ON f.dept_id = d.dept_id
-        WHERE 1=1
-        """;
-        // Pour "Toutes" : fallback sur l'ancienne logique globale
+        String sql;
         if (annee == null || annee.equals("Toutes")) {
             sql = """
-            SELECT d.nom_dept,
-                   ROUND(SUM(f.attrition) * 100.0 / NULLIF(COUNT(*), 0), 1) AS taux
-            FROM fait_rh f
-            JOIN dim_departement d ON f.dept_id = d.dept_id
-            WHERE 1=1
-            """ + filtreDept(dept) + """
-            GROUP BY d.nom_dept ORDER BY taux DESC
-        """;
+                SELECT d.nom_dept,
+                       ROUND(SUM(f.attrition) * 100.0 / NULLIF(COUNT(*), 0), 1) AS taux
+                FROM fait_rh f
+                JOIN dim_departement d ON f.dept_id = d.dept_id
+                WHERE 1=1
+                """ + filtreDept(dept) + """
+                GROUP BY d.nom_dept ORDER BY taux DESC
+            """;
         } else {
             String an = annee.replaceAll("[^0-9]", "");
-            sql = sql.replace("{AN}", an).replace("{AN}", an) + filtreDept(dept) + """
-            GROUP BY d.nom_dept ORDER BY taux DESC
-        """;
+            sql = "SELECT d.nom_dept," +
+                    " ROUND(COUNT(CASE WHEN f.annee_depart = " + an + " THEN 1 END) * 100.0" +
+                    " / NULLIF(COUNT(CASE WHEN f.annee_embauche <= " + an +
+                    " AND (f.annee_depart IS NULL OR f.annee_depart >= " + an + ") THEN 1 END), 0), 1) AS taux" +
+                    " FROM fait_rh f" +
+                    " JOIN dim_departement d ON f.dept_id = d.dept_id" +
+                    " WHERE 1=1" + filtreDept(dept) +
+                    " GROUP BY d.nom_dept ORDER BY taux DESC";
         }
         return queryStringDouble(sql, "nom_dept", "taux");
     }
@@ -244,7 +236,6 @@ public class DWRepository {
                    ROUND(AVG(f.salaire_mensuel), 2) AS salaire_moyen
             FROM fait_rh f
             JOIN dim_departement d ON f.dept_id = d.dept_id
-            JOIN dim_temps t ON f.temps_id = t.temps_id
             WHERE f.salaire_mensuel IS NOT NULL AND f.salaire_mensuel > 0
             """ + filtreActifAnnee(annee) + filtreDept(dept) + """
             GROUP BY d.nom_dept ORDER BY salaire_moyen DESC
@@ -260,7 +251,6 @@ public class DWRepository {
             FROM fait_rh f
             JOIN dim_employe e ON f.employe_id = e.employe_id
             JOIN dim_departement d ON f.dept_id = d.dept_id
-            JOIN dim_temps t ON f.temps_id = t.temps_id
             WHERE f.salaire_mensuel IS NOT NULL AND f.salaire_mensuel > 0
               AND e.genre IS NOT NULL
             """ + filtreActifAnnee(annee) + filtreDept(dept) + """
@@ -276,7 +266,6 @@ public class DWRepository {
                    ROUND(AVG(f.score_performance), 2) AS score_moyen
             FROM fait_rh f
             JOIN dim_departement d ON f.dept_id = d.dept_id
-            JOIN dim_temps t ON f.temps_id = t.temps_id
             WHERE f.score_performance IS NOT NULL AND f.score_performance > 0
             """ + filtreActifAnnee(annee) + filtreDept(dept) + """
             GROUP BY d.nom_dept ORDER BY score_moyen DESC
@@ -291,7 +280,6 @@ public class DWRepository {
                    ROUND(AVG(f.satisfaction_employe), 2) AS satisfaction
             FROM fait_rh f
             JOIN dim_departement d ON f.dept_id = d.dept_id
-            JOIN dim_temps t ON f.temps_id = t.temps_id
             WHERE f.satisfaction_employe IS NOT NULL AND f.satisfaction_employe > 0
             """ + filtreActifAnnee(annee) + filtreDept(dept) + """
             GROUP BY d.nom_dept ORDER BY satisfaction DESC
@@ -306,7 +294,6 @@ public class DWRepository {
                    ROUND(AVG(f.nb_absences), 1) AS moy_absences
             FROM fait_rh f
             JOIN dim_departement d ON f.dept_id = d.dept_id
-            JOIN dim_temps t ON f.temps_id = t.temps_id
             WHERE f.nb_absences IS NOT NULL AND f.nb_absences >= 0
             """ + filtreActifAnnee(annee) + filtreDept(dept) + """
             GROUP BY d.nom_dept ORDER BY moy_absences DESC
@@ -321,7 +308,6 @@ public class DWRepository {
                    ROUND(SUM(f.cout_formation), 2) AS cout_total
             FROM fait_rh f
             JOIN dim_departement d ON f.dept_id = d.dept_id
-            JOIN dim_temps t ON f.temps_id = t.temps_id
             WHERE f.cout_formation IS NOT NULL AND f.cout_formation > 0
             """ + filtreAnneeFormation(annee) + filtreDept(dept) + """
             GROUP BY d.nom_dept ORDER BY cout_total DESC
@@ -336,7 +322,6 @@ public class DWRepository {
             FROM fait_rh f
             JOIN dim_employe e ON f.employe_id = e.employe_id
             JOIN dim_departement d ON f.dept_id = d.dept_id
-            JOIN dim_temps t ON f.temps_id = t.temps_id
             WHERE e.genre IS NOT NULL
             """ + filtreActifAnnee(annee) + filtreDept(dept) + """
             GROUP BY e.genre
@@ -351,7 +336,6 @@ public class DWRepository {
             FROM fait_rh f
             JOIN dim_employe e ON f.employe_id = e.employe_id
             JOIN dim_departement d ON f.dept_id = d.dept_id
-            JOIN dim_temps t ON f.temps_id = t.temps_id
             WHERE f.attrition = 1 AND e.motif_depart IS NOT NULL
             """ + filtreAnneeDepart(annee) + filtreDept(dept) + """
             GROUP BY e.motif_depart ORDER BY nb DESC
@@ -365,11 +349,10 @@ public class DWRepository {
             SELECT d.nom_dept, COUNT(*) AS nb
             FROM fait_rh f
             JOIN dim_departement d ON f.dept_id = d.dept_id
-            JOIN dim_temps t ON f.temps_id = t.temps_id
             WHERE f.promotion_recommandee = 1
-              AND f.score_performance >= 3
+              AND f.score_performance >= 4
               AND f.score_evaluation >= 4
-              AND f.objectifs_atteints_pct >= 80
+              AND f.objectifs_atteints_pct >= 75
             """ + filtreActifAnnee(annee) + filtreDept(dept) + """
             GROUP BY d.nom_dept ORDER BY nb DESC
         """;
@@ -450,7 +433,6 @@ public class DWRepository {
             SELECT ROUND(AVG(f.salaire_mensuel), 2)
             FROM fait_rh f
             JOIN dim_departement d ON f.dept_id = d.dept_id
-            JOIN dim_temps t ON f.temps_id = t.temps_id
             WHERE f.salaire_mensuel IS NOT NULL AND f.salaire_mensuel > 0
             """ + filtreActifAnnee(annee) + filtreDept(dept);
         ResultSet rs = DatabaseManager.getConnection().createStatement().executeQuery(sql);
@@ -463,7 +445,6 @@ public class DWRepository {
             SELECT ROUND(AVG(f.satisfaction_employe), 2)
             FROM fait_rh f
             JOIN dim_departement d ON f.dept_id = d.dept_id
-            JOIN dim_temps t ON f.temps_id = t.temps_id
             WHERE f.satisfaction_employe IS NOT NULL AND f.satisfaction_employe > 0
             """ + filtreActifAnnee(annee) + filtreDept(dept);
         ResultSet rs = DatabaseManager.getConnection().createStatement().executeQuery(sql);

@@ -86,7 +86,6 @@ public class PromotionsPanel extends JPanel implements MainDashboard.Refreshable
             // Score performance moyen des candidats
             ResultSet rsPerf = query("SELECT ROUND(AVG(f.score_performance), 2) FROM fait_rh f " +
                     "JOIN dim_departement d ON f.dept_id = d.dept_id " +
-                    "JOIN dim_temps t ON f.temps_id = t.temps_id " +
                     "WHERE f.promotion_recommandee = 1 AND f.score_performance > 0" + af + df);
             double scoreMoyen = rsPerf.next() ? rsPerf.getDouble(1) : 0;
             row.add(MainDashboard.buildKpiCard("Score perf. moyen",
@@ -95,7 +94,6 @@ public class PromotionsPanel extends JPanel implements MainDashboard.Refreshable
             // % objectifs atteints moyen des candidats
             ResultSet rsObj = query("SELECT ROUND(AVG(f.objectifs_atteints_pct), 1) FROM fait_rh f " +
                     "JOIN dim_departement d ON f.dept_id = d.dept_id " +
-                    "JOIN dim_temps t ON f.temps_id = t.temps_id " +
                     "WHERE f.promotion_recommandee = 1 AND f.objectifs_atteints_pct >= 0" + af + df);
             double objMoyen = rsObj.next() ? rsObj.getDouble(1) : 0;
             String badgeObj = objMoyen >= 80 ? "Excellent" : objMoyen >= 60 ? "Correct" : "Insuffisant";
@@ -146,7 +144,6 @@ public class PromotionsPanel extends JPanel implements MainDashboard.Refreshable
                        ROUND(AVG(CASE WHEN f.promotion_recommandee = 0 THEN f.score_performance END), 2) AS score_autres
                 FROM fait_rh f
                 JOIN dim_departement d ON f.dept_id = d.dept_id
-                JOIN dim_temps t ON f.temps_id = t.temps_id
                 WHERE f.score_performance IS NOT NULL AND f.score_performance > 0
                 """ + af + df + " GROUP BY d.nom_dept ORDER BY d.nom_dept");
             while (rsPerf.next()) {
@@ -189,7 +186,6 @@ public class PromotionsPanel extends JPanel implements MainDashboard.Refreshable
                 SELECT d.nom_dept, ROUND(AVG(f.objectifs_atteints_pct), 1) AS moy_obj
                 FROM fait_rh f
                 JOIN dim_departement d ON f.dept_id = d.dept_id
-                JOIN dim_temps t ON f.temps_id = t.temps_id
                 WHERE f.objectifs_atteints_pct IS NOT NULL AND f.objectifs_atteints_pct >= 0
                 """ + af + df + " GROUP BY d.nom_dept ORDER BY moy_obj DESC");
             while (rsObj.next())
@@ -209,7 +205,6 @@ public class PromotionsPanel extends JPanel implements MainDashboard.Refreshable
                 FROM fait_rh f
                 JOIN dim_employe e ON f.employe_id = e.employe_id
                 JOIN dim_departement d ON f.dept_id = d.dept_id
-                JOIN dim_temps t ON f.temps_id = t.temps_id
                 WHERE f.promotion_recommandee = 1 AND e.genre IS NOT NULL
                 """ + af + df + " GROUP BY e.genre");
             while (rsGenre.next())
@@ -232,7 +227,7 @@ public class PromotionsPanel extends JPanel implements MainDashboard.Refreshable
     // UTILITAIRES
     // ═══════════════════════════════════════════════════════════════════
 
-    private String buildAnneeFilter() {
+    private String buildAnneeFilter(String annee) {
         if (annee == null || annee.equals("Toutes")) return "";
         String an = annee.replaceAll("[^0-9]", "");
         return " AND f.annee_embauche <= " + an +
