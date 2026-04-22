@@ -68,7 +68,6 @@ public class PerformancePanel extends JPanel implements MainDashboard.Refreshabl
             // Score performance moyen (1-4)
             ResultSet rs1 = query("SELECT ROUND(AVG(score_performance), 2) FROM fait_rh f " +
                     "JOIN dim_departement d ON f.dept_id = d.dept_id " +
-                    "JOIN dim_temps t ON f.temps_id = t.temps_id " +
                     "WHERE score_performance > 0" + af + df);
             double perf = rs1.next() ? rs1.getDouble(1) : 0;
             Color cPerf = perf >= 3.5 ? MainDashboard.C_SUCCESS : perf >= 2.5 ? MainDashboard.C_WARNING : MainDashboard.C_DANGER;
@@ -79,7 +78,6 @@ public class PerformancePanel extends JPanel implements MainDashboard.Refreshabl
             // Satisfaction moyenne (1-4)
             ResultSet rs2 = query("SELECT ROUND(AVG(satisfaction_employe), 2) FROM fait_rh f " +
                     "JOIN dim_departement d ON f.dept_id = d.dept_id " +
-                    "JOIN dim_temps t ON f.temps_id = t.temps_id " +
                     "WHERE satisfaction_employe > 0" + af + df);
             double satisf = rs2.next() ? rs2.getDouble(1) : 0;
             Color cSatisf = satisf >= 3 ? MainDashboard.C_SUCCESS : satisf >= 2 ? MainDashboard.C_WARNING : MainDashboard.C_DANGER;
@@ -90,7 +88,7 @@ public class PerformancePanel extends JPanel implements MainDashboard.Refreshabl
             // % employés avec heures sup
             ResultSet rs3 = query("SELECT ROUND(SUM(heures_sup) * 100.0 / COUNT(*), 1) FROM fait_rh f " +
                     "JOIN dim_departement d ON f.dept_id = d.dept_id " +
-                    "JOIN dim_temps t ON f.temps_id = t.temps_id WHERE 1=1" + af + df);
+                    "WHERE 1=1" + af + df);
             double pctHs = rs3.next() ? rs3.getDouble(1) : 0;
             row.add(MainDashboard.buildKpiCard("Heures supplémentaires",
                     String.format("%.1f%%", pctHs),
@@ -100,7 +98,6 @@ public class PerformancePanel extends JPanel implements MainDashboard.Refreshabl
             // Score évaluation moyen (1-5)
             ResultSet rs4 = query("SELECT ROUND(AVG(score_evaluation), 2) FROM fait_rh f " +
                     "JOIN dim_departement d ON f.dept_id = d.dept_id " +
-                    "JOIN dim_temps t ON f.temps_id = t.temps_id " +
                     "WHERE score_evaluation > 0" + af + df);
             double eval = rs4.next() ? rs4.getDouble(1) : 0;
             row.add(MainDashboard.buildKpiCard("Score évaluation moy.",
@@ -286,8 +283,10 @@ public class PerformancePanel extends JPanel implements MainDashboard.Refreshabl
     // ═══════════════════════════════════════════════════════════════════
 
     private String buildAnneeFilter() {
-        return (annee == null || annee.equals("Toutes")) ? ""
-                : " AND t.annee = " + annee.replaceAll("[^0-9]", "");
+        if (annee == null || annee.equals("Toutes")) return "";
+        String an = annee.replaceAll("[^0-9]", "");
+        return " AND f.annee_embauche <= " + an +
+                " AND (f.annee_depart IS NULL OR f.annee_depart >= " + an + ")";
     }
 
     private String buildDeptFilter() {

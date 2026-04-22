@@ -166,6 +166,9 @@ public class ETLPipeline {
         if (e.getAnneeEmbauche() == -1 && n.getAnneeEmbauche() != -1)
             existing.anneeEmbauche(n.getAnneeEmbauche());
 
+        if (e.getAnneeFormation() == -1 && n.getAnneeFormation() != -1)
+            existing.anneeFormation(n.getAnneeFormation());
+
         // Promotion : 1 prend le dessus sur 0 ou -1
         if (n.getPromotionRecommandee() == 1)
             existing.promotionRecommandee(1);

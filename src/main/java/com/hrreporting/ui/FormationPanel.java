@@ -70,7 +70,7 @@ public class FormationPanel extends JPanel implements MainDashboard.Refreshable 
             // Nb total de formations enregistrées
             ResultSet rs1 = query("SELECT COALESCE(SUM(f.nb_formations), 0) FROM fait_rh f " +
                     "JOIN dim_departement d ON f.dept_id = d.dept_id " +
-                    "JOIN dim_temps t ON f.temps_id = t.temps_id WHERE 1=1" + af + df);
+                    "WHERE 1=1" + af + df);
             int nbFormations = rs1.next() ? rs1.getInt(1) : 0;
             row.add(MainDashboard.buildKpiCard("Formations réalisées",
                     String.format("%,d", nbFormations), null, null));
@@ -84,7 +84,6 @@ public class FormationPanel extends JPanel implements MainDashboard.Refreshable 
             // Coût moyen par employé formé
             ResultSet rs3 = query("SELECT ROUND(AVG(f.cout_formation), 0) FROM fait_rh f " +
                     "JOIN dim_departement d ON f.dept_id = d.dept_id " +
-                    "JOIN dim_temps t ON f.temps_id = t.temps_id " +
                     "WHERE f.cout_formation IS NOT NULL AND f.cout_formation > 0 " +
                     "AND f.nb_formations IS NOT NULL AND f.nb_formations > 0" + af + df);
             double coutMoyen = rs3.next() ? rs3.getDouble(1) : 0;
@@ -95,7 +94,7 @@ public class FormationPanel extends JPanel implements MainDashboard.Refreshable 
             ResultSet rs4 = query("SELECT ROUND(SUM(CASE WHEN f.nb_formations > 0 THEN 1 ELSE 0 END) * 100.0 / COUNT(*), 1) " +
                     "FROM fait_rh f " +
                     "JOIN dim_departement d ON f.dept_id = d.dept_id " +
-                    "JOIN dim_temps t ON f.temps_id = t.temps_id WHERE 1=1" + af + df);
+                    "WHERE 1=1" + af + df);
             double pctFormes = rs4.next() ? rs4.getDouble(1) : 0;
             String badge = pctFormes >= 70 ? "Bon" : pctFormes >= 40 ? "Moyen" : "Faible";
             Color color  = pctFormes >= 70 ? MainDashboard.C_SUCCESS
@@ -144,7 +143,6 @@ public class FormationPanel extends JPanel implements MainDashboard.Refreshable 
                 FROM fait_rh f
                 JOIN dim_formation df ON f.formation_id = df.formation_id
                 JOIN dim_departement d ON f.dept_id = d.dept_id
-                JOIN dim_temps t ON f.temps_id = t.temps_id
                 WHERE f.formation_id IS NOT NULL
                 """ + af + df + " GROUP BY df.intitule ORDER BY nb DESC LIMIT 8");
             while (rsTop.next())
@@ -184,7 +182,6 @@ public class FormationPanel extends JPanel implements MainDashboard.Refreshable 
                 SELECT d.nom_dept, ROUND(AVG(f.nb_formations), 2) AS moy
                 FROM fait_rh f
                 JOIN dim_departement d ON f.dept_id = d.dept_id
-                JOIN dim_temps t ON f.temps_id = t.temps_id
                 WHERE f.nb_formations IS NOT NULL AND f.nb_formations >= 0
                 """ + af + df + " GROUP BY d.nom_dept ORDER BY moy DESC");
             while (rsNb.next())
@@ -215,7 +212,6 @@ public class FormationPanel extends JPanel implements MainDashboard.Refreshable 
                         "SELECT COUNT(*) FROM fait_rh f " +
                                 "JOIN dim_formation df ON f.formation_id = df.formation_id " +
                                 "JOIN dim_departement d ON f.dept_id = d.dept_id " +
-                                "JOIN dim_temps t ON f.temps_id = t.temps_id " +
                                 "WHERE " + conditions[i] + af + df);
                 dsDuree.setValue(labels[i], rsD.next() ? rsD.getInt(1) : 0);
             }
@@ -243,7 +239,7 @@ public class FormationPanel extends JPanel implements MainDashboard.Refreshable 
 
     private String buildAnneeFilter() {
         return (annee == null || annee.equals("Toutes")) ? ""
-                : " AND t.annee = " + annee.replaceAll("[^0-9]", "");
+                : " AND f.annee_formation = " + annee.replaceAll("[^0-9]", "");
     }
 
     private String buildDeptFilter() {

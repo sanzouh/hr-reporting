@@ -63,7 +63,7 @@ public class TurnoverPanel extends JPanel implements MainDashboard.Refreshable {
         row.setBackground(MainDashboard.C_BG);
 
         try {
-            String af = buildAnneeFilter();
+            String af = buildAnneeDepartFilter();
             String df = buildDeptFilter();
 
             double taux = DWRepository.getTauxAttritionGlobal(annee, departement);
@@ -72,17 +72,19 @@ public class TurnoverPanel extends JPanel implements MainDashboard.Refreshable {
                     String.format("%.1f%%", taux),
                     taux > 15 ? "Critique" : taux > 8 ? "Modéré" : "Stable", cTaux));
 
+            // Départs totaux — filtre par année de départ
             ResultSet rs2 = query("SELECT SUM(attrition) FROM fait_rh f " +
                     "JOIN dim_departement d ON f.dept_id = d.dept_id " +
-                    "JOIN dim_temps t ON f.temps_id = t.temps_id WHERE 1=1" + af + df);
+                    "WHERE f.attrition = 1" + buildAnneeDepartFilter() + df);
+
             int departs = rs2.next() ? rs2.getInt(1) : 0;
             row.add(MainDashboard.buildKpiCard("Départs totaux",
                     String.valueOf(departs), null, null));
 
+            // Durée moy. avant départ — filtre par année de départ
             ResultSet rs3 = query("SELECT ROUND(AVG(duree_avant_depart) / 365.0, 1) FROM fait_rh f " +
                     "JOIN dim_departement d ON f.dept_id = d.dept_id " +
-                    "JOIN dim_temps t ON f.temps_id = t.temps_id " +
-                    "WHERE f.duree_avant_depart > 0" + af + df);
+                    "WHERE f.duree_avant_depart > 0" + buildAnneeDepartFilter() + df);
             double duree = rs3.next() ? rs3.getDouble(1) : 0;
             row.add(MainDashboard.buildKpiCard("Durée moy. avant départ",
                     String.format("%.1f ans", duree), null, null));
@@ -155,16 +157,15 @@ public class TurnoverPanel extends JPanel implements MainDashboard.Refreshable {
         gbc.weighty = 1.0;
 
         try {
-            String af = buildAnneeFilter();
+            String af = buildAnneeDepartFilter();
             String df = buildDeptFilter();
 
             DefaultCategoryDataset dsDepart = new DefaultCategoryDataset();
-            ResultSet rs = query("""
-                SELECT d.nom_dept, ROUND(AVG(f.duree_avant_depart) / 365.0, 1)
-                FROM fait_rh f JOIN dim_departement d ON f.dept_id = d.dept_id
-                JOIN dim_temps t ON f.temps_id = t.temps_id
-                WHERE f.duree_avant_depart > 0
-                """ + af + df + " GROUP BY d.nom_dept ORDER BY AVG(f.duree_avant_depart) ASC");
+            ResultSet rs = query(
+                    "SELECT d.nom_dept, ROUND(AVG(f.duree_avant_depart) / 365.0, 1) " +
+                            "FROM fait_rh f JOIN dim_departement d ON f.dept_id = d.dept_id " +
+                            "WHERE f.duree_avant_depart > 0" + buildAnneeDepartFilter() + df +
+                            " GROUP BY d.nom_dept ORDER BY AVG(f.duree_avant_depart) ASC");
             while (rs.next())
                 dsDepart.addValue(rs.getDouble(2), "Années", rs.getString(1));
             JFreeChart chartDepart = ChartFactory.createBarChart(
@@ -285,8 +286,17 @@ public class TurnoverPanel extends JPanel implements MainDashboard.Refreshable {
     // ═══════════════════════════════════════════════════════════════════
 
     private String buildAnneeFilter() {
+        // Pour les snapshots actifs (heures sup, base population)
+        if (annee == null || annee.equals("Toutes")) return "";
+        String an = annee.replaceAll("[^0-9]", "");
+        return " AND f.annee_embauche <= " + an +
+                " AND (f.annee_depart IS NULL OR f.annee_depart >= " + an + ")";
+    }
+
+    private String buildAnneeDepartFilter() {
+        // Pour les flux de départs (départs totaux, durée avant départ)
         return (annee == null || annee.equals("Toutes")) ? ""
-                : " AND t.annee = " + annee.replaceAll("[^0-9]", "");
+                : " AND f.annee_depart = " + annee.replaceAll("[^0-9]", "");
     }
 
     private String buildDeptFilter() {

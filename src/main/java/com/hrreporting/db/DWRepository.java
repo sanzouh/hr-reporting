@@ -133,8 +133,8 @@ public class DWRepository {
                 salaire_mensuel, attrition, score_performance, satisfaction_employe,
                 nb_absences, heures_sup, score_evaluation, objectifs_atteints_pct,
                 cout_formation, nb_formations, duree_avant_depart, promotion_recommandee,
-                annee_depart, annee_embauche
-            ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+                annee_depart, annee_embauche, annee_formation
+            ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
         """);
         bindFait(ps, fait);
         ps.executeUpdate();
@@ -149,8 +149,8 @@ public class DWRepository {
                 salaire_mensuel, attrition, score_performance, satisfaction_employe,
                 nb_absences, heures_sup, score_evaluation, objectifs_atteints_pct,
                 cout_formation, nb_formations, duree_avant_depart, promotion_recommandee,
-                annee_depart, annee_embauche
-            ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+                annee_depart, annee_embauche, annee_formation
+            ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
         """);
         for (FaitRH fait : faits) {
             bindFait(ps, fait);
@@ -182,6 +182,7 @@ public class DWRepository {
         setNullableInt(ps, 17, fait.getPromotionRecommandee());
         setNullableInt(ps, 18, fait.getAnneeDepart());
         setNullableInt(ps, 19, fait.getAnneeEmbauche());
+        setNullableInt(ps, 20, fait.getAnneeFormation());
     }
 
     // ═══════════════════════════════════════════════════════════════════
@@ -322,7 +323,7 @@ public class DWRepository {
             JOIN dim_departement d ON f.dept_id = d.dept_id
             JOIN dim_temps t ON f.temps_id = t.temps_id
             WHERE f.cout_formation IS NOT NULL AND f.cout_formation > 0
-            """ + filtreAnnee(annee) + filtreDept(dept) + """
+            """ + filtreAnneeFormation(annee) + filtreDept(dept) + """
             GROUP BY d.nom_dept ORDER BY cout_total DESC
         """;
         return queryStringDouble(sql, "nom_dept", "cout_total");
@@ -369,7 +370,7 @@ public class DWRepository {
               AND f.score_performance >= 3
               AND f.score_evaluation >= 4
               AND f.objectifs_atteints_pct >= 80
-            """ + filtreAnnee(annee) + filtreDept(dept) + """
+            """ + filtreActifAnnee(annee) + filtreDept(dept) + """
             GROUP BY d.nom_dept ORDER BY nb DESC
         """;
         return queryStringInt(sql);
@@ -506,6 +507,11 @@ public class DWRepository {
     private static String filtreAnneeDepart(String annee) {
         return (annee == null || annee.equals("Toutes")) ? ""
                 : " AND f.annee_depart = " + annee.replaceAll("[^0-9]", "");
+    }
+
+    private static String filtreAnneeFormation(String annee) {
+        return (annee == null || annee.equals("Toutes")) ? ""
+                : " AND f.annee_formation = " + annee.replaceAll("[^0-9]", "");
     }
 
     private static String filtreDept(String dept) {

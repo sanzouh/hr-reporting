@@ -30,6 +30,7 @@ public class FaitRH {
     private final int    promotionRecommandee; // 0 = Non, 1 = Oui, -1 = inconnu
     private final int    anneeDepart;        // année effective du départ, -1 si encore actif
     private final int    anneeEmbauche;  // année réelle d'embauche (pour effectif actif)
+    private final int    anneeFormation;
 
     // ── Constructeur complet ──────────────────────────────────────────
     public FaitRH(String employeId, int deptId, int tempsId, int posteId, int formationId,
@@ -37,7 +38,7 @@ public class FaitRH {
                   int satisfactionEmploye, int nbAbsences, int heuresSup,
                   int scoreEvaluation, int objectifsAtteintsP,
                   double coutFormation, int nbFormations, int dureeAvantDepart,
-                  int promotionRecommandee, int anneeDepart, int anneeEmbauche) {
+                  int promotionRecommandee, int anneeDepart, int anneeEmbauche, int anneFormation) {
         this.employeId           = employeId;
         this.deptId              = deptId;
         this.tempsId             = tempsId;
@@ -54,9 +55,10 @@ public class FaitRH {
         this.coutFormation       = coutFormation;
         this.nbFormations        = nbFormations;
         this.dureeAvantDepart    = dureeAvantDepart;
-        this.promotionRecommandee = promotionRecommandee;
+        this.promotionRecommandee= promotionRecommandee;
         this.anneeDepart         = anneeDepart;
         this.anneeEmbauche       = anneeEmbauche;
+        this.anneeFormation       = anneFormation;
     }
 
     // ── Builder statique pour construction progressive ────────────────
@@ -82,6 +84,7 @@ public class FaitRH {
         private int    promotionRecommandee= -1;
         private int    anneeDepart         = -1;
         private int    anneeEmbauche       = -1;
+        private int    anneeFormation      = -1;
 
         public Builder employeId(String v)            { this.employeId = v; return this; }
         public Builder deptId(int v)                  { this.deptId = v; return this; }
@@ -102,13 +105,14 @@ public class FaitRH {
         public Builder promotionRecommandee(int v)    { this.promotionRecommandee = v; return this; }
         public Builder anneeDepart(int v)             { this.anneeDepart = v; return this; }
         public Builder anneeEmbauche(int v)           { this.anneeEmbauche = v; return this; }
+        public Builder anneeFormation(int v)          { this.anneeFormation = v; return this; }
 
         public FaitRH build() {
             return new FaitRH(employeId, deptId, tempsId, posteId, formationId,
                     salaireMensuel, attrition, scorePerformance, satisfactionEmploye,
                     nbAbsences, heuresSup, scoreEvaluation, objectifsAtteintsP,
                     coutFormation, nbFormations, dureeAvantDepart,
-                    promotionRecommandee, anneeDepart, anneeEmbauche);
+                    promotionRecommandee, anneeDepart, anneeEmbauche, anneeFormation);
         }
     }
 
@@ -132,6 +136,7 @@ public class FaitRH {
     public int    getPromotionRecommandee() { return promotionRecommandee; }
     public int    getAnneeDepart()          { return anneeDepart; }
     public int    getAnneeEmbauche()        { return anneeEmbauche; }
+    public int    getAnneeFormation()       { return anneeFormation; }
 
     @Override
     public String toString() {

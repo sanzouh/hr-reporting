@@ -232,9 +232,11 @@ public class PromotionsPanel extends JPanel implements MainDashboard.Refreshable
     // UTILITAIRES
     // ═══════════════════════════════════════════════════════════════════
 
-    private String buildAnneeFilter(String annee) {
-        return (annee == null || annee.equals("Toutes")) ? ""
-                : " AND t.annee = " + annee.replaceAll("[^0-9]", "");
+    private String buildAnneeFilter() {
+        if (annee == null || annee.equals("Toutes")) return "";
+        String an = annee.replaceAll("[^0-9]", "");
+        return " AND f.annee_embauche <= " + an +
+                " AND (f.annee_depart IS NULL OR f.annee_depart >= " + an + ")";
     }
 
     private String buildDeptFilter(String departement) {
