@@ -471,26 +471,22 @@ public class DWRepository {
         return rs.next() ? rs.getDouble(1) : 0;
     }
 
-    /** Delta salaire N vs N-1 (%) — dynamique */
+    /** Delta salaire N vs N-1 (%) — employés actifs chaque année */
     public static double getDeltaSalaireAnnuel(String annee) throws SQLException {
         if (annee == null || annee.equals("Toutes")) return 0;
-        int an = Integer.parseInt(annee);
-        String sql = """
-            SELECT t.annee, ROUND(AVG(f.salaire_mensuel), 2)
-            FROM fait_rh f
-            JOIN dim_temps t ON f.temps_id = t.temps_id
-            WHERE f.salaire_mensuel > 0 AND t.annee IN (?, ?)
-            GROUP BY t.annee ORDER BY t.annee
-        """;
+        int an = Integer.parseInt(annee.replaceAll("[^0-9]", ""));
+        String sql =
+            "SELECT" +
+            "  AVG(CASE WHEN f.annee_embauche <= ? AND (f.annee_depart IS NULL OR f.annee_depart >= ?) AND f.salaire_mensuel > 0 THEN f.salaire_mensuel END) AS sal_n1," +
+            "  AVG(CASE WHEN f.annee_embauche <= ? AND (f.annee_depart IS NULL OR f.annee_depart >= ?) AND f.salaire_mensuel > 0 THEN f.salaire_mensuel END) AS sal_n" +
+            " FROM fait_rh f";
         PreparedStatement ps = DatabaseManager.getConnection().prepareStatement(sql);
-        ps.setInt(1, an - 1);
-        ps.setInt(2, an);
+        ps.setInt(1, an - 1); ps.setInt(2, an - 1);
+        ps.setInt(3, an);     ps.setInt(4, an);
         ResultSet rs = ps.executeQuery();
-        double salN1 = 0, salN = 0;
-        while (rs.next()) {
-            if (rs.getInt(1) == an - 1) salN1 = rs.getDouble(2);
-            if (rs.getInt(1) == an)     salN  = rs.getDouble(2);
-        }
+        if (!rs.next()) return 0;
+        double salN1 = rs.getDouble("sal_n1");
+        double salN  = rs.getDouble("sal_n");
         if (salN1 == 0) return 0;
         return Math.round((salN - salN1) / salN1 * 1000.0) / 10.0;
     }
@@ -531,11 +527,6 @@ public class DWRepository {
     // ═══════════════════════════════════════════════════════════════════
     // HELPERS FILTRES
     // ═══════════════════════════════════════════════════════════════════
-
-    private static String filtreAnnee(String annee) {
-        return (annee == null || annee.equals("Toutes")) ? ""
-                : " AND t.annee = " + annee.replaceAll("[^0-9]", "");
-    }
 
     /** Filtre sur l'année réelle de départ — pour attrition, motifs, durée avant départ */
     private static String filtreAnneeDepart(String annee) {
