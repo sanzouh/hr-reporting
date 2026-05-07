@@ -69,23 +69,31 @@ public class EffectifsPanel extends JPanel implements MainDashboard.Refreshable 
             // Total employés
             ResultSet rs1 = query("SELECT COUNT(DISTINCT f.employe_id) FROM fait_rh f" +
                     " JOIN dim_departement d ON f.dept_id = d.dept_id" +
-                    " JOIN dim_temps t ON f.temps_id = t.temps_id" +
                     " WHERE 1=1" + anneeFilter + deptFilter);
             int total = rs1.next() ? rs1.getInt(1) : 0;
             row.add(MainDashboard.buildKpiCard("Total employés",
                     String.format("%,d", total), null, null));
 
-            // % actifs
-            ResultSet rs2 = query("""
-                SELECT ROUND(SUM(CASE WHEN e.statut = 'Actif' THEN 1 ELSE 0 END) * 100.0 / COUNT(*), 1)
-                FROM fait_rh f
-                JOIN dim_employe e ON f.employe_id = e.employe_id
-                JOIN dim_departement d ON f.dept_id = d.dept_id
-                JOIN dim_temps t ON f.temps_id = t.temps_id
-                WHERE 1=1
-                """ + anneeFilter + deptFilter);
-            double pctActifs = rs2.next() ? rs2.getDouble(1) : 0;
-            row.add(MainDashboard.buildKpiCard("Employés actifs",
+            // % actifs / taux de maintien
+            // "Toutes" : % sans date de départ (actifs aujourd'hui)
+            // Année X  : % encore présents à fin X parmi ceux actifs pendant X
+            boolean filtreSurAnnee = annee != null && !annee.equals("Toutes");
+            String labelMaintien;
+            double pctActifs;
+            if (!filtreSurAnnee) {
+                ResultSet rs2 = query("SELECT ROUND(SUM(CASE WHEN f.annee_depart IS NULL THEN 1 ELSE 0 END) * 100.0 / NULLIF(COUNT(*), 0), 1)" +
+                        " FROM fait_rh f JOIN dim_departement d ON f.dept_id = d.dept_id WHERE 1=1" + deptFilter);
+                pctActifs   = rs2.next() ? rs2.getDouble(1) : 0;
+                labelMaintien = "Employés actifs";
+            } else {
+                String an = annee.replaceAll("[^0-9]", "");
+                ResultSet rs2 = query("SELECT ROUND(SUM(CASE WHEN f.annee_depart IS NULL OR f.annee_depart > " + an +
+                        " THEN 1 ELSE 0 END) * 100.0 / NULLIF(COUNT(*), 0), 1)" +
+                        " FROM fait_rh f JOIN dim_departement d ON f.dept_id = d.dept_id WHERE 1=1" + anneeFilter + deptFilter);
+                pctActifs   = rs2.next() ? rs2.getDouble(1) : 0;
+                labelMaintien = "Maintien " + an;
+            }
+            row.add(MainDashboard.buildKpiCard(labelMaintien,
                     String.format("%.1f%%", pctActifs),
                     pctActifs > 85 ? "Stable" : "Attention",
                     pctActifs > 85 ? MainDashboard.C_SUCCESS : MainDashboard.C_WARNING));
