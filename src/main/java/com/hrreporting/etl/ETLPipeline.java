@@ -172,6 +172,9 @@ public class ETLPipeline {
         if (e.getAnneeNaissance() == -1 && n.getAnneeNaissance() != -1)
             existing.anneeNaissance(n.getAnneeNaissance());
 
+        if (e.getAnneeAbsences() == -1 && n.getAnneeAbsences() != -1)
+            existing.anneeAbsences(n.getAnneeAbsences());
+
         // Promotion : 1 prend le dessus sur 0 ou -1
         if (n.getPromotionRecommandee() == 1)
             existing.promotionRecommandee(1);

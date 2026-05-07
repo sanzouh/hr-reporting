@@ -29,8 +29,8 @@ public class NexCoreTimesheetLoader {
     );
 
     public static Map<String, FaitRH.Builder> loadAsMap() throws IOException, SQLException {
-        // Agrégation brute par employé (toutes années confondues)
-        Map<String, TimesheetAgg> aggregations = new LinkedHashMap<>();
+        // Agrégation par employé × année, puis on retient l'année la plus récente
+        Map<String, TimesheetAgg> byEmployeeYear = new LinkedHashMap<>();
         int lignesLues = 0, lignesIgnorees = 0;
 
         try (Workbook wb = new XSSFWorkbook(new FileInputStream(FILE_PATH))) {
@@ -61,7 +61,9 @@ public class NexCoreTimesheetLoader {
 
                     if (year < 0 || month < 0) { lignesIgnorees++; continue; }
 
-                    aggregations.merge(matricule,
+                    // Clé composite : un bucket par employé × année
+                    String key = matricule + "_" + year;
+                    byEmployeeYear.merge(key,
                             new TimesheetAgg(matricule, dept, year, month, ot, abs, site),
                             (ex, nw) -> {
                                 ex.totalAbsences += nw.totalAbsences;
@@ -74,9 +76,16 @@ public class NexCoreTimesheetLoader {
             }
         }
 
+        // Pour chaque employé, conserver uniquement l'année la plus récente
+        Map<String, TimesheetAgg> mostRecent = new LinkedHashMap<>();
+        for (TimesheetAgg agg : byEmployeeYear.values()) {
+            mostRecent.merge(agg.matricule, agg,
+                    (ex, nw) -> nw.year > ex.year ? nw : ex);
+        }
+
         // Construction des builders
         Map<String, FaitRH.Builder> result = new LinkedHashMap<>();
-        for (TimesheetAgg agg : aggregations.values()) {
+        for (TimesheetAgg agg : mostRecent.values()) {
             try {
                 int deptId  = DWRepository.upsertDepartement(agg.dept, agg.site, "N/A");
                 int tempsId = DWRepository.upsertTemps(agg.year, agg.year <= 2020 ? 1 : 2, 1, agg.month);
@@ -88,6 +97,7 @@ public class NexCoreTimesheetLoader {
                         .tempsId(tempsId)
                         .posteId(posteId)
                         .nbAbsences(agg.totalAbsences)
+                        .anneeAbsences(agg.year)
                         .heuresSup(agg.maxOT > 10 ? 1 : 0);
 
                 result.put(agg.matricule, builder);

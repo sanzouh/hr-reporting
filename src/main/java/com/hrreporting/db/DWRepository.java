@@ -133,8 +133,8 @@ public class DWRepository {
                 salaire_mensuel, attrition, score_performance, satisfaction_employe,
                 nb_absences, heures_sup, score_evaluation, objectifs_atteints_pct,
                 cout_formation, nb_formations, duree_avant_depart, promotion_recommandee,
-                annee_depart, annee_embauche, annee_formation, annee_naissance
-            ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+                annee_depart, annee_embauche, annee_formation, annee_naissance, annee_absences
+            ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
         """);
         bindFait(ps, fait);
         ps.executeUpdate();
@@ -149,8 +149,8 @@ public class DWRepository {
                 salaire_mensuel, attrition, score_performance, satisfaction_employe,
                 nb_absences, heures_sup, score_evaluation, objectifs_atteints_pct,
                 cout_formation, nb_formations, duree_avant_depart, promotion_recommandee,
-                annee_depart, annee_embauche, annee_formation, annee_naissance
-            ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+                annee_depart, annee_embauche, annee_formation, annee_naissance, annee_absences
+            ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
         """);
         for (FaitRH fait : faits) {
             bindFait(ps, fait);
@@ -184,6 +184,7 @@ public class DWRepository {
         setNullableInt(ps, 19, fait.getAnneeEmbauche());
         setNullableInt(ps, 20, fait.getAnneeFormation());
         setNullableInt(ps, 21, fait.getAnneeNaissance());
+        setNullableInt(ps, 22, fait.getAnneeAbsences());
     }
 
     // ═══════════════════════════════════════════════════════════════════
@@ -300,16 +301,17 @@ public class DWRepository {
         return queryStringDouble(sql, "nom_dept", "satisfaction");
     }
 
-    /** Absentéisme moyen par département */
+    /** Absentéisme moyen par département — filtré sur l'année réelle des absences */
     public static Map<String, Double> getAbsenteismeParDept(String annee, String dept) throws SQLException {
+        String filtreAn = (annee == null || annee.equals("Toutes")) ? ""
+                : " AND f.annee_absences = " + annee.replaceAll("[^0-9]", "");
         String sql = """
             SELECT d.nom_dept,
                    ROUND(AVG(f.nb_absences), 1) AS moy_absences
             FROM fait_rh f
             JOIN dim_departement d ON f.dept_id = d.dept_id
-            JOIN dim_temps t ON f.temps_id = t.temps_id
             WHERE f.nb_absences IS NOT NULL AND f.nb_absences >= 0
-            """ + filtreActifAnnee(annee) + filtreDept(dept) + """
+            """ + filtreAn + filtreDept(dept) + """
             GROUP BY d.nom_dept ORDER BY moy_absences DESC
         """;
         return queryStringDouble(sql, "nom_dept", "moy_absences");
