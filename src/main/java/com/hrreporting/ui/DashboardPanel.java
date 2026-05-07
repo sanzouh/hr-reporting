@@ -9,6 +9,8 @@ import org.jfree.data.general.DefaultPieDataset;
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
 import java.awt.*;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -168,48 +170,89 @@ public class DashboardPanel extends JPanel implements MainDashboard.Refreshable 
         row.setBackground(MainDashboard.C_BG);
 
         try {
-            Map<String, Double>  attrition   = DWRepository.getTauxAttritionParDept(annee, departement);
-            Map<String, Double>  satisfaction = DWRepository.getSatisfactionParDept(annee, departement);
-            Map<String, Double>  salaires     = DWRepository.getSalaireMoyenParDept(annee, departement);
-            Map<String, Integer> promotions   = DWRepository.getCandidatsPromotion(annee, departement);
+            Map<String, Double>  attrition  = DWRepository.getTauxAttritionParDept(annee, departement);
+            Map<String, Double>  satisf     = DWRepository.getSatisfactionParDept(annee, departement);
+            Map<String, Double>  salaires   = DWRepository.getSalaireMoyenParDept(annee, departement);
+            Map<String, Double>  perf       = DWRepository.getScorePerfMoyenParDept(annee, departement);
+            Map<String, Double>  absences   = DWRepository.getAbsenteismeParDept(annee, departement);
+            Map<String, Double>  formations = DWRepository.getCoutFormationParDept(annee, departement);
+            Map<String, Integer> promotions = DWRepository.getCandidatsPromotion(annee, departement);
+            Map<String, Double>  salGenre   = DWRepository.getSalaireMoyenParGenre(annee, departement);
 
-            // Risques
-            StringBuilder risques = new StringBuilder("<html><b style='color:#E24B4A'>Risques critiques</b><br><br>");
+            double salMoyGlobal = salaires.values().stream().mapToDouble(Double::doubleValue).average().orElse(1.0);
+
+            // ── Risques ──────────────────────────────────────────────────
+            List<String> risques = new ArrayList<>();
             attrition.forEach((dept, taux) -> {
-                if (taux > 15) risques.append("● <b>").append(dept).append("</b> : attrition ").append(taux).append("%<br>");
+                if (taux > 15)
+                    risques.add("<b>" + dept + "</b> : attrition " + String.format("%.1f", taux) + "%");
             });
-            satisfaction.forEach((dept, s) -> {
-                if (s < 2.5) risques.append("● <b>").append(dept).append("</b> : satisfaction faible (").append(String.format("%.1f", s)).append(")<br>");
+            satisf.forEach((dept, s) -> {
+                if (s < 2.5)
+                    risques.add("<b>" + dept + "</b> : satisfaction faible (" + String.format("%.1f", s) + " / 4)");
             });
-            risques.append("</html>");
+            perf.forEach((dept, p) -> {
+                if (p < 2.5)
+                    risques.add("<b>" + dept + "</b> : performance en baisse (" + String.format("%.1f", p) + " / 4)");
+            });
+            absences.forEach((dept, abs) -> {
+                if (abs > 40)
+                    risques.add("<b>" + dept + "</b> : absentéisme élevé (" + String.format("%.0f", abs) + " j/an)");
+            });
 
-            // Opportunités
-            StringBuilder opps = new StringBuilder("<html><b style='color:#1D9E75'>Opportunités</b><br><br>");
+            // ── Opportunités ─────────────────────────────────────────────
+            List<String> opps = new ArrayList<>();
             promotions.forEach((dept, nb) -> {
-                if (nb > 0) opps.append("● <b>").append(dept).append("</b> : ").append(nb).append(" candidat(s) promotion<br>");
+                if (nb > 0)
+                    opps.add("<b>" + dept + "</b> : " + nb + " candidat(s) à la promotion");
             });
-            satisfaction.forEach((dept, s) -> {
-                if (s >= 3.5) opps.append("● <b>").append(dept).append("</b> : satisfaction élevée<br>");
+            perf.forEach((dept, p) -> {
+                if (p >= 3.5)
+                    opps.add("<b>" + dept + "</b> : excellence opérationnelle (" + String.format("%.1f", p) + " / 4)");
             });
-            opps.append("</html>");
-
-            // Recommandations
-            StringBuilder reco = new StringBuilder("<html><b style='color:#1F4E79'>Recommandations</b><br><br>");
             attrition.forEach((dept, taux) -> {
-                if (taux > 15) reco.append("● Revoir conditions <b>").append(dept).append("</b><br>");
+                if (taux < 10 && satisf.getOrDefault(dept, 0.0) >= 3.5)
+                    opps.add("<b>" + dept + "</b> : fort engagement (attrition " + String.format("%.1f", taux) + "%)");
             });
-            double salaireMoyen = salaires.values().stream().mapToDouble(Double::doubleValue).average().orElse(0);
-            Map<String, Double> salGenre = DWRepository.getSalaireMoyenParGenre(annee, departement);
+
+            // ── Recommandations ───────────────────────────────────────────
+            List<String> recos = new ArrayList<>();
+            attrition.forEach((dept, taux) -> {
+                if (taux > 15) {
+                    double sat = satisf.getOrDefault(dept, -1.0);
+                    double sal = salaires.getOrDefault(dept, 0.0);
+                    if (sat > 0 && sat < 2.5)
+                        recos.add("Revoir les conditions de travail — <b>" + dept
+                                + "</b> (attrition " + String.format("%.0f", taux) + "%, sat. " + String.format("%.1f", sat) + ")");
+                    else if (sal > 0 && sal < salMoyGlobal * 0.90)
+                        recos.add("Réviser la grille salariale — <b>" + dept
+                                + "</b> (attrition " + String.format("%.0f", taux) + "%)");
+                    else
+                        recos.add("Analyser les causes de départ — <b>" + dept
+                                + "</b> (attrition " + String.format("%.0f", taux) + "%)");
+                }
+            });
             double salF = salGenre.getOrDefault("F", 0.0);
             double salM = salGenre.getOrDefault("M", 0.0);
-            if (Math.abs(salF - salM) / salaireMoyen > 0.05)
-                reco.append("● Écart salarial H/F détecté — audit recommandé<br>");
-            reco.append("● Optimiser budget formation départements sous-formés<br>");
-            reco.append("</html>");
+            if (salF > 0 && salM > 0 && Math.abs(salF - salM) / salMoyGlobal > 0.05) {
+                double gap = Math.abs(salM - salF) / salM * 100;
+                recos.add("Écart salarial H/F de " + String.format("%.1f", gap) + "% — audit recommandé");
+            }
+            List<String> deptsSansForm = new ArrayList<>();
+            salaires.keySet().forEach(dept -> {
+                if (!formations.containsKey(dept)) deptsSansForm.add("<b>" + dept + "</b>");
+            });
+            if (!deptsSansForm.isEmpty())
+                recos.add("Aucune formation déclarée — " + String.join(", ", deptsSansForm));
+            absences.forEach((dept, abs) -> {
+                if (abs > 40)
+                    recos.add("Enquête bien-être recommandée — <b>" + dept
+                            + "</b> (" + String.format("%.0f", abs) + " j/an)");
+            });
 
-            row.add(buildInsightCard(risques.toString(),  new Color(0xFCEBEB)));
-            row.add(buildInsightCard(opps.toString(),     new Color(0xEAF3DE)));
-            row.add(buildInsightCard(reco.toString(),     new Color(0xE6F1FB)));
+            row.add(buildInsightCard("Risques critiques", new Color(0xE24B4A), risques));
+            row.add(buildInsightCard("Opportunités",      new Color(0x1D9E75), opps));
+            row.add(buildInsightCard("Recommandations",   new Color(0x1F4E79), recos));
 
         } catch (Exception e) {
             System.err.println("[Dashboard] Erreur insights : " + e.getMessage());
@@ -219,14 +262,30 @@ public class DashboardPanel extends JPanel implements MainDashboard.Refreshable 
         return wrapper;
     }
 
-    private JPanel buildInsightCard(String html, Color bgColor) {
+    private JPanel buildInsightCard(String titleText, Color accentColor, List<String> items) {
         JPanel card = new JPanel(new BorderLayout());
-        card.setBackground(bgColor);
+        card.setBackground(MainDashboard.C_CARD);
         card.setBorder(BorderFactory.createCompoundBorder(
                 MainDashboard.roundedBorder(MainDashboard.C_BORDER),
-                new EmptyBorder(16, 16, 16, 16)
-        ));
-        JLabel lbl = new JLabel(html);
+                BorderFactory.createCompoundBorder(
+                        BorderFactory.createMatteBorder(0, 4, 0, 0, accentColor),
+                        new EmptyBorder(14, 14, 14, 14))));
+
+        String hex = String.format("#%02X%02X%02X",
+                accentColor.getRed(), accentColor.getGreen(), accentColor.getBlue());
+
+        StringBuilder html = new StringBuilder("<html>");
+        html.append("<b style='color:").append(hex).append("'>").append(titleText);
+        if (!items.isEmpty()) html.append("  (").append(items.size()).append(")");
+        html.append("</b><hr>");
+        if (items.isEmpty()) {
+            html.append("<i style='color:#888888'>Aucun élément détecté</i>");
+        } else {
+            items.forEach(item -> html.append("&#9679;&nbsp;").append(item).append("<br>"));
+        }
+        html.append("</html>");
+
+        JLabel lbl = new JLabel(html.toString());
         lbl.setFont(new Font("Segoe UI", Font.PLAIN, 12));
         lbl.setVerticalAlignment(SwingConstants.TOP);
         card.add(lbl, BorderLayout.CENTER);
