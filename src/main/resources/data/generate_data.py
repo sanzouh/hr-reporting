@@ -417,11 +417,16 @@ print(f"[Formations]   {len(form_rows):>5} lignes")
 # 5. TIMESHEET_OPERATIONS.XLSX  (données mensuelles par année)
 # ══════════════════════════════════════════════════════════════════════════════
 
+# Probabilité d'être un profil "heures sup" selon la performance (décision par employé)
+# Cible globale ~35% — cohérent avec IBM HR Analytics (~30%)
+_OT_PROB = {4: 0.65, 3: 0.42, 2: 0.22, 1: 0.10}
+
 ts_rows = []
 
 for e in employees:
     dept_ts  = DEPT_TO_TIMESHEET[e['dept']]
     end      = e['term_date'] or date(YEAR_MAX, 12, 31)
+    works_ot = random.random() < _OT_PROB.get(e['perf'], 0.30)
 
     for year in range(max(DATA_YEAR_MIN, e['hire_date'].year), min(YEAR_MAX + 1, end.year + 1)):
         for month in range(1, 13):
@@ -439,16 +444,18 @@ for e in employees:
             else:
                 abs_d = random.randint(0, 5)
 
-            # Heures sup (0-60 h/mois) corrélées à la performance et au département
-            if e['perf'] == 4:
+            # Heures sup — uniquement pour les profils "overtime-prone" (décidé par employé)
+            if not works_ot:
+                ot = 0
+            elif e['perf'] == 4:
                 ot = random.randint(5, 55)
             elif e['perf'] == 3:
-                ot = random.randint(0, 35)
+                ot = random.randint(3, 35)
             elif e['perf'] == 2:
-                ot = random.randint(0, 20)
+                ot = random.randint(2, 20)
             else:
-                ot = random.randint(0, 12)
-            if e['dept'] in ('IT', 'RD', 'MGMT'):
+                ot = random.randint(1, 12)
+            if works_ot and e['dept'] in ('IT', 'RD', 'MGMT'):
                 ot = min(int(ot * 1.3), 60)
 
             ts_rows.append({

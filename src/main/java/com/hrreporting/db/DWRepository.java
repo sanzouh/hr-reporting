@@ -302,9 +302,10 @@ public class DWRepository {
         return queryStringDouble(sql, "nom_dept", "satisfaction");
     }
 
-    /** Absentéisme moyen par département — filtré sur l'année réelle des absences */
+    /** Absentéisme moyen par département — filtré sur l'année réelle des absences. */
     public static Map<String, Double> getAbsenteismeParDept(String annee, String dept) throws SQLException {
-        String filtreAn = (annee == null || annee.equals("Toutes")) ? ""
+        String filtreAn = (annee == null || annee.equals("Toutes"))
+                ? ""
                 : " AND f.annee_absences = " + annee.replaceAll("[^0-9]", "");
         String sql = """
             SELECT d.nom_dept,
@@ -425,7 +426,7 @@ public class DWRepository {
         return rs.next() ? rs.getDouble(1) : 0;
     }
 
-    /** Effectif total */
+    /** Effectif total — historique cumulé pour "Toutes", snapshot actif pour une année précise */
     public static int getEffectifTotal(String annee, String dept) throws SQLException {
         String sql;
         if (annee == null || annee.equals("Toutes")) {
@@ -551,7 +552,8 @@ public class DWRepository {
         catch (NumberFormatException e) { return java.time.LocalDate.now().getYear(); }
     }
 
-    /** Filtre employés actifs pendant l'année X : embauchés avant X et pas encore partis */
+    /** Filtre employés actifs pendant l'année X : embauchés avant X et pas encore partis.
+     *  Pour "Toutes" : aucun filtre — vue historique cumulée depuis la création. */
     private static String filtreActifAnnee(String annee) {
         if (annee == null || annee.equals("Toutes")) return "";
         String an = annee.replaceAll("[^0-9]", "");

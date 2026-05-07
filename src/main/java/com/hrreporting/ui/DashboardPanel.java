@@ -72,10 +72,13 @@ public class DashboardPanel extends JPanel implements MainDashboard.Refreshable 
             row.add(MainDashboard.buildKpiCard("Taux d'attrition",
                     String.format("%.1f%%", tauxMoyen), badgeAttrition, colorAttrition));
 
-            // Effectif
+            // Effectif actif
             int totalEffectif = DWRepository.getEffectifTotal(annee, departement);
-            row.add(MainDashboard.buildKpiCard("Effectif total",
-                    String.format("%,d", totalEffectif) + " emp.", "Actifs", MainDashboard.C_PRIMARY));
+            boolean filtreAn  = annee != null && !annee.equals("Toutes");
+            String labelEff   = filtreAn ? "Effectif " + annee.replaceAll("[^0-9]", "") : "Effectif total";
+            String badgeEff   = filtreAn ? "Actifs " + annee.replaceAll("[^0-9]", "")  : "Cumulatif";
+            row.add(MainDashboard.buildKpiCard(labelEff,
+                    String.format("%,d", totalEffectif) + " emp.", badgeEff, MainDashboard.C_PRIMARY));
 
             // Salaire moyen + delta dynamique
             double salaireMoyen = DWRepository.getSalaireMoyenGlobal(annee, departement);
