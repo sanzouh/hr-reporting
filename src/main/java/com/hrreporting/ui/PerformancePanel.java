@@ -167,11 +167,16 @@ public class PerformancePanel extends JPanel implements MainDashboard.Refreshabl
             String af = buildAnneeFilter();
             String df = buildDeptFilter();
 
+            // Taux d'attrition : pour une année X, on compte uniquement les départs survenus EN X
+            String attrExpr = (annee == null || annee.equals("Toutes"))
+                    ? "SUM(f.attrition) * 100.0 / NULLIF(COUNT(*), 0)"
+                    : "COUNT(CASE WHEN f.annee_depart = " + annee.replaceAll("[^0-9]", "") + " THEN 1 END) * 100.0 / NULLIF(COUNT(*), 0)";
+
             DefaultCategoryDataset dsCorrel = new DefaultCategoryDataset();
             ResultSet rs = query(
                     "SELECT d.nom_dept," +
                             " ROUND(AVG(f.satisfaction_employe), 2) AS satisf," +
-                            " ROUND(SUM(f.attrition) * 100.0 / COUNT(*), 1) AS taux_attr" +
+                            " ROUND(" + attrExpr + ", 1) AS taux_attr" +
                             " FROM fait_rh f" +
                             " JOIN dim_departement d ON f.dept_id = d.dept_id" +
                             " WHERE f.satisfaction_employe > 0" + af + df + " GROUP BY d.nom_dept");
@@ -188,25 +193,25 @@ public class PerformancePanel extends JPanel implements MainDashboard.Refreshabl
             row.add(MainDashboard.buildCard("Corrélation satisfaction ↔ turnover",
                     new ChartPanel(chartCorrel)), gbc);
 
+            // Score évaluation moyen par département (le champ score_evaluation est une moyenne
+            // agrégée par employé — un axe temporel via dim_temps serait basé sur la date
+            // d'embauche, pas d'évaluation, ce qui serait trompeur)
             DefaultCategoryDataset dsEval = new DefaultCategoryDataset();
-            ResultSet rsEval = query("""
-                SELECT t.annee || '-S' || t.semestre AS periode,
-                       ROUND(AVG(f.score_evaluation), 2)
-                FROM fait_rh f
-                JOIN dim_departement d ON f.dept_id = d.dept_id
-                JOIN dim_temps t ON f.temps_id = t.temps_id
-                WHERE f.score_evaluation > 0
-                """ + df + " GROUP BY t.annee, t.semestre ORDER BY t.annee, t.semestre");
+            ResultSet rsEval = query(
+                    "SELECT d.nom_dept, ROUND(AVG(f.score_evaluation), 2)" +
+                    " FROM fait_rh f JOIN dim_departement d ON f.dept_id = d.dept_id" +
+                    " WHERE f.score_evaluation > 0" + af + df +
+                    " GROUP BY d.nom_dept ORDER BY AVG(f.score_evaluation) DESC");
             while (rsEval.next())
                 dsEval.addValue(rsEval.getDouble(2), "Score éval.", rsEval.getString(1));
 
-            JFreeChart chartEval = ChartFactory.createLineChart(
-                    null, "Période", "Score (1-5)", dsEval,
+            JFreeChart chartEval = ChartFactory.createBarChart(
+                    null, "Département", "Score (1-5)", dsEval,
                     PlotOrientation.VERTICAL, false, true, false);
-            styleLine(chartEval);
+            styleBar(chartEval, MainDashboard.C_PRIMARY_LT);
 
             gbc.gridx = 1; gbc.weightx = 0.50; gbc.insets = new Insets(0, 6, 0, 0);
-            row.add(MainDashboard.buildCard("Évolution score évaluation semestrielle",
+            row.add(MainDashboard.buildCard("Score évaluation moyen / département",
                     new ChartPanel(chartEval)), gbc);
 
         } catch (Exception e) {

@@ -315,16 +315,15 @@ public class DWRepository {
         return queryStringDouble(sql, "nom_dept", "moy_absences");
     }
 
-    /** Coût total formations par département */
+    /** Coût total formations par département — employés actifs pendant l'année */
     public static Map<String, Double> getCoutFormationParDept(String annee, String dept) throws SQLException {
         String sql = """
             SELECT d.nom_dept,
                    ROUND(SUM(f.cout_formation), 2) AS cout_total
             FROM fait_rh f
             JOIN dim_departement d ON f.dept_id = d.dept_id
-            JOIN dim_temps t ON f.temps_id = t.temps_id
             WHERE f.cout_formation IS NOT NULL AND f.cout_formation > 0
-            """ + filtreAnneeFormation(annee) + filtreDept(dept) + """
+            """ + filtreActifAnnee(annee) + filtreDept(dept) + """
             GROUP BY d.nom_dept ORDER BY cout_total DESC
         """;
         return queryStringDouble(sql, "nom_dept", "cout_total");
@@ -532,11 +531,6 @@ public class DWRepository {
     private static String filtreAnneeDepart(String annee) {
         return (annee == null || annee.equals("Toutes")) ? ""
                 : " AND f.annee_depart = " + annee.replaceAll("[^0-9]", "");
-    }
-
-    private static String filtreAnneeFormation(String annee) {
-        return (annee == null || annee.equals("Toutes")) ? ""
-                : " AND f.annee_formation = " + annee.replaceAll("[^0-9]", "");
     }
 
     private static String filtreDept(String dept) {

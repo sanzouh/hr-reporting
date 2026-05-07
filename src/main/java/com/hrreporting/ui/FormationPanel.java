@@ -238,8 +238,10 @@ public class FormationPanel extends JPanel implements MainDashboard.Refreshable 
     }
 
     private String buildAnneeFilter() {
-        return (annee == null || annee.equals("Toutes")) ? ""
-                : " AND f.annee_formation = " + annee.replaceAll("[^0-9]", "");
+        if (annee == null || annee.equals("Toutes")) return "";
+        String an = annee.replaceAll("[^0-9]", "");
+        return " AND f.annee_embauche <= " + an +
+                " AND (f.annee_depart IS NULL OR f.annee_depart >= " + an + ")";
     }
 
     private String buildDeptFilter() {

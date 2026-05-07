@@ -89,7 +89,7 @@ public class PromotionsPanel extends JPanel implements MainDashboard.Refreshable
                     "WHERE f.promotion_recommandee = 1 AND f.score_performance > 0" + af + df);
             double scoreMoyen = rsPerf.next() ? rsPerf.getDouble(1) : 0;
             row.add(MainDashboard.buildKpiCard("Score perf. moyen",
-                    String.format("%.2f / 5", scoreMoyen), null, null));
+                    String.format("%.2f / 4", scoreMoyen), null, null));
 
             // % objectifs atteints moyen des candidats
             ResultSet rsObj = query("SELECT ROUND(AVG(f.objectifs_atteints_pct), 1) FROM fait_rh f " +
