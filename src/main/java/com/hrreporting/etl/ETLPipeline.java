@@ -181,6 +181,12 @@ public class ETLPipeline {
         else if (e.getPromotionRecommandee() == -1 && n.getPromotionRecommandee() != -1)
             existing.promotionRecommandee(n.getPromotionRecommandee());
 
+        // Année promotion : conserver la plus récente toutes sources confondues
+        if (n.getAnneePromotionRecommandee() != -1) {
+            if (e.getAnneePromotionRecommandee() == -1 || n.getAnneePromotionRecommandee() > e.getAnneePromotionRecommandee())
+                existing.anneePromotionRecommandee(n.getAnneePromotionRecommandee());
+        }
+
         return existing;
     }
 }

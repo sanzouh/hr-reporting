@@ -71,8 +71,12 @@ public class NexCoreJobHistoryLoader {
                                     ex.titre       = nw.titre;
                                     ex.changeDate  = nw.changeDate;
                                 }
-                                // Promotion = 1 si au moins une promotion dans l'historique
-                                if (nw.promoted) ex.promoted = true;
+                                // Promotion effective : garder l'année de la plus récente
+                                if (nw.promoted) {
+                                    ex.promoted = true;
+                                    int nwAnnee = nw.changeDate != null ? nw.changeDate.getYear() : -1;
+                                    if (nwAnnee > ex.anneePromo) ex.anneePromo = nwAnnee;
+                                }
                                 return ex;
                             });
 
@@ -100,7 +104,8 @@ public class NexCoreJobHistoryLoader {
                         .tempsId(tempsId)
                         .posteId(posteId)
                         .salaireMensuel(agg.salMensuel)
-                        .promotionRecommandee(agg.promoted ? 1 : 0);
+                        .promotionRecommandee(agg.promoted ? 1 : 0)
+                        .anneePromotionRecommandee(agg.anneePromo);
 
                 result.put(agg.matricule, builder);
             } catch (Exception e) {
@@ -123,11 +128,13 @@ public class NexCoreJobHistoryLoader {
         String    matricule, dept, titre, site;
         double    salMensuel;
         boolean   promoted;
+        int       anneePromo;
         LocalDate changeDate;
 
         JobAgg(String m, String d, String t, double s, boolean p, LocalDate cd, String si) {
-            this.matricule = m; this.dept = d; this.titre = t;
-            this.salMensuel = s; this.promoted = p; this.changeDate = cd; this.site = si;
+            this.matricule  = m; this.dept = d; this.titre = t; this.site = si;
+            this.salMensuel = s; this.promoted = p; this.changeDate = cd;
+            this.anneePromo = (p && cd != null) ? cd.getYear() : -1;
         }
     }
 }

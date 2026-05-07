@@ -67,7 +67,10 @@ public class NexCoreEvaluationsLoader {
                                 ex.scoreTotal      += nw.scoreTotal;
                                 ex.objectifsTotal  += nw.objectifsTotal;
                                 ex.count           += 1;
-                                if (nw.promoted == 1) ex.promoted = 1; // 1 prend le dessus
+                                if (nw.promoted == 1) {
+                                    ex.promoted = 1;
+                                    if (nw.annee > ex.anneePromo) ex.anneePromo = nw.annee;
+                                }
                                 return ex;
                             });
 
@@ -98,7 +101,8 @@ public class NexCoreEvaluationsLoader {
                         .posteId(posteId)
                         .scoreEvaluation(scoreEvalMoyen)
                         .objectifsAtteintsP(objectifsMoyen)
-                        .promotionRecommandee(agg.promoted);
+                        .promotionRecommandee(agg.promoted)
+                        .anneePromotionRecommandee(agg.anneePromo);
 
                 result.put(agg.matricule, builder);
             } catch (Exception e) {
@@ -133,7 +137,7 @@ public class NexCoreEvaluationsLoader {
 
     private static class EvalAgg {
         String matricule, dept, site;
-        int    scoreTotal, objectifsTotal, count, promoted, annee, semNum;
+        int    scoreTotal, objectifsTotal, count, promoted, annee, semNum, anneePromo;
 
         EvalAgg(String m, String d, int s, int o, int p, int a, int sn, String si) {
             this.matricule      = m; this.dept = d; this.site = si;
@@ -142,6 +146,7 @@ public class NexCoreEvaluationsLoader {
             this.count          = 1;
             this.promoted       = p;
             this.annee          = a; this.semNum = sn;
+            this.anneePromo     = p == 1 ? a : -1;
         }
     }
 }

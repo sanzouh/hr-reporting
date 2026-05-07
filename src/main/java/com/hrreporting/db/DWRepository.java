@@ -133,8 +133,8 @@ public class DWRepository {
                 salaire_mensuel, attrition, score_performance, satisfaction_employe,
                 nb_absences, heures_sup, score_evaluation, objectifs_atteints_pct,
                 cout_formation, nb_formations, duree_avant_depart, promotion_recommandee,
-                annee_depart, annee_embauche, annee_formation, annee_naissance, annee_absences
-            ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+                annee_depart, annee_embauche, annee_formation, annee_naissance, annee_absences, annee_promotion_recommandee
+            ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
         """);
         bindFait(ps, fait);
         ps.executeUpdate();
@@ -149,8 +149,8 @@ public class DWRepository {
                 salaire_mensuel, attrition, score_performance, satisfaction_employe,
                 nb_absences, heures_sup, score_evaluation, objectifs_atteints_pct,
                 cout_formation, nb_formations, duree_avant_depart, promotion_recommandee,
-                annee_depart, annee_embauche, annee_formation, annee_naissance, annee_absences
-            ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+                annee_depart, annee_embauche, annee_formation, annee_naissance, annee_absences, annee_promotion_recommandee
+            ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
         """);
         for (FaitRH fait : faits) {
             bindFait(ps, fait);
@@ -185,6 +185,7 @@ public class DWRepository {
         setNullableInt(ps, 20, fait.getAnneeFormation());
         setNullableInt(ps, 21, fait.getAnneeNaissance());
         setNullableInt(ps, 22, fait.getAnneeAbsences());
+        setNullableInt(ps, 23, fait.getAnneePromotionRecommandee());
     }
 
     // ═══════════════════════════════════════════════════════════════════
@@ -361,18 +362,19 @@ public class DWRepository {
         return queryStringInt(sql);
     }
 
-    /** Candidats à la promotion par département */
+    /** Candidats à la promotion par département — filtrés sur l'année de recommandation */
     public static Map<String, Integer> getCandidatsPromotion(String annee, String dept) throws SQLException {
+        String filtrePromoAnnee = (annee == null || annee.equals("Toutes")) ? ""
+                : " AND f.annee_promotion_recommandee = " + annee.replaceAll("[^0-9]", "");
         String sql = """
             SELECT d.nom_dept, COUNT(*) AS nb
             FROM fait_rh f
             JOIN dim_departement d ON f.dept_id = d.dept_id
-            JOIN dim_temps t ON f.temps_id = t.temps_id
             WHERE f.promotion_recommandee = 1
               AND f.score_performance >= 3
               AND f.score_evaluation >= 4
               AND f.objectifs_atteints_pct >= 80
-            """ + filtreActifAnnee(annee) + filtreDept(dept) + """
+            """ + filtrePromoAnnee + filtreActifAnnee(annee) + filtreDept(dept) + """
             GROUP BY d.nom_dept ORDER BY nb DESC
         """;
         return queryStringInt(sql);
