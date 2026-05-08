@@ -64,9 +64,15 @@ public class NexCoreEvaluationsLoader {
                     aggregations.merge(matricule,
                             new EvalAgg(matricule, dept, score, objectives, promoted, annee, semNum, site),
                             (ex, nw) -> {
-                                ex.scoreTotal      += nw.scoreTotal;
-                                ex.objectifsTotal  += nw.objectifsTotal;
-                                ex.count           += 1;
+                                // Garde le score du semestre le plus récent
+                                boolean plusRecent = nw.annee > ex.annee
+                                        || (nw.annee == ex.annee && nw.semNum > ex.semNum);
+                                if (plusRecent) {
+                                    ex.latestScore     = nw.latestScore;
+                                    ex.latestObjectifs = nw.latestObjectifs;
+                                    ex.annee           = nw.annee;
+                                    ex.semNum          = nw.semNum;
+                                }
                                 if (nw.promoted == 1) {
                                     ex.promoted = 1;
                                     if (nw.annee > ex.anneePromo) ex.anneePromo = nw.annee;
@@ -90,9 +96,8 @@ public class NexCoreEvaluationsLoader {
                 int tempsId = DWRepository.upsertTemps(agg.annee, agg.semNum, trimestre, mois);
                 int posteId = DWRepository.upsertPoste("N/A", "N/A", "N/A");
 
-                // Moyennes sur toutes les évaluations de l'employé
-                int scoreEvalMoyen   = agg.count > 0 ? agg.scoreTotal / agg.count : -1;
-                int objectifsMoyen   = agg.count > 0 ? agg.objectifsTotal / agg.count : -1;
+                int scoreEvalMoyen   = agg.latestScore;
+                int objectifsMoyen   = agg.latestObjectifs;
 
                 FaitRH.Builder builder = FaitRH.builder()
                         .employeId(agg.matricule)
@@ -137,13 +142,12 @@ public class NexCoreEvaluationsLoader {
 
     private static class EvalAgg {
         String matricule, dept, site;
-        int    scoreTotal, objectifsTotal, count, promoted, annee, semNum, anneePromo;
+        int    latestScore, latestObjectifs, promoted, annee, semNum, anneePromo;
 
         EvalAgg(String m, String d, int s, int o, int p, int a, int sn, String si) {
             this.matricule      = m; this.dept = d; this.site = si;
-            this.scoreTotal     = s > 0 ? s : 0;
-            this.objectifsTotal = o >= 0 ? o : 0;
-            this.count          = 1;
+            this.latestScore    = s > 0 ? s : -1;
+            this.latestObjectifs = o >= 0 ? o : -1;
             this.promoted       = p;
             this.annee          = a; this.semNum = sn;
             this.anneePromo     = p == 1 ? a : -1;
