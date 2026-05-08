@@ -565,6 +565,17 @@ public class DWRepository {
     // UTILITAIRES PRIVÉS
     // ═══════════════════════════════════════════════════════════════════
 
+    public static void insertBridgeFormation(String employeId, int formationId, int annee) throws SQLException {
+        Connection conn = DatabaseManager.getConnection();
+        PreparedStatement ps = conn.prepareStatement(
+                "MERGE INTO bridge_employe_formation (employe_id, formation_id, annee) " +
+                "KEY (employe_id, formation_id) VALUES (?, ?, ?)");
+        ps.setString(1, employeId);
+        ps.setInt(2, formationId);
+        ps.setInt(3, annee);
+        ps.executeUpdate();
+    }
+
     public static boolean isDatabasePopulated() throws SQLException {
         ResultSet rs = DatabaseManager.getConnection().createStatement()
                 .executeQuery("SELECT COUNT(*) FROM fait_rh");

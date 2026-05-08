@@ -72,6 +72,8 @@ public class NexCoreFormationsLoader {
                     int formationId = DWRepository.upsertFormation(
                             formName, duration > 0 ? duration : 1, cost > 0 ? cost : 0);
 
+                    DWRepository.insertBridgeFormation(matricule, formationId, annee);
+
                     aggregations.merge(matricule,
                             new FormationAgg(matricule, dept, formationId,
                                     completed ? cost : 0, 1, annee, semestre, trimestre, mois, site),
@@ -114,6 +116,17 @@ public class NexCoreFormationsLoader {
 
         System.out.println("[FORM] " + result.size() + " builders construits, " + lignesIgnorees + " ignorées.");
         return result;
+    }
+
+    /** Migration : peuple uniquement le bridge sans toucher fait_rh */
+    public static void populateBridgeOnly() {
+        try {
+            System.out.println("[Migration] Peuplement bridge_employe_formation...");
+            loadAsMap();
+            System.out.println("[Migration] Bridge formations peuplé.");
+        } catch (Exception e) {
+            System.err.println("[Migration] Erreur bridge : " + e.getMessage());
+        }
     }
 
     /** Compatibilité ascendante */

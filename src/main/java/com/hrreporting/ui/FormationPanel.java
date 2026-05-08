@@ -139,11 +139,12 @@ public class FormationPanel extends JPanel implements MainDashboard.Refreshable 
 
             DefaultCategoryDataset dsTop = new DefaultCategoryDataset();
             ResultSet rsTop = query("""
-                SELECT df.intitule, COUNT(*) AS nb
-                FROM fait_rh f
-                JOIN dim_formation df ON f.formation_id = df.formation_id
+                SELECT df.intitule, COUNT(DISTINCT b.employe_id) AS nb
+                FROM bridge_employe_formation b
+                JOIN dim_formation df ON b.formation_id = df.formation_id
+                JOIN fait_rh f ON b.employe_id = f.employe_id
                 JOIN dim_departement d ON f.dept_id = d.dept_id
-                WHERE f.formation_id IS NOT NULL
+                WHERE 1=1
                 """ + af + df + " GROUP BY df.intitule ORDER BY nb DESC LIMIT 8");
             while (rsTop.next())
                 dsTop.addValue(rsTop.getInt("nb"), "Nb employés", rsTop.getString("intitule"));

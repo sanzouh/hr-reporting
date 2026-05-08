@@ -84,6 +84,15 @@ public class DatabaseManager {
         // ── Table de faits ────────────────────────────────────────────
 
         stmt.execute("""
+            CREATE TABLE IF NOT EXISTS bridge_employe_formation (
+                employe_id    VARCHAR(20) NOT NULL,
+                formation_id  INT NOT NULL,
+                annee         INT,
+                UNIQUE (employe_id, formation_id)
+            )
+        """);
+
+        stmt.execute("""
             CREATE TABLE IF NOT EXISTS fait_rh (
                 fait_id                 INT AUTO_INCREMENT PRIMARY KEY,
                 employe_id              VARCHAR(20),
@@ -121,6 +130,12 @@ public class DatabaseManager {
 
         stmt.close();
         System.out.println("[DB] Schéma H2 initialisé.");
+    }
+
+    public static boolean isBridgePopulated() throws SQLException {
+        ResultSet rs = getConnection().createStatement()
+                .executeQuery("SELECT COUNT(*) FROM bridge_employe_formation");
+        return rs.next() && rs.getInt(1) > 0;
     }
 
     public static void close() {
