@@ -76,10 +76,10 @@ public class NexCoreFormationsLoader {
 
                     aggregations.merge(matricule,
                             new FormationAgg(matricule, dept, formationId,
-                                    completed ? cost : 0, 1, annee, semestre, trimestre, mois, site),
+                                    completed ? cost : 0, completed ? 1 : 0, annee, semestre, trimestre, mois, site),
                             (ex, nw) -> {
                                 ex.coutTotal    += nw.coutTotal;
-                                ex.nbFormations += 1;
+                                ex.nbFormations += nw.nbFormations;
                                 return ex;
                             });
 
