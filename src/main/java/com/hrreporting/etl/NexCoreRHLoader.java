@@ -75,7 +75,7 @@ public class NexCoreRHLoader {
                     int anneeDepart       = termDate  != null ? ETLUtils.annee(termDate)  : -1;
                     int anneeEmbauche     = hireDate  != null ? ETLUtils.annee(hireDate)  : -1;
                     int anneeNaissance    = dob       != null ? dob.getYear()             : -1;
-                    double salaireMensuel = ETLUtils.annuelVersQuotidien(ETLUtils.parseMontant(salaryRaw));
+                    double salaireMensuel = ETLUtils.annuelVersMensuel(ETLUtils.parseMontant(salaryRaw));
                     // age/anciennete stockés dans dim_employe pour compatibilité (valeur courante)
                     int age        = dob      != null ? (int) java.time.temporal.ChronoUnit.YEARS.between(dob, LocalDate.now())      : -1;
                     int anciennete = hireDate != null ? (int) java.time.temporal.ChronoUnit.YEARS.between(hireDate, LocalDate.now()) : -1;

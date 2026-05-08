@@ -115,7 +115,7 @@ public class ETLUtils {
      * Convertit un salaire annuel en mensuel (÷ 12).
      * Utilisé pour rshuebner dont le champ Salary est annuel.
      */
-    public static double annuelVersQuotidien(double salaire) {
+    public static double annuelVersMensuel(double salaire) {
         return salaire <= 0 ? -1 : Math.round((salaire / 12.0) * 100.0) / 100.0;
     }
 

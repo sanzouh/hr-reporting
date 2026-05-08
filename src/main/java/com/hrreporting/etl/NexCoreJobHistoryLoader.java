@@ -59,7 +59,7 @@ public class NexCoreJobHistoryLoader {
 
                     String    dept       = DEPT_MAP.getOrDefault(deptCode.trim().toUpperCase(), deptCode.trim());
                     LocalDate changeDate = ETLUtils.parseDate(changeDateRaw);
-                    double    salMensuel = ETLUtils.annuelVersQuotidien(ETLUtils.parseMontant(salAfterRaw));
+                    double    salMensuel = ETLUtils.annuelVersMensuel(ETLUtils.parseMontant(salAfterRaw));
                     boolean   isPromo    = "Promotion".equalsIgnoreCase(changeType.trim());
 
                     aggregations.merge(matricule,

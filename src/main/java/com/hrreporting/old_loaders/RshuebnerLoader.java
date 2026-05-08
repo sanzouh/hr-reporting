@@ -68,7 +68,7 @@ public class RshuebnerLoader {
 
                     // Salaire annuel → mensuel
                     double salaireAnnuel    = ETLUtils.parseMontant(salaryRaw);
-                    double salaireMensuel   = ETLUtils.annuelVersQuotidien(salaireAnnuel);
+                    double salaireMensuel   = ETLUtils.annuelVersMensuel(salaireAnnuel);
 
                     // Dates
                     LocalDate dateEmbauche  = ETLUtils.parseDate(hireRaw);
