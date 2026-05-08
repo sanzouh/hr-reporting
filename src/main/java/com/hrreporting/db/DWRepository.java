@@ -319,17 +319,34 @@ public class DWRepository {
         return queryStringDouble(sql, "nom_dept", "moy_absences");
     }
 
-    /** Coût total formations par département — employés actifs pendant l'année */
+    /** Coût total formations par département.
+     *  Mode "Toutes" : coût historique cumulé (fait_rh).
+     *  Mode année X  : formations réellement suivies en X via le bridge. */
     public static Map<String, Double> getCoutFormationParDept(String annee, String dept) throws SQLException {
-        String sql = """
-            SELECT d.nom_dept,
-                   ROUND(SUM(f.cout_formation), 2) AS cout_total
-            FROM fait_rh f
-            JOIN dim_departement d ON f.dept_id = d.dept_id
-            WHERE f.cout_formation IS NOT NULL AND f.cout_formation > 0
-            """ + filtreActifAnnee(annee) + filtreDept(dept) + """
-            GROUP BY d.nom_dept ORDER BY cout_total DESC
-        """;
+        String sql;
+        if (annee == null || annee.equals("Toutes")) {
+            sql = """
+                SELECT d.nom_dept,
+                       ROUND(SUM(f.cout_formation), 2) AS cout_total
+                FROM fait_rh f
+                JOIN dim_departement d ON f.dept_id = d.dept_id
+                WHERE f.cout_formation IS NOT NULL AND f.cout_formation > 0
+                """ + filtreDept(dept) + """
+                GROUP BY d.nom_dept ORDER BY cout_total DESC
+            """;
+        } else {
+            String an = annee.replaceAll("[^0-9]", "");
+            sql = """
+                SELECT d.nom_dept,
+                       ROUND(SUM(df.cout_usd), 2) AS cout_total
+                FROM bridge_employe_formation b
+                JOIN dim_formation df ON b.formation_id = df.formation_id
+                JOIN fait_rh f ON b.employe_id = f.employe_id
+                JOIN dim_departement d ON f.dept_id = d.dept_id
+                WHERE b.annee = """ + an + " AND df.cout_usd > 0" + filtreDept(dept) + """
+                GROUP BY d.nom_dept ORDER BY cout_total DESC
+            """;
+        }
         return queryStringDouble(sql, "nom_dept", "cout_total");
     }
 

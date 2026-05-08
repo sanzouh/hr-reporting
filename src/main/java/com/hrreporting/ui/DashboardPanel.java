@@ -84,9 +84,9 @@ public class DashboardPanel extends JPanel implements MainDashboard.Refreshable 
             double salaireMoyen = DWRepository.getSalaireMoyenGlobal(annee, departement);
             double delta        = DWRepository.getDeltaSalaireAnnuel(annee);
             String badgeSalaire = delta == 0 ? "vs N-1 : N/A"
-                    : String.format("%+.1f%% vs N-1", delta);
+                    : String.format("%+.1f%% (niveau moyen)", delta);
             Color colorSalaire  = delta >= 0 ? MainDashboard.C_SUCCESS : MainDashboard.C_DANGER;
-            row.add(MainDashboard.buildKpiCard("Salaire moyen",
+            row.add(MainDashboard.buildKpiCard("Salaire moyen / mois",
                     String.format("$%,.0f", salaireMoyen), badgeSalaire, colorSalaire));
 
             // Satisfaction
